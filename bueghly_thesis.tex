@@ -60,9 +60,9 @@ This is the abstract.
 
 Text for acknowledgments.
 
-\preface		% Preface (optional).
-
-This is the preface.
+%\preface		% Preface (optional).
+%
+%This is the preface.
 
 
 %% A few more optional pages (uncomment if needed)
@@ -104,36 +104,36 @@ This is the preface.
 
 % If there is an introduction it must be the first chapter
 
-\chapter{Introduction or Title of First Chapter}	% The first chapter.
-				% \chapter command is of the form
-				% \chapter[..]{..} or \chapter{..} where
-	... text ...		% {chapter heading} and [entry in table of
-				% contents].
-\section{First section of chapter 1}
-				% IMPORTANT: If your chapter heading consists
-				% of more than one lines, it will be auto-
-	... text ...		% matically broken into separate lines.
-				% However, if you don't like the way LaTeX
-				% breaks the chapter heading into lines, use
-\section{Another section}	% `\newheadline' command to break lines.
-				% Never use \\ in sectional (e.g., chapter,
-	... text ...		% section, subsection) headings.
-
-\chapter{Title of Second Chapter}	% Chapter 2.
-
-	... text ...
-
-\section{First section of chapter 2}
-
-	... text...
-
-\subsection{A subsection}
-
-	... more text ...
-
-\subsubsection{A subsubsection}
-
-	... more text ...
+%\chapter{Introduction or Title of First Chapter}	% The first chapter.
+%				% \chapter command is of the form
+%				% \chapter[..]{..} or \chapter{..} where
+%	... text ...		% {chapter heading} and [entry in table of
+%				% contents].
+%\section{First section of chapter 1}
+%				% IMPORTANT: If your chapter heading consists
+%				% of more than one lines, it will be auto-
+%	... text ...		% matically broken into separate lines.
+%				% However, if you don't like the way LaTeX
+%				% breaks the chapter heading into lines, use
+%\section{Another section}	% `\newheadline' command to break lines.
+%				% Never use \\ in sectional (e.g., chapter,
+%	... text ...		% section, subsection) headings.
+%
+%\chapter{Title of Second Chapter}	% Chapter 2.
+%
+%	... text ...
+%
+%\section{First section of chapter 2}
+%
+%	... text...
+%
+%\subsection{A subsection}
+%
+%	... more text ...
+%
+%\subsubsection{A subsubsection}
+%
+%	... more text ...
 
 
 % Alternatively, you may write the chapters in separate
@@ -147,13 +147,19 @@ This is the preface.
 % The command \includeonly above allows to include a selected 
 % set of chapters only.
 
+
+\include{introduction}
+
+\include{results}
+
+
 % Uncomment the 'singlespace' environment and '\bibsep' command
 % if needed - some bibliographic styles overide the definition
 % of 'thebibliography' in nuthesis.cls
 %
 \begin{singlespace}
 %\bibsep 12pt
-\clearpage\phantomsection % needed for hyperlikns to work correctly
+\clearpage\phantomsection % needed for hyperlinks to work correctly
 \begin{thebibliography}{xxx}
 
 \bibitem{label1} A bibliographic item.  A bibliographic item.  A
@@ -181,47 +187,47 @@ bibliographic item.  A bibliographic item.
 \appendix		% Appendix begins here (optional).
 
 
-\chapter{Title of First Appendix} 	% First appendix chapter, i.e., Appendix A.
-
-Here goes the first appendix.
-
-
-\section{First section of Appendix}	% This is appendix section 1.
-
-This is the Appendix.
-
-\subsection{First subsection of Appendix}  % This is appendix subsection 1.
-
-More text ...
-
-\subsubsection{First subsubsection of Appendix}  % This is subsubsection 1.
-
-Yet more text ...
-
-\chapter{Title of Second Appendix}
-
-In case there is more than one appendix.
-
-
-\begin{vita}                    % Vita (optional).
-
-This is the Vita. This is the Vita. This is the Vita. This is the Vita. 
-This is the Vita. This is the Vita. This is the Vita. This is the Vita. 
-This is the Vita. This is the Vita. This is the Vita. This is the Vita. 
-This is the Vita. This is the Vita. This is the Vita. This is the Vita. 
-
-This is the Vita. This is the Vita. This is the Vita. This is the Vita. 
-This is the Vita. This is the Vita. This is the Vita. This is the Vita. 
-This is the Vita. This is the Vita. This is the Vita. This is the Vita. 
-This is the Vita. This is the Vita. This is the Vita. This is the Vita. 
-
-This is the Vita. This is the Vita. This is the Vita. This is the Vita. 
-This is the Vita. This is the Vita. This is the Vita. This is the Vita. 
-This is the Vita. This is the Vita. This is the Vita. This is the Vita. 
-This is the Vita. This is the Vita. This is the Vita. This is the Vita. 
+%\chapter{Title of First Appendix} 	% First appendix chapter, i.e., Appendix A.
+%
+%Here goes the first appendix.
+%
+%
+%\section{First section of Appendix}	% This is appendix section 1.
+%
+%This is the Appendix.
+%
+%\subsection{First subsection of Appendix}  % This is appendix subsection 1.
+%
+%More text ...
+%
+%\subsubsection{First subsubsection of Appendix}  % This is subsubsection 1.
+%
+%Yet more text ...
+%
+%\chapter{Title of Second Appendix}
+%
+%In case there is more than one appendix.
 
 
-\end{vita}
+%\begin{vita}                    % Vita (optional).
+%
+%This is the Vita. This is the Vita. This is the Vita. This is the Vita. 
+%This is the Vita. This is the Vita. This is the Vita. This is the Vita. 
+%This is the Vita. This is the Vita. This is the Vita. This is the Vita. 
+%This is the Vita. This is the Vita. This is the Vita. This is the Vita. 
+%
+%This is the Vita. This is the Vita. This is the Vita. This is the Vita. 
+%This is the Vita. This is the Vita. This is the Vita. This is the Vita. 
+%This is the Vita. This is the Vita. This is the Vita. This is the Vita. 
+%This is the Vita. This is the Vita. This is the Vita. This is the Vita. 
+%
+%This is the Vita. This is the Vita. This is the Vita. This is the Vita. 
+%This is the Vita. This is the Vita. This is the Vita. This is the Vita. 
+%This is the Vita. This is the Vita. This is the Vita. This is the Vita. 
+%This is the Vita. This is the Vita. This is the Vita. This is the Vita. 
+%
+%
+%\end{vita}
 
 
 \end{document}
