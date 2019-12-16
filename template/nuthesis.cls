@@ -61,7 +61,7 @@
 %\RequirePackage[bookmarks, bookmarksopen=true, plainpages=false, pdfpagelabels, letterpaper, pdfpagelayout=SinglePage, breaklinks=true]{hyperref} % contributed by Ezra Getzler - 3/15/2005
 % ``breaklinks = true'' option added - MAL 4/21/2009
 % letterpaper option removed, it was trigerring a warning: Package hyperref Warning: Option `letterpaper' is no longer used. - MAL 4/23/2018
-\RequirePackage[bookmarks, bookmarksopen=true, plainpages=false, pdfpagelabels, pdfpagelayout=SinglePage, breaklinks=true]{hyperref}
+\RequirePackage[bookmarks, bookmarksopen=true, plainpages=false, pdfpagelabels, pdfpagelayout=SinglePage, breaklinks=true, hidelinks]{hyperref}
 
 
 % Page numbering should be at normal size 
