@@ -7,6 +7,89 @@
 %\section{Quantum Chromodynamics}
 
 \section{Spontaneous Symmetry Breaking (Higgs Mechanism)}
+The electroweak Lagrangian lacking the Higgs term \textcolor{red}{CITE EQUATION} is insufficient. In particular, it does not provide
+an explanation for massive gauge bosons. Experimental evidence for massive gauge bosons dates back to the \textcolor{red}{early?}
+twentieth century. Beta decay experiments indicated charged current interactions mediated by a massive W boson, and later experiments 
+indicated additional neutral current interactions mediated by a massive Z boson (\textcolor{red}{CHECK THIS}). Later in the twentieth 
+century (\textcolor{red}{GIVE SPECIFIC DATES/REFS}) the W and Z bosons were discovered. Indeed, the W and Z masses have been found 
+to be roughly 80 GeV and 91 GeV respectively. An explanation came in the form of the Higgs mechanism (\textcolor{red}{CITE}),
+which spontaneously breaks the SU(2)xU(1) gauge symmetry of the elecroweak Lagrangian. In addition, there arises a real 
+Higgs field accompanied by a massive Higgs boson, and fermion masses are explained via their Yukawa couplings to the Higgs boson. 
+The discovery of the Higgs boson and the subsequent measurements of its properties have provided proof that the Higgs mechanism 
+is indeed a central piece of the Standard Model. 
+
+To understand how the Higgs mechanism works, consider the introduction of a complex scalar field $\sf \Phi$, which 
+transforms as a doublet under SU(2).
+\begin{equation}
+    \label{eqn:higgsField}
+    \Phi = 
+    \begin{bmatrix}
+        \phi^{+} \\ 
+        \phi^{0}
+    \end{bmatrix}
+\end{equation}
+Its contribution to the Lagrangian is given by:
+\begin{equation}
+    \mathcal{L_{H}} = (D^{\mu}\Phi)^{\dagger}(D_{\mu}\Phi) - V(\Phi)
+    \label{LHiggs}
+\end{equation}
+where the Higgs potential takes the form
+\begin{equation}
+    V(\Phi) = \mu^{2}|\Phi^{\dagger}\Phi| + \lambda \Big(|\Phi^{\dagger}\Phi|\Big)^{2}.
+    \label{VHiggs}
+\end{equation}
+$D_{\mu}$ is the covariant derivative
+\begin{equation}
+    D_{\mu} = \partial_{\mu} - \frac{ig}{2}\tau\cdot A_{\mu} - \frac{ig'}{2}B_{\mu}Y.
+    \label{EWCovariantDeriv}
+\end{equation}
+Consider the case that the parameters of the Higgs potential $\lambda$ and $\mu$ satisfy the conditions 
+$\lambda > 0$ and $\mu^{2} < 0$. Then the shape of the potential is shown in \ref{fig:VHiggs}. Clearly, there is no minimum of the 
+potential at $\Phi = 0$. Rather, an infinite set of minima lie around a circle in the complex plane. Hence, it is said that $\Phi$ 
+has a nonzero vacuum expectation value (VEV). The value of the VEV in terms of $\mu$ and $\lambda$ can be determined by explicitly
+minimizing the potential:
+\begin{align}
+    \frac{\partial}{\partial(\Phi^{\dagger}\Phi)}V(\Phi) &= 0 \\
+    \mu^{2} + 2\lambda\Big(|\Phi^{\dagger}\Phi|\Big) &= 0 \\
+    \mu^{2} + 2\lambda\Big[(\phi^{+})^{2} + (\phi^{0})^{2}\Big] &= 0 
+    \label{VHiggsMinimization}
+\end{align}
+Clearly, this can be minimized in many ways depending on individual values of $\phi^{+}$ and $\phi^{0}$ in the vacuum. By convention,
+and without generality, we choose the case in which $\phi^{+} = 0$. In this case we obtain the equation
+\begin{equation}
+    \phi^{0} = \sqrt{\frac{-\mu^{2}}{2\lambda}} = \frac{1}{\sqrt{2}}v
+\end{equation}
+where we have defined $v \equiv \sqrt{-\mu^{2}/\lambda}$.
+
+The existence of the Higgs VEV leads naturally to the masses of the W and Z bosons. This can be shown by squaring the covariant 
+derivative acting on the scalar doublet $\Phi$ and evaluating the result in the vacuum. Note that in the vacuum, all terms involving 
+the partial derivative $\partial_{\mu}$ will yield zero contribution. Therefore, keeping only the relevant terms, the squared covariant 
+derivative reduces to
+\begin{equation}
+    |D_{\mu}|^{2} \rightarrow (\frac{g}{2}A_{\mu}^{a}\tau^{a} +\frac{g'}{2}B_{\mu})(\frac{g}{2}A^{b\mu}\tau^{b} + \frac{g'}{2}B^{\mu})
+    \label{covDerivSquared}
+\end{equation}
+Evaluating this in the vacuum yields
+\begin{align}
+    \Delta\mathcal{L} &= \frac{1}{2}
+    \begin{bmatrix}0 & v
+    \end{bmatrix}
+    (\frac{g}{2}A_{\mu}^{a}\tau^{a} +\frac{g'}{2}B_{\mu})(\frac{g}{2}A^{b\mu}\tau^{b} + \frac{g'}{2}B^{\mu}) 
+    \begin{bmatrix}
+        0 \\ 
+        v
+    \end{bmatrix} \\ 
+    \Delta\mathcal{L} &=
+    \frac{1}{2}\frac{v^{2}}{4}[g^{2}(A_{\mu}^{1})^{2} g^{2}(A_{\mu}^{2})^{2} + (g'B_{\mu} - gA_{\mu}^{3})^{2}]
+\end{align}
+From this, we can identify the fields and masses for the positively and negatively charged W bosons and the neutral Z boson and photon. 
+These are as follows:
+\begin{align}
+    W_{\mu}^{\pm} &= \frac{1}{\sqrt{2}}(A_{\mu}^{1} \mp iA_{\mu}^{2}) \; &m_{W} = \frac{gv}{2} \\
+    Z_{\mu}^{0} &= \frac{1}{\sqrt{g^{2} + g'^{2}}}(gA_{\mu}^{3} - g'B_{\mu}) \; &m_{Z} = \sqrt{g^{2} + g'^{2}}\frac{v}{2} \\
+    A_{\mu} &= \frac{1}{\sqrt{g^{2} + g'^{2}}}(g'A_{\mu}^{3} + gB_{\mu}) \; &m_{A} = 0
+    \label{gaugeBosonsAndMasses}
+\end{align}
 
 \section{Higgs Production}
 
