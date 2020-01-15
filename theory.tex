@@ -48,48 +48,108 @@ $\lambda > 0$ and $\mu^{2} < 0$. Then the shape of the potential is shown in \re
 potential at $\Phi = 0$. Rather, an infinite set of minima lie around a circle in the complex plane. Hence, it is said that $\Phi$ 
 has a nonzero vacuum expectation value (VEV). The value of the VEV in terms of $\mu$ and $\lambda$ can be determined by explicitly
 minimizing the potential:
-\begin{align}
+\begin{align*}
     \frac{\partial}{\partial(\Phi^{\dagger}\Phi)}V(\Phi) &= 0 \\
     \mu^{2} + 2\lambda\Big(|\Phi^{\dagger}\Phi|\Big) &= 0 \\
-    \mu^{2} + 2\lambda\Big[(\phi^{+})^{2} + (\phi^{0})^{2}\Big] &= 0 
+    \mu^{2} + 2\lambda\Big[(\phi^{+})^{2} + (\phi^{0})^{2}\Big] &= 0 \numberthis
     \label{VHiggsMinimization}
-\end{align}
+\end{align*}
 Clearly, this can be minimized in many ways depending on individual values of $\phi^{+}$ and $\phi^{0}$ in the vacuum. By convention,
-and without generality, we choose the case in which $\phi^{+} = 0$. In this case we obtain the equation
+and without loss of generality, we choose the case in which $\phi^{+} = 0$. In this case we obtain the equation
 \begin{equation}
     \phi^{0} = \sqrt{\frac{-\mu^{2}}{2\lambda}} = \frac{1}{\sqrt{2}}v
 \end{equation}
 where we have defined $v \equiv \sqrt{-\mu^{2}/\lambda}$.
 
-The existence of the Higgs VEV leads naturally to the masses of the W and Z bosons. This can be shown by squaring the covariant 
-derivative acting on the scalar doublet $\Phi$ and evaluating the result in the vacuum. Note that in the vacuum, all terms involving 
-the partial derivative $\partial_{\mu}$ will yield zero contribution. Therefore, keeping only the relevant terms, the squared covariant 
-derivative reduces to
+The existence of the Higgs VEV has profound implications. To see this, it is helpful to reparameterize the scalar doublet field
+$\Phi$ as follows:
 \begin{equation}
-    |D_{\mu}|^{2} \rightarrow (\frac{g}{2}A_{\mu}^{a}\tau^{a} +\frac{g'}{2}B_{\mu})(\frac{g}{2}A^{b\mu}\tau^{b} + \frac{g'}{2}B^{\mu})
-    \label{covDerivSquared}
-\end{equation}
-Evaluating this in the vacuum yields
-\begin{align}
-    \Delta\mathcal{L} &= \frac{1}{2}
-    \begin{bmatrix}0 & v
+    \Phi = \frac{1}{\sqrt{2}}e^{i\frac{\tau^{a}}{2}\theta_{a}(x)}
+    \begin{bmatrix}
+        0 \\
+        v + h(x)
     \end{bmatrix}
-    (\frac{g}{2}A_{\mu}^{a}\tau^{a} +\frac{g'}{2}B_{\mu})(\frac{g}{2}A^{b\mu}\tau^{b} + \frac{g'}{2}B^{\mu}) 
+    \label{reparamHiggsField}
+\end{equation}
+As $\Phi$ is invariant under local SU(2) gauge transformations, the prefactor may be rotated away. This is equivalent to setting 
+$\theta(x) = 0$ in equation \ref{reparamHiggsField}. This choice of gauge is known as the unitary gauge, and leads to 
+\begin{equation}
+    \Phi = \frac{1}{\sqrt{2}}
+    \begin{bmatrix}
+        0 \\
+        v + h(x)
+    \end{bmatrix}
+    \label{HiggsFieldUnitaryGauge}
+\end{equation}
+Given the above form of $\Phi$, we can now evaluate the Higgs Lagrangian (equation \ref{LHiggs}), starting with the kinetic term
+$(D^{\mu}\Phi)^{\dagger}(D_{\mu}\Phi)$.
+\begin{align*}
+    (D^{\mu}\Phi)^{\dagger}(D_{\mu}\Phi) &= \Big| (\partial_{\mu} - \frac{ig}{2}\tau\cdot A_{\mu} - \frac{ig'}{2}B_{\mu}Y)\Phi\Big|^{2} \\
+    &= \frac{1}{2}
+    \Big| 
+    \begin{bmatrix}
+        \partial_{\mu} - \frac{i}{2}(gA_{\mu}^{3} + g'B_{\mu}) & -\frac{ig}{2}(A_{\mu}^{1} - iA_{\mu}^{2}) \\
+            -\frac{ig}{2}(A_{\mu}^{1} + iA_{\mu}^{2}) & \partial_{\mu} + \frac{i}{2}(gA_{\mu}^{3} - g'B_{\mu})
+    \end{bmatrix} 
     \begin{bmatrix}
         0 \\ 
-        v
-    \end{bmatrix} \\ 
-    \Delta\mathcal{L} &=
-    \frac{1}{2}\frac{v^{2}}{4}[g^{2}(A_{\mu}^{1})^{2} g^{2}(A_{\mu}^{2})^{2} + (g'B_{\mu} - gA_{\mu}^{3})^{2}]
-\end{align}
-From this, we can identify the fields and masses for the positively and negatively charged W bosons and the neutral Z boson and photon. 
-These are as follows:
+        v + h(x)
+    \end{bmatrix} 
+    \Big|^{2} \\ &=  
+    \frac{1}{2}\Big| 
+    \begin{bmatrix}
+        -\frac{ig}{2}(A_{\mu}^{1} - iA_{\mu}^{2})(v + h(x)) \\
+        \partial_{\mu}h(x) + \frac{i}{2}(gA_{\mu}^{3} - g'B_{\mu})(v + h(x))
+    \end{bmatrix}
+    \Big|^{2} \\ &= 
+    \frac{1}{2}\partial_{\mu}h(x)\partial^{\mu}h(x) + \frac{1}{8}(gA_{\mu}^{3} - g'B_{\mu})(gA^{\mu}_{3} - g'B^{\mu})(v + h(x))^{2} \\ &+ 
+    \frac{g^{2}}{8}(A_{\mu}^{1} - iA_{\mu}^{2})(A_{\mu}^{1} + iA_{\mu}^{2})(v + h(x))^{2} \label{kinHiggsExpansion} \numberthis 
+\end{align*}
+With some foreknowledge of the result, let us define the physical gauge fields and their masses as follows:
 \begin{align}
     W_{\mu}^{\pm} &= \frac{1}{\sqrt{2}}(A_{\mu}^{1} \mp iA_{\mu}^{2}) \; &m_{W} = \frac{gv}{2} \\
-    Z_{\mu}^{0} &= \frac{1}{\sqrt{g^{2} + g'^{2}}}(gA_{\mu}^{3} - g'B_{\mu}) \; &m_{Z} = \sqrt{g^{2} + g'^{2}}\frac{v}{2} \\
+    Z_{\mu} &= \frac{1}{\sqrt{g^{2} + g'^{2}}}(gA_{\mu}^{3} - g'B_{\mu}) \; &m_{Z} = \sqrt{g^{2} + g'^{2}}\frac{v}{2} \\
     A_{\mu} &= \frac{1}{\sqrt{g^{2} + g'^{2}}}(g'A_{\mu}^{3} + gB_{\mu}) \; &m_{A} = 0
     \label{gaugeBosonsAndMasses}
 \end{align}
+Then the kinetic term of the Higgs Lagrangian can be recast as
+\begin{align*}
+    (D^{\mu}\Phi)^{\dagger}(D_{\mu}\Phi) &= \frac{1}{2}\partial_{\mu}h(x)\partial^{\mu}h(x) \\ 
+    &+ \frac{1}{2}m_{Z}^{2}Z_{\mu}Z^{\mu} + m_{W}^{2}W_{\mu}^{+}W^{-\mu} \\
+    &+ \frac{v}{4}(g^{2} + g'^{2})Z_{\mu}Z^{\mu}h + \frac{1}{8}(g^{2} + g'^{2})Z_{\mu}Z^{\mu}h^{2} \\
+    &+ \frac{v}{4}g^{2}W_{\mu}^{+}W^{-\mu}h + \frac{1}{8}g^{2}W_{\mu}^{+}W^{-\mu}h^{2} \label{kinHiggsMasses}\numberthis
+\end{align*}
+Equation \ref{kinHiggsMasses} provides a great deal of information on the physical ramifications of the Higgs mechanism.
+The first term is the kinetic term of the physical Higgs boson field. The second and third terms are the mass terms of the Z and W 
+bosons respectively. The fourth and fifth terms show the linear and quadratic couplings of the Z boson to the Higgs boson respectively.
+Finally, the sixth and seventh terms show the linear and quadratic couplings of the W boson to the Higgs boson respectively. 
+
+
+
+%The existence of the Higgs VEV leads naturally to the masses of the W and Z bosons. This can be shown by squaring the covariant 
+%derivative acting on the scalar doublet $\Phi$ and evaluating the result in the vacuum. Note that in the vacuum, all terms involving 
+%the partial derivative $\partial_{\mu}$ will yield zero contribution. Therefore, keeping only the relevant terms, the squared covariant 
+%derivative reduces to
+%\begin{equation}
+%    |D_{\mu}|^{2} \rightarrow (\frac{g}{2}A_{\mu}^{a}\tau^{a} +\frac{g'}{2}B_{\mu})(\frac{g}{2}A^{b\mu}\tau^{b} + \frac{g'}{2}B^{\mu})
+%    \label{covDerivSquared}
+%\end{equation}
+%Evaluating this in the vacuum yields
+%\begin{align}
+%    \Delta\mathcal{L} &= \frac{1}{2}
+%    \begin{bmatrix}0 & v
+%    \end{bmatrix}
+%    (\frac{g}{2}A_{\mu}^{a}\tau^{a} +\frac{g'}{2}B_{\mu})(\frac{g}{2}A^{b\mu}\tau^{b} + \frac{g'}{2}B^{\mu}) 
+%    \begin{bmatrix}
+%        0 \\ 
+%        v
+%    \end{bmatrix} \\ 
+%    \Delta\mathcal{L} &=
+%    \frac{1}{2}\frac{v^{2}}{4}[g^{2}(A_{\mu}^{1})^{2} g^{2}(A_{\mu}^{2})^{2} + (g'B_{\mu} - gA_{\mu}^{3})^{2}]
+%\end{align}
+%From this, we can identify the fields and masses for the positively and negatively charged W bosons and the neutral Z boson and photon. 
+%These are as follows:
+
 
 \section{Higgs Production}
 
