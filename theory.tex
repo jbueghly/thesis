@@ -123,8 +123,44 @@ Equation \ref{kinHiggsMasses} provides a great deal of information on the physic
 The first term is the kinetic term of the physical Higgs boson field. The second and third terms are the mass terms of the Z and W 
 bosons respectively. The fourth and fifth terms show the linear and quadratic couplings of the Z boson to the Higgs boson respectively.
 Finally, the sixth and seventh terms show the linear and quadratic couplings of the W boson to the Higgs boson respectively. 
+Given the form of equation \ref{HiggsFieldUnitaryGauge}, a similar expansion can be carried out on the Higgs potential
+(equation \ref{VHiggs}). Here, the terms involving the physical Higgs boson are most interesting, so constant terms are dropped.
+\begin{align*}
+    V(\Phi) &= \frac{\mu^{2}}{2}(v+h)^{2} + \frac{\lambda}{4}((v+h)^{2})^{2} \\
+    &\rightarrow \lambda v^{2}h^{2} + \lambda vh^{3} + \frac{\lambda}{4}h^{4} \label{expandedVHiggs} \numberthis
+\end{align*}
+The first term is a Higgs mass term, with $m_{H} = \sqrt{2\lambda v^{2}}$. The second and third terms describe the Higgs 
+trilinear and quartic self-coupling respectively.
 
-
+The Lagrangian including the Higgs doublet $\Phi$ can be further extended to incorporate interactions between the Higgs and fermion fields. These interactions, along with the nonzero Higgs VEV, provide a mechanism to generate the fermion masses. The interactions take the 
+form of Yukawa couplings:
+\begin{equation}
+    \mathcal{L}_{Yukawa} = Y_{ij}^{d}\bar{Q}^{i}_{L}\Phi d_{R}^{j} + Y_{ij}^{u}\bar{Q}^{i}_{L}\tilde{\Phi} u_{R}^{j} 
+    + Y_{ij}^{e}\bar{L}^{i}_{L}\Phi e_{R}^{j} + h.c.
+    \label{LYukawa}
+\end{equation}
+where
+\begin{equation}
+    \tilde{\Phi} \equiv i\tau_{2}\Phi^{*}
+    \label{PhiDual}
+\end{equation}
+Plugging in the unitary gauge $\Phi$ parameterization of equation \ref{HiggsFieldUnitaryGauge}, this evaluates to 
+\begin{align}
+    \mathcal{L}_{Yukawa} = \frac{Y_{ij}^{d}}{\sqrt{2}}\bar{d}_{L}^{i}(v + h)d_{R}^{j} 
+    + \frac{Y_{ij}^{u}}{\sqrt{2}}\bar{u}_{L}^{i}(v+h)u_{R}^{j} + \frac{Y_{ij}^{e}}{\sqrt{2}}\bar{e}_{L}^{i}(v+h)e_{R}^{j}
+    \label{expandedLYuk}
+\end{align}
+It is worth looking closely at the terms in equation \ref{expandedLYuk}. For a given fermion type, the first term in the parentheses
+is a fermion mass term. The second term in the parentheses gives the coupling of the fermion to the Higgs boson. With this in mind, 
+we observe that the fermion mass is given in terms of the couplings and the Higgs vev by 
+\begin{equation}
+    m_{f} = \frac{y_{f}v}{\sqrt{2}}
+    \label{fermionMass}
+\end{equation}
+where $y_{f}$ is the relevant value taken from the Yukawa coupling matrix. In addition, we see that the strength of the fermion coupling
+to the Higgs boson is given by $\frac{m_{f}}{v}$. Thus, fermions couple to the Higgs boson with strength directly proportional 
+to their masses. This result has important consequences in the context of collider experiments, as it regulates the rates of
+Higgs production and decay related to each fermion-Higgs vertex. 
 
 %The existence of the Higgs VEV leads naturally to the masses of the W and Z bosons. This can be shown by squaring the covariant 
 %derivative acting on the scalar doublet $\Phi$ and evaluating the result in the vacuum. Note that in the vacuum, all terms involving 
