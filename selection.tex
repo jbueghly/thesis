@@ -61,4 +61,24 @@ Identification efficiencies and scale factors corresponding to the muon identifi
 \hzz analysis working group, and are shown in Figure [FIG]. The momentum of each muon passing the identification requirements is 
 corrected using the Rochester method and corrections [REF]. 
 
+
+
 \section{Electron Selection}
+Electrons are identified using a boosted decision tree multivariate (MVA) discriminator trained on Drell-Yan plus jets simulation 
+with prompt electrons matched to generator-level objects as signal and unmatched and non-prompt electrons as background. The features 
+used in the training include \pT, supercluster $\eta$, shower shape variables, ratio of hadronic to electromagnetic energy, track and 
+pixel hit variables, and isolation variables [REF]. These features are sensitive to bremsstrahlung along the electron trajectory, 
+momentum-energy matching between electron trajectory and ECAL cluster, shower shape, and electrons from photon conversions.
+Since isolation features are included in the training of the discriminator, there is no need for separate isolation cuts. 
+Electrons pass the identification requirement of the \hzg analysis if their discriminator score is higher than a loose working point 
+value, corresponding to 98\% signal efficiency. In addition to the MVA cut, electrons must have $|d_{xy}| < 0.5$ cm and $|d_{z}| < 1$ cm
+with respect to the primary vertex. Electrons with \pT $\leq$ 7 GeV are rejected. 
+
+Electron identification efficiencies and scale factors are measured using a tag and probe method on dielectron events near the 
+Z boson peak. These electrons must pass the single electron trigger with a \pT threshold of 27 (32) GeV for 2016 (2017/2018) data. 
+The dielectron mass must be between 60 and 120 GeV. The tag electron must pass a tight cut-based electron identification and have 
+\pT $>$ 30 (35) GeV for 2016 (2017) and $|\eta|$ < 2.5. The probe electron must pass the loose MVA identification cut and associated 
+impact parameter and \pT cuts described above. Identification efficiencies and scale factors are measured and applied in bins of 
+\pT and supercluster $\eta$. The scale factors for each data-taking year are shown in Figures [FIGS]. 
+
+\section{Photon Selection}
