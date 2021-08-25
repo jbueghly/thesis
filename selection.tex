@@ -58,10 +58,7 @@ trigger. To account for this, 2016 data events containing identified muons with 
 are rejected. 
 
 Identification efficiencies and scale factors corresponding to the muon identification above are measured and provided by the 
-\hzz analysis working group, and are shown in Figure [FIG]. The momentum of each muon passing the identification requirements is 
-corrected using the Rochester method and corrections [REF]. 
-
-
+\hzz analysis working group, and are shown in Figure [FIG].  
 
 \section{Electron Selection}
 Electrons are identified using a boosted decision tree multivariate (MVA) discriminator trained on Drell-Yan plus jets simulation 
@@ -82,3 +79,43 @@ impact parameter and \pT cuts described above. Identification efficiencies and s
 \pT and supercluster $\eta$. The scale factors for each data-taking year are shown in Figures [FIGS]. 
 
 \section{Photon Selection}
+Photons are identified using a boosted decision tree MVA discriminator trained on photon plus jets simulation. The features used in the 
+training include supercluster kinematics, isolation variables, and shower shape variables [REF]. To reject electrons faking photons, 
+a conversion-safe electron veto is applied. In order to improve agreement between simulation and data in the \hzg analysis, shower 
+shape corrections are taken from the Higgs to diphoton analysis [REF] and applied to simulated events. The original MVA provided by the 
+EGamma POG is then reevaluated after these corrections. The following features are corrected: $R_{9}$, defined as the ratio of energy in
+the 5x5 array of ECAL crystals to the supercluster energy; $S_{4}$, defined as the ratio of the maximum energy 2x2 array to the energy of 
+the 5x5 array; the energy weighted shower widths $\sigma_{\eta}$ and $\sigma_{\phi}$; the energy weighted widths by crystal index 
+$\sigma_{i\eta i\eta}$ and $\sigma_{i\eta i\phi}$; photon isolation, charged isolation with respect to the primary vertex, 
+and charged isolation with respect to the worst vertex choice. The validity of the shower shape corrections is checked using tag 
+and probe procedures for $Z\rightarrow e^{+}e^{-}$ events where the probe electron mimics a photon and $Z\rightarrow \mu^{+}\mu^{-}$
+events with an FSR photon. A comparison of the agreement between uncorrected and corrected simulation with data is shown in 
+Figures [FIGS]. Simulation comparisons with data for individual shower shape features before and after correction can be found 
+in Appendix [APPENDIX], Figures [FIGS]. 
+
+After deriving the corrected photon MVA discriminator, 90\% signal efficiency working point cuts for barrel and endcap photons 
+are determined for the \hzg analysis. The working points are defined based on real photons from SM $Z\gamma$ simulation, and correspond 
+to discriminator scores greater than -0.4 (-0.59) for barrel (endcap) photons. A comparison of these working points with the standard 
+EGamma POG 90\% efficiency working points, plotted on the receiver operator characteristic (ROC) curve for SM $Z\gamma$ and Z plus jets 
+simulation, is shown in Figure [FIG]. The efficiency of the photon identification is measured with $Z\rightarrow e^{+}e^{-}$ data
+using a tag and probe technique. The tag electron must pass the single electron trigger with \pT threshold 27 (32) GeV in 
+2016 (2017/2018), tight cut-based identification, have \pT $>$ 30 (35) GeV for 2016 (2017/2018), and have $|\eta| < 2.5$. The 
+probe electron must pass the photon MVA identification with shower shape corrections described above. The scale factors, measured and 
+applied in bins of \pT and supercluster $\eta$, are shown in Figure [FIG]. The efficiencies and scale factors for the conversion-safe 
+electron veto are measured by the EGamma POG using $Z\mu^{+}\mu^{-}$ events with an FSR photon and applied in the \hzg analysis. 
+The scale factors are cataloged in Table [TAB]. 
+
+\section{Jet Selection}
+Jets are selected in order to categorize events coming from potential VBF Higgs production, but no jet multiplicity requirement is present 
+for the \hzg selection. In fact, the majority of simulation and data events selected in the analysis have no jets. However, identifying 
+and selecting jets to categorize VBF events can still significantly improve the sensitivity of the search. Jets are required to pass 
+a loose cut-based identification in 2016 and a tight cut-based identification in 2017 and 2018. These sets of identification cuts are
+determined and provided by the JetMET POG. Additionally, jets must satisfy \pT $>$ 30 GeV, $|\eta| < 4.7$, and $\Delta R > 0.4$ with 
+respect to each lepton and the photon selected in the analysis. An issue with noise in the ECAL endcap in 2017 caused an artificial 
+increase in jet multiplicity in data within a specific kinematic phase space [REF]. To mitigate this, jets are rejected if they have 
+raw \pT $<$ 50 GeV and $2.65 < |\eta| < 3.139$. This cut reduces the efficiency to reconstruct dijet pairs by 12\% in the specified 
+region. To tag VBF events, we are interested in dijet pairs. To this end, if there are more than two jets satisfying the above criteria, 
+only the two jets with highest \pT are selected. 
+
+\section{Object Corrections}
+
