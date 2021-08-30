@@ -1,1 +1,39 @@
 \chapter{Event Categorization}
+
+The sensitivity of the \hzg search can be significantly improved by leveraging the differences between signal events
+arising from different Higgs boson production modes with different final state topologies and kinematics. 
+This is achieved by defining mutually exclusive categories targeting these different types of signal events. In previously 
+published CMS searches for \hzg [REFS], cut-based approaches were used to define the categories. Broadly, the presence of at least 
+one additional lepton was used to tag VH and ttH production, a dijet system was used to tag VBF production, a boosted jet was 
+used to tag gluon-gluon fusion events recoiling off of a jet, and properties of the photon were used to divide the remaining 
+events into kinematically distinct untagged categories. The specific definitions of the categories used in the 2016 search 
+at 13 TeV are shown in Figure [FIG]. 
+
+The categorization of the present search is inspired by the previous CMS searches, but is significantly more sophisticated and 
+better optimized than those searches. The lepton tag category remains, as do the concepts of dijet and untagged categories. 
+However, the dijet and untagged categories are determined via the training of two BDTs, with category 
+boundaries optimized using the resulting BDT scores. Moreover, the boosted category is studied and found to yield no 
+improvement over the categories determined by the BDTs, so the boosted category is dropped in the present analysis. We proceed with 
+a description of the BDT procedures for the untagged and dijet cases. Then, with our BDTs in hand, we describe the procedure 
+for defining an optimal set of categories to be used in the analysis. We show that this categorization procedure is more 
+optimal than what has been done in past CMS searches. 
+
+\section{Kinematic BDT}
+
+The kinematic BDT is used to separate \hzg signal events from background events. Its primary purpose is to define the 
+untagged categories, which are distinguished primarily by kinematics and the quality of the final state photon. Its secondary 
+use is as an input to the dijet BDT (described below) in order to increase signal to background discrimination in the 
+dijet BDT training. The kinematic BDT is trained on \hzg signal events from all Higgs production modes and background events from 
+SM $Z\gamma$, Z+jets, and $t\bar{t}$. The training is restricted to use half of the simulated events, with the other half 
+reserved for category optimization (described later). All training events are required to pass the basic object and 
+event selection described in Chapter 6. Events from 2016, 2017, and 2018 simulation samples in both the muon and electron channels 
+are combined for the training. These samples are weighted by their respective cross sections and weighted by the luminosity of
+each year. 
+
+\section{Dijet BDT}
+
+\section{Categorization Procedure}
+
+\section{Dropping of Boosted Category}
+
+\section{Comparison to Previous Approach}
