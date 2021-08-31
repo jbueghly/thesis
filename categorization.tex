@@ -1,5 +1,4 @@
 \chapter{Event Categorization}
-
 The sensitivity of the \hzg search can be significantly improved by leveraging the differences between signal events
 arising from different Higgs boson production modes with different final state topologies and kinematics. 
 This is achieved by defining mutually exclusive categories targeting these different types of signal events. In previously 
@@ -19,18 +18,58 @@ for defining an optimal set of categories to be used in the analysis. We show th
 optimal than what has been done in past CMS searches. 
 
 \section{Kinematic BDT}
-
 The kinematic BDT is used to separate \hzg signal events from background events. Its primary purpose is to define the 
 untagged categories, which are distinguished primarily by kinematics and the quality of the final state photon. Its secondary 
 use is as an input to the dijet BDT (described below) in order to increase signal to background discrimination in the 
 dijet BDT training. The kinematic BDT is trained on \hzg signal events from all Higgs production modes and background events from 
-SM $Z\gamma$, Z+jets, and $t\bar{t}$. The training is restricted to use half of the simulated events, with the other half 
-reserved for category optimization (described later). All training events are required to pass the basic object and 
+SM $Z\gamma$, Z plus jets, and $t\bar{t}$. The training is restricted to use half of the simulated events, with the other half 
+reserved for category optimization and signal modeling. All training events are required to pass the basic object and 
 event selection described in Chapter 6. Events from 2016, 2017, and 2018 simulation samples in both the muon and electron channels 
 are combined for the training. These samples are weighted by their respective cross sections and weighted by the luminosity of
 each year. 
 
+The following features are used in the training of the kinematic BDT: photon MVA score, photon energy resolution, $\eta$ of each 
+lepton and the photon, smallest and largest of the two $\Delta R$ values of the photon with respect to each lepton, $p_{T}/m$ for the 
+three body system, and three theoretically motivated decay angles. The angular quantities are defined in Figure [FIG] and their 
+theoretical, generator-level, and reconstructed distributions are shown in Figure [FIG]. The signal and background distributions
+used in the training for all kinematic BDT features are shown in Figure [FIG]. Table [TAB] ranks the kinematic BDT 
+training features in order of importance for the final discriminator. We observe that the most discriminating feature is the photon 
+MVA identification score which mainly serves distinguish real photons from misreconstructed jets. A comparison of the BDT 
+distributions in the training and test samples allows us to check for any possible overtraining of the model. This is shown in 
+Figure [FIG], where no significant overtraining is observed. 
+
+The output of the kinematic 
+BDT in data and simulation is shown in Figure [FIG]. We observe good agreement between data and simulation. For additional 
+validation of the method, two control regions are defined. A background-enriched control region is defined by 
+$m_{\ell\ell} + m_{\ell\ell\gamma} < 185$ GeV or $p_{T}^{\gamma} < 15/110$, and an irreducible background-enriched (SM $Z\gamma$) 
+control region is defince by $m_{\ell\ell} + m_{\ell\ell\gamma} < 185$ GeV and $80 < m_{\ell\ell} < 100$ GeV. The data and simulation
+distributions for the kinematic BDT for these control regions are shown in Figures [FIGS]. Again, we observe good agreement 
+between data and simulation.
+
 \section{Dijet BDT}
+The dijet BDT is used to discriminate signal from VBF Higgs production from other dijet signal and background events. The training
+and evaluation of the dijet BDT is only carried out on events which have two jets selected according to the requirements in 
+section [SEC]. The training is performed using VBF \hzg events as signal and gluon-gluon fusion \hzg, SM $Z\gamma$, Z plus jets, and 
+$t\bar{t}$ events as background. VH and ttH \hzg events are neglected, as their contribution is negligibly small. Only about 65\% 
+of the signal jets correspond to the true VBF jets in which we are interested. Because of this, we perform an additional matching 
+procedure for these jets. In order for an event to be used in the training, both reconstructed jets must be matched 
+to generator-level partons, which must also be matched to the generator-level \pT values of the true VBF partons. As with the 
+kinematic BDT, only half of the simulated events are used for the training procedure, with the remainder used for category optimization
+and signal modeling. Again, events from all data-taking years in both the muon and electron channels are combined for the training. 
+The samples are weightd by their respective cross sections and weighted by the luminosity of each year. 
+
+The input features to the dijet BDT training include 
+$\Delta\eta$(j, j), $\Delta\phi$(j, j), $\Delta\phi$($Z\gamma$, jj),  
+$\Delta R(j,\gamma)$, ${p_{T}}^{j1,2}$,
+$p_{T}^{t}$ (defined as $\frac{2|p_{Tx}^{Z}p_{Ty}^{\gamma}-p_{Ty}^{Z}p_{Tx}^{\gamma}|}{p_{T}^{H}}$),
+system \pT balance (defined as 
+$|\frac{\sum_{Z,\gamma,j_{1},j_{2}}{\vec{p}_{transverse}}^{i}}{\sum_{Z,\gamma,j_{1},j_{2}}p_{T}}|$),
+photon Zeppenfeld variable (defined as $|\eta_{\gamma}-\frac{\eta_{j1}+\eta_{j2}}{2}|$), and
+kinematic MVA score. The angular quantities provide discrimination between VBF and non-VBF events,
+while the kinematic MVA score and $p_{T}^{t}$ provide discrimination between signal and 
+background events. The $p_{T}^{t}$ [REF] is the component of the transverse momentum of the Z$\gamma$ system that
+is perpendicular to the difference of the 3-momenta of the Z boson and the photon candidate. 
+
 
 \section{Categorization Procedure}
 
