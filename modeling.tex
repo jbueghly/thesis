@@ -1,1 +1,12 @@
 \chapter{Signal and Background Modeling}
+In each category, we carry out a shape analysis to search for a signal peak in the $m_{\ell\ell\gamma}$ spectrum.
+The signal and background mass shapes are modeled using parametric functions. 
+
+\subsection{Signal Modeling}
+The signal model is defined as the sum of Crystal Ball~\cite{CB-Oreglia} and Gaussian functions.
+The signal shape parameters are determined by fitting this model to simulated signal events in each category.
+To account for differences in mass resolution, these fits are performed separately for the event samples used to model each data-taking year, as well as for muon and electron channel events.
+This results in six signal models that are summed to give the total signal expectation in a given category.
+Separate sets of parameter values are found by fitting simulated events with $m_\PH$ of $120$, $125$, and $130$\GeV.
+Using linear interpolation, parameter values are also determined at 1\GeV intervals in $m_\PH$ from $120$--$130$\GeV, as well as at 125.38\GeV.
+In the fit to data, the mean and resolution parameters are allowed to vary subject to constraints from several systematic uncertainties, described in Section~\ref{sec:uncertainties}, while the remaining parameters are held fixed. 
