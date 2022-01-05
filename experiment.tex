@@ -14,6 +14,12 @@
 
 \subsection{Muon Detectors}
 
+\begin{figure}
+  \centering
+   \includegraphics[width=0.9\textwidth]{fig/experiment/detector/muon_sys_r-z.png}
+	\caption{Diagram of CMS detector in the r-z plane showing the components of the muon system.}
+\end{figure}
+
 \section{Trigger System}
 
 \section{Object Reconstruction}
@@ -42,6 +48,14 @@ In the absence of any GSF electron tracks, a photon candidate is obtained. Addit
 The measured energy resolution for electrons produced in $\PZ$ boson decays in  $\Pp\Pp$ collision data ranges from $2$--$5$\%, depending on electron pseudorapidity and energy loss through bremsstrahlung in the detector material~\cite{CMS:2020uim}.
 
 \subsection{Muon Reconstruction}
+Muon reconstruction utilizes information from the muon detectors and the tracker. First, detector hits in the CSCs, DTs, and RPCs are used to build standalone tracks using a Kalman-filter technique.
+Subsequently, these standalone muon tracks are combined with tracker information via two algorithms. So-called "tracker muons" are reconstructed using an "inside-out" algorithm, which starts from 
+tracker tracks and matches them to DT or CSC segments. So-called "global muons" are reconstructed with an "outside-in" approach which starts from standalone muon tracks and matches them 
+to tracker tracks using a Kalman-filter technique. In the case where both algorithms reconstruct a muon sharing the same tracker tack, the two outputs are merged into a single muon candidate.
+In general, the tracker muon algorithm is more efficient in the region of low muon \pT, while the global algorithm is efficient at high \pT. 
+
+The energy of muons is obtained from the corresponding track momentum. Matching muons to tracks measured in the silicon tracker results in a \pt resolution, for muons with \pt up to $100$\GeV, of $1$\% in the barrel and $3$\% in the endcaps. The \pt resolution in the barrel is better than $7$\% for muons with \pt up to $1$\TeV~\cite{CMS:2018rym}.
+
 
 \subsection{Hadrons}
 
