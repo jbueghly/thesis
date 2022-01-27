@@ -85,14 +85,39 @@ pass through the fibers, and a calculable fraction of the light is captured by t
 as absorbers. This extends the effective HCAL depth to 11.8 interaction lengths everywhere except at the barrel-endcap boundary. 
 
 \subsection{Muon Detectors}
+The CMS muon detector system is comprised of a set of gas ionization detectors embedded in the flux-return yoke outside the solenoid magnet. 
+These detectors cover the pseudorapidity range $|\eta| < 2.4$. The positioning of the detectors outside the magnet takes advantage of the fact that muons deposit minimal energy in the detector 
+materials, such as the calorimeters. Most other types of high energy particles will have deposited their energy before reaching the muon system, so using the combination of muon system and tracker information, CMS is able to reconstruct muons with excellent momentum resolution. The gas ionization detectors in the muon system come in three types: drift tubes (DTs), cathode strip chambers (CSCs), and 
+resistive plate chambers (RPCs). The DTs cover the barrel region ($|\eta| < 1.2$) and are arranged in four stations, each with 60--70 drift chambers containing a gas mixture of 85\% Ar and 15\% CO$_2$.
+The CSCs are multiwire proportional chambers composed of anode wire planes interleaved with cathode panels. Muons passing through the CSCs ionize a gas mixture of 40\% Ar, 50\% CO$_2$, and 10\% CF$_4$, 
+and the electrons flow to the anodes, yielding a detectable avalanche of charge. Covering the region $|\eta| < 2.1$, the RPCs are composed of oppositely charged parallel plates enclosing a gas mixture 
+of primarily $\mathrm{C}_2\mathrm{H}_2\mathrm{F}_4$. One advantage of the RPCs is their good time resolution, which is less than the LHC bunch spacing time of 25ns. This makes them useful for fast muon triggering that matches
+muon tracks to the relevant bunch crossing. Figure \ref{fig:muon_system} shows a cross sectional view of the CMS detector highlighting the muon system components. 
 
 \begin{figure}
   \centering
    \includegraphics[width=0.9\textwidth]{fig/experiment/detector/muon_sys_r-z.png}
 	\caption{Diagram of CMS detector in the r-z plane showing the components of the muon system.}
+	\label{fig:muon_system}
 \end{figure}
 
 \section{Trigger System}
+At the LHC, the proton beam crossing interval is 25 ns, which corresponds to a pp collision rate of 40 MHz. Recording the full set of detector information for each collision is unfeasible, as it 
+would lead to far too much data to save to disk. As a result, the CMS experiment employs a two-tiered trigger system designed to preserve information of physics interest while reducing the 
+stored event rate to a more manageable 100 Hz. The first level of the trigger (L1) is a hardware trigger, which reduces the event rate from 40 MHz to about 100 kHz. The second layer is the 
+high level trigger (HLT), a processor farm using software optimized for fast processing. 
+
+The L1 trigger is implemented using FPGAs and ASICs, and has local, regional, and global components. First, local patterns in the calorimeters, track segments, and hit patterns in the muon chambers 
+are used by the Trigger Primitive Generators (TPGs). The TPGs rank and sort primitive objects corresponding to particle candidates based on energy, momentum, and reconstruction quality. Information
+from the TPGs is taken as input by regional triggers for the calorimeters and muon systems. These regional triggers further determine candidate physics objects, as well as energy sums and isolation
+information. Finally, this information is fed to a set of global triggers, which rank trigger objects across the entire detector. The final global trigger must decide whether to accept or 
+reject an event based on information input from the global calorimeter and muon trigger systems. Algorithms used in this decision can be based on single object \pT thresholds and multiplicity-related 
+thresholds, such as the presence of multiple jets, among other criteria. Events passing the L1 trigger are read out and passed to the HLT for further processing. 
+
+In contrast to the L1 trigger, the HLT incorporates the full physics object reconstruction based on the full precision of the detector. This allows the HLT to accept and reject events with algorithms 
+of similar quality to those used by offline analyses. Over 13,000 CPU cores are dedicated to HLT processing. For speed and efficiency, reconstruction and filtering algorithms are applied in increasing order of complexity. If a filter sequence fails, the rest of the reconstruction is skipped. Additionally, processing is done regionally based on the L1 candidates and relevant detector components 
+passed as input to the HLT. Events that pass the HLT are assigned to relevant data streams based on their physics content. For this analysis, the relevant streams are the Double Muon and 
+Double Electron streams, triggered by events with two muons or two electrons passing a set of minimum \pT requirements, among other cuts. 
 
 \section{Object Reconstruction}
 The global event reconstruction (also called particle-flow (PF) event reconstruction~\cite{CMS:2017yfk}) aims to reconstruct and identify each individual particle in an event, with an optimized combination of all subdetector information. In this process, the identification of the particle type (photon, electron, muon, charged hadron, neutral hadron) plays an important role in the determination of the particle direction and energy.
@@ -133,11 +158,31 @@ The energy of muons is obtained from the corresponding track momentum. Matching 
 Charged hadrons are identified as charged particle tracks that are neither identified as electrons nor as muons. Neutral hadrons are identified as HCAL energy clusters not linked to any charged hadron trajectory, or as a combined ECAL and HCAL energy excess with respect to the expected charged hadron energy deposit.
 
 \subsection{Jets}
+For each event, hadronic jets are reconstructed as clusters of PF particles, including photons, electrons, muons, and hadrons. For clustering, the infrared and collinear-safe anti-\kt algorithm~\cite{Cacciari:2008gp, Cacciari:2011ma} is used. The goal of jet clustering algorithms is to combine PF particles together into a single jet object by merging them together based on their relative geometric distances and transverse momenta (\kt). In the case of the anti-\kt algorithm, clustering proceeds from smallest geometric distance to largest, weighted by squared inverse \kt. This inverse weighting 
+preferentially combines PF particles with higher momenta before lower momenta, for a given distance. The advantage of this approach is that low momentum particles are more likely to be clustered 
+with high momentum counterparts, rather than with other low momentum particles. It follows that these low momentum particles will not significantly modify the jet shape, whereas the more important, high-momentum particles, will. A precise definition of the anti-\kt algorithm is defined in equation \ref{eq:antikt}. 
+
+\begin{equation}
+	d_{ij} = min(k_{T,i}^{2p}, k_{T,j}^{2p})\frac{(\eta_i - \eta_j)^2 + (\phi_i - \phi_j)^2}{R^2},\;\; d_i = k_{T,i}^{2p}
+	\label{eq:antikt}
+\end{equation}
+
+In equation \ref{eq:antikt}, the indices i and j refer to two PF particles, the parameter $p$ is taken to be -1, and the radius parameter $R$ is parameter that can be tuned. For standard jets in CMS, as used in this analysis, $R$ is set to 0.4. Particles are clustered from smallest $d_{ij}$ to largest until there is no $d_{ij}$ smaller than $k_{ti}^{-2}$, at which point the final jet is defined. A visual representation of the anti-\kt algorithm is shown in Fig. \ref{fig:anti_kt_diagram}.
 
 \begin{figure}
   \centering
    \includegraphics[width=0.9\textwidth]{fig/experiment/reconstruction/jet_clustering.png}
-	\caption{Diagram representing the jet clustering algorithm.}
+	\caption{An example of the first few steps of the anti-\kt jet clustering algorithm.}
+	\label{fig:anti_kt_diagram}
 \end{figure}
 
-\subsection{Primary Vertex}
+Jet momentum is determined as the vectorial sum of all particle momenta in the jet, and is found from simulation to be, on average, within $5$--$10$\% of the true momentum over the entire \pt spectrum and detector acceptance. Additional $\Pp\Pp$ interactions within the same or nearby bunch crossings (pileup) can contribute additional tracks and calorimetric energy depositions to the jet momentum. To mitigate this effect, charged particles identified to be originating from pileup vertices are discarded and an offset correction is applied to correct for remaining contributions~\cite{CMS:2020ebo}. The jet energy resolution typically amounts to $15$--$20$\% at $30$\GeV, $10$\% at $100$\GeV, and $5$\% at $1$\TeV~\cite{CMS:2016lmd}.
+
+\begin{figure}
+  \centering
+   \includegraphics[width=0.9\textwidth]{fig/experiment/reconstruction/jet_energy_resolution.png}
+	\caption{Jet energy resolution as a function of simulated jet \pT in the barrel (left) and in the endcap (right) regions. Calo refers to the sum of ECAL and HCAL energy deposits, 
+	while PF corresponds to jets clustered from PF particles using the anti-\kt algorithm.}
+	\label{fig:anti_kt_diagram}
+\end{figure}
+
