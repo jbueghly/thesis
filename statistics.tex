@@ -1,1 +1,51 @@
 \chapter{Statistical Analysis}
+
+The signal search is performed using a simultaneous fit to the $m_{\ell^+\ell^-\gamma}$ distribution in the eight event categories described in Section~\ref{sec:class}.
+The expected SM $\PH\to\PZ\gamma$ distributions, scaled by a factor of 10, are also shown.
+The fit uses a binned maximum likelihood method in the range $105 < m_{\ell^+\ell^-\gamma} < 170$\GeV.
+In each category, a likelihood function is defined using analytic models of signal and background events, along with nuisance parameters for systematic uncertainties.
+The combined likelihood function is the product of the likelihood functions in each category.
+The parameter of interest in the maximum likelihood fit is the signal strength $\mu$, defined as the product of the cross section and the branching fraction [$\sigma(\Pp\Pp\to\PH)\mathcal{B}(\PH\to\PZ\gamma)$], relative to the SM expectation.
+
+The signal model is defined as the sum of Crystal Ball~\cite{CB-Oreglia} and Gaussian functions.
+The signal shape parameters are determined by fitting this model to simulated signal events in each category.
+To account for differences in mass resolution, these fits are performed separately for the event samples used to model each data-taking year, as well as for muon and electron channel events.
+This results in six signal models that are summed to give the total signal expectation in a given category.
+Table~\ref{tab:yield} gives these mass resolutions for $\PH\to\PZ\gamma$, summed over the three years, as obtained from simulation. The mass resolutions range from 1.4--2.3\GeV, depending on the category.
+Separate sets of parameter values are found by fitting simulated events with $m_\PH$ of $120$, $125$, and $130$\GeV.
+Using linear interpolation, parameter values are also determined at 1\GeV intervals in $m_\PH$ from $120$--$130$\GeV, as well as at \mH\GeV. 
+In the fit to data, the mean and resolution parameters are allowed to vary subject to constraints from several systematic uncertainties, described in Section~\ref{sec:systematics}, while the remaining parameters are held fixed.
+
+The background model in each category is obtained from the data using the discrete profiling method~\cite{Dauncey:2014xga}.
+This technique accounts for the systematic uncertainty associated with choosing an analytic functional form to fit the background.
+The background function is chosen from a set of candidate functions via a discrete nuisance parameter in the fit.
+These functions are derived from the data in each category, with muon and electron events from all data-taking years combined.
+The $m_{\ell^+\ell^-\gamma}$ spectrum consists of a turn-on peak around 110--115\GeV and a falling spectrum in the high-mass tail, where the turn-on peak is driven by the photon $\pt$ selection.
+These features are modeled by the convolution of a Gaussian function with a step function multiplied by one of several falling spectrum functions.
+The complete function has the general form:
+\begin{equation}
+    \mathcal{F}(m_{\ell^+\ell^-\gamma}; \mu_{\mathrm{G}}, \sigma_{\mathrm{G}}, s, \vec{\alpha}) = \int_{105}^{170}\mathcal{N}(m_{\ell^+\ell^-\gamma}-t;\mu_{\mathrm{G}},\sigma_{\mathrm{G}})\Theta(t; s)f(t; \vec{\alpha})dt,
+\end{equation}
+where $t$ is the integration variable for the convolution, $\mathcal{N}(m_{\ell^+\ell^-\gamma}-t;\mu_{\mathrm{G}},\sigma_{\mathrm{G}})$ is the Gaussian function with mean $\mu_{\mathrm{G}}$ and standard deviation $\sigma_{\mathrm{G}}$, $\Theta(t; s)$ is the Heaviside step function with step location $s$, and $f(t; \vec{\alpha})$ is the falling spectrum function with shape parameters $\vec{\alpha}$.
+The falling spectrum function families considered include exponential functions, power law functions, Laurent series, and Bernstein polynomials.
+Functions from each family are selected based on a chi-squared goodness-of-fit criterion ($\text{\textit{p}-value} > 0.01$) as well as an $\mathcal{F}$-test~\cite{Fisher:1922saa}, which determines the highest order function to be used.
+A penalty term is added to the final likelihood to take into account the number of parameters in each function, ensuring that higher-order functions will not be preferred a priori.
+The set of profiled background functions in each category is checked to ensure that any bias introduced into the fit results is small and that the associated CL intervals have the appropriate frequentist coverage. For each function, pseudo-data sets are generated under a fixed signal strength hypothesis. A signal-plus-background fit is performed on each pseudo-data set, with the choice of background function profiled, and the distribution of best fit signal strengths is used to assess the bias and frequentist coverage.
+
+The best fit value of the signal strength, $\hat{\mu}$, is determined by maximizing the likelihood, accounting for all nuisance parameters.
+The uncertainty in $\hat{\mu}$ and the observed significance are derived from the profile likelihood test statistic~\cite{cite:l3},
+\begin{equation}
+	q(\mu) = -2\mathrm{ln}\Bigg(\frac{\mathcal{L}(\mu, \hat{\vec{\theta_{\mu}}})}{\mathcal{L}(\hat{\mu},\hat{\vec{\theta}})}\Bigg),
+\end{equation}
+where $\vec{\theta}$ is the set of nuisance parameters, $\hat{\mu}$ and $\hat{\vec{\theta}}$ are unconditional best fit values, and $\hat{\vec{\theta_{\mu}}}$ is the set of conditional best fit values of the nuisance parameters for a given value of $\mu$.
+An upper limit on $\mu$ is determined using the profile likelihood statistic with the \CLs criterion.
+The asymptotic approximation for the sampling distribution of $q(\mu)$ is assumed in the derivation of these results~\cite{cite:l1,cite:l2,cite:l3,Cowan:2010js}.
+The expected significance under the SM hypothesis and the expected upper limits under the background-only hypothesis are also reported.
+These are obtained by fitting to the corresponding Asimov data sets~\cite{Cowan:2010js}.
+
+In addition, a combined maximum likelihood fit with the CMS measurement~\cite{CMS:2021kom} of $\PH\to\PGg\PGg$ using the same data sample is performed to determine the ratio $\mathcal{B}(\PH\to\PZ\gamma)/\mathcal{B}(\PH\to\gamma\gamma)$.
+The $\PH\to\PGg\PGg$ analysis obtained a signal strength for $\sigma(\Pp\Pp\to\PH)\mathcal{B}(\PH\to\PGg\PGg)$ of $1.12\pm0.09$.
+In this combined fit, the branching fraction $\mathcal{B}(\PH\to\gamma\gamma)$ is an additional free parameter.
+The uncertainty in the measured ratio of the two branching fractions is dominated by the statistical uncertainties in the branching fractions.
+Common sources of theoretical and experimental uncertainty in the two measurements, described in the next section, are treated as correlated in the fit.
+The combination is performed at $m_\PH = \mH$\GeV, and the discrete profiling method is used for the background modeling in both cases.
