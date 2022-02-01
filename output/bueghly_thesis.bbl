@@ -361,7 +361,7 @@ M.~Cacciari, F.~A. Dreyer, A.~Karlberg, G.~P. Salam, and G.~Zanderighi.
   next-to-next-to-leading order.}
 \newblock \emph{Phys. Rev. Lett.}  (2015) \textbf{115}:082002.
 \newblock \doi{10.1103/PhysRevLett.115.082002}.
-\newblock [Erratum: \DOI{10.1103/PhysRevLett.120.139901}].
+\newblock [Erratum: \doi{10.1103/PhysRevLett.120.139901}].
 \newline\urlprefix\url{https://link.aps.org/doi/10.1103/PhysRevLett.115.082002}
 
 \bibitem{BREIN2004149}
@@ -423,6 +423,15 @@ R.~D. Ball, V.~Bertone, F.~Cerutti, L.~Del~Debbio, S.~Forte, \emph{et~al.}
 \newblock ISSN 0168-9002.
 \newblock \doi{10.1016/S0168-9002(03)01368-8}.
 
+\bibitem{detanneal}
+{W.~Erdmann}.
+\newblock \enquote{Offline primary vertex reconstruction with deterministic
+  annealing clustering.}
+\newblock \emph{CMS Internal note}  (2011) \textbf{2011/014}.
+
+\bibitem{L1_prefire}
+{\url{https://twiki.cern.ch/twiki/bin/viewauth/CMS/L1ECALPrefiringWeightRecipe}}.
+
 \bibitem{CB-Oreglia}
 M.~J. Oreglia.
 \newblock \enquote{A study of the reactions $\psi^\prime \to \gamma \gamma
@@ -437,6 +446,12 @@ P.~D. Dauncey, M.~Kenzie, N.~Wardle, and G.~J. Davies.
 \newblock \emph{JINST}  (2015) \textbf{10}:P04015.
 \newblock \doi{10.1088/1748-0221/10/04/P04015}.
 \newblock \eprint{1408.6865}.
+
+\bibitem{CMS-PAS-HIG-13-006}
+{CMS Collaboration}.
+\newblock \enquote{Search for a higgs boson decaying into a z boson and a
+  photon in pp collisions at $\sqrt{s}$ = 7 and 8 tev.}
+\newblock \emph{Phys. Lett. B}  (2013) \textbf{726}:587$--$609.
 
 \bibitem{cite:cs1}
 A.~D. Martin, W.~J. Stirling, R.~S. Thorne, and G.~Watt.
@@ -502,6 +517,6 @@ G.~Cowan, K.~Cranmer, E.~Gross, and O.~Vitells.
   physics.}
 \newblock \emph{Eur. Phys. J. C}  (2011) \textbf{71}:1554.
 \newblock \doi{10.1140/epjc/s10052-011-1554-0}.
-\newblock [Erratum: \DOI{10.1140/epjc/s10052-013-2501-z}], \eprint{1007.1727}.
+\newblock [Erratum: \doi{10.1140/epjc/s10052-013-2501-z}], \eprint{1007.1727}.
 
 \end{thebibliography}

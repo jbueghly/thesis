@@ -22,9 +22,8 @@ I was expecting a `,' or a `}'---line 1191 of file refs.bib
  : archivePrefix = {arXiv},
 (Error may have been on previous line)
 I'm skipping whatever remains of this entry
-Warning--I didn't find a database entry for "detanneal"
-Warning--I didn't find a database entry for "L1_prefire"
-Warning--I didn't find a database entry for "CMS-PAS-HIG-13-006"
+Warning--entry type for "L1_prefire" isn't style-file defined
+--line 1221 of file refs.bib
 Warning--empty journal in LHC-YR4
 Warning--empty author in LUM-17-004
 Warning--missing institution in LUM-17-004
@@ -32,45 +31,45 @@ Warning--empty author in LUM-18-002
 Warning--missing institution in LUM-18-002
 Warning--empty author in AGOSTINELLI2003250
 Warning--missing institution in cite:l3
-You've used 65 entries,
+You've used 68 entries,
             2559 wiz_defined-function locations,
-            1065 strings with 17238 characters,
-and the built_in function-call counts, 26263 in all, are:
-= -- 1794
-> -- 735
+            1073 strings with 17566 characters,
+and the built_in function-call counts, 27049 in all, are:
+= -- 1842
+> -- 744
 < -- 3
-+ -- 341
-- -- 169
-* -- 1806
-:= -- 3007
-add.period$ -- 375
-call.type$ -- 65
-change.case$ -- 67
++ -- 346
+- -- 171
+* -- 1842
+:= -- 3088
+add.period$ -- 384
+call.type$ -- 68
+change.case$ -- 69
 chr.to.int$ -- 0
-cite$ -- 72
-duplicate$ -- 2806
-empty$ -- 2679
-format.name$ -- 225
-if$ -- 5661
+cite$ -- 75
+duplicate$ -- 2900
+empty$ -- 2782
+format.name$ -- 227
+if$ -- 5838
 int.to.chr$ -- 0
-int.to.str$ -- 65
-missing$ -- 681
-newline$ -- 455
-num.names$ -- 62
-pop$ -- 1065
+int.to.str$ -- 68
+missing$ -- 701
+newline$ -- 468
+num.names$ -- 64
+pop$ -- 1109
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 0
-skip$ -- 544
+skip$ -- 570
 stack$ -- 0
-substring$ -- 750
-swap$ -- 1679
+substring$ -- 777
+swap$ -- 1723
 text.length$ -- 3
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 0
 warning$ -- 7
-while$ -- 122
-width$ -- 67
-write$ -- 957
+while$ -- 125
+width$ -- 70
+write$ -- 984
 (There was 1 error message)
