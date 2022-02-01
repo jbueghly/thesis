@@ -1,0 +1,76 @@
+This is BibTeX, Version 0.99d (TeX Live 2019/Debian)
+Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
+The top-level auxiliary file: output/bueghly_thesis.aux
+A level-1 auxiliary file: abstract.aux
+A level-1 auxiliary file: introduction.aux
+A level-1 auxiliary file: theory.aux
+A level-1 auxiliary file: experiment.aux
+A level-1 auxiliary file: analysis_strategy.aux
+A level-1 auxiliary file: data.aux
+A level-1 auxiliary file: selection.aux
+A level-1 auxiliary file: categorization.aux
+A level-1 auxiliary file: modeling.aux
+A level-1 auxiliary file: uncertainties.aux
+A level-1 auxiliary file: statistics.aux
+A level-1 auxiliary file: results.aux
+A level-1 auxiliary file: conclusion.aux
+The style file: thesis_bibstyle.bst
+A level-1 auxiliary file: appendix_resonant_fits.aux
+Database file #1: refs.bib
+I was expecting a `,' or a `}'---line 1191 of file refs.bib
+ : 
+ : archivePrefix = {arXiv},
+(Error may have been on previous line)
+I'm skipping whatever remains of this entry
+Warning--I didn't find a database entry for "detanneal"
+Warning--I didn't find a database entry for "L1_prefire"
+Warning--I didn't find a database entry for "CMS-PAS-HIG-13-006"
+Warning--empty journal in LHC-YR4
+Warning--empty author in LUM-17-004
+Warning--missing institution in LUM-17-004
+Warning--empty author in LUM-18-002
+Warning--missing institution in LUM-18-002
+Warning--empty author in AGOSTINELLI2003250
+Warning--missing institution in cite:l3
+You've used 65 entries,
+            2559 wiz_defined-function locations,
+            1065 strings with 17238 characters,
+and the built_in function-call counts, 26263 in all, are:
+= -- 1794
+> -- 735
+< -- 3
++ -- 341
+- -- 169
+* -- 1806
+:= -- 3007
+add.period$ -- 375
+call.type$ -- 65
+change.case$ -- 67
+chr.to.int$ -- 0
+cite$ -- 72
+duplicate$ -- 2806
+empty$ -- 2679
+format.name$ -- 225
+if$ -- 5661
+int.to.chr$ -- 0
+int.to.str$ -- 65
+missing$ -- 681
+newline$ -- 455
+num.names$ -- 62
+pop$ -- 1065
+preamble$ -- 1
+purify$ -- 0
+quote$ -- 0
+skip$ -- 544
+stack$ -- 0
+substring$ -- 750
+swap$ -- 1679
+text.length$ -- 3
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 0
+warning$ -- 7
+while$ -- 122
+width$ -- 67
+write$ -- 957
+(There was 1 error message)

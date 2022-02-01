@@ -219,32 +219,31 @@ Last, but not least, I want to thank my parents, sisters, and my partner Anna. Y
 % if needed - some bibliographic styles overide the definition
 % of 'thebibliography' in nuthesis.cls
 %
-\begin{singlespace}
+%\begin{singlespace}
 %\bibsep 12pt
 \clearpage\phantomsection % needed for hyperlinks to work correctly
-\begin{thebibliography}{xxx}
-
-\bibitem{label1} A bibliographic item.  A bibliographic item.  A
-bibliographic item.  A bibliographic item.
-\bibitem{label2} Another bibliographic item.  
-\bibitem{label3} Yet another bibliographic item.  
+%\begin{thebibliography}{xxx}
+%
+%
+%\bibitem{label1} A bibliographic item.  A bibliographic item.  A
+%bibliographic item.  A bibliographic item.
+%\bibitem{label2} Another bibliographic item.  
+%\bibitem{label3} Yet another bibliographic item.  
 % The usages of \bibitem and \cite{..} are 
 % explained in Section 4.3 (page 73) of % LaTeX manual.
 % Or you may use BibTeX.
-\end{thebibliography}
-\end{singlespace}
-
+%\end{thebibliography}
+%\end{singlespace}
 % (The following suggested by Francisco Iacobelli - 5/11/2010)
 % In case, you want to use BibTeX, you should replace (or comment)
 % the bibliography environment.
 % Instead uncomment the following lines and replace <bib file>
 % with your .bib file:
-% \begin{singlespace}
-% \bibsep 12pt
-% \bibliographystyle{acm} %or another suitable style.
-% \bibliography{<bib file>}
-% \end{singlespace}
-
+ \begin{singlespace}
+%\bibsep 12pt
+ \bibliographystyle{thesis_bibstyle} %or another suitable style.
+ \bibliography{refs}
+ \end{singlespace}
 
 \appendix		% Appendix begins here (optional).
 

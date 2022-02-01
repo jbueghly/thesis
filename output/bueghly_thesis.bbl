@@ -1,0 +1,507 @@
+\begin{thebibliography}{10}
+\newcommand{\enquote}[1]{``#1''}
+\providecommand{\url}[1]{\texttt{#1}}
+\providecommand{\urlprefix}{URL }
+\expandafter\ifx\csname urlstyle\endcsname\relax
+  \providecommand{\doi}[1]{doi:\discretionary{}{}{}#1}\else
+  \providecommand{\doi}{doi:\discretionary{}{}{}\begingroup
+  \urlstyle{rm}\Url}\fi
+\providecommand{\eprint}[2][]{\url{#2}}
+
+\bibitem{Aad_2012}
+G.~Aad \emph{et~al.}
+\newblock \enquote{{Observation of a new particle in the search for the
+  standard model Higgs boson with the ATLAS detector at the LHC}.}
+\newblock \emph{Phys. Lett. B}  (2012) \textbf{716}:1.
+\newblock \doi{10.1016/j.physletb.2012.08.020}.
+\newblock \eprint{1207.7214}.
+
+\bibitem{Chatrchyan_2012}
+S.~Chatrchyan \emph{et~al.}
+\newblock \enquote{{Observation of a new boson at a mass of 125 GeV with the
+  CMS experiment at the LHC}.}
+\newblock \emph{Phys. Lett. B}  (2012) \textbf{716}:30.
+\newblock \doi{10.1016/j.physletb.2012.08.021}.
+\newblock \eprint{1207.7235}.
+
+\bibitem{CMS:2013btf}
+S.~Chatrchyan \emph{et~al.}
+\newblock \enquote{{Observation of a new boson with mass near 125 GeV in pp
+  collisions at $\sqrt{s}$ = 7 and 8 TeV}.}
+\newblock \emph{JHEP}  (2013) \textbf{06}:081.
+\newblock \doi{10.1007/JHEP06(2013)081}.
+\newblock \eprint{1303.4571}.
+
+\bibitem{PhysRevD.98.030001}
+{Particle Data Group}, P.~A. Zyla, \emph{et~al.}
+\newblock \enquote{Review of particle physics.}
+\newblock \emph{Prog. Theor. Exp. Phys.}  (2020) \textbf{2020}:083C01.
+\newblock \doi{10.1093/ptep/ptaa104}.
+
+\bibitem{Abba96}
+A.~Abbasabadi, D.~Bowser-Chao, D.~A. Dicus, and W.~W. Repko.
+\newblock \enquote{Radiative {Higgs} boson decays {$\PH\to ff\gamma$}.}
+\newblock \emph{Phys. Rev. D}  (1997) \textbf{55}:5647.
+\newblock \doi{10.1103/PhysRevD.55.5647}.
+\newblock \eprint{hep-ph/9611209}.
+
+\bibitem{Chen12}
+L.~B. Chen, C.~F. Qiao, and R.~L. Zhu.
+\newblock \enquote{Reconstructing the 125 {GeV SM Higgs} boson through
+  $\ell\bar{\ell}\gamma$.}
+\newblock \emph{Phys. Lett. B}  (2013) \textbf{726}:306.
+\newblock \doi{10.1016/j.physletb.2013.08.050}.
+\newblock \eprint{1211.6058}.
+
+\bibitem{Htollg-FB-Sun}
+Y.~Sun, H.~Chang, and D.~Gao.
+\newblock \enquote{Higgs decays to $\gamma \ell^+\ell^-$ in the standard
+  model.}
+\newblock \emph{JHEP}  (2013) \textbf{05}:061.
+\newblock \doi{10.1007/JHEP05(2013)061}.
+\newblock \eprint{1303.2230}.
+
+\bibitem{Passarino}
+G.~Passarino.
+\newblock \enquote{Higgs boson production and decay: {Dalitz} sector.}
+\newblock \emph{Phys. Lett. B}  (2013) \textbf{727}:424.
+\newblock \doi{10.1016/j.physletb.2013.10.052}.
+\newblock \eprint{1308.0422}.
+
+\bibitem{Campbell_2013hz}
+J.~M. Campbell, R.~K. Ellis, W.~T. Giele, and C.~Williams.
+\newblock \enquote{{Finding the Higgs boson in decays to $Z \gamma$ using the
+  matrix element method at next-to-leading order}.}
+\newblock \emph{Phys. Rev. D}  (2013) \textbf{87}:073005.
+\newblock \doi{10.1103/PhysRevD.87.073005}.
+\newblock \eprint{1301.7086}.
+
+\bibitem{Degrassi:2019yix}
+G.~Degrassi and M.~Vitti.
+\newblock \enquote{{The effect of an anomalous Higgs trilinear self-coupling on
+  the $h \rightarrow \gamma \, Z$ decay}.}
+\newblock \emph{Eur. Phys. J. C}  (2020) \textbf{80}:307.
+\newblock \doi{10.1140/epjc/s10052-020-7860-7}.
+\newblock \eprint{1912.06429}.
+
+\bibitem{Low:2011gn}
+I.~Low, J.~Lykken, and G.~Shaughnessy.
+\newblock \enquote{{Singlet scalars as Higgs imposters at the Large Hadron
+  Collider}.}
+\newblock \emph{Phys. Rev. D}  (2011) \textbf{84}:035027.
+\newblock \doi{10.1103/PhysRevD.84.035027}.
+\newblock \eprint{1105.4587}.
+
+\bibitem{LHC-YR4}
+D.~de~Florian \emph{et~al.}
+\newblock \enquote{{Handbook of LHC Higgs cross sections: 4. deciphering the
+  nature of the Higgs sector}.}  (2016) \textbf{2/2017}.
+\newblock \doi{10.23731/CYRM-2017-002}.
+\newblock \eprint{1610.07922}.
+
+\bibitem{CMS:2021kom}
+A.~M. Sirunyan \emph{et~al.}
+\newblock \enquote{{Measurements of Higgs boson production cross sections and
+  couplings in the diphoton decay channel at $ \sqrt{\mathrm{s}} $ = 13 TeV}.}
+\newblock \emph{JHEP}  (2021) \textbf{07}:027.
+\newblock \doi{10.1007/JHEP07(2021)027}.
+\newblock \eprint{2103.06956}.
+
+\bibitem{CMS:2020xrn}
+A.~M. Sirunyan \emph{et~al.}
+\newblock \enquote{{A measurement of the Higgs boson mass in the diphoton decay
+  channel}.}
+\newblock \emph{Phys. Lett. B}  (2020) \textbf{805}:135425.
+\newblock \doi{10.1016/j.physletb.2020.135425}.
+\newblock \eprint{2002.06398}.
+
+\bibitem{Djouadi:1996yq}
+A.~Djouadi, V.~Driesen, W.~Hollik, and A.~Kraft.
+\newblock \enquote{{The Higgs-photon-Z boson coupling revisited}.}
+\newblock \emph{Eur. Phys. J. C}  (1998) \textbf{1}:163.
+\newblock \doi{10.1007/BF01245806}.
+\newblock \eprint{hep-ph/9701342}.
+
+\bibitem{Zg_theory_extension}
+C.-W. Chiang and K.~Yagyu.
+\newblock \enquote{{Higgs boson decays to
+  \ensuremath{\gamma}\ensuremath{\gamma} and Z\ensuremath{\gamma} in models
+  with Higgs extensions}.}
+\newblock \emph{Phys. Rev. D}  (2013) \textbf{87}:033003.
+\newblock \doi{10.1103/PhysRevD.87.033003}.
+\newblock \eprint{1207.1065}.
+
+\bibitem{Zg_theory_decaywidth}
+M.~Carena, I.~Low, and C.~E.~M. Wagner.
+\newblock \enquote{{Implications of a modified Higgs to diphoton decay width}.}
+\newblock \emph{JHEP}  (2012) \textbf{08}:060.
+\newblock \doi{10.1007/JHEP08(2012)060}.
+\newblock \eprint{1206.1082}.
+
+\bibitem{Chen:2013vi}
+C.-S. Chen, C.-Q. Geng, D.~Huang, and L.-H. Tsai.
+\newblock \enquote{{New scalar contributions to $h\to Z\gamma$}.}
+\newblock \emph{Phys. Rev. D}  (2013) \textbf{87}:075019.
+\newblock \doi{10.1103/PhysRevD.87.075019}.
+\newblock \eprint{1301.4694}.
+
+\bibitem{atl-HZG}
+G.~Aad \emph{et~al.}
+\newblock \enquote{Search for {Higgs} boson decays to a photon and a {Z} boson
+  in pp collisions at $\sqrt{s}$ = 7 and 8 {TeV} with the {ATLAS} detector.}
+\newblock \emph{Phys. Lett. B}  (2014) \textbf{732}:8.
+\newblock \doi{10.1016/j.physletb.2014.03.015}.
+\newblock \eprint{1402.3051}.
+
+\bibitem{cms-HZG}
+S.~Chatrchyan \emph{et~al.}
+\newblock \enquote{Search for a {Higgs} boson decaying into a {Z} and a photon
+  in pp collisions at $\sqrt{s} = 7$ and {8\TeV}.}
+\newblock \emph{Phys. Lett. B}  (2013) \textbf{726}:587.
+\newblock \doi{10.1016/j.physletb.2013.09.057}.
+\newblock \eprint{1307.5515}.
+
+\bibitem{Sirunyan:2018tbk}
+A.~M. Sirunyan \emph{et~al.}
+\newblock \enquote{{Search for the decay of a Higgs boson in the
+  $\ell\ell\gamma$ channel in proton-proton collisions at $\sqrt{s} =$ 13
+  TeV}.}
+\newblock \emph{JHEP}  (2018) \textbf{11}:152.
+\newblock \doi{10.1007/JHEP11(2018)152}.
+\newblock \eprint{1806.05996}.
+
+\bibitem{Aad:2020plj}
+G.~Aad \emph{et~al.}
+\newblock \enquote{{A search for the $Z\gamma$ decay mode of the Higgs boson in
+  pp collisions at $\sqrt{s}$ = 13 TeV with the ATLAS detector}.}
+\newblock \emph{Phys. Lett. B}  (2020) \textbf{809}:135754.
+\newblock \doi{10.1016/j.physletb.2020.135754}.
+\newblock \eprint{2005.05382}.
+
+\bibitem{atlas_llgrun2}
+G.~Aad \emph{et~al.}
+\newblock \enquote{{Evidence for Higgs boson decays to a low-mass dilepton
+  system and a photon in pp collisions at $\sqrt{s}$=13 TeV with the ATLAS
+  detector}.}
+\newblock \emph{Phys. Lett. B}  (2021) \textbf{819}:136412.
+\newblock \doi{10.1016/j.physletb.2021.136412}.
+\newblock \eprint{2103.10322}.
+
+\bibitem{2016341}
+V.~Khachatryan \emph{et~al.}
+\newblock \enquote{{Search for a Higgs boson decaying into $\gamma^* \gamma \to
+  \ell \ell \gamma$ with low dilepton mass in pp collisions at $\sqrt s = $ 8
+  TeV}.}
+\newblock \emph{Phys. Lett. B}  (2016) \textbf{753}:341.
+\newblock \doi{10.1016/j.physletb.2015.12.039}.
+\newblock \eprint{1507.03031}.
+
+\bibitem{CMS:2008xjf}
+S.~Chatrchyan \emph{et~al.}
+\newblock \enquote{The {CMS} experiment at the {CERN} {LHC}.}
+\newblock \emph{JINST}  (2008) \textbf{3}:S08004.
+\newblock \doi{10.1088/1748-0221/3/08/S08004}.
+
+\bibitem{CMS:2020cmk}
+A.~M. Sirunyan \emph{et~al.}
+\newblock \enquote{{Performance of the CMS Level-1 trigger in proton-proton
+  collisions at $\sqrt{s} =$ 13 TeV}.}
+\newblock \emph{JINST}  (2020) \textbf{15}:P10017.
+\newblock \doi{10.1088/1748-0221/15/10/P10017}.
+\newblock \eprint{2006.10165}.
+
+\bibitem{CMS:2016ngn}
+V.~Khachatryan \emph{et~al.}
+\newblock \enquote{{The CMS trigger system}.}
+\newblock \emph{JINST}  (2017) \textbf{12}:P01020.
+\newblock \doi{10.1088/1748-0221/12/01/P01020}.
+\newblock \eprint{1609.02366}.
+
+\bibitem{CMS:2015xaf}
+V.~Khachatryan \emph{et~al.}
+\newblock \enquote{{Performance of electron reconstruction and selection with
+  the CMS detector in proton-proton collisions at $\sqrt{s} = 8$\TeV}.}
+\newblock \emph{JINST}  (2015) \textbf{10}:P06005.
+\newblock \doi{10.1088/1748-0221/10/06/P06005}.
+\newblock \eprint{1502.02701}.
+
+\bibitem{CMS:2018rym}
+A.~M. Sirunyan \emph{et~al.}
+\newblock \enquote{{Performance of the CMS muon detector and muon
+  reconstruction with proton-proton collisions at $\sqrt{s}=$ 13 TeV}.}
+\newblock \emph{JINST}  (2018) \textbf{13}:P06015.
+\newblock \doi{10.1088/1748-0221/13/06/P06015}.
+\newblock \eprint{1804.04528}.
+
+\bibitem{CMS:2015myp}
+V.~Khachatryan \emph{et~al.}
+\newblock \enquote{Performance of photon reconstruction and identification with
+  the {CMS} detector in proton-proton collisions at sqrt(s) = 8 {TeV}.}
+\newblock \emph{JINST}  (2015) \textbf{10}:P08010.
+\newblock \doi{10.1088/1748-0221/10/08/P08010}.
+\newblock \eprint{1502.02702}.
+
+\bibitem{CMS:2014pgm}
+S.~Chatrchyan \emph{et~al.}
+\newblock \enquote{{Description and performance of track and primary-vertex
+  reconstruction with the CMS tracker}.}
+\newblock \emph{JINST}  (2014) \textbf{9}:P10009.
+\newblock \doi{10.1088/1748-0221/9/10/P10009}.
+\newblock \eprint{1405.6569}.
+
+\bibitem{CMS:2017yfk}
+A.~M. Sirunyan \emph{et~al.}
+\newblock \enquote{Particle-flow reconstruction and global event description
+  with the {CMS} detector.}
+\newblock \emph{JINST}  (2017) \textbf{12}:P10003.
+\newblock \doi{10.1088/1748-0221/12/10/P10003}.
+\newblock \eprint{1706.04965}.
+
+\bibitem{CMS:2020uim}
+A.~M. Sirunyan \emph{et~al.}
+\newblock \enquote{{Electron and photon reconstruction and identification with
+  the CMS experiment at the CERN LHC}.}
+\newblock \emph{JINST}  (2021) \textbf{16}:P05014.
+\newblock \doi{10.1088/1748-0221/16/05/P05014}.
+\newblock \eprint{2012.06888}.
+
+\bibitem{Cacciari:2008gp}
+M.~Cacciari, G.~P. Salam, and G.~Soyez.
+\newblock \enquote{{The anti-$k_\textrm{T}$ jet clustering algorithm}.}
+\newblock \emph{JHEP}  (2008) \textbf{04}:063.
+\newblock \doi{10.1088/1126-6708/2008/04/063}.
+\newblock \eprint{0802.1189}.
+
+\bibitem{Cacciari:2011ma}
+M.~Cacciari, G.~P. Salam, and G.~Soyez.
+\newblock \enquote{{FastJet user manual}.}
+\newblock \emph{Eur. Phys. J. C}  (2012) \textbf{72}:1896.
+\newblock \doi{10.1140/epjc/s10052-012-1896-2}.
+\newblock \eprint{1111.6097}.
+
+\bibitem{CMS:2020ebo}
+A.~M. Sirunyan \emph{et~al.}
+\newblock \enquote{{Pileup mitigation at CMS in 13 TeV data}.}
+\newblock \emph{JINST}  (2020) \textbf{15}:P09018.
+\newblock \doi{10.1088/1748-0221/15/09/P09018}.
+\newblock \eprint{2003.00503}.
+
+\bibitem{CMS:2016lmd}
+V.~Khachatryan \emph{et~al.}
+\newblock \enquote{{Jet energy scale and resolution in the CMS experiment in pp
+  collisions at 8 TeV}.}
+\newblock \emph{JINST}  (2017) \textbf{12}:P02014.
+\newblock \doi{10.1088/1748-0221/12/02/P02014}.
+\newblock \eprint{1607.03663}.
+
+\bibitem{CMS-LUM-17-003}
+A.~M. Sirunyan \emph{et~al.}
+\newblock \enquote{Precision luminosity measurement in proton-proton collisions
+  at $\sqrt{s} =$ 13 {TeV} in 2015 and 2016 at {CMS}.}
+\newblock \emph{Eur. Phys. J. C}  (2021) \textbf{81}:800.
+\newblock \doi{10.1140/epjc/s10052-021-09538-2}.
+\newblock \eprint{2104.01927}.
+
+\bibitem{LUM-17-004}
+\enquote{{CMS} luminosity measurement for the 2017 data-taking period at
+  $\sqrt{s}=$ 13 {TeV}.}
+\newblock \emph{CMS Physics Analysis Summary CMS-PAS-LUM-17-004} (2018).
+\newline\urlprefix\url{https://cds.cern.ch/record/2621960}
+
+\bibitem{LUM-18-002}
+\enquote{{CMS} luminosity measurement for the 2018 data-taking period at
+  $\sqrt{s}=$ 13 {TeV}.}
+\newblock \emph{CMS Physics Analysis Summary CMS-PAS-LUM-18-002} (2019).
+\newline\urlprefix\url{https://cds.cern.ch/record/2676164}
+
+\bibitem{cite:powheg1}
+S.~Alioli, P.~Nason, C.~Oleari, and E.~Re.
+\newblock \enquote{{NLO Higgs} boson production via gluon fusion matched with
+  shower in {POWHEG}.}
+\newblock \emph{JHEP}  (2009) \textbf{04}:002.
+\newblock \doi{10.1088/1126-6708/2009/04/002}.
+\newblock \eprint{0812.0578}.
+
+\bibitem{cite:powheg2}
+P.~Nason and C.~Oleari.
+\newblock \enquote{{NLO Higgs} boson production via vector-boson fusion matched
+  with shower in {POWHEG}.}
+\newblock \emph{JHEP}  (2010) \textbf{02}:037.
+\newblock \doi{10.1007/JHEP02(2010)037}.
+\newblock \eprint{0911.5299}.
+
+\bibitem{Alwall:2014hca}
+J.~Alwall, R.~Frederix, S.~Frixione, V.~Hirschi, F.~Maltoni, \emph{et~al.}
+\newblock \enquote{The automated computation of tree-level and next-to-leading
+  order differential cross sections, and their matching to parton shower
+  simulations.}
+\newblock \emph{JHEP}  (2014) \textbf{07}:079.
+\newblock \doi{10.1007/JHEP07(2014)079}.
+\newblock \eprint{1405.0301}.
+
+\bibitem{Frixione:2007nw}
+S.~Frixione, P.~Nason, and G.~Ridolfi.
+\newblock \enquote{{A Positive-weight next-to-leading-order Monte Carlo for
+  heavy flavour hadroproduction}.}
+\newblock \emph{JHEP}  (2007) \textbf{09}:126.
+\newblock \doi{10.1088/1126-6708/2007/09/126}.
+\newblock \eprint{0707.3088}.
+
+\bibitem{Anastasiou:2016cez}
+C.~Anastasiou, C.~Duhr, F.~Dulat, E.~Furlan, T.~Gehrmann, \emph{et~al.}
+\newblock \enquote{{High precision determination of the gluon fusion Higgs
+  boson cross-section at the LHC}.}
+\newblock \emph{JHEP}  (2016) \textbf{05}:058.
+\newblock \doi{10.1007/JHEP05(2016)058}.
+\newblock \eprint{1602.00695}.
+
+\bibitem{PhysRevLett.115.082002}
+M.~Cacciari, F.~A. Dreyer, A.~Karlberg, G.~P. Salam, and G.~Zanderighi.
+\newblock \enquote{Fully differential vector-boson-fusion higgs production at
+  next-to-next-to-leading order.}
+\newblock \emph{Phys. Rev. Lett.}  (2015) \textbf{115}:082002.
+\newblock \doi{10.1103/PhysRevLett.115.082002}.
+\newblock [Erratum: \DOI{10.1103/PhysRevLett.120.139901}].
+\newline\urlprefix\url{https://link.aps.org/doi/10.1103/PhysRevLett.115.082002}
+
+\bibitem{BREIN2004149}
+O.~Brein, A.~Djouadi, and R.~Harlander.
+\newblock \enquote{{NNLO QCD corrections to the Higgs-strahlung processes at
+  hadron colliders}.}
+\newblock \emph{Phys. Lett. B}  (2004) \textbf{579}:149.
+\newblock \doi{10.1016/j.physletb.2003.10.112}.
+\newblock \eprint{hep-ph/0307206}.
+
+\bibitem{PhysRevD.68.034022}
+S.~Dawson, C.~Jackson, L.~H. Orr, L.~Reina, and D.~Wackeroth.
+\newblock \enquote{{Associated Higgs production with top quarks at the large
+  hadron collider: NLO QCD corrections}.}
+\newblock \emph{Phys. Rev. D}  (2003) \textbf{68}:034022.
+\newblock \doi{10.1103/PhysRevD.68.034022}.
+\newblock \eprint{hep-ph/0305087}.
+
+\bibitem{Sjostrand:2014zea}
+T.~Sj{\"o}strand, S.~Ask, J.~R. Christiansen, R.~Corke, N.~Desai, \emph{et~al.}
+\newblock \enquote{An introduction to {PYTHIA 8.2}.}
+\newblock \emph{Comput. Phys. Commun.}  (2015) \textbf{191}:159.
+\newblock \doi{10.1016/j.cpc.2015.01.024}.
+\newblock \eprint{1410.3012}.
+
+\bibitem{Khachatryan:2015pea}
+V.~Khachatryan \emph{et~al.}
+\newblock \enquote{Event generator tunes obtained from underlying event and
+  multiparton scattering measurements.}
+\newblock \emph{Eur. Phys. J. C}  (2016) \textbf{76}:155.
+\newblock \doi{10.1140/epjc/s10052-016-3988-x}.
+\newblock \eprint{1512.00815}.
+
+\bibitem{Sirunyan:2019dfx}
+A.~M. Sirunyan \emph{et~al.}
+\newblock \enquote{{Extraction and validation of a new set of CMS PYTHIA8 tunes
+  from underlying-event measurements}.}
+\newblock \emph{Eur. Phys. J. C}  (2020) \textbf{80}:4.
+\newblock \doi{10.1140/epjc/s10052-019-7499-4}.
+\newblock \eprint{1903.12179}.
+
+\bibitem{nnpdf30}
+R.~D. Ball \emph{et~al.}
+\newblock \enquote{Parton distributions for the {LHC} run {II}.}
+\newblock \emph{JHEP}  (2015) \textbf{04}:040.
+\newblock \doi{10.1007/JHEP04(2015)040}.
+\newblock \eprint{1410.8849}.
+
+\bibitem{nnpdf_new}
+R.~D. Ball, V.~Bertone, F.~Cerutti, L.~Del~Debbio, S.~Forte, \emph{et~al.}
+\newblock \enquote{Parton distributions from high-precision collider data.}
+\newblock \emph{Eur. Phys. J. C}  (2017) \textbf{77}:663.
+\newblock \doi{10.1140/epjc/s10052-017-5199-5}.
+\newblock \eprint{1706.00428}.
+
+\bibitem{AGOSTINELLI2003250}
+\enquote{Geant4$-$a simulation toolkit.}
+\newblock \emph{Nucl. Instrum. Meth. A}  (2003) \textbf{506}:250.
+\newblock ISSN 0168-9002.
+\newblock \doi{10.1016/S0168-9002(03)01368-8}.
+
+\bibitem{CB-Oreglia}
+M.~J. Oreglia.
+\newblock \enquote{A study of the reactions $\psi^\prime \to \gamma \gamma
+  \psi$.}
+\newblock Ph.D. thesis, Stanford University (1980).
+\newblock {SLAC} Report {SLAC-R-236}, see Appendix {D}.
+\newline\urlprefix\url{http://www.slac.stanford.edu/pubs/slacreports/slac-r-236.html}
+
+\bibitem{Dauncey:2014xga}
+P.~D. Dauncey, M.~Kenzie, N.~Wardle, and G.~J. Davies.
+\newblock \enquote{{Handling uncertainties in background shapes}.}
+\newblock \emph{JINST}  (2015) \textbf{10}:P04015.
+\newblock \doi{10.1088/1748-0221/10/04/P04015}.
+\newblock \eprint{1408.6865}.
+
+\bibitem{cite:cs1}
+A.~D. Martin, W.~J. Stirling, R.~S. Thorne, and G.~Watt.
+\newblock \enquote{Parton distributions for the {LHC}.}
+\newblock \emph{Eur. Phys. J. C}  (2009) \textbf{63}:189.
+\newblock \doi{10.1140/epjc/s10052-009-1072-5}.
+\newblock \eprint{0901.0002}.
+
+\bibitem{cite:cs2}
+H.~Lai, M.~Guzzi, J.~Huston, Z.~Li, P.~M. Nadolsky, \emph{et~al.}
+\newblock \enquote{New parton distributions for collider physics.}
+\newblock \emph{Phys. Rev. D}  (2010) \textbf{82}:74024.
+\newblock \doi{10.1103/PhysRevD.82.074024}.
+\newblock \eprint{1007.2241}.
+
+\bibitem{Butterworth:2015oua}
+J.~Butterworth \emph{et~al.}
+\newblock \enquote{{PDF4LHC} recommendations for {LHC} run {II}.}
+\newblock \emph{J. Phys. G}  (2016) \textbf{43}:023001.
+\newblock \doi{10.1088/0954-3899/43/2/023001}.
+\newblock \eprint{1510.03865}.
+
+\bibitem{Sirunyan:2018nqx}
+A.~M. Sirunyan \emph{et~al.}
+\newblock \enquote{{Measurement of the inelastic proton-proton cross section at
+  $ \sqrt{s}=13 $ TeV}.}
+\newblock \emph{JHEP}  (2018) \textbf{07}:161.
+\newblock \doi{10.1007/JHEP07(2018)161}.
+\newblock \eprint{1802.02613}.
+
+\bibitem{Fisher:1922saa}
+R.~A. Fisher.
+\newblock \enquote{{On the mathematical foundations of theoretical
+  statistics}.}
+\newblock \emph{Phil. Trans. Roy. Soc. Lond.}  (1922) \textbf{222}:309.
+\newblock \doi{10.1098/rsta.1922.0009}.
+
+\bibitem{cite:l3}
+{ATLAS and CMS Collaborations, The LHC Higgs combination group}.
+\newblock \enquote{Procedure for the {LHC Higgs} boson search combination in
+  summer 2011.}
+\newblock \emph{Technical Report CMS-NOTE-2011-005. ATL-PHYS-PUB-2011-11}
+  (2011).
+\newline\urlprefix\url{https://cds.cern.ch/record/1379837}
+
+\bibitem{cite:l1}
+A.~L. Read.
+\newblock \enquote{{Presentation of search results: The CL$_{s}$ technique}.}
+\newblock \emph{J. Phys. G}  (2002) \textbf{28}:2693.
+\newblock \doi{10.1088/0954-3899/28/10/313}.
+
+\bibitem{cite:l2}
+T.~Junk.
+\newblock \enquote{Confidence level computation for combining searches with
+  small statistics.}
+\newblock \emph{Nucl. Instrum. Meth. A}  (1999) \textbf{434}:435.
+\newblock \doi{10.1016/S0168-9002(99)00498-2}.
+\newblock \eprint{hep-ex/9902006}.
+
+\bibitem{Cowan:2010js}
+G.~Cowan, K.~Cranmer, E.~Gross, and O.~Vitells.
+\newblock \enquote{Asymptotic formulae for likelihood-based tests of new
+  physics.}
+\newblock \emph{Eur. Phys. J. C}  (2011) \textbf{71}:1554.
+\newblock \doi{10.1140/epjc/s10052-011-1554-0}.
+\newblock [Erratum: \DOI{10.1140/epjc/s10052-013-2501-z}], \eprint{1007.1727}.
+
+\end{thebibliography}
