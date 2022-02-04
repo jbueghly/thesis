@@ -2,26 +2,43 @@
 
 \section{The Standard Model}
 
-\begin{figure}
+The SM is currently our best theoretical framework for understanding the nature of fundamental particles. 
+It is rooted in the idea that particles exist as excitations of quantum fields. These fields are constructed so as to obey 
+fundamental symmetries of nature, and quantum field theory describes both the particles of our universe and their interactions. The SM is not only 
+elegant and extensive, but provides a wide variety of measurable observables for the experimentalist to probe. So far, many 
+measurements have been made of the known elementary particles and their interactions, and the predictions of the SM have held up in each case. In 
+this respect, it is a wildly successful theory. In other respects, it is obviously incomplete. It does not account for the gravitational force, dark matter, or dark energy, among other phenomena. 
+Thus, there is value in testing the SM even more carefully with experiments 
+like those at the LHC, in hopes of refining our understanding and potentially discovering new physics. 
+
+\section{The Elementary Particles} 
+
+\begin{figure}[htb]
 	\begin{center}
 	\includegraphics[width=0.65\textwidth]{fig/theory/Standard_Model_of_Elementary_Particles.png}
-		\caption[Table of fundamental particles in the SM. The leftmost three columns correspond to three generations of fermions, 
-		the fourth column from the left shows the gauge bosons which mediate the fundamental forces, and the rightmost column shows the Higgs boson. 
+		\caption[Table of elementary particles in the SM. The leftmost three columns correspond to three generations of fermions, 
+		the fourth column from the left shows the gauge bosons which mediate the elementary forces, and the rightmost column shows the Higgs boson. 
 		For each particle, mass, charge, and spin are labeled, with mass values given as of 2019.]
-		{Table~\cite{SMImage} of fundamental particles in the SM. The leftmost three columns correspond to three generations of fermions, 
+		{Table~\cite{SMImage} of elementary particles in the SM. The leftmost three columns correspond to three generations of fermions, 
 		the fourth column from the left shows the gauge bosons which mediate the fundamental forces, and the rightmost column shows the Higgs boson. 
 		For each particle, mass, charge, and spin are labeled, with mass values given as of 2019.}
 		\label{fig:SMParticles}
 	\end{center}
 \end{figure}
 
-
-The Standard Model (SM) is currently our best theoretical framework for understanding the nature of fundamental particles. 
-It is rooted in the idea that particles exist as excitations of quantum fields. These fields are constructed so as to obey 
-fundamental symmetries of nature, and they yield the particles of our universe, as well as their interactions. The SM is not only 
-elegant and extensive, but provides a wide variety of measurable observables for the experimentalist to probe. So far, many 
-measurements have been made of the currently known elementary particles, and the predictions of the SM have held up in each case. In 
-this respect, it is a wildly successful theory. In other respects, it is obviously incomplete.
+Figure \ref{fig:SMParticles} catalogs the elementary particles of the SM. These particles come in two broad types: fermions and bosons. Fermions are particles of half-integer spin that obey 
+the Pauli exclusion principle. They are, therefore, responsible for the structure of matter. 
+Each fermion has a corresponding antiparticle that has opposite electrical charge, but is otherwise identical. 
+The fermions are subdivided into two types in three generations, the generations corresponding to mass.
+Quarks are fermions that carry both fractional electric charge and color charge, so they participate in the electroweak and strong interactions. 
+Leptons are fermions that carry integer electric charge and participate in the electroweak interaction.
+In contrast to fermions, bosons have integer spin. The vector gauge bosons function as mediators of the fundamental forces of nature. 
+The gluons mediate the strong force, the photon the electromagnetic force, and the W and Z bosons the weak force. 
+Finally, the electrically neutral, scalar Higgs boson emerges due to electroweak symmetry breaking, described later in this section. The interaction of the Higgs 
+with the other particles in the SM is responsible for particle masses. 
+In the context of this thesis, which is a search for \hzg{}, the most relevant elementary particles are the Higgs boson, Z boson, leptons, and photon. 
+Therefore, the remainder of this section will describe electroweak theory and the Higgs mechanism in more detail. Other aspects of the SM, such as quantum chromodynamics, 
+are of importance in collider physics, but of less relevance for this specific search. Such topics are omitted in order to narrow the scope of the discussion.
 
 \section{Electroweak Theory}
 
@@ -248,3 +265,55 @@ We see that the branching fraction of \hzg is suppressed relative to several oth
 
 \section{Physics Beyond the Standard Model}
 
+One of the goals of the LHC is to search for BSM physics. While the decay \hzg{} is predicted in the SM, searching for it and measuring its branching fraction can indirectly probe potential 
+new physics phenomena. A few unique features of \hzg{} make it well-suited as a BSM probe. First, the decay is loop-induced, which means that the introduction of new particles will contribute 
+to the loop, interfering and altering the final branching fraction. Secondly, the decay \hgg{} is a very similar loop-induced process that has been discovered and measured extensively 
+by the CMS and ATLAS Collaborations [REFS]. This means any new particle content entering into the \hzg{} loop will also enter into the \hgg{} loop. However, in the case of \hzg{}, the
+Z boson couples to loop particles according to the SU(2)xU(1) quantum number rather than just the electric charge, as is the case for \hgg{}. 
+It follows that potential BSM physics scenarios can shift the 
+branching fractions of \hzg{} and \hgg{} by differing amounts, making the ratio $\mathcal{B}(\PH\rightarrow\PZ\gamma)/\mathcal{B}(\PH\rightarrow\gamma\gamma)$ a sensitive observable. In the SM, 
+$\mathcal{B}(\PH\rightarrow\PZ\gamma)/\mathcal{B}(\PH\rightarrow\gamma\gamma) = 0.69 \pm 0.04$. A measurement of a significant deviation from this value would be an indicator of possible BSM physics.
+Below, we describe a few examples of BSM scenarios that can affect this ratio.
+
+One way to consider BSM effects in the context of \hzg{} is to introduce new particles, like a W' boson, charged scalar, or a pair of charged leptons. 
+This is the approach taken by Carena, Low, and Wagner~\cite{Zg_theory_decaywidth}. The W' possibility is motivated by the fact that the W boson loop is the dominant 
+contribution in the SM. The W' can be defined by an SU(2) triplet and characterized by mass and Higgs coupling parameters. Figure \ref{fig:rzg_bsm} (left) shows contours of constant branching fraction 
+enhancement in the \hzg{} and \hgg{} decay channels in the mass-coupling plane for the W' model. 
+Depending on the parameter values, the level of enhancement can be up to double the SM value, and it differs 
+significantly in the two channels. Similarly, we can imagine a new charged scalar or a pair of new charged leptons. The branching fraction enhancement contour plots in Fig. \ref{fig:rzg_bsm} show that for similar regions in the mass-coupling plane, \hzg{} can be enhanced, while \hgg{} is simultaneously diminished. 
+
+Other relevant BSM physics models include extended Higgs sectors. Such models often contain charged Higgs bosons, which enter into the \hzg{} and \hgg{} loops and impact the branching fractions. 
+In Ref. \cite{Zg_theory_extension}, Chiang and Yagyu catalog extended Higgs models of varying types: models with one singly-charged boson, those with one singly-charged and one doubly-charged boson, 
+and those with two singly-charged bosons. In total, the authors consider thirteen models, including the two Higgs doublet model, the minimal SUSY model, and the Higgs triplet model. 
+Figure \ref{fig:exthiggs} gives the ratio of decay widths $\Gamma(\PH\rightarrow\PZ\gamma)/\Gamma(\PH\rightarrow\gamma\gamma)$ as a function of the mass coefficient of the additional scalar field(s) for seven of the models. It is evident that, for mass scales accessible at the LHC, the ratio can be significantly shifted relative to the SM expectation. 
+
+
+\begin{figure}[tb]
+	\begin{center}
+		\includegraphics[width=0.30\textwidth, height=.30\textwidth]{fig/theory/rzgamma_wprime.png}
+		\includegraphics[width=0.30\textwidth, height=.30\textwidth]{fig/theory/rzgamma_scalar.png}
+		\includegraphics[width=0.30\textwidth, height=.30\textwidth]{fig/theory/rzgamma_fermion.png}
+		\caption[Contours of constant branching fraction enhancement relative to the SM for the W' (left), charged scalar (center), 
+		and charged lepton (right) scenarios. 
+		The solid lines represent contours of enhancement in $\mathcal{B}$(\hzg), while the dashed lines correspond to \hgg{}. The yellow boxed numbers label the enhancement for each 
+		\hzg{} contour, and the unboxed numbers label the enhancement for each \hgg{} contour.]
+		{Contours of constant branching fraction enhancement relative to the SM for the W' (left), charged scalar (center), 
+		and charged lepton (right) scenarios~\cite{Zg_theory_decaywidth}. 
+		The solid lines represent contours of enhancement in $\mathcal{B}$(\hzg), while the dashed lines correspond to \hgg{}. The yellow boxed numbers label the enhancement for each 
+		\hzg{} contour, and the unboxed numbers label the enhancement for each \hgg{} contour.}
+		\label{fig:rzg_bsm}
+	\end{center}
+\end{figure}
+
+\begin{figure}[tb]
+	\begin{center}
+		\includegraphics[width=0.9\textwidth]{fig/theory/rzgamma_exthiggs.png}
+		\caption[Ratio of decay widths $\Gamma(\PH\rightarrow\PZ\gamma)/\Gamma(\PH\rightarrow\gamma\gamma)$ as a function of the mass coefficient of the additional scalar field(s) for 
+		seven BSM models with extended Higgs sectors. 
+		The models plotted on the left correspond to one additional singly-charged boson, and those on the right to one additional singly-charged and one additional doubly-charged boson.]
+		{Ratio of decay widths $\Gamma(\PH\rightarrow\PZ\gamma)/\Gamma(\PH\rightarrow\gamma\gamma)$ as a function of the mass coefficient of the additional scalar field(s) for 
+		seven BSM models with extended Higgs sectors~\cite{Zg_theory_extension}. 
+		The models plotted on the left correspond to one additional singly-charged boson, and those on the right to one additional singly-charged and one additional doubly-charged boson.}
+		\label{fig:exthiggs}
+	\end{center}
+\end{figure}

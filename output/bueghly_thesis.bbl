@@ -122,6 +122,13 @@ A.~Djouadi, V.~Driesen, W.~Hollik, and A.~Kraft.
 \newblock \doi{10.1007/BF01245806}.
 \newblock \eprint{hep-ph/9701342}.
 
+\bibitem{Zg_theory_decaywidth}
+M.~Carena, I.~Low, and C.~E.~M. Wagner.
+\newblock \enquote{{Implications of a modified Higgs to diphoton decay width}.}
+\newblock \emph{JHEP}  (2012) \textbf{08}:060.
+\newblock \doi{10.1007/JHEP08(2012)060}.
+\newblock \eprint{1206.1082}.
+
 \bibitem{Zg_theory_extension}
 C.-W. Chiang and K.~Yagyu.
 \newblock \enquote{{Higgs boson decays to
@@ -130,13 +137,6 @@ C.-W. Chiang and K.~Yagyu.
 \newblock \emph{Phys. Rev. D}  (2013) \textbf{87}:033003.
 \newblock \doi{10.1103/PhysRevD.87.033003}.
 \newblock \eprint{1207.1065}.
-
-\bibitem{Zg_theory_decaywidth}
-M.~Carena, I.~Low, and C.~E.~M. Wagner.
-\newblock \enquote{{Implications of a modified Higgs to diphoton decay width}.}
-\newblock \emph{JHEP}  (2012) \textbf{08}:060.
-\newblock \doi{10.1007/JHEP08(2012)060}.
-\newblock \eprint{1206.1082}.
 
 \bibitem{Chen:2013vi}
 C.-S. Chen, C.-Q. Geng, D.~Huang, and L.-H. Tsai.
