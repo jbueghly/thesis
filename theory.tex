@@ -41,20 +41,35 @@ Therefore, the remainder of this section will describe electroweak theory and th
 are of importance in collider physics, but of less relevance for this specific search. Such topics are omitted in order to narrow the scope of the discussion.
 
 \section{Electroweak Theory}
+To motivate the Higgs mechanism and Higgs interactions, it is useful to first consider the electroweak interaction absent the Higgs. The electroweak piece of the 
+SM Lagrangian can be written as 
+\begin{align}
+	& \mathcal{L}_{EW} = -\frac{1}{4}A_a^{\mu\nu}A^a_{\mu\nu} - \frac{1}{4}B^{\mu\nu}B_{\mu\nu} + i\sum_L \bar{L}\gamma^{\mu}D_{\mu,L}L + i\sum_R \bar{R}\gamma^{\mu}D_{\mu,R}R \label{eqn:LEWK}\\
+	& A^a_{\mu\nu} = \partial_{\mu}A_{\nu}^{a} - \partial_{\nu}A_{\mu} + g\varepsilon_{abc}W^{b}_{\mu}W^{c}_{\nu} \\
+	& B_{\mu\nu} = \partial_{\mu}B_{\nu} - \partial_{\nu}B_{\mu} \\
+	& D_{\mu,L} = \partial_{\mu} + \frac{ig}{2}\tau\cdot A_{\mu} + \frac{ig'}{2}B_{\mu}Y \label{eqn:DL}\\
+	& D_{\mu,R} = \partial_{\mu} + \frac{ig'}{2}B_{\mu}Y. \label{eqn:DR}
+\end{align}
+In the above equations, $A_{\mu\nu}^a$ represents an SU(2)$_L$ triplet of gauge fields and $B_{\mu\nu}$ represents a U(1) gauge field. The third and fourth terms in equation \ref{eqn:LEWK} 
+describe the interactions of these gauge fields with the fermions, both quarks and leptons. Note that the interaction depends on the chirality of the fermions, where the left-handed 
+fermions are denoted as $L$ and the right-handed as $R$. The right-handed fermions interact only with the U(1) field, while the left-handed fermions interact with the U(1) and SU(2)$_L$ fields. 
+This is encoded by the derivative operators $D_{\mu,L}$ and $D_{\mu,R}$ defined in equations \ref{eqn:DL} and \ref{eqn:DR} in terms of the fields, Pauli matrices ($\tau$), hypercharge operator Y, and the couplings $g$ and $g'$. 
 
-%\section{Quantum Chromodynamics}
-
-\section{Spontaneous Symmetry Breaking (Higgs Mechanism)}
-The electroweak Lagrangian lacking the Higgs term \textcolor{red}{CITE EQUATION} is insufficient. In particular, it does not provide
-an explanation for massive gauge bosons. Experimental evidence for massive gauge bosons dates back to the \textcolor{red}{early?}
+One important property of the electroweak Lagrangian above is that the bosons associated with the gauge fields are all massless. 
+However, we now know that the W and Z bosons have masses. 
+Experimental evidence for massive gauge bosons dates back to the \textcolor{red}{early?}
 twentieth century. Beta decay experiments indicated charged current interactions mediated by a massive W boson, and later experiments 
 indicated additional neutral current interactions mediated by a massive Z boson (\textcolor{red}{CHECK THIS}). Later in the twentieth 
 century (\textcolor{red}{GIVE SPECIFIC DATES/REFS}) the W and Z bosons were discovered. Indeed, the W and Z masses have been found 
-to be roughly 80 GeV and 91 GeV respectively. An explanation came in the form of the Higgs mechanism (\textcolor{red}{CITE}),
-which spontaneously breaks the SU(2)xU(1) gauge symmetry of the elecroweak Lagrangian. In addition, there arises a real 
-Higgs field accompanied by a massive Higgs boson, and fermion masses are explained via their Yukawa couplings to the Higgs boson. 
-The discovery of the Higgs boson and the subsequent measurements of its properties have provided proof that the Higgs mechanism 
-is indeed a central piece of the Standard Model. 
+to be roughly 80 GeV and 91 GeV respectively. Therefore, the above description is incomplete. 
+
+\section{Spontaneous Symmetry Breaking (Higgs Mechanism)}
+A solution to the problems of the electroweak Lagrangian in equation \ref{eqn:LEWK} came in the form of the Higgs mechanism (\textcolor{red}{CITE}),
+which spontaneously breaks the SU(2)xU(1) gauge symmetry. One consequence of this is the addition of a real 
+Higgs field accompanied by a massive Higgs boson. The W and Z boson masses arise naturally due to the electroweak symmetry breaking, 
+while fermion masses are explained via additional Yukawa couplings to the Higgs boson. 
+The discovery of the Higgs boson and subsequent measurements of its properties have provided experimental verification that the Higgs mechanism 
+is a central piece of the Standard Model. 
 
 To understand how the Higgs mechanism works, consider the introduction of a complex scalar field $\sf \Phi$, which 
 transforms as a doublet under SU(2).
