@@ -260,6 +260,29 @@ A.~Cho.
   \eprint{https://www.science.org/doi/pdf/10.1126/science.337.6100.1289}.
 \newline\urlprefix\url{https://www.science.org/doi/abs/10.1126/science.337.6100.1289}
 
+\bibitem{Evans_2008}
+L.~Evans and P.~Bryant.
+\newblock \enquote{{LHC} machine.}
+\newblock \emph{Journal of Instrumentation}  (2008)
+  \textbf{3}~(08):S08001--S08001.
+\newblock \doi{10.1088/1748-0221/3/08/s08001}.
+\newline\urlprefix\url{https://doi.org/10.1088/1748-0221/3/08/s08001}
+
+\bibitem{Myers:226776}
+S.~Myers.
+\newblock \emph{{The LEP Collider, from design to approval and commissioning}}.
+\newblock John Adams' memorial lecture. CERN, Geneva (1991).
+\newblock \doi{10.5170/CERN-1991-008}.
+\newblock Delivered at CERN, 26 Nov 1990.
+\newline\urlprefix\url{https://cds.cern.ch/record/226776}
+
+\bibitem{Benedikt:2004wm}
+\enquote{{LHC Design Report. 3. The LHC injector chain}.}  (2004)
+  \doi{10.5170/CERN-2004-003-V-3}.
+
+\bibitem{CERN_complex}
+{\url{https://home.cern/science/accelerators/accelerator-complex}}.
+
 \bibitem{CMS:2008xjf}
 S.~Chatrchyan \emph{et~al.}
 \newblock \enquote{The {CMS} experiment at the {CERN} {LHC}.}
@@ -281,6 +304,14 @@ V.~Khachatryan \emph{et~al.}
 \newblock \doi{10.1088/1748-0221/12/01/P01020}.
 \newblock \eprint{1609.02366}.
 
+\bibitem{CMS:2015myp}
+V.~Khachatryan \emph{et~al.}
+\newblock \enquote{Performance of photon reconstruction and identification with
+  the {CMS} detector in proton-proton collisions at sqrt(s) = 8 {TeV}.}
+\newblock \emph{JINST}  (2015) \textbf{10}:P08010.
+\newblock \doi{10.1088/1748-0221/10/08/P08010}.
+\newblock \eprint{1502.02702}.
+
 \bibitem{CMS:2015xaf}
 V.~Khachatryan \emph{et~al.}
 \newblock \enquote{{Performance of electron reconstruction and selection with
@@ -296,14 +327,6 @@ A.~M. Sirunyan \emph{et~al.}
 \newblock \emph{JINST}  (2018) \textbf{13}:P06015.
 \newblock \doi{10.1088/1748-0221/13/06/P06015}.
 \newblock \eprint{1804.04528}.
-
-\bibitem{CMS:2015myp}
-V.~Khachatryan \emph{et~al.}
-\newblock \enquote{Performance of photon reconstruction and identification with
-  the {CMS} detector in proton-proton collisions at sqrt(s) = 8 {TeV}.}
-\newblock \emph{JINST}  (2015) \textbf{10}:P08010.
-\newblock \doi{10.1088/1748-0221/10/08/P08010}.
-\newblock \eprint{1502.02702}.
 
 \bibitem{CMS:2014pgm}
 S.~Chatrchyan \emph{et~al.}
