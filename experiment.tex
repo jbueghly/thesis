@@ -1,7 +1,7 @@
 \chapter{Experiment Description}\label{sec:experiment}
 
 \section{The Large Hadron Collider}
-The Large Hadron Collider (LHC)~\cite{Evans_2008} is a high energy proton-proton collider that serves several modern particle physics detector experiments. 
+The Large Hadron Collider (LHC)~\cite{Evans_2008} is a high energy pp collider that serves several modern particle physics detector experiments. 
 Built at CERN, straddling the French-Swiss border, and turned on for operation in 2008, it is the most powerful particle collider in history. 
 The LHC was designed to collide protons at a maximum center of mass energy of $\sqrt s = 14\TeV$ 
 with a maximum instantaneous luminosity of $10^{34}\cm^{-2}\mathrm{s}^{-1}$. To achieve this performance, the 27 km tunnel 
@@ -16,7 +16,7 @@ proton beam energy up to 450\GeV. At this point, the beam is injected to the two
 ring is achieved by a system of thousands of superconducting dipole magnets, along with hundreds of correcting quadrupole magnets. A liquid helium cooling system is 
 used to maintain the magnets at cryogenic temperatures. A full diagram of the CERN accelerator complex~\cite{CERN_complex}, including the parts relevant for the LHC, is shown in Fig. \ref{fig:accelerator_complex}.
 
-\begin{figure}
+\begin{figure}[tb]
   \centering
    \includegraphics[width=0.9\textwidth]{fig/experiment/CCC-v2019-final-white.png}
 	\caption[CERN accelerator complex.]{CERN accelerator complex~\cite{CERN_complex}.}
@@ -26,40 +26,41 @@ used to maintain the magnets at cryogenic temperatures. A full diagram of the CE
 
 \section{The Compact Muon Solenoid}
 The CMS apparatus~\cite{CMS:2008xjf} is a multipurpose, nearly hermetic detector, designed to trigger on~\cite{CMS:2020cmk,CMS:2016ngn} and identify photons, electrons, muons, and (charged and neutral) hadrons~\cite{CMS:2015myp,CMS:2015xaf,CMS:2018rym,CMS:2014pgm}.
-The central feature of the CMS apparatus is a superconducting solenoid of 6\unit{m} internal diameter, providing a magnetic field of $3.8$\unit{T}. Within the solenoid volume are a silicon pixel and strip tracker, a lead tungstate crystal electromagnetic calorimeter (ECAL), and a brass and scintillator hadron calorimeter (HCAL), each composed of a barrel and two endcap sections. The ECAL consists of 75,848 lead tungstate crystals, which provide coverage in pseudorapidity $\abs{\eta} < 1.48 $ in a barrel region (EB) and $1.48 < \abs{\eta} < 3.0$ in two endcap regions (EE). Preshower detectors consisting of two planes of silicon sensors interleaved with a total of $3$ radiation lengths of lead are located in front of each EE detector. Forward calorimeters extend the pseudorapidity coverage provided by the barrel and endcap detectors. Muons are measured in gas-ionization detectors embedded in the steel flux-return yoke outside the solenoid. A more detailed description of the detector components and operation is provided below. 
+The central feature of the CMS apparatus is a superconducting solenoid of 6\unit{m} internal diameter, providing a magnetic field of $3.8$\unit{T}. Within the solenoid volume are a silicon pixel and strip tracker, a lead tungstate crystal electromagnetic calorimeter (ECAL), and a brass and scintillator hadron calorimeter (HCAL), each composed of a barrel and two endcap sections. The ECAL consists of 75,848 lead tungstate crystals, which provide coverage in pseudorapidity $\abs{\eta} < 1.48 $ in a barrel region (EB) and $1.48 < \abs{\eta} < 3.0$ in two endcap regions (EE). Preshower detectors consisting of two planes of silicon sensors interleaved with a total of $3$ radiation lengths of lead are located in front of each EE detector. Forward calorimeters extend the pseudorapidity coverage provided by the barrel and endcap detectors. Muons are measured in gas-ionization detectors embedded in the steel flux-return yoke outside the solenoid. Figure \ref{fig:detector} shows a schematic diagram of the CMS detector, and a more detailed description of the individual detector components and detector operation is provided below. 
 %A more detailed description of the CMS detector, together with a definition of the coordinate system used and the relevant kinematic variables, can be found in Ref.~\cite{CMS:2008xjf}.
 
-\begin{figure}
+\begin{figure}[tb]
   \centering
-   \includegraphics[width=0.9\textwidth]{fig/experiment/detector/cms_about_detector.png}
-	\caption{The CMS detector apparatus.}
+   \includegraphics[width=0.75\textwidth]{fig/experiment/detector/cms_about_detector.png}
+	\caption[CMS detector apparatus.]{CMS detector apparatus.~\cite{detector_image}}
 	\label{fig:detector}
 \end{figure}
 
 
 \subsection{Superconducting Magnet}
-The function of the superconducting magnet within the CMS detector is to bend the trajectories of charged particles. This is crucial for particle identification and momentum measurement. 
+The function of the superconducting magnet within the CMS detector is to bend the trajectories of charged particles. This is crucial for accurate particle identification and momentum measurement. 
 Designed to provide a maximum magnetic field of $4$\unit{T}, its operating strength during pp collision runs is set to $3.8$\unit{T}. The bulk of the magnet is composed of NbTi, cooled by 
-liquid helium to 4.5K, which is below the critical temperature allowing for superconductivity. The magnet has a length of 12.5m, diameter of 6.3m, and mass of 220 tons. The solenoid encloses 
+liquid helium to 4.5K, which is below the critical temperature for superconductivity. The magnet has a length of 12.5m, diameter of 6.3m, and mass of 220 tons. The solenoid encloses 
 several detector components, including the tracker and the majority of the calorimeters. A steel flux-return yoke is built around the solenoid, and is composed of 5 wheels and two endcaps weighing 
 a total of roughly 10,000 tons. 
 
 \subsection{Inner Tracking System}
 The inner tracking system is designed to reconstruct charged particle trajectories and vertices arising from particle decays. Comprised of a silicon pixel detector and silicon strip tracker, 
-it covers the pseudorapidity region $|\eta| < 2.5$ and is designed for efficient and precise measurement of charged particles with \pt about about 1\GeV. 
+it covers the pseudorapidity region $|\eta| < 2.5$ and is designed for efficient and precise measurement of charged particles with transverse momentum (\pt) above about 1\GeV. 
 At the LHC design luminosity for pp collisions, each bunch crossing leads to about 1,000 hits in the inner tracking system. As such, the inner tracking system was designed to be 
-maximally radiation tolerant while maintaining physics performance. 
+maximally radiation tolerant. 
 
-The silicon pixel detector covers the inner region of $r < 10 cm$. It is composed of $100 \times 150 \mu m^{2}$ pixels arranged in three barrel layers and two endcap disks. Due to the extreme 
-radiation environment, the innermost layer was designed to be replaced after at least two years of LHC operation. 
+The silicon pixel detector covers the inner region of $r < 10 \cm$. It is composed of $100 \times 150 \micron^{2}$ pixels, arranged in three barrel layers and two endcap disks. Due to the extreme 
+radiation environment, the innermost layer was designed to be replaced after about two years of LHC operation. 
 In response to LHC running conditions and detector degradation, a replacement and upgrade of the full pixel detector was made during the LHC extended year-end technical stop in 2016/2017. 
-The silicon strip tracker covers the region $20 < r < 116 cm$. It is divided into three subsystems: the Tracker Inner Barrel (TIB), Tracker Inner Disks (TID), and Tracker Outer Barrel (TOB). 
-The strip thickness is $320 \mu m$ ($500 \mu m$) in the TIB/TID (TOB). A schematic diagram of the CMS inner tracking system in the r-z plane is shown in Fig. \ref{fig:cms_tracker}.
 
-\begin{figure}
+The silicon strip tracker covers the region $20 < r < 116 \cm$. It is divided into three subsystems: the Tracker Inner Barrel (TIB), Tracker Inner Disks (TID), and Tracker Outer Barrel (TOB). 
+The strip thickness is $320 \micron$ ($500 \micron$) in the TIB/TID (TOB). A schematic diagram of the CMS inner tracking system in the r-z plane is shown in Fig. \ref{fig:cms_tracker}.
+
+\begin{figure}[tb]
   \centering
-   \includegraphics[width=0.9\textwidth]{fig/experiment/detector/cms_tracker.png}
-	\caption{Cross section of the CMS inner tracking system in the r-z plane.}
+   \includegraphics[width=0.8\textwidth]{fig/experiment/detector/cms_tracker.png}
+	\caption[Cross section of the CMS inner tracking system in the r-z plane.]{Cross section of the CMS inner tracking system in the r-z plane.~\cite{CMS:2008xjf}}
 	\label{fig:cms_tracker}
 \end{figure}
 
