@@ -55,16 +55,11 @@ describe the interactions of these gauge fields with the fermions, both quarks a
 fermions are denoted as $L$ and the right-handed as $R$. The right-handed fermions interact only with the U(1) field, while the left-handed fermions interact with the U(1) and SU(2)$_L$ fields. 
 This is encoded by the derivative operators $D_{\mu,L}$ and $D_{\mu,R}$ defined in equations \ref{eqn:DL} and \ref{eqn:DR} in terms of the fields, Pauli matrices ($\tau$), hypercharge operator Y, and the couplings $g$ and $g'$. 
 
-One important property of the electroweak Lagrangian above is that the bosons associated with the gauge fields are all massless. 
-However, we now know that the W and Z bosons have masses. 
-Experimental evidence for massive gauge bosons dates back to the \textcolor{red}{early?}
-twentieth century. Beta decay experiments indicated charged current interactions mediated by a massive W boson, and later experiments 
-indicated additional neutral current interactions mediated by a massive Z boson (\textcolor{red}{CHECK THIS}). Later in the twentieth 
-century (\textcolor{red}{GIVE SPECIFIC DATES/REFS}) the W and Z bosons were discovered. Indeed, the W and Z masses have been found 
-to be roughly 80 GeV and 91 GeV respectively. Therefore, the above description is incomplete. 
-
 \section{Spontaneous Symmetry Breaking (Higgs Mechanism)}
-A solution to the problems of the electroweak Lagrangian in equation \ref{eqn:LEWK} came in the form of the Higgs mechanism (\textcolor{red}{CITE}),
+One important property of the electroweak Lagrangian in equation \ref{eqn:LEWK} is that the bosons associated with the gauge fields are all massless. 
+However, the direct observation of charged and neutral 
+current interactions \cite{HASERT1973121,HASERT1973138} at CERN in 1973 implied that the W and Z boson must have relatively large masses in the range of 50--100\GeV. Indeed, the massive W and Z bosons were later discovered and measured \cite{UA1:1983crd,UA2:1983tsx} at the CERN Super Proton Synchroton in 1983. 
+A solution to this shortcoming of the electroweak theory came in the form of the Higgs mechanism \cite{Englert:1964et,Higgs:1964ia,Higgs:1964pj},
 which spontaneously breaks the SU(2)xU(1) gauge symmetry. One consequence of this is the addition of a real 
 Higgs field accompanied by a massive Higgs boson. The W and Z boson masses arise naturally due to the electroweak symmetry breaking, 
 while fermion masses are explained via additional Yukawa couplings to the Higgs boson. 
@@ -72,7 +67,7 @@ The discovery of the Higgs boson and subsequent measurements of its properties h
 is a central piece of the Standard Model. 
 
 To understand how the Higgs mechanism works, consider the introduction of a complex scalar field $\sf \Phi$, which 
-transforms as a doublet under SU(2).
+transforms as a doublet under SU(2)$_L$.
 \begin{equation}
     \label{eqn:higgsField}
     \Phi = 
@@ -83,7 +78,7 @@ transforms as a doublet under SU(2).
 \end{equation}
 Its contribution to the Lagrangian is given by:
 \begin{equation}
-    \mathcal{L_{H}} = (D^{\mu}\Phi)^{\dagger}(D_{\mu}\Phi) - V(\Phi)
+    \mathcal{L_{H}} = (D^{\mu}_L\Phi)^{\dagger}(D_{\mu,L}\Phi) - V(\Phi)
     \label{LHiggs}
 \end{equation}
 where the Higgs potential takes the form
@@ -91,13 +86,8 @@ where the Higgs potential takes the form
     V(\Phi) = \mu^{2}|\Phi^{\dagger}\Phi| + \lambda \Big(|\Phi^{\dagger}\Phi|\Big)^{2}.
     \label{VHiggs}
 \end{equation}
-$D_{\mu}$ is the covariant derivative
-\begin{equation}
-    D_{\mu} = \partial_{\mu} - \frac{ig}{2}\tau\cdot A_{\mu} - \frac{ig'}{2}B_{\mu}Y.
-    \label{EWCovariantDeriv}
-\end{equation}
-Consider the case that the parameters of the Higgs potential $\lambda$ and $\mu$ satisfy the conditions 
-$\lambda > 0$ and $\mu^{2} < 0$. Then the shape of the potential is shown in Fig. \ref{fig:VHiggs}. Clearly, there is no minimum of the 
+Consider the case in which the parameters of the Higgs potential $\lambda$ and $\mu$ satisfy the conditions 
+$\lambda > 0$ and $\mu^{2} < 0$. Then the shape of the potential is shown in Fig. \ref{fig:VHiggs} (right). There is no minimum of the 
 potential at $\Phi = 0$. Rather, an infinite set of minima lie around a circle in the complex plane. Hence, it is said that $\Phi$ 
 has a nonzero vacuum expectation value (VEV). The value of the VEV in terms of $\mu$ and $\lambda$ can be determined by explicitly
 minimizing the potential:
@@ -107,7 +97,7 @@ minimizing the potential:
     \mu^{2} + 2\lambda\Big[(\phi^{+})^{2} + (\phi^{0})^{2}\Big] &= 0 \numberthis
     \label{VHiggsMinimization}
 \end{align*}
-Clearly, this can be minimized in many ways depending on individual values of $\phi^{+}$ and $\phi^{0}$ in the vacuum. By convention,
+This can be minimized in many ways depending on individual values of $\phi^{+}$ and $\phi^{0}$ in the vacuum. By convention,
 and without loss of generality, we choose the case in which $\phi^{+} = 0$. In this case we obtain the equation
 \begin{equation}
     \phi^{0} = \sqrt{\frac{-\mu^{2}}{2\lambda}} = \frac{1}{\sqrt{2}}v
@@ -132,7 +122,7 @@ $\Phi$ as follows:
     \end{bmatrix}
     \label{reparamHiggsField}
 \end{equation}
-As $\Phi$ is invariant under local SU(2) gauge transformations, the prefactor may be rotated away. This is equivalent to setting 
+As $\Phi$ is invariant under local SU(2)$_L$ gauge transformations, the prefactor may be rotated away. This is equivalent to setting 
 $\theta(x) = 0$ in equation \ref{reparamHiggsField}. This choice of gauge is known as the unitary gauge, and leads to 
 \begin{equation}
     \Phi = \frac{1}{\sqrt{2}}
@@ -143,9 +133,9 @@ $\theta(x) = 0$ in equation \ref{reparamHiggsField}. This choice of gauge is kno
     \label{HiggsFieldUnitaryGauge}
 \end{equation}
 Given the above form of $\Phi$, we can now evaluate the Higgs Lagrangian (equation \ref{LHiggs}), starting with the kinetic term
-$(D^{\mu}\Phi)^{\dagger}(D_{\mu}\Phi)$.
+$(D^{\mu}_L\Phi)^{\dagger}(D_{\mu,L}\Phi)$.
 \begin{align*}
-    (D^{\mu}\Phi)^{\dagger}(D_{\mu}\Phi) &= \Big| (\partial_{\mu} - \frac{ig}{2}\tau\cdot A_{\mu} - \frac{ig'}{2}B_{\mu}Y)\Phi\Big|^{2} \\
+    (D^{\mu}_L\Phi)^{\dagger}(D_{\mu,L}\Phi) &= \Big| (\partial_{\mu} - \frac{ig}{2}\tau\cdot A_{\mu} - \frac{ig'}{2}B_{\mu}Y)\Phi\Big|^{2} \\
     &= \frac{1}{2}
     \Big| 
     \begin{bmatrix}
@@ -166,7 +156,7 @@ $(D^{\mu}\Phi)^{\dagger}(D_{\mu}\Phi)$.
     \frac{1}{2}\partial_{\mu}h(x)\partial^{\mu}h(x) + \frac{1}{8}(gA_{\mu}^{3} - g'B_{\mu})(gA^{\mu}_{3} - g'B^{\mu})(v + h(x))^{2} \\ &+ 
     \frac{g^{2}}{8}(A_{\mu}^{1} - iA_{\mu}^{2})(A_{\mu}^{1} + iA_{\mu}^{2})(v + h(x))^{2} \label{kinHiggsExpansion} \numberthis 
 \end{align*}
-With some foreknowledge of the result, let us define the physical gauge fields and their masses as follows:
+With some foreknowledge of the result, we define the physical gauge fields and their masses.
 \begin{align}
     W_{\mu}^{\pm} &= \frac{1}{\sqrt{2}}(A_{\mu}^{1} \mp iA_{\mu}^{2}) \; &m_{W} = \frac{gv}{2} \\
     Z_{\mu} &= \frac{1}{\sqrt{g^{2} + g'^{2}}}(gA_{\mu}^{3} - g'B_{\mu}) \; &m_{Z} = \sqrt{g^{2} + g'^{2}}\frac{v}{2} \\
@@ -175,15 +165,15 @@ With some foreknowledge of the result, let us define the physical gauge fields a
 \end{align}
 Then the kinetic term of the Higgs Lagrangian can be recast as
 \begin{align*}
-    (D^{\mu}\Phi)^{\dagger}(D_{\mu}\Phi) &= \frac{1}{2}\partial_{\mu}h(x)\partial^{\mu}h(x) \\ 
+    (D^{\mu}_L\Phi)^{\dagger}(D_{\mu,L}\Phi) &= \frac{1}{2}\partial_{\mu}h(x)\partial^{\mu}h(x) \\ 
     &+ \frac{1}{2}m_{Z}^{2}Z_{\mu}Z^{\mu} + m_{W}^{2}W_{\mu}^{+}W^{-\mu} \\
     &+ \frac{v}{4}(g^{2} + g'^{2})Z_{\mu}Z^{\mu}h + \frac{1}{8}(g^{2} + g'^{2})Z_{\mu}Z^{\mu}h^{2} \\
     &+ \frac{v}{4}g^{2}W_{\mu}^{+}W^{-\mu}h + \frac{1}{8}g^{2}W_{\mu}^{+}W^{-\mu}h^{2} \label{kinHiggsMasses}\numberthis
 \end{align*}
 Equation \ref{kinHiggsMasses} provides a great deal of information on the physical ramifications of the Higgs mechanism.
 The first term is the kinetic term of the physical Higgs boson field. The second and third terms are the mass terms of the Z and W 
-bosons respectively. The fourth and fifth terms show the linear and quadratic couplings of the Z boson to the Higgs boson respectively.
-Finally, the sixth and seventh terms show the linear and quadratic couplings of the W boson to the Higgs boson respectively. 
+bosons, respectively. The fourth and fifth terms show the linear and quadratic couplings of the Z boson to the Higgs boson, respectively.
+Finally, the sixth and seventh terms show the linear and quadratic couplings of the W boson to the Higgs boson, respectively. 
 Given the form of equation \ref{HiggsFieldUnitaryGauge}, a similar expansion can be carried out on the Higgs potential
 (equation \ref{VHiggs}). Here, the terms involving the physical Higgs boson are most interesting, so constant terms are dropped.
 \begin{align*}
@@ -191,21 +181,21 @@ Given the form of equation \ref{HiggsFieldUnitaryGauge}, a similar expansion can
     &\rightarrow \lambda v^{2}h^{2} + \lambda vh^{3} + \frac{\lambda}{4}h^{4} \label{expandedVHiggs} \numberthis
 \end{align*}
 The first term is a Higgs mass term, with $m_{H} = \sqrt{2\lambda v^{2}}$. The second and third terms describe the Higgs 
-trilinear and quartic self-coupling respectively.
+trilinear and quartic self-couplings, respectively.
 
 The Lagrangian including the Higgs doublet $\Phi$ can be further extended to incorporate interactions between the Higgs and fermion fields. These interactions, along with the nonzero Higgs VEV, provide a mechanism to generate the fermion masses. The interactions take the 
 form of Yukawa couplings:
 \begin{equation}
     \mathcal{L}_{Yukawa} = Y_{ij}^{d}\bar{Q}^{i}_{L}\Phi d_{R}^{j} + Y_{ij}^{u}\bar{Q}^{i}_{L}\tilde{\Phi} u_{R}^{j} 
-    + Y_{ij}^{e}\bar{L}^{i}_{L}\Phi e_{R}^{j} + h.c.
+    + Y_{ij}^{e}\bar{L}^{i}_{L}\Phi e_{R}^{j} + h.c.,
     \label{LYukawa}
 \end{equation}
-where
+where $\tilde{\Phi} \equiv i\tau_{2}\Phi^{*}$, and $u$, $d$, and $e$ represent up-type quarks, down-type quarks, and leptons, respectively. The constants $Y_{ij}^a$ denote the Yukawa couplings in each case, $Q^i$ is the set of SU(2) quark doublets, and $L^i$ is the set of SU(2) lepton doublets.
 \begin{equation}
     \tilde{\Phi} \equiv i\tau_{2}\Phi^{*}
     \label{PhiDual}
 \end{equation}
-Plugging in the unitary gauge $\Phi$ parameterization of equation \ref{HiggsFieldUnitaryGauge}, this evaluates to 
+Plugging in the unitary gauge parameterization of equation \ref{HiggsFieldUnitaryGauge}, this evaluates to 
 \begin{align}
     \mathcal{L}_{Yukawa} = \frac{Y_{ij}^{d}}{\sqrt{2}}\bar{d}_{L}^{i}(v + h)d_{R}^{j} 
     + \frac{Y_{ij}^{u}}{\sqrt{2}}\bar{u}_{L}^{i}(v+h)u_{R}^{j} + \frac{Y_{ij}^{e}}{\sqrt{2}}\bar{e}_{L}^{i}(v+h)e_{R}^{j}
@@ -221,7 +211,7 @@ we observe that the fermion mass is given in terms of the couplings and the Higg
 where $y_{f}$ is the relevant value taken from the Yukawa coupling matrix. In addition, we see that the strength of the fermion coupling
 to the Higgs boson is given by $\frac{m_{f}}{v}$. Thus, fermions couple to the Higgs boson with strength directly proportional 
 to their masses. This result has important consequences in the context of collider experiments, as it regulates the rates of
-Higgs production and decay related to each fermion-Higgs vertex. 
+Higgs production and decay related to each fermion-Higgs interaction. 
 
 %The existence of the Higgs VEV leads naturally to the masses of the W and Z bosons. This can be shown by squaring the covariant 
 %derivative acting on the scalar doublet $\Phi$ and evaluating the result in the vacuum. Note that in the vacuum, all terms involving 

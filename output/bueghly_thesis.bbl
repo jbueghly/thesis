@@ -203,6 +203,54 @@ W.~Commons.
   {\url{https://en.wikipedia.org/wiki/File:Standard_Model_of_Elementary_Particles.svg#file}}
   (2019).
 
+\bibitem{HASERT1973121}
+F.~Hasert, H.~Faissner, W.~Krenz, J.~{Von Krogh}, D.~Lanske, \emph{et~al.}
+\newblock \enquote{Search for elastic muon-neutrino electron scattering.}
+\newblock \emph{Physics Letters B}  (1973) \textbf{46}~(1):121--124.
+\newblock ISSN 0370-2693.
+\newblock \doi{10.1016/0370-2693(73)90494-2}.
+
+\bibitem{HASERT1973138}
+F.~Hasert, S.~Kabe, W.~Krenz, J.~{Von Krogh}, D.~Lanske, \emph{et~al.}
+\newblock \enquote{Observation of neutrino-like interactions without muon or
+  electron in the gargamelle neutrino experiment.}
+\newblock \emph{Physics Letters B}  (1973) \textbf{46}~(1):138--140.
+\newblock ISSN 0370-2693.
+\newblock \doi{https://doi.org/10.1016/0370-2693(73)90499-1}.
+
+\bibitem{UA1:1983crd}
+G.~Arnison \emph{et~al.}
+\newblock \enquote{{Experimental Observation of Isolated Large Transverse
+  Energy Electrons with Associated Missing Energy at $\sqrt{s}= 540$ GeV}.}
+\newblock \emph{Phys. Lett. B}  (1983) \textbf{122}:103--116.
+\newblock \doi{10.1016/0370-2693(83)91177-2}.
+
+\bibitem{UA2:1983tsx}
+M.~Banner \emph{et~al.}
+\newblock \enquote{{Observation of Single Isolated Electrons of High Transverse
+  Momentum in Events with Missing Transverse Energy at the CERN anti-p p
+  Collider}.}
+\newblock \emph{Phys. Lett. B}  (1983) \textbf{122}:476--485.
+\newblock \doi{10.1016/0370-2693(83)91605-2}.
+
+\bibitem{Englert:1964et}
+F.~Englert and R.~Brout.
+\newblock \enquote{{Broken Symmetry and the Mass of Gauge Vector Mesons}.}
+\newblock \emph{Phys. Rev. Lett.}  (1964) \textbf{13}:321--323.
+\newblock \doi{10.1103/PhysRevLett.13.321}.
+
+\bibitem{Higgs:1964ia}
+P.~W. Higgs.
+\newblock \enquote{{Broken symmetries, massless particles and gauge fields}.}
+\newblock \emph{Phys. Lett.}  (1964) \textbf{12}:132--133.
+\newblock \doi{10.1016/0031-9163(64)91136-9}.
+
+\bibitem{Higgs:1964pj}
+P.~W. Higgs.
+\newblock \enquote{{Broken Symmetries and the Masses of Gauge Bosons}.}
+\newblock \emph{Phys. Rev. Lett.}  (1964) \textbf{13}:508--509.
+\newblock \doi{10.1103/PhysRevLett.13.508}.
+
 \bibitem{CMS:2008xjf}
 S.~Chatrchyan \emph{et~al.}
 \newblock \enquote{The {CMS} experiment at the {CERN} {LHC}.}
