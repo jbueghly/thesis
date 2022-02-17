@@ -183,19 +183,22 @@ The momentum of muons is obtained from the corresponding track momentum. Matchin
 
 
 \subsection{Hadron Reconstruction}
-Charged hadrons are identified as charged particle tracks that are neither identified as electrons nor as muons. Neutral hadrons are identified as HCAL energy clusters not linked to any charged hadron trajectory, or as a combined ECAL and HCAL energy excess with respect to the expected charged hadron energy deposit.
+All particles within an event that are not reconstructed as photons, electrons, or muons are reconstructed as hadrons. Note that within the tracker acceptance ($|\eta|<2.5$), all ECAL clusters 
+not linked to a track are considered photons. All of the remaining ECAL and HCAL clusters are processed further by the PF algorithm. The HCAL clusters are 
+first linked to any associated tracks and ECAL clusters. Then, a comparison is made between the calorimetric energy sum and the sum of the track momenta. If the calorimetric energy sum is 
+compatible with the sum of track momenta, a charged hadron is reconstructed. If the calorimetric energy sum is greater than the sum of track momenta, the excess prompts the reconstruction of photons and neutral hadrons, depending on the size of the excess. 
 
 \subsection{Jet Reconstruction}
 For each event, hadronic jets are reconstructed as clusters of PF particles, including photons, electrons, muons, and hadrons. For clustering, the infrared and collinear-safe anti-\kt algorithm~\cite{Cacciari:2008gp, Cacciari:2011ma} is used. The goal of jet clustering algorithms is to combine PF particles together into a single jet object by merging them together based on their relative geometric distances and transverse momenta (\kt). In the case of the anti-\kt algorithm, clustering proceeds from smallest geometric distance to largest, weighted by squared inverse \kt. This inverse weighting 
 preferentially combines PF particles with higher momenta before lower momenta, for a given distance. The advantage of this approach is that low momentum particles are more likely to be clustered 
-with high momentum counterparts, rather than with other low momentum particles. It follows that these low momentum particles will not significantly modify the jet shape, whereas the more important, high-momentum particles, will. A precise definition of the anti-\kt algorithm is defined in equation \ref{eq:antikt}. 
+with high momentum counterparts, rather than with other low momentum particles. It follows that these low momentum particles will not significantly modify the jet shape, whereas the more important, high-momentum particles, will. A precise definition of the anti-\kt algorithm is given in equation \ref{eq:antikt}. 
 
 \begin{equation}
 	d_{ij} = min(k_{T,i}^{2p}, k_{T,j}^{2p})\frac{(\eta_i - \eta_j)^2 + (\phi_i - \phi_j)^2}{R^2},\;\; d_i = k_{T,i}^{2p}
 	\label{eq:antikt}
 \end{equation}
 
-In equation \ref{eq:antikt}, the indices i and j refer to two PF particles, the parameter $p$ is taken to be -1, and the radius parameter $R$ is parameter that can be tuned. For standard jets in CMS, as used in this analysis, $R$ is set to 0.4. Particles are clustered from smallest $d_{ij}$ to largest until there is no $d_{ij}$ smaller than $k_{ti}^{-2}$, at which point the final jet is defined. A visual representation of the anti-\kt algorithm is shown in Fig. \ref{fig:anti_kt_diagram}.
+The indices i and j refer to two PF particles, the parameter $p$ is taken to be -1, and the radius parameter $R$ can be tuned. For standard jets in CMS, as used in this analysis, $R$ is set to 0.4. Particles are clustered from smallest $d_{ij}$ to largest, until there is no $d_{ij}$ smaller than $k_{ti}^{-2}$, at which point the final jet is defined. A visual representation of the anti-\kt algorithm is shown in Fig. \ref{fig:anti_kt_diagram}.
 
 \begin{figure}
   \centering
@@ -204,13 +207,13 @@ In equation \ref{eq:antikt}, the indices i and j refer to two PF particles, the 
 	\label{fig:anti_kt_diagram}
 \end{figure}
 
-Jet momentum is determined as the vectorial sum of all particle momenta in the jet, and is found from simulation to be, on average, within $5$--$10$\% of the true momentum over the entire \pt spectrum and detector acceptance. Additional $\Pp\Pp$ interactions within the same or nearby bunch crossings (pileup) can contribute additional tracks and calorimetric energy depositions to the jet momentum. To mitigate this effect, charged particles identified to be originating from pileup vertices are discarded and an offset correction is applied to correct for remaining contributions~\cite{CMS:2020ebo}. The jet energy resolution typically amounts to $15$--$20$\% at $30$\GeV, $10$\% at $100$\GeV, and $5$\% at $1$\TeV~\cite{CMS:2016lmd}.
+Jet momentum is determined as the vectorial sum of all particle momenta in the jet, and is found from simulation to be, on average, within $5$--$10$\% of the true momentum over the entire \pt spectrum and detector acceptance. Additional $\Pp\Pp$ interactions within the same or nearby bunch crossings (pileup) can contribute additional tracks and calorimetric energy depositions to the jet momentum. To mitigate this effect, charged particles identified as originating from pileup vertices are discarded, and an offset correction is applied to correct for the remaining contributions~\cite{CMS:2020ebo}. The jet energy resolution, as shown in Fig. \ref{fig:jet_resolution}, typically amounts to $15$--$20$\% at $30$\GeV, $10$\% at $100$\GeV, and $5$\% at $1$\TeV~\cite{CMS:2016lmd}.
 
 \begin{figure}
   \centering
    \includegraphics[width=0.9\textwidth]{fig/experiment/reconstruction/jet_energy_resolution.png}
-	\caption{Jet energy resolution as a function of simulated jet \pt in the barrel (left) and in the endcap (right) regions. Calo refers to the sum of ECAL and HCAL energy deposits, 
+	\caption{Jet energy resolution as a function of simulated jet \pt in the barrel (left) and in the endcap (right) regions~\cite{CMS:2017yfk}. Calo refers to the sum of ECAL and HCAL energy deposits, 
 	while PF corresponds to jets clustered from PF particles using the anti-\kt algorithm.}
-	\label{fig:anti_kt_diagram}
+	\label{fig:jet_resolution}
 \end{figure}
 
