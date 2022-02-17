@@ -52,7 +52,7 @@ maximally radiation tolerant.
 
 The silicon pixel detector covers the inner region of $r < 10 \cm$. It is composed of $100 \times 150 \micron^{2}$ pixels, arranged in three barrel layers and two endcap disks. Due to the extreme 
 radiation environment, the innermost layer was designed to be replaced after about two years of LHC operation. 
-In response to LHC running conditions and detector degradation, a replacement and upgrade of the full pixel detector was made during the LHC extended year-end technical stop in 2016/2017. 
+In response to LHC running conditions and detector degradation, a replacement and upgrade of the full pixel detector was made during the LHC extended year-end technical stop in 2016--2017. 
 
 The silicon strip tracker covers the region $20 < r < 116 \cm$. It is divided into three subsystems: the Tracker Inner Barrel (TIB), Tracker Inner Disks (TID), and Tracker Outer Barrel (TOB). 
 The strip thickness is $320 \micron$ ($500 \micron$) in the TIB/TID (TOB). A schematic diagram of the CMS inner tracking system in the r-z plane is shown in Fig. \ref{fig:cms_tracker}.
@@ -67,22 +67,29 @@ The strip thickness is $320 \micron$ ($500 \micron$) in the TIB/TID (TOB). A sch
 
 \subsection{Electromagnetic Calorimeter (ECAL)}
 The electromagnetic calorimeter (ECAL) is designed to identify and measure electromagnetic particles by inducing and characterizing electromagnetic showers. 
-It is made of 61,200 lead tungstate ($PbWO_4$) crystals in the barrel (EB), which covers $|\eta| < 1.479$, plus 7,324 crystals in each endcap (EE), which fall in the range $1.479 < |\eta| < 3.0$. A preshower system lies in front of the EE. The preshower is a lead and silicon sampling calorimeter designed to aid in the identification of neutral pions and to improve the spatial resolution in the 
+It is made up of 61,200 lead tungstate (PbWO$_4$) crystals in the barrel (EB), which covers $|\eta| < 1.479$, plus 7,324 crystals in each endcap (EE), which cover the range $1.479 < |\eta| < 3.0$. A preshower system lies in front of the EE. The preshower is a lead and silicon sampling calorimeter designed to aid in the identification of neutral pions and to improve the spatial resolution in the 
 endcap region. 
-The crystal length corresponds to 25.8 (24.7) radiation lengths ($\chi^{0}$) in the EB (EE). When electromagnetic particles, such as 
-electrons and photons, encounter the ECAL, electromagnetic showers are induced. Light is emitted by the ECAL crystals proportional to the energy of constituent particles in the shower, allowing 
-for reconstruction of the full shower energy. An array of fast and radiation tolerant photodetectors detects the emitted light, and this information is saved off detector. 
-For this purpose, the EB uses Hamatsu avalanche photodiodes, while the EE uses vacuum phototriodes. 
+The crystal length corresponds to 25.8 (24.7) radiation lengths in the EB (EE). When electromagnetic particles, such as 
+electrons and photons, encounter the ECAL and interact with the crystal material, electromagnetic showers are induced. 
+Light is emitted by the ECAL crystals proportional to the energy of constituent particles in the shower, allowing 
+for reconstruction of the shower energy. An array of fast and radiation-tolerant photodetectors detects the emitted light, and this information is saved off detector. 
+For this purpose, the EB uses avalanche photodiodes, while the EE uses vacuum phototriodes. As shown in Fig. \ref{fig:cms_ecal_response}, the ECAL has maintained good performance with minimal degradation throughout the duration of Run 1 and Run 2 of the LHC.
 
-
+\begin{figure}[tb]
+  \centering
+   \includegraphics[width=0.8\textwidth]{fig/experiment/detector/cms_ecal_response.png}
+	\caption[Response of the CMS ECAL crystals to injected laser light as a function of time, broken into regions of $|\eta|$.]
+{Response of the CMS ECAL crystals to injected laser light as a function of time, broken into regions of $|\eta|$.~\cite{Cavallari:2798128}}
+	\label{fig:cms_ecal_response}
+\end{figure}
 
 \subsection{Hadronic Calorimeter (HCAL)}
-Measurements of hadrons, jets, and missing transverse momentum are important to the analysis goals of the CMS physics program. The hadronic calorimeter (HCAL) is instrumental in such 
-measurements. In a nutshell, the HCAL is primarily a sampling calorimeter broken into several subdetectors. The barrel (HB) covers the range $|\eta| < 1.3$, the endcaps (HE) cover the range $1.3 < |\eta| < 3$, the forward calorimeter (HF) covers the range $3 < |\eta| < 5$, and an outer barrel calorimeter (HO) covers $|\eta| < 1.3$ outside of the solenoid magnet. 
+Measurements of hadrons, jets, and missing transverse momentum are crucial at a hadron collider like the LHC. The CMS hadronic calorimeter (HCAL) is instrumental in such 
+measurements. The HCAL is primarily a sampling calorimeter broken into several subdetectors. The barrel (HB) covers the range $|\eta| < 1.3$, the endcaps (HE) cover the range $1.3 < |\eta| < 3$, the forward calorimeter (HF) covers the range $3 < |\eta| < 5$, and an outer barrel calorimeter (HO) covers $|\eta| < 1.3$ outside of the solenoid magnet. 
 
-Layers of brass absorber are interleaved with plastic scintillator in the HB and HE, with a total absorber thickness of 5.82--10.6 interaction lengths in the HB and about 10 interaction lengths in the HE. Scintillation light emitted by the active material is measured and transmitted off-detector using hybrid photodiodes.
-The design of the HF was motivated by the extreme particle fluxes in the very forward region. The HF is made up of steel plate absorbers, in which quartz fibers are inserted to serve as the active material. Cherenkov light is produced when shower particles above the Cherenkov threshold 
-pass through the fibers, and a calculable fraction of the light is captured by the fibers. The function of the HO is to recover the energy in showers that leak through the HB, which is crucial for the accurate measurement of missing transverse momentum. In the HO, the solenoid coil itself, as well as a thick iron tail catcher, function 
+Layers of brass absorber are interleaved with plastic scintillator in the HB and HE, with a total absorber thickness of 5.82--10.6 interaction lengths in the HB and about 10 interaction lengths in the HE. Scintillation light emitted by the active material is measured and transmitted off detector using hybrid photodiodes.
+The design of the HF was motivated by the extreme particle fluxes in the very forward region. The HF is made up of steel plate absorbers, in which quartz fibers are inserted to serve as the active material. Cherenkov light is produced when shower particles moving at speeds above the Cherenkov threshold 
+pass through the fibers, and a calculable fraction of the light is captured by the fibers. The function of the HO is to recover the energy in showers that leak through the HB, which is needed for the accurate measurement of missing transverse momentum. In the HO, the solenoid coil, itself, as well as a thick iron tail catcher, function 
 as absorbers. This extends the effective HCAL depth to 11.8 interaction lengths everywhere except at the barrel-endcap boundary. 
 
 \subsection{Muon Detectors}

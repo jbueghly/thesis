@@ -339,6 +339,12 @@ S.~Chatrchyan \emph{et~al.}
 \bibitem{detector_image}
 {\url{https://cms.cern/detector}}.
 
+\bibitem{Cavallari:2798128}
+F.~Cavallari and C.~I. Rovelli.
+\newblock \enquote{{Calibration and Performance of the CMS Electromagnetic
+  Calorimeter in LHC Run2}.}  (2021) .
+\newline\urlprefix\url{http://cds.cern.ch/record/2798128}
+
 \bibitem{CMS:2017yfk}
 A.~M. Sirunyan \emph{et~al.}
 \newblock \enquote{Particle-flow reconstruction and global event description
