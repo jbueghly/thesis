@@ -2,29 +2,29 @@
 
 \section{Triggers}
 The topology and basic kinematics of the \hzg process guide the choice of triggers used in this analysis. As this is a three body
-decay, the \pT of the photon tends to be less than in other channels like \hgg. Consequently, the CMS photon trigger \pT thresholds 
+decay, the \pt of the photon tends to be less than in other channels like \hgg. Consequently, the CMS photon trigger \pt thresholds 
 are too great to make them viable options. Instead, we trigger on the leptons arising from the decay of the Z boson, which tend 
-to have larger \pT. The best approach to maximize signal efficiency is to use the double lepton triggers. The double muon trigger 
-has \pT thresholds of 17 and 8 GeV, and the double electron trigger has thresholds of 23 and 12 GeV. These are the lowest 
+to have larger \pt. The best approach to maximize signal efficiency is to use the double lepton triggers. The double muon trigger 
+has \pt thresholds of 17 and 8 GeV, and the double electron trigger has thresholds of 23 and 12 GeV. These are the lowest 
 unprescaled double lepton triggers generally available for CMS Run 2 analysis. Events passing both the double muon and 
 double electron triggers are treated as double muon events.
 
 The triggers are applied to both data and simulation. Trigger efficiencies and scale factors are measured using the 
 simulation samples corresponding to each data-taking year. These measurements use a tag and probe method [CITE]. The tag and probe  method
 takes advantage of the high purity of $Z \rightarrow \ell^{+}\ell{-}$ events near the Z mass peak. One lepton functions as the 
-tag, and satisfies a set of tight trigger, identification, isolation, \pT requirements. The second lepton, the probe, must pass a looser selection and is used to measure the efficiency in question. 
+tag, and satisfies a set of tight trigger, identification, isolation, \pt requirements. The second lepton, the probe, must pass a looser selection and is used to measure the efficiency in question. 
 Using this approach, trigger efficiencies for each leg of a given 
 double lepton trigger are measured in both data and simulation. Then a corrective scale factor, defined as the ratio of data efficiency 
-to simulation efficiency, is applied to the simulation. Scale factors are measured and applied in bins of \pT and $|\eta|$.
+to simulation efficiency, is applied to the simulation. Scale factors are measured and applied in bins of \pt and $|\eta|$.
 
 For the double electron trigger efficiency measurements, the tag electron must satisfy the following requirements. It must pass 
-the single electron trigger, pass a tight cut-based identification, have \pT $> 30 \, (35)$ in 2016 (2017/2018), and have $|\eta| < 2.5$. 
+the single electron trigger, pass a tight cut-based identification, have \pt $> 30 \, (35)$ in 2016 (2017/2018), and have $|\eta| < 2.5$. 
 The probe electron must pass the loose electron MVA identification (with isolation) requirement. The efficiencies for each leg 
 of the trigger are measured separately, so in each case, the probe electron must match the trigger leg being measured. The efficiencies 
 and scale factors of each double electron trigger leg for 2016, 2017, and 2018 are shown in Figures [FIGS]. 
 
 For the double muon trigger efficiency measurements, the tag muon must satisfy the following requirements. It must pass the single 
-muon trigger, pass a tight cut-based identification, have \pT $> 26 \, (29)$ GeV for 2016 (2017/2018) and satisfy $|\eta| < 2.4$. The 
+muon trigger, pass a tight cut-based identification, have \pt $> 26 \, (29)$ GeV for 2016 (2017/2018) and satisfy $|\eta| < 2.4$. The 
 probe muon must pass the $H \rightarrow ZZ$ identification and isolation cuts. The details of the $H \rightarrow ZZ$ muon 
 identification will be described later. The efficiencies for each leg of the trigger are measured separately, so in each case, the probe 
 muon must match the trigger leg being measured. The efficiencies and scale factors of each double muon trigger leg for 2016, 2017, 
@@ -33,8 +33,8 @@ and 2018 are shown in Figures [FIGS].
 \section{Muon Selection}
 A loose cut-based muon identification is used in the analysis. This identification was originally developed by the \hzz 
 analysis [REF] and is well-suited for \hzg due to the similarity of the multiple, potentially soft, muons in the final state. 
-All muons are first required to pass a set of common cuts, followed by a separate set of cuts for high \pT (greater than 200 GeV) 
-and low \pT muons. All muons must satisfy \pT $>$ 5 GeV, $|\eta| < 2.4$, $|d_{xy}| < 0.5$ cm, and $|d_{z}| < 1$ cm, where $d_{xy}$ and 
+All muons are first required to pass a set of common cuts, followed by a separate set of cuts for high \pt (greater than 200 GeV) 
+and low \pt muons. All muons must satisfy \pt $>$ 5 GeV, $|\eta| < 2.4$, $|d_{xy}| < 0.5$ cm, and $|d_{z}| < 1$ cm, where $d_{xy}$ and 
 $d_{z}$ are impact parameters defined with respect to the primary vertex of the interaction using the best muon track. 
 Additionally, the three dimensional impact parameter (analogously defined) must have a magnitude less than four times its uncertainty.
 Muons must either be reconstructed as global muons or tracker muons. Muons with standalone tracks (tracks only in the muon system) are
@@ -46,8 +46,8 @@ within a $\Delta R = 0.3$ cone is defined as
 \end{equation}
 Muons must satisfy $\mathcal{I} < 0.35$. 
 
-For muons with \pT $<$ 200 GeV, muons satisfying the common requirements and identified by the particle flow identification
-algorithm are selected. For muons with \pT $>$ 200 GeV, muons are selected if they pass the particle flow identification or if they pass
+For muons with \pt $<$ 200 GeV, muons satisfying the common requirements and identified by the particle flow identification
+algorithm are selected. For muons with \pt $>$ 200 GeV, muons are selected if they pass the particle flow identification or if they pass
 a set of high-$p_{T}$ requirements. These requirements are the following: the muon must be matched to segments in at least two muon 
 stations; satisfy $\frac{p_{T}}{\sigma_{p_{T}}} < 0.3$, $|d_{xy}| < 0.2$ cm, $|d_{z}| < 0.5$ cm, have at least one pixel hit, and have 
 tracker hits in at least six tracker layers.
@@ -63,20 +63,20 @@ Identification efficiencies and scale factors corresponding to the muon identifi
 \section{Electron Selection}
 Electrons are identified using a boosted decision tree multivariate (MVA) discriminator trained on Drell-Yan plus jets simulation 
 with prompt electrons matched to generator-level objects as signal and unmatched and non-prompt electrons as background. The features 
-used in the training include \pT, supercluster $\eta$, shower shape variables, ratio of hadronic to electromagnetic energy, track and 
+used in the training include \pt, supercluster $\eta$, shower shape variables, ratio of hadronic to electromagnetic energy, track and 
 pixel hit variables, and isolation variables [REF]. These features are sensitive to bremsstrahlung along the electron trajectory, 
 momentum-energy matching between electron trajectory and ECAL cluster, shower shape, and electrons from photon conversions.
 Since isolation features are included in the training of the discriminator, there is no need for separate isolation cuts. 
 Electrons pass the identification requirement of the \hzg analysis if their discriminator score is higher than a loose working point 
 value, corresponding to 98\% signal efficiency. In addition to the MVA cut, electrons must have $|d_{xy}| < 0.5$ cm and $|d_{z}| < 1$ cm
-with respect to the primary vertex. Electrons with \pT $\leq$ 7 GeV are rejected. 
+with respect to the primary vertex. Electrons with \pt $\leq$ 7 GeV are rejected. 
 
 Electron identification efficiencies and scale factors are measured using a tag and probe method on dielectron events near the 
-Z boson peak. These electrons must pass the single electron trigger with a \pT threshold of 27 (32) GeV for 2016 (2017/2018) data. 
+Z boson peak. These electrons must pass the single electron trigger with a \pt threshold of 27 (32) GeV for 2016 (2017/2018) data. 
 The dielectron mass must be between 60 and 120 GeV. The tag electron must pass a tight cut-based electron identification and have 
-\pT $>$ 30 (35) GeV for 2016 (2017) and $|\eta|$ < 2.5. The probe electron must pass the loose MVA identification cut and associated 
-impact parameter and \pT cuts described above. Identification efficiencies and scale factors are measured and applied in bins of 
-\pT and supercluster $\eta$. The scale factors for each data-taking year are shown in Figures [FIGS]. 
+\pt $>$ 30 (35) GeV for 2016 (2017) and $|\eta|$ < 2.5. The probe electron must pass the loose MVA identification cut and associated 
+impact parameter and \pt cuts described above. Identification efficiencies and scale factors are measured and applied in bins of 
+\pt and supercluster $\eta$. The scale factors for each data-taking year are shown in Figures [FIGS]. 
 
 \section{Photon Selection}
 Photons are identified using a boosted decision tree MVA discriminator trained on photon plus jets simulation. The features used in the 
@@ -98,10 +98,10 @@ are determined for the \hzg analysis. The working points are defined based on re
 to discriminator scores greater than -0.4 (-0.59) for barrel (endcap) photons. A comparison of these working points with the standard 
 EGamma POG 90\% efficiency working points, plotted on the receiver operator characteristic (ROC) curve for SM $Z\gamma$ and Z plus jets 
 simulation, is shown in Figure [FIG]. The efficiency of the photon identification is measured with $Z\rightarrow e^{+}e^{-}$ data
-using a tag and probe technique. The tag electron must pass the single electron trigger with \pT threshold 27 (32) GeV in 
-2016 (2017/2018), tight cut-based identification, have \pT $>$ 30 (35) GeV for 2016 (2017/2018), and have $|\eta| < 2.5$. The 
+using a tag and probe technique. The tag electron must pass the single electron trigger with \pt threshold 27 (32) GeV in 
+2016 (2017/2018), tight cut-based identification, have \pt $>$ 30 (35) GeV for 2016 (2017/2018), and have $|\eta| < 2.5$. The 
 probe electron must pass the photon MVA identification with shower shape corrections described above. The scale factors, measured and 
-applied in bins of \pT and supercluster $\eta$, are shown in Figure [FIG]. The efficiencies and scale factors for the conversion-safe 
+applied in bins of \pt and supercluster $\eta$, are shown in Figure [FIG]. The efficiencies and scale factors for the conversion-safe 
 electron veto are measured by the EGamma POG using $Z\mu^{+}\mu^{-}$ events with an FSR photon and applied in the \hzg analysis. 
 The scale factors are cataloged in Table [TAB]. 
 
@@ -110,12 +110,12 @@ Jets are selected in order to categorize events coming from potential VBF Higgs 
 for the \hzg selection. In fact, the majority of simulation and data events selected in the analysis have no jets. However, identifying 
 and selecting jets to categorize VBF events can still significantly improve the sensitivity of the search. Jets are required to pass 
 a loose cut-based identification in 2016 and a tight cut-based identification in 2017 and 2018. These sets of identification cuts are
-determined and provided by the JetMET POG. Additionally, jets must satisfy \pT $>$ 30 GeV, $|\eta| < 4.7$, and $\Delta R > 0.4$ with 
+determined and provided by the JetMET POG. Additionally, jets must satisfy \pt $>$ 30 GeV, $|\eta| < 4.7$, and $\Delta R > 0.4$ with 
 respect to each lepton and the photon selected in the analysis. An issue with noise in the ECAL endcap in 2017 caused an artificial 
 increase in jet multiplicity in data within a specific kinematic phase space [REF]. To mitigate this, jets are rejected if they have 
-raw \pT $<$ 50 GeV and $2.65 < |\eta| < 3.139$. This cut reduces the efficiency to reconstruct dijet pairs by 12\% in the specified 
+raw \pt $<$ 50 GeV and $2.65 < |\eta| < 3.139$. This cut reduces the efficiency to reconstruct dijet pairs by 12\% in the specified 
 region. To tag VBF events, we are interested in dijet pairs. To this end, if there are more than two jets satisfying the above criteria, 
-only the two jets with highest \pT are selected. 
+only the two jets with highest \pt are selected. 
 
 \section{Object Corrections}
 Several standard corrections are applied to the physics objects selected in the analysis. Rochester muon momentum scale and resolution 
@@ -124,10 +124,10 @@ and photons are provided by the EGamma POG and applied in the analysis. Jet mome
 the JetMET POG and applied in the analysis. 
 
 An additional muon momentum correction is obtained using an FSR photon recovery procedure, and is based on the procedure used by the \hzz 
-analysis [REF]. FSR photons are not considered during the standard CMS muon reconstruction. As the \pT of FSR photons from radiating 
+analysis [REF]. FSR photons are not considered during the standard CMS muon reconstruction. As the \pt of FSR photons from radiating 
 muons is generally very low, particle flow photons are considered, in contrast with the fully reconstructed photons used in the main 
 analysis selection. A particle flow photon must pass a set of cuts in order to be identified as an FSR photon associated with one of the 
-muons selected by the analysis. The photon must have \pT $>$ 2 GeV, $|\eta|<2.4$, and relative particle flow isolation less than 1.8. 
+muons selected by the analysis. The photon must have \pt $>$ 2 GeV, $|\eta|<2.4$, and relative particle flow isolation less than 1.8. 
 It must also satisfy $\Delta R(\gamma, \mu)/p_{T,\gamma}^{2} < 0.012$ and $\Delta R(\gamma, \mu) < 0.4$. If multiple particle flow 
 photons pass these requirements, the photon with the smallest $\Delta R(\gamma, \mu)/p_{T,\gamma}^{2} < 0.012$ is chosen. 
 Then, the four momentum of the FSR photon is added back to the four momentum of the muon, and the muon kinematics reevaluated. 
@@ -143,12 +143,12 @@ geometric center of the detector and a transverse position within
 2\,{cm} of the nominal beam collision point. The vertex with the largest value of summed physics-object
 $p_{T}^2$ is taken to be the primary interaction vertex. The physics objects used in this calculation are derived from 
 information obtained from the charged-particle tracking detectors only. These objects include jets reconstructed by 
-clustering charged particle tracks; the associated missing transverse momentum, defined as the negative vector sum of the \pT of 
+clustering charged particle tracks; the associated missing transverse momentum, defined as the negative vector sum of the \pt of 
 those jets.
 
 Events with two same-flavor opposite sign leptons (e or $\mu$) and a photon are selected. The leading muon (electron) is required to have 
-\pT greater than 25 (20) GeV, and the trailing lepton must have \pT greater than 15 (10) GeV. Electrons (muons) must have $|\eta|$ 
-less than 2.5 (2.4). The photon must have \pT greater than 15 GeV and must satisfy $0 < |\eta| < 1.4442$ or $1.566 < |\eta| < 2.5$. 
+\pt greater than 25 (20) GeV, and the trailing lepton must have \pt greater than 15 (10) GeV. Electrons (muons) must have $|\eta|$ 
+less than 2.5 (2.4). The photon must have \pt greater than 15 GeV and must satisfy $0 < |\eta| < 1.4442$ or $1.566 < |\eta| < 2.5$. 
 This avoids the calorimeter transition region, in which photon reconstruction is more difficult. The invariant mass of the dilepton 
 system is required to be greater than 50 GeV. In events with multiple dilepton pairs, the pair with mass closest to the nominal 
 Z boson mass [REF] is selected. 
@@ -183,7 +183,7 @@ Their uncertainties are saved and used to calculate a per-event uncertainty for 
 To optimize this procedure, we determine the true generator level Z lineshape from a gluon-gluon fusion \hzg sample.
 Generator level Z lineshapes for the dielectron and dimuon final states are fit with 
 a single-sided Crystal Ball function plus three gaussian functions.
-For each event, the likelihood is maximized and the \pT information of the refit leptons is updated. 
+For each event, the likelihood is maximized and the \pt information of the refit leptons is updated. 
 Then, the dilepton mass and three body mass are recalculated based on the refit leptons.
 The mass distributions for before and after the kinematic fit are shown in Figure [FIG]. The level of improvement in the 
 dilepton mass resolution, 

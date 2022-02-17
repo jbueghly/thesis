@@ -197,7 +197,7 @@ V.~Khachatryan \emph{et~al.}
 \newblock \eprint{1507.03031}.
 
 \bibitem{SMImage}
-W.~Commons.
+{Wikipedia Commons}.
 \newblock \enquote{File:standard model of elementary particles.svg.}
 \newblock
   {\url{https://en.wikipedia.org/wiki/File:Standard_Model_of_Elementary_Particles.svg#file}}
@@ -366,6 +366,22 @@ A.~M. Sirunyan \emph{et~al.}
 \newblock \emph{JINST}  (2021) \textbf{16}:P05014.
 \newblock \doi{10.1088/1748-0221/16/05/P05014}.
 \newblock \eprint{2012.06888}.
+
+\bibitem{FRUHWIRTH1987444}
+R.~Frühwirth.
+\newblock \enquote{Application of kalman filtering to track and vertex
+  fitting.}
+\newblock \emph{Nuclear Instruments and Methods in Physics Research Section A:
+  Accelerators, Spectrometers, Detectors and Associated Equipment}  (1987)
+  \textbf{262}~(2):444--450.
+\newblock ISSN 0168-9002.
+\newblock \doi{https://doi.org/10.1016/0168-9002(87)90887-4}.
+\newline\urlprefix\url{https://www.sciencedirect.com/science/article/pii/0168900287908874}
+
+\bibitem{MUON:DP2019}
+{CMS Collaboration}.
+\newblock \enquote{Muon reconstruction performance during run 2.}  (2019) .
+\newline\urlprefix\url{https://cds.cern.ch/record/2682902/files/DP2019_022.pdf}
 
 \bibitem{Cacciari:2008gp}
 M.~Cacciari, G.~P. Salam, and G.~Soyez.

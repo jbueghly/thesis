@@ -164,13 +164,22 @@ The measured energy resolution for electrons produced in $\PZ$ boson decays in  
 \end{figure}
 
 \subsection{Muon Reconstruction}
-Muon reconstruction utilizes information from the muon detectors and the tracker. First, detector hits in the CSCs, DTs, and RPCs are used to build standalone tracks using a Kalman-filter technique.
-Subsequently, these standalone muon tracks are combined with tracker information via two algorithms. So-called "tracker muons" are reconstructed using an "inside-out" algorithm, which starts from 
-tracker tracks and matches them to DT or CSC segments. So-called "global muons" are reconstructed with an "outside-in" approach which starts from standalone muon tracks and matches them 
-to tracker tracks using a Kalman-filter technique. In the case where both algorithms reconstruct a muon sharing the same tracker tack, the two outputs are merged into a single muon candidate.
-In general, the tracker muon algorithm is more efficient in the region of low muon \pT, while the global algorithm is efficient at high \pT. 
+Muon reconstruction utilizes information from the muon detectors and the tracker. First, detector hits in the CSCs, DTs, and RPCs are used to build standalone tracks using a Kalman filter~\cite{FRUHWIRTH1987444} technique.
+Subsequently, these standalone muon tracks are combined with tracker information via two algorithms. So-called ``tracker muons" are reconstructed using an ``inside-out" algorithm, which starts from 
+tracker tracks and matches them to DT or CSC segments. So-called ``global muons" are reconstructed with an ``outside-in" approach, which starts from standalone muon tracks and matches them 
+to tracker tracks using a Kalman filter technique. If both algorithms reconstruct a muon sharing the same tracker track, the two outputs are merged into a single muon candidate.
+In general, the tracker muon algorithm is more efficient in the region of low muon \pt, while the global algorithm is more efficient at high \pt. 
 
-The energy of muons is obtained from the corresponding track momentum. Matching muons to tracks measured in the silicon tracker results in a \pt resolution, for muons with \pt up to $100$\GeV, of $1$\% in the barrel and $3$\% in the endcaps. The \pt resolution in the barrel is better than $7$\% for muons with \pt up to $1$\TeV~\cite{CMS:2018rym}.
+The momentum of muons is obtained from the corresponding track momentum. Matching muons to tracks measured in the silicon tracker results in a \pt resolution, for muons with \pt up to $100$\GeV, of $1$\% in the barrel and $3$\% in the endcaps. The \pt resolution in the barrel is better than $7$\% for muons with \pt up to $1$\TeV~\cite{CMS:2018rym}. As shown in Fig. \ref{fig:muon_resolution}, this corresponds to a dimuon mass resolution in $\PZ\to\mpmm$ events of roughly 1--2\GeV, depending on the pseudorapidity of the muons~\cite{MUON:DP2019}. 
+
+\begin{figure}[tb]
+  \centering
+   \includegraphics[width=0.9\textwidth]{fig/experiment/reconstruction/muon_resolution.png}
+	\caption
+	[Left: dimuon mass resolution as a function of leading muon $\eta$ for $\PZ\to\mpmm$ events in 2018 data and simulation. Right: reconstructed dimuon mass.]
+	{Left: dimuon mass resolution as a function of leading muon $\eta$ for $\PZ\to\mpmm$ events in 2018 data and simulation. Right: reconstructed dimuon mass.~\cite{MUON:DP2019}}
+	\label{fig:muon_resolution}
+\end{figure}
 
 
 \subsection{Hadron Reconstruction}
@@ -200,7 +209,7 @@ Jet momentum is determined as the vectorial sum of all particle momenta in the j
 \begin{figure}
   \centering
    \includegraphics[width=0.9\textwidth]{fig/experiment/reconstruction/jet_energy_resolution.png}
-	\caption{Jet energy resolution as a function of simulated jet \pT in the barrel (left) and in the endcap (right) regions. Calo refers to the sum of ECAL and HCAL energy deposits, 
+	\caption{Jet energy resolution as a function of simulated jet \pt in the barrel (left) and in the endcap (right) regions. Calo refers to the sum of ECAL and HCAL energy deposits, 
 	while PF corresponds to jets clustered from PF particles using the anti-\kt algorithm.}
 	\label{fig:anti_kt_diagram}
 \end{figure}
