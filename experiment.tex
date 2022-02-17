@@ -102,7 +102,7 @@ and the electrons flow to the anodes, yielding a detectable avalanche of charge.
 of primarily $\mathrm{C}_2\mathrm{H}_2\mathrm{F}_4$. One advantage of the RPCs is their good time resolution, which is less than the LHC bunch spacing time of 25ns. This makes them useful for fast muon triggering that matches
 muon tracks to the relevant bunch crossing. Figure \ref{fig:muon_system} shows a cross-sectional view of the CMS detector highlighting the muon system components. 
 
-\begin{figure}
+\begin{figure}[tb]
   \centering
    \includegraphics[width=0.9\textwidth]{fig/experiment/detector/muon_sys_r-z.png}
 	\caption[Diagram of the CMS detector in the r-z plane showing the components of the muon system.]
@@ -111,27 +111,26 @@ muon tracks to the relevant bunch crossing. Figure \ref{fig:muon_system} shows a
 \end{figure}
 
 \section{Trigger System}
-At the LHC, the proton beam crossing interval is 25 ns, which corresponds to a pp collision rate of 40 MHz. Recording the full set of detector information for each collision is unfeasible, as it 
-would lead to far too much data to save to disk. As a result, the CMS experiment employs a two-tiered trigger system designed to preserve information of physics interest while reducing the 
+At the LHC, the proton beam crossing interval is 25 ns, which corresponds to a pp collision rate of 40 MHz. Recording the full set of detector information for each collision is unfeasible, as there is far too much data to save to disk. As a result, the CMS experiment employs a two-tiered trigger system, designed to preserve information of physics interest while reducing the 
 stored event rate to a more manageable 100 Hz. The first level of the trigger (L1) is a hardware trigger, which reduces the event rate from 40 MHz to about 100 kHz. The second layer is the 
 high level trigger (HLT), a processor farm using software optimized for fast processing. 
 
-The L1 trigger is implemented using FPGAs and ASICs, and has local, regional, and global components. First, local patterns in the calorimeters, track segments, and hit patterns in the muon chambers 
-are used by the Trigger Primitive Generators (TPGs). The TPGs rank and sort primitive objects corresponding to particle candidates based on energy, momentum, and reconstruction quality. Information
+The L1 trigger is implemented using field-programmable gate arrays and application-specific integrated circuits, and has local, regional, and global components. First, local patterns in the calorimeters, track segments, and hit patterns in the muon chambers 
+are processed by the Trigger Primitive Generators (TPGs). The TPGs rank and sort primitive objects corresponding to particle candidates based on energy, momentum, and reconstruction quality. Information
 from the TPGs is taken as input by regional triggers for the calorimeters and muon systems. These regional triggers further determine candidate physics objects, as well as energy sums and isolation
 information. Finally, this information is fed to a set of global triggers, which rank trigger objects across the entire detector. The final global trigger must decide whether to accept or 
-reject an event based on information input from the global calorimeter and muon trigger systems. Algorithms used in this decision can be based on single object \pT thresholds and multiplicity-related 
-thresholds, such as the presence of multiple jets, among other criteria. Events passing the L1 trigger are read out and passed to the HLT for further processing. 
+reject an event based on information input from the global calorimeter and muon trigger systems. Algorithms used for this decision can be based on single object \pt thresholds and multiplicity-related 
+requirements, such as the presence of multiple jets, among other criteria. Events passing the L1 trigger are read out and passed to the HLT for further processing. 
 
 In contrast to the L1 trigger, the HLT incorporates the full physics object reconstruction based on the full precision of the detector. This allows the HLT to accept and reject events with algorithms 
-of similar quality to those used by offline analyses. Over 13,000 CPU cores are dedicated to HLT processing. For speed and efficiency, reconstruction and filtering algorithms are applied in increasing order of complexity. If a filter sequence fails, the rest of the reconstruction is skipped. Additionally, processing is done regionally based on the L1 candidates and relevant detector components 
-passed as input to the HLT. Events that pass the HLT are assigned to relevant data streams based on their physics content. For this analysis, the relevant streams are the Double Muon and 
-Double Electron streams, triggered by events with two muons or two electrons passing a set of minimum \pT requirements, among other cuts. 
+of similar quality to those used by offline analyses. Over 13,000 central processing unit cores are dedicated to HLT processing. For speed and efficiency, reconstruction and filtering algorithms are applied in increasing order of complexity. If a filter sequence fails, the rest of the reconstruction is skipped. Additionally, processing is done regionally based on the L1 candidates and relevant detector components 
+passed as input to the HLT. Events that pass the HLT are assigned to relevant data streams based on their physics content. For the \hzg{} search, the relevant streams are the Double Muon and 
+Double Electron streams, triggered by events with two muons or two electrons passing a set of minimum \pt requirements and other cuts. 
 
 \section{Object Reconstruction}
 The global event reconstruction (also called particle-flow (PF) event reconstruction~\cite{CMS:2017yfk}) aims to reconstruct and identify each individual particle in an event, with an optimized combination of all subdetector information. In this process, the identification of the particle type (photon, electron, muon, charged hadron, neutral hadron) plays an important role in the determination of the particle direction and energy.
 
-\begin{figure}
+\begin{figure}[tb]
   \centering
    \includegraphics[width=0.9\textwidth]{fig/experiment/reconstruction/cms_detector.png}
 	\caption{Schematic of different particles interacting with the CMS detector.}
