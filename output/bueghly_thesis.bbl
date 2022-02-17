@@ -353,6 +353,12 @@ A.~M. Sirunyan \emph{et~al.}
 \newblock \doi{10.1088/1748-0221/12/10/P10003}.
 \newblock \eprint{1706.04965}.
 
+\bibitem{Adam:815410}
+W.~Adam, R.~Frühwirth, A.~Strandlie, and T.~Todor.
+\newblock \enquote{{Reconstruction of Electrons with the Gaussian-Sum Filter in
+  the CMS Tracker at the LHC}.}  (2005) .
+\newline\urlprefix\url{https://cds.cern.ch/record/815410}
+
 \bibitem{CMS:2020uim}
 A.~M. Sirunyan \emph{et~al.}
 \newblock \enquote{{Electron and photon reconstruction and identification with

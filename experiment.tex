@@ -128,29 +128,40 @@ passed as input to the HLT. Events that pass the HLT are assigned to relevant da
 Double Electron streams, triggered by events with two muons or two electrons passing a set of minimum \pt requirements and other cuts. 
 
 \section{Object Reconstruction}
-The global event reconstruction (also called particle-flow (PF) event reconstruction~\cite{CMS:2017yfk}) aims to reconstruct and identify each individual particle in an event, with an optimized combination of all subdetector information. In this process, the identification of the particle type (photon, electron, muon, charged hadron, neutral hadron) plays an important role in the determination of the particle direction and energy.
+The global event reconstruction (also called particle-flow (PF) event reconstruction~\cite{CMS:2017yfk}) aims to reconstruct and identify each individual particle in an event, with an optimized combination of all subdetector information. In this process, the identification of the particle type (photon, electron, muon, charged hadron, neutral hadron) plays an important role in the determination of the particle direction and energy. Figure \ref{fig:particles_interact} provides a simple visualization of how each type of particle types interacts with each of the CMS subdetectors. An overview of the reconstruction procedure for each particle type is provided below.
 
 \begin{figure}[tb]
   \centering
    \includegraphics[width=0.9\textwidth]{fig/experiment/reconstruction/cms_detector.png}
-	\caption{Schematic of different particles interacting with the CMS detector.}
+	\caption{Visualization of different types of particles interacting with the CMS detector.}
+	\label{fig:particles_interact}
 \end{figure}
 
 \subsection{Photon and Electron Reconstruction}
 Photons and electrons interact with the material in the ECAL, depositing the majority of their energy before reaching the HCAL. As they interact, photons convert into 
 electron-positron pairs and electrons radiate bremsstrahlung photons. This leads to the formation of an electromagnetic shower. Because of this, the original particle energy 
 is split into multiple energy deposits, which must be combined to reconstruct the original energy. Deposits in individual ECAL crystals are combined into clusters, 
-and these clusters are in turn combined into superclusters. Two algorithms are used to generate superclusters: the so-called "mustache" algorithm, and the so-called "refined" algorithm.
-The mustache algorithm defines a seed cluster with energy above a certain threshold, and then combines it with other clusters within a region of the eta-phi plane centered at the 
-seed location. The refined algorithm uses the mustache superclusters as well as tracking information to extrapolate bremsstrahlung and conversion tracks to decide whether a cluster should belong 
+and these clusters are in turn combined into superclusters. Two algorithms are used to define superclusters: the ``mustache" algorithm, and the ``refined" algorithm.
+The mustache algorithm defines a seed cluster with energy above a certain threshold, and then combines it with other clusters within a region of the $\eta$-$\phi$ plane centered at the 
+seed location. The refined algorithm uses the mustache superclusters and tracking information to extrapolate bremsstrahlung and conversion tracks, in order to decide whether a cluster should belong 
 to the supercluster. 
 
-The distinction between photons and electrons is made using tracking information, where photons are associated with no tracks and electrons with tracks. The Gaussian Sum Filter (GSF) [REF] track 
+The distinction between photons and electrons is made using tracking information, where photons are associated with no tracks and electrons with tracks. The Gaussian Sum Filter (GSF)~\cite{Adam:815410} track 
 fitting algorithm is used to identify and characterize tracks that might be associated with an electron. It first begins with a hit pattern in the tracker, which is used as a seed. This seed 
 can either be tracker-driven, coming from the collection of generic tracks tested for mutual compatibility, or it can be ECAL-driven, where a mustache supercluster is compared in location with 
 a collection of tracker hit patterns to determine if the supercluster is consistent with the trajectory indicated by the track. Electron seeds are then converted into reconstructed electron tracks. 
-In the absence of any GSF electron tracks, a photon candidate is obtained. Additional separation between photons and electrons is obtained through further selection requirements. 
+In the absence of any GSF electron tracks, a photon candidate is obtained. Additional distinction between photons and electrons is obtained through further selection requirements. 
+Fig. \ref{fig:electron_resolution} shows the energy resolution for simulated electrons in the barrel and endcaps as a function of generated \pt. 
 The measured energy resolution for electrons produced in $\PZ$ boson decays in  $\Pp\Pp$ collision data ranges from $2$--$5$\%, depending on electron pseudorapidity and energy loss through bremsstrahlung in the detector material~\cite{CMS:2020uim}.
+
+\begin{figure}[tb]
+  \centering
+   \includegraphics[width=0.8\textwidth]{fig/experiment/reconstruction/electron_resolution.png}
+	\caption
+	[Energy resolution for simulated electrons in the barrel (left) and endcaps (right) as a function of generated \pt. The green markers represent tracker measurement only, the orange markers represent ECAL measurement only, and the purple markers represent the combination of tracker and ECAL information.]
+	{Energy resolution for simulated electrons in the barrel (left) and endcaps (right) as a function of generated \pt~\cite{CMS:2020uim}. The green markers represent tracker measurement only, the orange markers represent ECAL measurement only, and the purple markers represent the combination of tracker and ECAL information.}
+	\label{fig:electron_resolution}
+\end{figure}
 
 \subsection{Muon Reconstruction}
 Muon reconstruction utilizes information from the muon detectors and the tracker. First, detector hits in the CSCs, DTs, and RPCs are used to build standalone tracks using a Kalman-filter technique.
@@ -162,10 +173,10 @@ In general, the tracker muon algorithm is more efficient in the region of low mu
 The energy of muons is obtained from the corresponding track momentum. Matching muons to tracks measured in the silicon tracker results in a \pt resolution, for muons with \pt up to $100$\GeV, of $1$\% in the barrel and $3$\% in the endcaps. The \pt resolution in the barrel is better than $7$\% for muons with \pt up to $1$\TeV~\cite{CMS:2018rym}.
 
 
-\subsection{Hadrons}
+\subsection{Hadron Reconstruction}
 Charged hadrons are identified as charged particle tracks that are neither identified as electrons nor as muons. Neutral hadrons are identified as HCAL energy clusters not linked to any charged hadron trajectory, or as a combined ECAL and HCAL energy excess with respect to the expected charged hadron energy deposit.
 
-\subsection{Jets}
+\subsection{Jet Reconstruction}
 For each event, hadronic jets are reconstructed as clusters of PF particles, including photons, electrons, muons, and hadrons. For clustering, the infrared and collinear-safe anti-\kt algorithm~\cite{Cacciari:2008gp, Cacciari:2011ma} is used. The goal of jet clustering algorithms is to combine PF particles together into a single jet object by merging them together based on their relative geometric distances and transverse momenta (\kt). In the case of the anti-\kt algorithm, clustering proceeds from smallest geometric distance to largest, weighted by squared inverse \kt. This inverse weighting 
 preferentially combines PF particles with higher momenta before lower momenta, for a given distance. The advantage of this approach is that low momentum particles are more likely to be clustered 
 with high momentum counterparts, rather than with other low momentum particles. It follows that these low momentum particles will not significantly modify the jet shape, whereas the more important, high-momentum particles, will. A precise definition of the anti-\kt algorithm is defined in equation \ref{eq:antikt}. 
