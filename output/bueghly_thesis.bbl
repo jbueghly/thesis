@@ -8,6 +8,14 @@
   \urlstyle{rm}\Url}\fi
 \providecommand{\eprint}[2][]{\url{#2}}
 
+\bibitem{CMS:2017yfk}
+A.~M. Sirunyan \emph{et~al.}
+\newblock \enquote{Particle-flow reconstruction and global event description
+  with the {CMS} detector.}
+\newblock \emph{JINST}  (2017) \textbf{12}:P10003.
+\newblock \doi{10.1088/1748-0221/12/10/P10003}.
+\newblock \eprint{1706.04965}.
+
 \bibitem{Aad_2012}
 G.~Aad \emph{et~al.}
 \newblock \enquote{{Observation of a new particle in the search for the
@@ -345,14 +353,6 @@ F.~Cavallari and C.~I. Rovelli.
   Calorimeter in LHC Run2}.}  (2021) .
 \newline\urlprefix\url{http://cds.cern.ch/record/2798128}
 
-\bibitem{CMS:2017yfk}
-A.~M. Sirunyan \emph{et~al.}
-\newblock \enquote{Particle-flow reconstruction and global event description
-  with the {CMS} detector.}
-\newblock \emph{JINST}  (2017) \textbf{12}:P10003.
-\newblock \doi{10.1088/1748-0221/12/10/P10003}.
-\newblock \eprint{1706.04965}.
-
 \bibitem{Adam:815410}
 W.~Adam, R.~Frühwirth, A.~Strandlie, and T.~Todor.
 \newblock \enquote{{Reconstruction of Electrons with the Gaussian-Sum Filter in
@@ -411,6 +411,23 @@ V.~Khachatryan \emph{et~al.}
 \newblock \emph{JINST}  (2017) \textbf{12}:P02014.
 \newblock \doi{10.1088/1748-0221/12/02/P02014}.
 \newblock \eprint{1607.03663}.
+
+\bibitem{Ackerstaffetal.1998}
+K.~Ackerstaff \emph{et~al.}
+\newblock \enquote{{Search for anomalous production of dilepton events with
+  missing transverse momentum in $e^+e^-$ collisions at $\sqrt{s}$ = 161 GeV
+  and 172 GeV}.}
+\newblock \emph{Eur. Phys. J. C}  (1998) \textbf{4}:47.
+\newblock \doi{10.1007/PL00021655}.
+\newblock \eprint{hep-ex/9710010}.
+
+\bibitem{VESTERINEN2009432}
+M.~Vesterinen and T.~R. Wyatt.
+\newblock \enquote{{A novel technique for studying the $\textrm{Z}$ boson
+  transverse momentum distribution at hadron colliders}.}
+\newblock \emph{Nucl. Instrum. Meth. A}  (2009) \textbf{602}:432.
+\newblock \doi{10.1016/j.nima.2009.01.203}.
+\newblock \eprint{0807.4956}.
 
 \bibitem{CMS-LUM-17-003}
 A.~M. Sirunyan \emph{et~al.}

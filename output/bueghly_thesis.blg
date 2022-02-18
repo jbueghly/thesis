@@ -5,7 +5,7 @@ A level-1 auxiliary file: abstract.aux
 A level-1 auxiliary file: introduction.aux
 A level-1 auxiliary file: theory.aux
 A level-1 auxiliary file: experiment.aux
-A level-1 auxiliary file: analysis_strategy.aux
+A level-1 auxiliary file: analysis_overview.aux
 A level-1 auxiliary file: data.aux
 A level-1 auxiliary file: selection.aux
 A level-1 auxiliary file: categorization.aux
@@ -42,45 +42,45 @@ Warning--empty author in LUM-18-002
 Warning--missing institution in LUM-18-002
 Warning--empty author in AGOSTINELLI2003250
 Warning--missing institution in cite:l3
-You've used 86 entries,
+You've used 88 entries,
             2559 wiz_defined-function locations,
-            1196 strings with 22408 characters,
-and the built_in function-call counts, 33391 in all, are:
-= -- 2279
-> -- 887
+            1211 strings with 22863 characters,
+and the built_in function-call counts, 34153 in all, are:
+= -- 2332
+> -- 905
 < -- 3
-+ -- 415
-- -- 204
-* -- 2239
-:= -- 3776
-add.period$ -- 461
-call.type$ -- 86
-change.case$ -- 85
++ -- 423
+- -- 208
+* -- 2290
+:= -- 3864
+add.period$ -- 473
+call.type$ -- 88
+change.case$ -- 87
 chr.to.int$ -- 0
-cite$ -- 98
-duplicate$ -- 3577
-empty$ -- 3487
-format.name$ -- 268
-if$ -- 7221
+cite$ -- 100
+duplicate$ -- 3662
+empty$ -- 3567
+format.name$ -- 274
+if$ -- 7386
 int.to.chr$ -- 0
-int.to.str$ -- 86
-missing$ -- 855
-newline$ -- 572
-num.names$ -- 79
-pop$ -- 1397
+int.to.str$ -- 88
+missing$ -- 875
+newline$ -- 586
+num.names$ -- 81
+pop$ -- 1428
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 0
-skip$ -- 727
+skip$ -- 743
 stack$ -- 0
-substring$ -- 1037
-swap$ -- 2097
+substring$ -- 1052
+swap$ -- 2147
 text.length$ -- 3
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 0
 warning$ -- 12
-while$ -- 156
-width$ -- 88
-write$ -- 1195
+while$ -- 160
+width$ -- 90
+write$ -- 1225
 (There was 1 error message)
