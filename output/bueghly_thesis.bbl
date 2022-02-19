@@ -429,6 +429,14 @@ M.~Vesterinen and T.~R. Wyatt.
 \newblock \doi{10.1016/j.nima.2009.01.203}.
 \newblock \eprint{0807.4956}.
 
+\bibitem{bib:htozz2016}
+A.~M. Sirunyan \emph{et~al.}
+\newblock \enquote{Measurements of properties of the {Higgs} boson decaying
+  into the four-lepton final state in pp collisions at $ \sqrt{s}=13 $ {TeV}.}
+\newblock \emph{JHEP}  (2017) \textbf{11}:047.
+\newblock \doi{10.1007/JHEP11(2017)047}.
+\newblock \eprint{1706.09936}.
+
 \bibitem{CMS-LUM-17-003}
 A.~M. Sirunyan \emph{et~al.}
 \newblock \enquote{Precision luminosity measurement in proton-proton collisions

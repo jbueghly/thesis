@@ -44,53 +44,9 @@ The ATLAS full Run 2 search~\cite{Aad:2020plj} was published in 2020, with a lar
 \end{figure}
 
 \section{The CMS Run 2 Strategy}
+The remainder of this thesis provides a thorough description of the CMS Run 2 search for \hzg{}. First, a brief overview is provided below. The data sample corresponds to an integrated luminosity of \LumiT\fbinv of $\Pp\Pp$ collisions at $\sqrt s = 13 \TeV$ accumulated between 2016 and 2018. Much of the analysis strategy has been inspired by the prior CMS and ATLAS \hzg{} searches, as well as other CMS Higgs analyses. The baseline event selection is similar to the previous CMS searches. One crucial difference with respect to the CMS 2016 analysis is that the $m_{\lplm\gamma}$ range has been extended to 105--170\GeV, including the kinematic turn-on, as was done in the CMS Run 1 analysis. This choice will be discussed in detail later in this thesis. Additionally, a kinematic fit procedure has been added to the analysis to improve the $m_{\lplm\gamma}$ resolution, similar to what has been done in the previous ATLAS \hzg{} analyses and in other CMS Higgs analyses, including $\PH\to\PZ\PZ^*\to4\ell$~\cite{bib:htozz2016}.
 
+The sensitivity of the analysis is enhanced by searching for Higgs boson production in a variety of mechanisms, including gluon-gluon fusion ($\Pg\Pg\PH$); vector boson fusion (VBF); and the associated production of a Higgs boson with either a weak vector boson (V$\PH$, where V = $\PZ$ or $\PW$) or a top quark pair ($\ttbar\PH$). The dominant backgrounds arise from Drell--Yan production in association with an initial-state photon~($\PZ/\gamma^{*}$+$\gamma$) and Drell--Yan production in association with jets, where a jet or additional lepton is misidentified as a photon ($\PZ/\gamma^{*}$+jets). 
+After using a set of discriminating variables to suppress background in the different production mechanisms, the signal is identified as a narrow resonant peak around $m_{\PH}$ in the distribution of $m_{\lplm\gamma}$.
 
-Before discussing the full details of the analysis procedure and results, it is worth summarizing 
-the broader strategy taken in our search for \hzg. As two prior CMS results have 
-been published with Run 1 data and 2016 data, we will emphasize the ways in which our analysis
-overlaps and differs from these previous approaches. Very broadly, the current search is 
-similar to the previous analyses in trigger, object, and basic event selection. 
-However, it is significantly more advanced in three body mass reconstruction, 
-event categorization, and background modeling. We will show that the innovations in these 
-areas have significantly improved the expected sensitivity and statistical robustness of the search 
-with respect to the past CMS analyses.
-
-Chapter 5 provides a detailed description of the data and Monte Carlo simulation 
-used in our analysis. Standard dimuon and dielectron trigger streams are used for 2016, 2017, 
-and 2018 LHC data. The full dataset corresponds to an integrated luminosity of 
-137 $fb^{-1}$. In other words, we use the full CMS Run 2 dataset at 13 TeV center of 
-mass energy. Simulated signal samples are used to determine the expected signal yields 
-and three body mass shape. Simulated background samples are used for MVA training 
-and category optimization. However, the background shape and normalization in the final result
-is determined by fitting the data and does not rely on any simulation.
-
-Chapter 6 describes the basic object and event selection used in the analysis, and Chapter 7 
-describes further selection and categorization using MVAs. As mentioned, the basic 
-selection requirements are fairly similar to previous CMS analyses. Muons are selected with 
-a loose cut-based ID, while electrons and photons are selected with loose MVA IDs. Loose ID
-requirements are chosen in order to maximize signal efficiency. Background is then suppressed 
-through a combination of basic cuts and MVA methods. Basic kinematic cuts on isolation, mass, 
-and photon energy variables are able to significantly reduce backgrounds from initial and final 
-state radiation, while the MVA methods are able to strongly disciminate against backgrounds from 
-jets misreconstructed as photons. Finally, a kinematic fit procedure in the dilepton mass 
-is able to significantly improve the signal mass resolution. The kinematic fit is an 
-innovation of the current analysis and contributes to its improved sensitivity.
-
-Chapter 8 details the approach to signal and background modeling of the three body 
-mass spectrum. As in previous CMS \hzg searches, the 
-signal shape is determined via an analytic fit to simulation. A resonant background 
-contribution from \hmumu is modeled similarly. The nonresonant 
-background contribution is taken from a fit to data in the range of 105 to 170 GeV. This 
-background model includes both the turn-on arising from the real Z boson peak as well as 
-the falling spectrum at higher mass. We note that the turn-on was fit in the Run 1 analysis as 
-well, but was dropped in the 2016 analysis. A more thorough discussion of the merits of fitting 
-the turn-on will be described in chapter 8.
-
-Chapter 9 describes the systematic uncertainties relevant for the analysis, and Chapter 10
-gives a basic overview of the statistics used to arrive at the final results. It is 
-worth noting that given the current integrated luminosity, the analysis is dominated by 
-statistical uncertainty. Chapter 11 gives the full set of results, including best fit 
-signal strength, limits, and comparisons with \hgg. 
-
-
+The data sample is divided into mutually exclusive categories according to (i) the presence of an additional lepton produced by $\PZ(\to\lplm)$ or $\PW(\to\ell\nu)$ decay, indicating the possible associated production of a Higgs boson with a $\PW$ or $\PZ$ boson, or $\ttbar\PH$ production with a leptonic top quark decay; (ii) the value of a multivariate analysis (MVA) discriminant characterizing the kinematic properties of a dijet system together with the $\lplm\gamma$ candidate, indicating possible VBF production; and (iii) the value of an MVA discriminant characterizing the kinematic properties of the $\lplm\gamma$ system. This MVA categorization procedure is an innovation of the CMS Run 2 analysis. While a VBF MVA was used in the ATLAS full Run 2 analysis, we are the first to also leverage a kinematic MVA for maximal discrimination between signal and background.

@@ -17,19 +17,19 @@ A level-1 auxiliary file: conclusion.aux
 The style file: thesis_bibstyle.bst
 A level-1 auxiliary file: appendix_resonant_fits.aux
 Database file #1: refs.bib
-I was expecting a `,' or a `}'---line 1191 of file refs.bib
+I was expecting a `,' or a `}'---line 1187 of file refs.bib
  : 
  : archivePrefix = {arXiv},
 (Error may have been on previous line)
 I'm skipping whatever remains of this entry
 Warning--entry type for "L1_prefire" isn't style-file defined
---line 1221 of file refs.bib
+--line 1217 of file refs.bib
 Warning--entry type for "SMImage" isn't style-file defined
---line 1235 of file refs.bib
+--line 1231 of file refs.bib
 Warning--entry type for "CERN_complex" isn't style-file defined
---line 1375 of file refs.bib
+--line 1371 of file refs.bib
 Warning--entry type for "detector_image" isn't style-file defined
---line 1379 of file refs.bib
+--line 1375 of file refs.bib
 Warning--empty journal in LHC-YR4
 Warning--empty author in Benedikt:2004wm
 Warning--empty journal in Benedikt:2004wm
@@ -42,45 +42,45 @@ Warning--empty author in LUM-18-002
 Warning--missing institution in LUM-18-002
 Warning--empty author in AGOSTINELLI2003250
 Warning--missing institution in cite:l3
-You've used 88 entries,
+You've used 89 entries,
             2559 wiz_defined-function locations,
-            1211 strings with 22863 characters,
-and the built_in function-call counts, 34153 in all, are:
-= -- 2332
-> -- 905
+            1216 strings with 23043 characters,
+and the built_in function-call counts, 34540 in all, are:
+= -- 2359
+> -- 914
 < -- 3
-+ -- 423
-- -- 208
-* -- 2290
-:= -- 3864
-add.period$ -- 473
-call.type$ -- 88
-change.case$ -- 87
++ -- 427
+- -- 210
+* -- 2316
+:= -- 3909
+add.period$ -- 479
+call.type$ -- 89
+change.case$ -- 88
 chr.to.int$ -- 0
-cite$ -- 100
-duplicate$ -- 3662
-empty$ -- 3567
-format.name$ -- 274
-if$ -- 7386
+cite$ -- 101
+duplicate$ -- 3705
+empty$ -- 3608
+format.name$ -- 277
+if$ -- 7470
 int.to.chr$ -- 0
-int.to.str$ -- 88
-missing$ -- 875
-newline$ -- 586
-num.names$ -- 81
-pop$ -- 1428
+int.to.str$ -- 89
+missing$ -- 885
+newline$ -- 593
+num.names$ -- 82
+pop$ -- 1443
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 0
-skip$ -- 743
+skip$ -- 751
 stack$ -- 0
-substring$ -- 1052
-swap$ -- 2147
+substring$ -- 1061
+swap$ -- 2172
 text.length$ -- 3
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 0
 warning$ -- 12
-while$ -- 160
-width$ -- 90
-write$ -- 1225
+while$ -- 162
+width$ -- 91
+write$ -- 1240
 (There was 1 error message)
