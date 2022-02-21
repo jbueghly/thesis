@@ -1,73 +1,56 @@
 \chapter{Data and Simulated Samples}\label{sec:data}
 
-The data sample used for the \hzg search corresponds to a total integrated luminosity of \LumiT\fbinv and was collected over a data-taking period spanning three years: \Lumia\fbinv in 2016, \Lumib\fbinv in 2017, and \Lumic\fbinv in 2018~\cite{CMS-LUM-17-003,LUM-17-004,LUM-18-002}. 
-To be considered in the analysis, events must satisfy the high-level trigger requirements for at least one of the dielectron or dimuon triggers.
+The data sample used for the CMS Run 2 \hzg{} search corresponds to a total integrated luminosity of \LumiT\fbinv and was collected over a data-taking period spanning three years: \Lumia\fbinv in 2016, \Lumib\fbinv in 2017, and \Lumic\fbinv in 2018~\cite{CMS-LUM-17-003,LUM-17-004,LUM-18-002}. 
+To be considered in the analysis, events must satisfy the HLT requirements for at least one of the dielectron or dimuon triggers.
 The dielectron trigger requires a leading (subleading) electron with
-$\pt > 23\,(12)\GeV$, while the dimuon trigger requires a muon with $\pt > 17\,(8)\GeV$.
-The corresponding CMS data streams are listed in Table \ref{tab:data_samples}. To ensure data quality, luminosity masks are applied based recommendations from the Physics Performance and Dataset group. Table \ref{tab:lumi_jsons} shows the luminosity masks applied for each of the three data-taking years.
+$\pt > 23\,(12)\GeV$, while the dimuon trigger requires a leading (subleading) muon with $\pt > 17\,(8)\GeV$.
+The corresponding CMS data streams are listed in Table \ref{tab:data_samples}. 
+To ensure data quality, luminosity masks are applied based on recommendations from the Physics Performance and Dataset group.
 
-\begin{table}[h]
+\begin{table}[tb]
   \begin{center}
-    \caption{Summary of data samples used.}
+    \caption{Summary of data samples used. All samples use the MINIAOD data format.}
     \begin{tabular}{|l|l|}
       \hline
-      data set name                                    & channel                       \\ \hline
-      /DoubleEG/Run2016B-17Jul2018\_ver2-v1/MINIAOD   & $\PZ\PGg\to \Pe\Pe + \PGg $     \\
-      /DoubleEG/Run2016C-17Jul2018-v1/MINIAOD         & $\PZ\PGg\to \Pe\Pe + \PGg $     \\
-      /DoubleEG/Run2016D-17Jul2018-v1/MINIAOD         & $\PZ\PGg\to \Pe\Pe + \PGg $     \\
-      /DoubleEG/Run2016E-17Jul2018-v1/MINIAOD         & $\PZ\PGg\to \Pe\Pe + \PGg $     \\       
-      /DoubleEG/Run2016F-17Jul2018-v1/MINIAOD         & $\PZ\PGg\to \Pe\Pe + \PGg $     \\       
-      /DoubleEG/Run2016G-17Jul2018-v1/MINIAOD         & $\PZ\PGg\to \Pe\Pe + \PGg $     \\
-      /DoubleEG/Run2016H-17Jul2018-v1/MINIAOD         & $\PZ\PGg\to \Pe\Pe + \PGg $     \\
-      /DoubleEG/Run2016H-17Jul2018-v1/MINIAOD         & $\PZ\PGg\to \Pe\Pe + \PGg $     \\
-      /DoubleEG/Run2017B-31Mar2018-v1/MINIAOD         & $\PZ\PGg\to \Pe\Pe + \PGg $     \\
-      /DoubleEG/Run2017C-31Mar2018-v1/MINIAOD         & $\PZ\PGg\to \Pe\Pe + \PGg $     \\
-      /DoubleEG/Run2017D-31Mar2018-v1/MINIAOD         & $\PZ\PGg\to \Pe\Pe + \PGg $     \\
-      /DoubleEG/Run2017E-31Mar2018-v1/MINIAOD         & $\PZ\PGg\to \Pe\Pe + \PGg $     \\       
-      /DoubleEG/Run2017F-31Mar2018-v1/MINIAOD         & $\PZ\PGg\to \Pe\Pe + \PGg $     \\           
-      /EGamma/Run2018A-17Sep2018-v2/MINIAOD           & $\PZ\PGg\to \Pe\Pe + \PGg $     \\  
-      /EGamma/Run2018B-17Sep2018-v1/MINIAOD           & $\PZ\PGg\to \Pe\Pe + \PGg $     \\
-      /EGamma/Run2018C-17Sep2018-v1/MINIAOD           & $\PZ\PGg\to \Pe\Pe + \PGg $     \\
-      /EGamma/Run2018D-22Jan2019-v2/MINIAOD           & $\PZ\PGg\to \Pe\Pe + \PGg $     \\
-      \hline  
-      \hline  
-      /DoubleMuon/Run2016B-17Jul2018\_ver2-v1/MINIAOD   & $\PZ\PGg\to \PGm\PGm + \PGg $     \\
-      /DoubleMuon/Run2016C-17Jul2018-v1/MINIAOD         & $\PZ\PGg\to \PGm\PGm + \PGg $     \\
-      /DoubleMuon/Run2016D-17Jul2018-v1/MINIAOD         & $\PZ\PGg\to \PGm\PGm + \PGg $     \\
-      /DoubleMuon/Run2016E-17Jul2018-v1/MINIAOD         & $\PZ\PGg\to \PGm\PGm + \PGg $     \\
-      /DoubleMuon/Run2016F-17Jul2018-v1/MINIAOD         & $\PZ\PGg\to \PGm\PGm + \PGg $     \\
-      /DoubleMuon/Run2016G-17Jul2018-v1/MINIAOD         & $\PZ\PGg\to \PGm\PGm + \PGg $     \\ 
-      /DoubleMuon/Run2016H-17Jul2018-v1/MINIAOD         & $\PZ\PGg\to \PGm\PGm + \PGg $     \\
-      /DoubleMuon/Run2016H-17Jul2018-v1/MINIAOD         & $\PZ\PGg\to \PGm\PGm + \PGg $     \\ 
-      /DoubleMuon/Run2017B-31Mar2018-v1/MINIAOD         & $\PZ\PGg\to \PGm\PGm + \PGg $     \\
-      /DoubleMuon/Run2017C-31Mar2018-v1/MINIAOD         & $\PZ\PGg\to \PGm\PGm + \PGg $     \\
-      /DoubleMuon/Run2017D-31Mar2018-v1/MINIAOD         & $\PZ\PGg\to \PGm\PGm + \PGg $     \\
-      /DoubleMuon/Run2017E-31Mar2018-v1/MINIAOD         & $\PZ\PGg\to \PGm\PGm + \PGg $     \\       
-      /DoubleMuon/Run2017F-31Mar2018-v1/MINIAOD         & $\PZ\PGg\to \PGm\PGm + \PGg $     \\
-      /DoubleMuon/Run2018A-17Sep2018-v2/MINIAOD         & $\PZ\PGg\to \PGm\PGm + \PGg $     \\  
-      /DoubleMuon/Run2018B-17Sep2018-v1/MINIAOD         & $\PZ\PGg\to \PGm\PGm + \PGg $     \\
-      /DoubleMuon/Run2018C-17Sep2018-v1/MINIAOD         & $\PZ\PGg\to \PGm\PGm + \PGg $     \\
-      /DoubleMuon/Run2018D-PromptReco-v2/MINIAOD        & $\PZ\PGg\to \PGm\PGm + \PGg $     \\\hline       
+	    \textbf{$\Pe^+\Pe^-\PGg$ final state} & \textbf{$\PGm^+\PGm^+\PGg$ final state}	                     \\\hline 
+      /DoubleEG/Run2016B-17Jul2018\_ver2-v1 	&  /DoubleMuon/Run2016B-17Jul2018\_ver2-v1   \\
+      /DoubleEG/Run2016C-17Jul2018-v1 		&  /DoubleMuon/Run2016C-17Jul2018-v1         \\
+      /DoubleEG/Run2016D-17Jul2018-v1 		&  /DoubleMuon/Run2016D-17Jul2018-v1         \\
+      /DoubleEG/Run2016E-17Jul2018-v1	        &  /DoubleMuon/Run2016E-17Jul2018-v1         \\       
+      /DoubleEG/Run2016F-17Jul2018-v1	        &  /DoubleMuon/Run2016F-17Jul2018-v1         \\       
+      /DoubleEG/Run2016G-17Jul2018-v1	        &  /DoubleMuon/Run2016G-17Jul2018-v1         \\
+      /DoubleEG/Run2016H-17Jul2018-v1	        &  /DoubleMuon/Run2016H-17Jul2018-v1         \\
+      /DoubleEG/Run2016H-17Jul2018-v1	        &  /DoubleMuon/Run2016H-17Jul2018-v1         \\
+      /DoubleEG/Run2017B-31Mar2018-v1	        &  /DoubleMuon/Run2017B-31Mar2018-v1         \\
+      /DoubleEG/Run2017C-31Mar2018-v1	        &  /DoubleMuon/Run2017C-31Mar2018-v1         \\
+      /DoubleEG/Run2017D-31Mar2018-v1	        &  /DoubleMuon/Run2017D-31Mar2018-v1         \\
+      /DoubleEG/Run2017E-31Mar2018-v1	        &  /DoubleMuon/Run2017E-31Mar2018-v1         \\       
+      /DoubleEG/Run2017F-31Mar2018-v1	        &  /DoubleMuon/Run2017F-31Mar2018-v1         \\           
+      /EGamma/Run2018A-17Sep2018-v2		&  /DoubleMuon/Run2018A-17Sep2018-v2         \\  
+      /EGamma/Run2018B-17Sep2018-v1		&  /DoubleMuon/Run2018B-17Sep2018-v1         \\
+      /EGamma/Run2018C-17Sep2018-v1		&  /DoubleMuon/Run2018C-17Sep2018-v1         \\
+      /EGamma/Run2018D-22Jan2019-v2		&  /DoubleMuon/Run2018D-PromptReco-v2        \\\hline       
     \end{tabular}
     \label{tab:data_samples}
   \end{center}
 \end{table}
-
-\begin{table}[h]
-    \scriptsize
-  \begin{center}
-    \caption{JSON files for luminosity masks used in the analysis.}
-    \begin{tabular}{|l|l|l|}
-      \hline
-        run period &  JSON file   &     luminosity ($fb^{-1}$)   \\ \hline
-        2016       &  Cert\_271036-284044\_13TeV\_ReReco\_07Aug2017\_Collisions16\_JSON.txt   & \Lumia    \\
-        2017       &  Cert\_294927-306462\_13TeV\_EOY2017ReReco\_Collisions17\_JSON\_v1.txt   & \Lumib    \\
-        2018       &  Cert\_314472-325175\_13TeV\_17SeptEarlyReReco2018ABC\_PromptEraD\_Collisions18\_JSON.txt    & \Lumic    \\
-      \hline
-    \end{tabular}
-    \label{tab:lumi_jsons}
-  \end{center}
-\end{table}
+%\clearpage
+%
+%\begin{table}[h]
+%    \scriptsize
+%  \begin{center}
+%    \caption{JSON files for luminosity masks used in the analysis.}
+%    \begin{tabular}{|l|l|l|}
+%      \hline
+%        run period &  JSON file   &     luminosity ($fb^{-1}$)   \\ \hline
+%        2016       &  Cert\_271036-284044\_13TeV\_ReReco\_07Aug2017\_Collisions16\_JSON.txt   & \Lumia    \\
+%        2017       &  Cert\_294927-306462\_13TeV\_EOY2017ReReco\_Collisions17\_JSON\_v1.txt   & \Lumib    \\
+%        2018       &  Cert\_314472-325175\_13TeV\_17SeptEarlyReReco2018ABC\_PromptEraD\_Collisions18\_JSON.txt    & \Lumic    \\
+%      \hline
+%    \end{tabular}
+%    \label{tab:lumi_jsons}
+%  \end{center}
+%\end{table}
 
 Signal samples for $\Pg\Pg\PH$, VBF, $\mathrm{V}\PH$, and $\ttbar\PH$ production, with 
 $\PH\to\PZ\gamma$ and $\PZ\to\ell^+\ell^-$ ($\ell = \Pe$, $\mu$, or $\tau$),
