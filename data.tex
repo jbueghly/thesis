@@ -104,22 +104,18 @@ The events with prompt, final state photons are tagged using generator-level tru
 
 \section{Photon Internal Conversion}
 \label{sec:gconversion}
-It was noticed by the $\PH\to\PGg\PGg$ group that Pythia 8 showering automatically 
+The PYTHIA 8 showering algorithm automatically 
 includes a component in which $\PH\to\PGg\PGg$ photons are 
-``internally converted'' into  $\PH\to\PGg\PGg*\to ff\PGg\PGg$ 
-(with $ff$ mostly $ee$). This also affects the $\PH\to \PZ\PGg$ and SM $\PZ\PGg$ samples. 
-We lose some events with $\PGg^{*}$ decay to fermions since they do not pass our selection of 
-2 leptons plus a photon. 
-Since the normalization of the samples
-does not include the internal conversion component, the cross section has to be adjusted accordingly.
-To determine the number by which the cross section is adjusted, we measure the internal conversion
-rate in MC. 
-We define a ratio where the numerator is the number of photons flagged as
-\textbf{fromHardProcessFinalState} 
-and the denominator is total number of events in the MC. Subtracting this ratio from 1 gives
-the internal conversion rate.
-In our analysis, the internal conversion rate is ~3.1\%(2016) and ~3.0\%(2017).  
-We therefore divide our cross sections by 0.969 (0.97) for 2016 (2017 and 2018).
+internally converted via the process $\PH\to\PGg\PGg*\to \mathrm{f\bar{f}}\PGg\PGg$, with $\mathrm{f\bar{f}}$ mostly $\epem$. 
+This also affects the $\PH\to \PZ\PGg$ signal and $\PZ\PGg$ background samples. 
+Since the normalization of these samples does not include the internal conversion component, the cross section must be adjusted accordingly.
+To determine the amount by which the cross section is adjusted, we measure the internal conversion
+rate in simulation. 
+We define a ratio where the numerator is the number of events with hard process final state photons
+and the denominator is total number of events in the simulation. Subtracting this ratio from unity gives the internal conversion rate.
+The hard process final state photon flagging is done using generator-level truth information.
+In our analysis, the internal conversion rate is about 3.1\% (2016) and 3.0\% (2017 and 2018).  
+We, therefore, divide the affected sample cross sections by 0.969 (0.97) for 2016 (2017 and 2018).
 
 \section{Transverse Momentum Reweighting}\label{sec:Zpt}
 For the 2016 MC, the underlying event tuning was developed in Run-1 with 7 \TeV data. 
