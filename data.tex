@@ -34,23 +34,36 @@ To ensure data quality, luminosity masks are applied based on recommendations fr
     \label{tab:data_samples}
   \end{center}
 \end{table}
-%\clearpage
-%
-%\begin{table}[h]
-%    \scriptsize
-%  \begin{center}
-%    \caption{JSON files for luminosity masks used in the analysis.}
-%    \begin{tabular}{|l|l|l|}
-%      \hline
-%        run period &  JSON file   &     luminosity ($fb^{-1}$)   \\ \hline
-%        2016       &  Cert\_271036-284044\_13TeV\_ReReco\_07Aug2017\_Collisions16\_JSON.txt   & \Lumia    \\
-%        2017       &  Cert\_294927-306462\_13TeV\_EOY2017ReReco\_Collisions17\_JSON\_v1.txt   & \Lumib    \\
-%        2018       &  Cert\_314472-325175\_13TeV\_17SeptEarlyReReco2018ABC\_PromptEraD\_Collisions18\_JSON.txt    & \Lumic    \\
-%      \hline
-%    \end{tabular}
-%    \label{tab:lumi_jsons}
-%  \end{center}
-%\end{table}
+
+\begin{table}[tb]
+	\begin{center}
+		\caption{Simulated event samples used in the analysis. For Higgs samples, the listed cross sections and branching fractions correspond to the values for $m_{\PH}=125\GeV$.}
+		\begin{tabular}{|l|c|c|}
+			\hline
+			\textbf{process} & \textbf{cross section (pb)} & \textbf{branching fraction}\\\hline 
+			$\mathrm{gg}\PH\to\PZ\gamma\to\lplm\gamma$ & 48.58 & $1.548\times 10^{-3}$ \\ 
+			$\mathrm{q\bar{q}}\PH\to\PZ\gamma\to\lplm\gamma$ & 3.782 & $1.548\times 10^{-3}$\\
+			$\PZ\PH\to\PZ\gamma\to\lplm\gamma$ & 0.8839 & $1.548\times 10^{-3}$\\ 
+			$\PW^+\PH\to\PZ\gamma\to\lplm\gamma$ & 0.84 & $1.548\times 10^{-3}$\\
+			$\PW^-\PH\to\PZ\gamma\to\lplm\gamma$ & 0.532 & $1.548\times 10^{-3}$\\ 
+			$\ttbar\PH\to\PZ\gamma\to\lplm\gamma$ & 0.5071 & $1.548\times 10^{-3}$\\ 
+			$\mathrm{gg}\PH\to\mpmm$ & 48.58 & $2.176\times 10^{-4}$\\ 
+			$\mathrm{q\bar{q}}\PH\to\mpmm$ & 3.782 & $2.176\times 10^{-4}$\\
+			$\PZ\PH\to\mpmm$ & 0.8839 & $2.176\times 10^{-4}$\\ 
+			$\PW^+\PH\to\mpmm$ & 0.84 & $2.176\times 10^{-4}$\\
+			$\PW^-\PH\to\mpmm$ & 0.532 & $2.176\times 10^{-4}$\\ 
+			$\ttbar\PH\to\mpmm$ & 0.5071 & $2.176\times 10^{-4}$\\ 
+			$\PZ/\gamma^*\to\lplm\gamma$ & 117.864 & --\\
+			$\PZ/\gamma^*\to\lplm$+jets & 6225.42 & --\\
+			$\ttbar$ (inclusive) & 831.76 & --\\
+			VBF $\PZ/\gamma^*+\gamma$ & 0.1097 & --\\
+
+			\hline
+		\end{tabular}
+		\label{tab:sim_samples}
+	\end{center}
+\end{table}
+
 
 Signal samples for $\Pg\Pg\PH$, VBF, $\mathrm{V}\PH$, and $\ttbar\PH$ production, with 
 $\PH\to\PZ\gamma$ and $\PZ\to\ell^+\ell^-$ ($\ell = \Pe$, $\mu$, or $\tau$),
