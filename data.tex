@@ -35,6 +35,25 @@ To ensure data quality, luminosity masks are applied based on recommendations fr
   \end{center}
 \end{table}
 
+Signal samples for $\Pg\Pg\PH$, VBF, $\mathrm{V}\PH$, and $\ttbar\PH$ production, with 
+$\PH\to\PZ\gamma$ and $\PZ\to\ell^+\ell^-$ ($\ell = \Pe$, $\mu$, or $\tau$),
+are generated at next-to-leading order (NLO) using \POWHEG v2.0~\cite{cite:powheg1,cite:powheg2}.
+These samples are produced for $m_\PH$ of $120$, $125$, and $130$\GeV. 
+The dominant backgrounds, $\PZ/\gamma^{*}(\rightarrow \ell^+\ell^-)$+$\gamma$ and $\PZ/\gamma^{*}(\rightarrow \ell^+\ell^-)$+jets,
+are generated at NLO using the \MGvATNLO v2.6.0 (v2.6.1) 
+generator~\cite{Alwall:2014hca} for 2016 (2017 and 2018) samples. 
+ Events arising from $\ttbar$ production~\cite{Frixione:2007nw} are a relatively minor background and are generated at NLO with \POWHEG v2.0~\cite{cite:powheg1,cite:powheg2}.
+ The background from vector boson scattering (VBS) production of $\PZ/\gamma^{*}$+$\gamma$ pairs, with the $\PZ$ boson decaying to a pair of leptons, is simulated at leading order using the \MGvATNLO generator. The decay $\PH\to\mu^+\mu^-$ is considered as a resonant background and is generated for the $\Pg\Pg\PH$, VBF,  $\mathrm{V}\PH$, and $\ttbar\PH$ production mechanisms. The $\Pg\Pg\PH$ production cross section is
+computed at next-to-next-to-NLO precision in QCD and at NLO in electroweak (EWK)
+theory~\cite{Anastasiou:2016cez}. 
+The cross sections for Higgs boson production in the VBF~\cite{PhysRevLett.115.082002} and VH~\cite{BREIN2004149} mechanisms are calculated at next-to-NLO in QCD, including NLO EWK corrections, while the $\ttbar\PH$ cross section is computed at NLO in QCD and EWK theory~\cite{PhysRevD.68.034022}. 
+
+A full list of simulated physics processes used in the analysis is provided in Table \ref{tab:sim_samples}, along with cross section and branching fraction information. 
+For the \hzg{} and $\PH\to\mu^+\mu^-$ samples, the SM Higgs boson production cross sections and branching fractions
+recommended by the LHC Higgs Working
+Group~\cite{LHC-YR4} are used for each mass point.
+The values for the Higgs boson processes listed in Table \ref{tab:sim_samples} correspond to $m_{\PH}=125\GeV$.
+
 \begin{table}[tb]
 	\begin{center}
 		\caption{Simulated event samples used in the analysis. For Higgs samples, the listed cross sections and branching fractions correspond to the values for $m_{\PH}=125\GeV$.}
@@ -64,30 +83,12 @@ To ensure data quality, luminosity masks are applied based on recommendations fr
 	\end{center}
 \end{table}
 
-
-Signal samples for $\Pg\Pg\PH$, VBF, $\mathrm{V}\PH$, and $\ttbar\PH$ production, with 
-$\PH\to\PZ\gamma$ and $\PZ\to\ell^+\ell^-$ ($\ell = \Pe$, $\mu$, or $\tau$),
-are generated at next-to-leading order (NLO) using \POWHEG v2.0~\cite{cite:powheg1,cite:powheg2}.
-Samples are produced for $m_\PH$ of $120$, $125$, and $130$\GeV. 
-The SM Higgs boson production cross sections and branching fractions
-recommended by the LHC Higgs Working
-Group~\cite{LHC-YR4} are considered for each mass point.
-
-The dominant backgrounds, $\PZ/\gamma^{*}(\rightarrow \ell^+\ell^-)$+$\gamma$ and $\PZ/\gamma^{*}(\rightarrow \ell^+\ell^-)$+jets,
-are generated at NLO using the \MGvATNLO v2.6.0 (v2.6.1) 
-generator~\cite{Alwall:2014hca} for 2016 (2017 and 2018) samples. 
- Events arising from $\ttbar$ production~\cite{Frixione:2007nw} are a relatively minor background and are generated at NLO with \POWHEG v2.0~\cite{cite:powheg1,cite:powheg2}.
- The background from vector boson scattering (VBS) production of $\PZ/\gamma^{*}$+$\gamma$ pairs, with the $\PZ$ boson decaying to a pair of leptons, is simulated at leading order using the \MGvATNLO generator. The decay $\PH\to\mu^+\mu^-$ is considered as a resonant background and is generated for the $\Pg\Pg\PH$, VBF,  $\mathrm{V}\PH$, and $\ttbar\PH$ production mechanisms. The $\Pg\Pg\PH$ production cross section is
-computed at next-to-next-to-NLO precision in QCD and at NLO in electroweak (EWK)
-theory~\cite{Anastasiou:2016cez}. 
-The cross sections for Higgs boson production in the VBF~\cite{PhysRevLett.115.082002} and VH~\cite{BREIN2004149} mechanisms are calculated at next-to-NLO in QCD, including NLO EWK corrections, while the $\ttbar\PH$ cross section is computed at NLO in QCD and EWK theory~\cite{PhysRevD.68.034022}. 
-
 All simulated events are interfaced
 with \PYTHIA v8.226~(v8.230)~\cite{Sjostrand:2014zea} with the
 CUETP8M1~\cite{Khachatryan:2015pea} (CP5~\cite{Sirunyan:2019dfx}) underlying event tune for 2016 (2017--2018) for the
 fragmentation and hadronization of partons and the internal bremsstrahlung of the leptons. The NLO parton distribution function (PDF) set, NNPDF v3.0~\cite{nnpdf30}~(NNPDF v3.1)~\cite{nnpdf_new}, is used to produce these samples in 2016 (2017--2018). The response of the CMS detector is modeled using the
 \GEANTfour  program~\cite{AGOSTINELLI2003250}. 
-The simulated events are reweighted to correct for differences between data and simulation in the number of additional $\Pp\Pp$ interactions, trigger efficiencies, selection efficiencies, and efficiencies of isolation requirements for photons, electrons, and muons.
+The simulated events are reweighted to correct for differences between data and simulation in the number of additional $\Pp\Pp$ interactions, trigger efficiencies, selection efficiencies, and efficiencies of isolation requirements for photons, electrons, and muons. These corrections and their associated uncertainties will be described in more detail throughout the remainder of this thesis.
 
 \section{Z+jets Overlap Removal}
 In the simulation of the Z+jets sample, PYTHIA adds ISR and FSR photons to the events.
@@ -109,7 +110,7 @@ includes a component in which $\PH\to\PGg\PGg$ photons are
 (with $ff$ mostly $ee$). This also affects the $\PH\to \PZ\PGg$ and SM $\PZ\PGg$ samples. 
 We lose some events with $\PGg^{*}$ decay to fermions since they do not pass our selection of 
 2 leptons plus a photon. 
-Since the normalization of the samples 
+Since the normalization of the samples
 does not include the internal conversion component, the cross section has to be adjusted accordingly.
 To determine the number by which the cross section is adjusted, we measure the internal conversion
 rate in MC. 
