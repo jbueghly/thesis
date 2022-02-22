@@ -88,19 +88,19 @@ with \PYTHIA v8.226~(v8.230)~\cite{Sjostrand:2014zea} with the
 CUETP8M1~\cite{Khachatryan:2015pea} (CP5~\cite{Sirunyan:2019dfx}) underlying event tune for 2016 (2017--2018) for the
 fragmentation and hadronization of partons and the internal bremsstrahlung of the leptons. The NLO parton distribution function (PDF) set, NNPDF v3.0~\cite{nnpdf30}~(NNPDF v3.1)~\cite{nnpdf_new}, is used to produce these samples in 2016 (2017--2018). The response of the CMS detector is modeled using the
 \GEANTfour  program~\cite{AGOSTINELLI2003250}. 
-The simulated events are reweighted to correct for differences between data and simulation in the number of additional $\Pp\Pp$ interactions, trigger efficiencies, selection efficiencies, and efficiencies of isolation requirements for photons, electrons, and muons. These corrections and their associated uncertainties will be described in more detail throughout the remainder of this thesis.
+The simulated events are reweighted to correct for differences between data and simulation in the number of additional $\Pp\Pp$ interactions, trigger efficiencies, selection efficiencies, and efficiencies of isolation requirements for photons, electrons, and muons. These corrections and their associated uncertainties will be described in more detail throughout the remainder of this thesis. The rest of this chapter will discuss general procedures and corrections related to the data and simulated samples.
 
 \section{Z+jets Overlap Removal}
-In the simulation of the Z+jets sample, PYTHIA adds ISR and FSR photons to the events.
-However, these events overlap with those in SM $\PZ\PGg$ sample. 
-In addition, the ISR and FSR photons 
-in the SM $\PZ\PGg$ sample are simulated at the matrix element level, and the interference between
-the ISR and FSR $\PZ\PGg$ diagrams is better computed in Madgraph. 
-Therefore the overlapping events are removed from the Z+jets sample 
-and retained in the SM $\PZ\PGg$ sample. Events are identified as 
-overlapping if they contain at least one photon which is either flagged as 
-``fromHardProcessFinalState'' nor ``isPromptFinalState'' with $\Delta R < 0.1$ , $\Delta R = \sqrt{\Delta\eta^2+\Delta\phi^2}$,
-with respect to the selected reconstructed photon. 
+The two dominant backgrounds in this analysis are $\PZ/\gamma^{*}(\rightarrow \ell^+\ell^-)$+$\gamma$, or $\PZ\gamma$ for short, and $\PZ/\gamma^{*}(\rightarrow \ell^+\ell^-)$+jets, or $\PZ$+jets for short. Both processes 
+are simulated independently in order to obtain the best model of the kinematics of the $\lplm\gamma$ system. 
+The $\PZ\gamma$ sample simulates photons from initial-state and final-state radiation at the matrix element level and includes a better 
+computation of the interference between the corresponding Feynman diagrams than the $\PZ$+jets sample.
+However, the $\PZ$+jets
+simulated sample also includes the contribution from $\PZ\gamma$. Therefore, this contribution must be removed from the 
+$\PZ$+jets sample in order to avoid double counting events and to utilize the better kinematic modeling of the $\PZ\gamma$
+sample. To handle this, $\PZ$+jets events are removed from the analysis if they contain prompt, final state photons within 
+$\DR = \sqrt{\smash[b]{(\Delta\phi)^2 + (\Delta\eta)^2}} = 0.1$ of the photon selected to reconstruct the $\lplm\gamma$ system.
+The events with prompt, final state photons are tagged using generator-level truth information.
 
 \section{Photon Internal Conversion}
 \label{sec:gconversion}
