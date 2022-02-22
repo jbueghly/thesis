@@ -118,25 +118,26 @@ In our analysis, the internal conversion rate is about 3.1\% (2016) and 3.0\% (2
 We, therefore, divide the affected sample cross sections by 0.969 (0.97) for 2016 (2017 and 2018).
 
 \section{Transverse Momentum Reweighting}\label{sec:Zpt}
-For the 2016 MC, the underlying event tuning was developed in Run-1 with 7 \TeV data. 
-To get a more appropriate underlying description, the GEN group provided a new tuning
-for 2017 and 2018 MC production, updating from CUETP8M1 (2016) to CP5 (2017/2018).
-However, a discrepency was found in the $\ell\ell\gamma$ \pt spectrum
-which had an obvious and significant impact in the SM $Z\gamma$ sample. 
-Since $\pt^{ll\gamma}/m_{ll\gamma}$ is an important variable in the kinematic MVA training, 
-we correct for this issue by reweighting the $\pt^{ll\gamma}$ from simulation to data in 
-2017 and 2018 using a sideband region. 
-We define the sideband region as $115GeV<m_{ll\gamma}<120GeV$ and $130GeV<m_{ll\gamma}<135GeV$,
-which is chosen close to signal region to avoid differences in kinematics.
-We evaluate this weight for the electron and muon channels for 2017 and 2018.
-\begin{figure*}[htbp]
+The underlying event tuning was updated from CUETP8M1 (2016) to CP5 (2017--2018). Unfortunately, 
+it was discovered that this update caused significant mismodeling of the $\lplm\gamma$ \pt spectrum in the 
+$\PZ\gamma$ and $\PZ$+jets background samples in 2017 and 2018. Figure \ref{fig:pt_reweight} (left) shows the clear difference between 
+simulated $\pt^{\lplm\gamma}$ in 2016 and 2017--2018. As will be described later in this thesis, 
+the variable $\pt^{\lplm\gamma}/m_{\lplm\gamma}$ has good discriminating power between signal and background and is a useful feature for MVA training.
+Therefore, it is important to correct this discrepancy. To do this, a simple reweighting of the distribution is performed using two 
+sideband regions in $m_{\lplm\gamma}$. The sidebands are defined as 115--120 and 130--135\GeV. The resulting weights are then applied to 
+the $\PZ\gamma$ and $\PZ$+jets simulated events in 2017 and 2018. Figure \ref{fig:pt_reweight} (right) shows the final distribution of 
+$\pt^{\lplm\gamma}/m_{\lplm\gamma}$ for all data-taking years combined after the $\pt^{\lplm\gamma}$ reweighting is applied. The overall agreement 
+between data and simulation is good over the full $\pt$ spectrum.
+
+\begin{figure}[tb]
 	\begin{center}
-		\includegraphics[width=0.35\textwidth]{fig/zpt_reweight/zgptrewei_datasb17.pdf}
-		\includegraphics[width=0.35\textwidth]{fig/zpt_reweight/zgptrewei_datasb18.pdf}
+		\includegraphics[width=0.45\textwidth, height=0.35\textwidth]{fig/zpt_reweight/ptm_year_comp.png}
+		\includegraphics[width=0.45\textwidth, height=0.35\textwidth]{fig/zpt_reweight/pt_over_m_data_mc.png}
 	\end{center}
-	\caption{Simulation before and after the correction to the $\ell\ell\gamma$ \pt.
-    The black points show the data. Left:2017, right: 2018.}
-\end{figure*}
+	\caption{Left: Background simulation modeling of $\pt^{\lplm\gamma}$ in each data-taking year. There is a shape discrepancy between 2016 and 2017--2018 due to the 
+	updated underlying event tuning. Right: Final comparison between data and simulation after the $\pt^{\lplm\gamma}$ reweighting is performed on 2017 and 2018 background simulation.}
+	\label{fig:pt_reweight}
+\end{figure}
 
 \section{Pileup Reweighting}\label{sec:pileup}
 The simulation includes an accurate distribution of the number of interactions 
