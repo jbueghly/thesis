@@ -11,34 +11,64 @@ To avoid fake vertices, the PV reconstruction is required to have more than four
 In the case of multiple satisfactory vertices, the vertex with the highest scalar sum of squared \pt is chosen.
 
 \section{Triggers}
-The topology and basic kinematics of the \hzg process guide the choice of triggers used in this analysis. As this is a three body
-decay, the \pt of the photon tends to be less than in other channels like \hgg. Consequently, the CMS photon trigger \pt thresholds 
-are too great to make them viable options. Instead, we trigger on the leptons arising from the decay of the Z boson, which tend 
-to have larger \pt. The best approach to maximize signal efficiency is to use the double lepton triggers. The double muon trigger 
-has \pt thresholds of 17 and 8 GeV, and the double electron trigger has thresholds of 23 and 12 GeV. These are the lowest 
-unprescaled double lepton triggers generally available for CMS Run 2 analysis. Events passing both the double muon and 
-double electron triggers are treated as double muon events.
+The topology and kinematics of the \hzg{} process guide the choice of triggers used in this analysis. As there are at least three final state decay products, 
+the photon \pt tends to be less than in other channels, such as \hgg. Consequently, the CMS single photon trigger \pt thresholds 
+are too great to make them viable options. In addition, there is no suitable unprescaled multijet plus photon trigger to target events with 
+hadronic decays of the $\PZ$ boson, so the triggers are chosen to target the $\lplm\gamma$ final states.
+Therefore, we trigger on the leptons arising from the decay of the Z boson, which tend 
+to have larger values of \pt. The best approach to maximize signal efficiency is to use the double lepton triggers. 
+The dielectron trigger requires a leading (subleading) electron with
+$\pt > 23\,(12)\GeV$, while the dimuon trigger requires a muon with $\pt > 17\,(8)\GeV$. Events passing both the double muon and double electron triggers are classified as $\mpmm\gamma$ events.
 
-The triggers are applied to both data and simulation. Trigger efficiencies and scale factors are measured using the 
-simulation samples corresponding to each data-taking year. These measurements use a tag and probe method [CITE]. The tag and probe  method
-takes advantage of the high purity of $Z \rightarrow \ell^{+}\ell{-}$ events near the Z mass peak. One lepton functions as the 
-tag, and satisfies a set of tight trigger, identification, isolation, \pt requirements. The second lepton, the probe, must pass a looser selection and is used to measure the efficiency in question. 
-Using this approach, trigger efficiencies for each leg of a given 
-double lepton trigger are measured in both data and simulation. Then a corrective scale factor, defined as the ratio of data efficiency 
-to simulation efficiency, is applied to the simulation. Scale factors are measured and applied in bins of \pt and $|\eta|$.
+The triggers are applied to both data and simulation. Trigger efficiencies and SFs are measured using the 
+simulation samples corresponding to each data-taking year. These measurements use a tag and probe method [CITE]. 
+This tag and probe method takes advantage of the high purity of $\PZ\to\lplm$ events near the $\PZ$ boson mass peak. 
+One lepton functions as the tag, and satisfies a set of tight trigger, identification, isolation, and \pt requirements. 
+The second lepton, the probe, must pass a looser selection and is used to measure the efficiency in question. 
+Using this approach, trigger efficiencies for each leg of a given double lepton trigger are measured in both data and simulation. 
+Then a corrective SF, defined as the ratio of data efficiency to simulation efficiency, is applied to the simulation. 
+Scale factors are measured and applied in bins of \pt and $|\eta|$.
 
-For the double electron trigger efficiency measurements, the tag electron must satisfy the following requirements. It must pass 
-the single electron trigger, pass a tight cut-based identification, have \pt $> 30 \, (35)$ in 2016 (2017/2018), and have $|\eta| < 2.5$. 
-The probe electron must pass the loose electron MVA identification (with isolation) requirement. The efficiencies for each leg 
+For the double electron trigger efficiency measurements, the tag electron must satisfy a set of requirements. The tag must pass 
+the single electron trigger, pass a tight cut-based identification, have $\pt>30\,(35)\GeV$ in 2016 (2017 and 2018), and have $|\eta|<2.5$. 
+The probe electron must pass a loose electron MVA identification requirement. The details of the electron MVA identification will be described later in this chapter.
+The efficiencies for each leg 
 of the trigger are measured separately, so in each case, the probe electron must match the trigger leg being measured. The efficiencies 
-and scale factors of each double electron trigger leg for 2016, 2017, and 2018 are shown in Figures [FIGS]. 
+and scale factors of each double electron trigger leg for 2016, 2017, and 2018 are shown in Fig. \ref{fig:ele_trig_SF}.
+The double electron trigger efficiency is measured to be in the range of 86--97\%, depending on the electron \pt and $\eta$.
 
-For the double muon trigger efficiency measurements, the tag muon must satisfy the following requirements. It must pass the single 
-muon trigger, pass a tight cut-based identification, have \pt $> 26 \, (29)$ GeV for 2016 (2017/2018) and satisfy $|\eta| < 2.4$. The 
-probe muon must pass the $H \rightarrow ZZ$ identification and isolation cuts. The details of the $H \rightarrow ZZ$ muon 
-identification will be described later. The efficiencies for each leg of the trigger are measured separately, so in each case, the probe 
+\begin{figure}[tb]
+	\begin{center}
+		\includegraphics[width=0.30\textwidth]{fig/SFs/2016_ele_trg1_1D.pdf}
+		\includegraphics[width=0.30\textwidth]{fig/SFs/2017_ele_trg1_1D.pdf}
+		\includegraphics[width=0.30\textwidth]{fig/SFs/2018_ele_trg1_1D.pdf}
+		\includegraphics[width=0.30\textwidth]{fig/SFs/2016_ele_trg2_1D.pdf}
+		\includegraphics[width=0.30\textwidth]{fig/SFs/2017_ele_trg2_1D.pdf}
+		\includegraphics[width=0.30\textwidth]{fig/SFs/2018_ele_trg2_1D.pdf}
+	\end{center}
+	\caption{Triggers}
+	\label{fig:ele_trig_SF}
+\end{figure}
+
+For the double muon trigger efficiency measurements, the tag muon must satisfy a set of requirements. It must pass the single 
+muon trigger, pass a tight cut-based identification, have $\pt>26\,(29)$ GeV for 2016 (2017 and 2018) and satisfy $|\eta| < 2.4$. The 
+probe muon must pass the $\PH\to\PZ\PZ$ identification and isolation cuts. The details of the $\PH\to\PZ\PZ$ muon 
+identification will be described later in this chapter. The efficiencies for each leg of the trigger are measured separately, so in each case, the probe 
 muon must match the trigger leg being measured. The efficiencies and scale factors of each double muon trigger leg for 2016, 2017, 
-and 2018 are shown in Figures [FIGS]. 
+and 2018 are shown in Fig. \ref{fig:mu_trig_SF}. The double muon trigger efficiency is measured to be in the range of 93--95\%, depending on the muon \pt and $\eta$.
+
+\begin{figure}[tb]
+	\begin{center}
+		\includegraphics[width=0.30\textwidth]{fig/SFs/sf1D_year2016_leg1.png}
+		\includegraphics[width=0.30\textwidth]{fig/SFs/sf1D_year2017_leg1.png}
+		\includegraphics[width=0.30\textwidth]{fig/SFs/sf1D_year2018_leg1.png}
+		\includegraphics[width=0.30\textwidth]{fig/SFs/sf1D_year2016_leg2.png}
+		\includegraphics[width=0.30\textwidth]{fig/SFs/sf1D_year2017_leg2.png}
+		\includegraphics[width=0.30\textwidth]{fig/SFs/sf1D_year2018_leg2.png}
+	\end{center}
+	\caption{Triggers}
+	\label{fig:mu_trig_SF}
+\end{figure}
 
 \section{Photon Selection}
 Photons are identified using a boosted decision tree MVA discriminator trained on photon plus jets simulation. The features used in the 
