@@ -1,4 +1,14 @@
-\chapter{Object and Event Selection}\label{sec:selection}
+\chapter{Physics Object and Event Selection}\label{sec:selection}
+This chapter outlines the basic \hzg{} physics object and event selection before any event categorization is done.
+Along the way, we will also point out the most relevant corrections applied, including trigger scale factors (SFs), physics object energy and momentum corrections, and identification and isolation SFs.
+
+\section{Primary Vertex}
+Events are required to have at least one good primary vertex (PV)
+with a reconstructed longitudinal position within 24\cm of the
+geometric center of the detector and a transverse position within
+2\cm of the nominal beam collision point. 
+To avoid fake vertices, the PV reconstruction is required to have more than four degrees of freedom.
+In the case of multiple satisfactory vertices, the vertex with the highest scalar sum of squared \pt is chosen.
 
 \section{Triggers}
 The topology and basic kinematics of the \hzg process guide the choice of triggers used in this analysis. As this is a three body
@@ -30,6 +40,51 @@ identification will be described later. The efficiencies for each leg of the tri
 muon must match the trigger leg being measured. The efficiencies and scale factors of each double muon trigger leg for 2016, 2017, 
 and 2018 are shown in Figures [FIGS]. 
 
+\section{Photon Selection}
+Photons are identified using a boosted decision tree MVA discriminator trained on photon plus jets simulation. The features used in the 
+training include supercluster kinematics, isolation variables, and shower shape variables [REF]. To reject electrons faking photons, 
+a conversion-safe electron veto is applied. In order to improve agreement between simulation and data in the \hzg analysis, shower 
+shape corrections are taken from the Higgs to diphoton analysis [REF] and applied to simulated events. The original MVA provided by the 
+EGamma POG is then reevaluated after these corrections. The following features are corrected: $R_{9}$, defined as the ratio of energy in
+the 5x5 array of ECAL crystals to the supercluster energy; $S_{4}$, defined as the ratio of the maximum energy 2x2 array to the energy of 
+the 5x5 array; the energy weighted shower widths $\sigma_{\eta}$ and $\sigma_{\phi}$; the energy weighted widths by crystal index 
+$\sigma_{i\eta i\eta}$ and $\sigma_{i\eta i\phi}$; photon isolation, charged isolation with respect to the primary vertex, 
+and charged isolation with respect to the worst vertex choice. The validity of the shower shape corrections is checked using tag 
+and probe procedures for $Z\rightarrow e^{+}e^{-}$ events where the probe electron mimics a photon and $Z\rightarrow \mu^{+}\mu^{-}$
+events with an FSR photon. A comparison of the agreement between uncorrected and corrected simulation with data is shown in 
+Figures [FIGS]. Simulation comparisons with data for individual shower shape features before and after correction can be found 
+in Appendix [APPENDIX], Figures [FIGS]. 
+
+After deriving the corrected photon MVA discriminator, 90\% signal efficiency working point cuts for barrel and endcap photons 
+are determined for the \hzg analysis. The working points are defined based on real photons from SM $Z\gamma$ simulation, and correspond 
+to discriminator scores greater than -0.4 (-0.59) for barrel (endcap) photons. A comparison of these working points with the standard 
+EGamma POG 90\% efficiency working points, plotted on the receiver operator characteristic (ROC) curve for SM $Z\gamma$ and Z plus jets 
+simulation, is shown in Figure [FIG]. The efficiency of the photon identification is measured with $Z\rightarrow e^{+}e^{-}$ data
+using a tag and probe technique. The tag electron must pass the single electron trigger with \pt threshold 27 (32) GeV in 
+2016 (2017/2018), tight cut-based identification, have \pt $>$ 30 (35) GeV for 2016 (2017/2018), and have $|\eta| < 2.5$. The 
+probe electron must pass the photon MVA identification with shower shape corrections described above. The scale factors, measured and 
+applied in bins of \pt and supercluster $\eta$, are shown in Figure [FIG]. The efficiencies and scale factors for the conversion-safe 
+electron veto are measured by the EGamma POG using $Z\mu^{+}\mu^{-}$ events with an FSR photon and applied in the \hzg analysis. 
+The scale factors are cataloged in Table [TAB]. 
+
+\section{Electron Selection}
+Electrons are identified using a boosted decision tree multivariate (MVA) discriminator trained on Drell-Yan plus jets simulation 
+with prompt electrons matched to generator-level objects as signal and unmatched and non-prompt electrons as background. The features 
+used in the training include \pt, supercluster $\eta$, shower shape variables, ratio of hadronic to electromagnetic energy, track and 
+pixel hit variables, and isolation variables [REF]. These features are sensitive to bremsstrahlung along the electron trajectory, 
+momentum-energy matching between electron trajectory and ECAL cluster, shower shape, and electrons from photon conversions.
+Since isolation features are included in the training of the discriminator, there is no need for separate isolation cuts. 
+Electrons pass the identification requirement of the \hzg analysis if their discriminator score is higher than a loose working point 
+value, corresponding to 98\% signal efficiency. In addition to the MVA cut, electrons must have $|d_{xy}| < 0.5$ cm and $|d_{z}| < 1$ cm
+with respect to the primary vertex. Electrons with \pt $\leq$ 7 GeV are rejected. 
+
+Electron identification efficiencies and scale factors are measured using a tag and probe method on dielectron events near the 
+Z boson peak. These electrons must pass the single electron trigger with a \pt threshold of 27 (32) GeV for 2016 (2017/2018) data. 
+The dielectron mass must be between 60 and 120 GeV. The tag electron must pass a tight cut-based electron identification and have 
+\pt $>$ 30 (35) GeV for 2016 (2017) and $|\eta|$ < 2.5. The probe electron must pass the loose MVA identification cut and associated 
+impact parameter and \pt cuts described above. Identification efficiencies and scale factors are measured and applied in bins of 
+\pt and supercluster $\eta$. The scale factors for each data-taking year are shown in Figures [FIGS]. 
+
 \section{Muon Selection}
 A loose cut-based muon identification is used in the analysis. This identification was originally developed by the \hzz 
 analysis [REF] and is well-suited for \hzg due to the similarity of the multiple, potentially soft, muons in the final state. 
@@ -59,51 +114,6 @@ are rejected.
 
 Identification efficiencies and scale factors corresponding to the muon identification above are measured and provided by the 
 \hzz analysis working group, and are shown in Figure [FIG].  
-
-\section{Electron Selection}
-Electrons are identified using a boosted decision tree multivariate (MVA) discriminator trained on Drell-Yan plus jets simulation 
-with prompt electrons matched to generator-level objects as signal and unmatched and non-prompt electrons as background. The features 
-used in the training include \pt, supercluster $\eta$, shower shape variables, ratio of hadronic to electromagnetic energy, track and 
-pixel hit variables, and isolation variables [REF]. These features are sensitive to bremsstrahlung along the electron trajectory, 
-momentum-energy matching between electron trajectory and ECAL cluster, shower shape, and electrons from photon conversions.
-Since isolation features are included in the training of the discriminator, there is no need for separate isolation cuts. 
-Electrons pass the identification requirement of the \hzg analysis if their discriminator score is higher than a loose working point 
-value, corresponding to 98\% signal efficiency. In addition to the MVA cut, electrons must have $|d_{xy}| < 0.5$ cm and $|d_{z}| < 1$ cm
-with respect to the primary vertex. Electrons with \pt $\leq$ 7 GeV are rejected. 
-
-Electron identification efficiencies and scale factors are measured using a tag and probe method on dielectron events near the 
-Z boson peak. These electrons must pass the single electron trigger with a \pt threshold of 27 (32) GeV for 2016 (2017/2018) data. 
-The dielectron mass must be between 60 and 120 GeV. The tag electron must pass a tight cut-based electron identification and have 
-\pt $>$ 30 (35) GeV for 2016 (2017) and $|\eta|$ < 2.5. The probe electron must pass the loose MVA identification cut and associated 
-impact parameter and \pt cuts described above. Identification efficiencies and scale factors are measured and applied in bins of 
-\pt and supercluster $\eta$. The scale factors for each data-taking year are shown in Figures [FIGS]. 
-
-\section{Photon Selection}
-Photons are identified using a boosted decision tree MVA discriminator trained on photon plus jets simulation. The features used in the 
-training include supercluster kinematics, isolation variables, and shower shape variables [REF]. To reject electrons faking photons, 
-a conversion-safe electron veto is applied. In order to improve agreement between simulation and data in the \hzg analysis, shower 
-shape corrections are taken from the Higgs to diphoton analysis [REF] and applied to simulated events. The original MVA provided by the 
-EGamma POG is then reevaluated after these corrections. The following features are corrected: $R_{9}$, defined as the ratio of energy in
-the 5x5 array of ECAL crystals to the supercluster energy; $S_{4}$, defined as the ratio of the maximum energy 2x2 array to the energy of 
-the 5x5 array; the energy weighted shower widths $\sigma_{\eta}$ and $\sigma_{\phi}$; the energy weighted widths by crystal index 
-$\sigma_{i\eta i\eta}$ and $\sigma_{i\eta i\phi}$; photon isolation, charged isolation with respect to the primary vertex, 
-and charged isolation with respect to the worst vertex choice. The validity of the shower shape corrections is checked using tag 
-and probe procedures for $Z\rightarrow e^{+}e^{-}$ events where the probe electron mimics a photon and $Z\rightarrow \mu^{+}\mu^{-}$
-events with an FSR photon. A comparison of the agreement between uncorrected and corrected simulation with data is shown in 
-Figures [FIGS]. Simulation comparisons with data for individual shower shape features before and after correction can be found 
-in Appendix [APPENDIX], Figures [FIGS]. 
-
-After deriving the corrected photon MVA discriminator, 90\% signal efficiency working point cuts for barrel and endcap photons 
-are determined for the \hzg analysis. The working points are defined based on real photons from SM $Z\gamma$ simulation, and correspond 
-to discriminator scores greater than -0.4 (-0.59) for barrel (endcap) photons. A comparison of these working points with the standard 
-EGamma POG 90\% efficiency working points, plotted on the receiver operator characteristic (ROC) curve for SM $Z\gamma$ and Z plus jets 
-simulation, is shown in Figure [FIG]. The efficiency of the photon identification is measured with $Z\rightarrow e^{+}e^{-}$ data
-using a tag and probe technique. The tag electron must pass the single electron trigger with \pt threshold 27 (32) GeV in 
-2016 (2017/2018), tight cut-based identification, have \pt $>$ 30 (35) GeV for 2016 (2017/2018), and have $|\eta| < 2.5$. The 
-probe electron must pass the photon MVA identification with shower shape corrections described above. The scale factors, measured and 
-applied in bins of \pt and supercluster $\eta$, are shown in Figure [FIG]. The efficiencies and scale factors for the conversion-safe 
-electron veto are measured by the EGamma POG using $Z\mu^{+}\mu^{-}$ events with an FSR photon and applied in the \hzg analysis. 
-The scale factors are cataloged in Table [TAB]. 
 
 \section{Jet Selection}
 Jets are selected in order to categorize events coming from potential VBF Higgs production, but no jet multiplicity requirement is present 
