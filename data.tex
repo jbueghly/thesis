@@ -140,51 +140,44 @@ between data and simulation is good over the full $\pt$ spectrum.
 \end{figure}
 
 \section{Pileup Reweighting}\label{sec:pileup}
-The simulation includes an accurate distribution of the number of interactions 
-taking place in each bunch crossing. Although the Deterministic Annealing primary vertex reconstruction \cite{detanneal} has been shown to
+In order to correctly model the pileup distribution in data, a pileup reweighting procedure must be applied to the simulation.
+Although the Deterministic Annealing primary vertex reconstruction \cite{detanneal} has been shown to
 be efficient and well-behaved up to the observed levels of pileup, the final distribution
 for the number of reconstructed primary vertices is still sensitive to differences between data and 
-MC in the primary vertex reconstruction and underlying event.
-Additionally, there is a potentially larger effect where the distribution for the number of
-reconstructed vertices can be biased by the offline event selection criteria and even by the trigger.
-In order to factorize these effects, instead of reweighting the MC by the number of 
-reconstructed Primary Vertices, we reweight the number of pileup interactions in the simulation 
-(as stored in the PileupInfo collection in the MC). The pileup distribution for data is
-derived by using the per-bunch-crossing-per-luminosity-section instantaneous luminosity from
-the LumiDB together with the total pp inelastic cross section. The total pp inelastic cross 
+simulation in the primary vertex reconstruction and underlying event.
+Additionally, the offline event selection criteria and trigger can potentially impact the distribution for the number of
+reconstructed vertices. 
+To handle this, the pileup distribution for data is first derived by using the per-bunch-crossing, per-luminosity-section instantaneous luminosity, 
+together with the total pp inelastic cross section. The total pp inelastic cross 
 section is taken to be 66 mb, 72.4 mb, and 80 mb for 2016, 2017, and 2018 respectively.
-This yields an expected pileup distribution, correctly weighted by the 
-per-bunch-crossing-per-luminosity-section integrated luminosity over the entire data-taking period. The inelatistic cross-sections are choosing the  
-Figure \ref{fig:puwei} shows the number of primary vertices distribution after 
-pile-up reweighting in
-the $ee\PGg$ channel. 
-\begin{figure}[hbtp]
+This yields an expected pileup distribution, correctly weighted over the entire data-taking period. The simulation is then reweighted to 
+match this expected pileup distribution. 
+Figure \ref{fig:puwei} shows the number of primary vertices after pileup reweighting for each data-taking year. The uncertainties associated with pileup reweighting are 
+accounted for in the analysis and are discussed further in Chapter \ref{sec:uncertainties}.
+\begin{figure}[tb]
   \begin{center}
      \includegraphics[width=0.3\textwidth]{fig/pileup/ele_kin_nVtx_valid_Legacy16_HLT.pdf}
      \includegraphics[width=0.3\textwidth]{fig/pileup/ele_kin_nVtx_valid_Rereco17_HLT.pdf}
      \includegraphics[width=0.3\textwidth]{fig/pileup/ele_kin_nVtx_valid_Rereco18_HLT.pdf}
   \end{center}
-\caption{Distribution of the number of primary vertices in data and simulation shown for the electron channel after 2 leptons and 1 photon are selected. Left to right: 2016, 2017, 2018. The pileup cross section is taken to be 66 mb, 72.4 mb, and 80 mb for 2016, 2017, and 2018 respectively.}
+	\caption{Distributions of the number of primary vertices in data and simulation for $\epem\PGg$ events in 2016 (left), 2017 (center), and 2018 (right) after pileup reweighting.}
 \label{fig:puwei}
 \end{figure}
 
-\section{Level-1 Trigger Prefiring Problem}\label{sec:L1}
+\section{Level-1 Trigger Prefiring Reweighting}\label{sec:L1}
 In 2016 and 2017, a gradual timing shift of the ECAL was not properly propagated to 
-L1 trigger primitives (TP) resulting in a significant fraction of high eta TP 
-being mistakenly associated to the previous bunch crossing. 
-Since Level 1 rules forbid two consecutive bunch crossings to fire, 
-an unpleasant consequence of this (in addition to not finding the TP in the bx 0) 
-is that events can self veto if a significant amount of ECAL energy is found in the region 
-of $2.<|\eta|<3$. This effect is not described by the simulations \cite{L1_prefire}.\\
-
-The JETMET twiki provides a recipe to compute the probability for an event not to prefire, that can then be applied to the simulations. This is achieved with an EDProducer that runs over all offline photons and jets found in the event and assign them a prefiring probability. 
-
-The final event weight is obtained as the product of the non prefiring probability of all objects (measured using unprefirable events), namely:
+L1 trigger primitives, resulting in a significant fraction of high-pseudorapidity trigger primitives
+mistakenly associated to the previous bunch crossing~\cite{L1_prefire}. 
+Since L1 trigger rules forbid two consecutive bunch crossings from triggering, 
+a consequence is that events can self-veto if a significant amount of ECAL energy is found in the region 
+$2<|\eta|<3$. This effect is not described in simulation.
+To handle this, a weight is applied to each simulated event based on the probability of an event not to prefire and self-veto. 
+The prefiring probability is determined by measuring the timing distributions of physics objects in the subset of data events for which prefiring 
+is impossible due to the lack of a L1 trigger accept in the previous bunch crossing. The measurement is parameterized in 
+$\eta$ and \pt. The final event weight applied to the simulation is the product of the non-prefiring probability of all objects, as shown in equation \ref{eqn:prefire}.
 \begin{equation}
-	\omega = 1 - P(Prefiring) = \prod_{i=photon,jets}(1-\epsilon_i^{pref}(\eta,\pt^{EM}))
+	\omega = 1 - \mathrm{P(Prefiring)} = \prod_{i=\mathrm{photons,\,jets,\,muons}}(1-\epsilon_i^{\mathrm{pref}}(\eta,\pt^{\mathrm{EM,\,\mu}}))
+	\label{eqn:prefire}
 \end{equation}
-
-The impact of the L1 prefiring for electrons (muons) is a 1.4 (0.8)\% 
-loss in signal yield for 2016 and 2.4 (1.1)\% 
-loss in signal yield for 2017.
-
+The impact of the L1 prefiring for electrons (muons) is a 1.4 (0.8)\% loss in signal yield for 2016 and 2.4 (1.1)\% loss in signal yield for 2017.
+The uncertainties associated with the L1 prefiring reweighting are accounted for in the analysis and are discussed further in Chapter \ref{sec:uncertainties}.
