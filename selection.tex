@@ -73,19 +73,29 @@ and 2018 are shown in Fig. \ref{fig:mu_trig_SF}. On average, the double muon tri
 \end{figure}
 
 \section{Photon Selection}
-Photons are identified using a boosted decision tree MVA discriminator trained on photon plus jets simulation. The features used in the 
-training include supercluster kinematics, isolation variables, and shower shape variables [REF]. To reject electrons faking photons, 
-a conversion-safe electron veto is applied. In order to improve agreement between simulation and data in the \hzg analysis, shower 
-shape corrections are taken from the Higgs to diphoton analysis [REF] and applied to simulated events. The original MVA provided by the 
-EGamma POG is then reevaluated after these corrections. The following features are corrected: $R_{9}$, defined as the ratio of energy in
+Photons are identified using a BDT discriminant (photon MVA ID) trained on $\PGg$+jets simulation in order to distinguish real photons from jets misreconstructed as photons. 
+The features used for the BDT training include supercluster kinematics, isolation variables, and shower shape variables~\cite{EGM:PhotonID}. 
+To reject electrons faking photons, a conversion-safe electron veto is also applied. In order to improve agreement between simulation and data for the photon MVA ID, shower 
+shape corrections are taken from the CMS $\PH\to\PGg\PGg$ analysis of the same data set~\cite{CMS:2021kom} and applied to simulated events. 
+The photon MVA ID is then reevaluated after these corrections. We correct the following features: $R_{9}^{5x5}$, defined as the ratio of energy in
 the 5x5 array of ECAL crystals to the supercluster energy; $S_{4}$, defined as the ratio of the maximum energy 2x2 array to the energy of 
 the 5x5 array; the energy weighted shower widths $\sigma_{\eta}$ and $\sigma_{\phi}$; the energy weighted widths by crystal index 
 $\sigma_{i\eta i\eta}$ and $\sigma_{i\eta i\phi}$; photon isolation, charged isolation with respect to the primary vertex, 
 and charged isolation with respect to the worst vertex choice. The validity of the shower shape corrections is checked using tag 
-and probe procedures for $Z\rightarrow e^{+}e^{-}$ events where the probe electron mimics a photon and $Z\rightarrow \mu^{+}\mu^{-}$
-events with an FSR photon. A comparison of the agreement between uncorrected and corrected simulation with data is shown in 
-Figures [FIGS]. Simulation comparisons with data for individual shower shape features before and after correction can be found 
-in Appendix [APPENDIX], Figures [FIGS]. 
+and probe procedures for $\PZ\to\epem$ events where the probe electron mimics a photon and $\PZ\to\mpmm$
+events with an FSR photon. Comparisons of the agreement between uncorrected and corrected simulation with data for the photon MVA ID are shown in 
+Fig. \ref{fig:photon_mva_correction}. Similar plots for individual shower shape features can be found in Appendix \ref{sec:shower_shape}. 
+
+\begin{figure}[tb]
+	\begin{center}
+		\includegraphics[width=0.35\textwidth]{fig/ss_corr/phoMVA_17_EB_Z.pdf}
+		\includegraphics[width=0.35\textwidth]{fig/ss_corr/phoMVA_17_EE_Z.pdf}
+		\includegraphics[width=0.35\textwidth]{fig/ss_corr/phoMVA_17_EB_Z_mmg.pdf}
+		\includegraphics[width=0.35\textwidth]{fig/ss_corr/phoMVA_17_EE_Z_mmg.pdf}
+	\end{center}
+	\caption{Comparison of simulation with 2017 data for the photon MVA ID before and after shower shape corrections are applied to the simulation. The plots on the left (right) correspond to the barrel and endcap regions, and the upper (lower) plots correspond to $\PZ\to\epem$ ($\PZ\to\mpmm+\PGg$) events.}
+	\label{fig:photon_mva_correction}
+\end{figure}
 
 After deriving the corrected photon MVA discriminator, 90\% signal efficiency working point cuts for barrel and endcap photons 
 are determined for the \hzg analysis. The working points are defined based on real photons from SM $Z\gamma$ simulation, and correspond 

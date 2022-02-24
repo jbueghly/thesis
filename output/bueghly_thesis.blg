@@ -30,6 +30,8 @@ Warning--entry type for "CERN_complex" isn't style-file defined
 --line 1371 of file refs.bib
 Warning--entry type for "detector_image" isn't style-file defined
 --line 1375 of file refs.bib
+Warning--entry type for "EGM:PhotonID" isn't style-file defined
+--line 1428 of file refs.bib
 Warning--empty journal in LHC-YR4
 Warning--empty author in Benedikt:2004wm
 Warning--empty journal in Benedikt:2004wm
@@ -42,45 +44,45 @@ Warning--empty author in LUM-18-002
 Warning--missing institution in LUM-18-002
 Warning--empty author in AGOSTINELLI2003250
 Warning--missing institution in cite:l3
-You've used 89 entries,
+You've used 90 entries,
             2559 wiz_defined-function locations,
-            1216 strings with 23039 characters,
-and the built_in function-call counts, 34540 in all, are:
-= -- 2359
-> -- 914
+            1219 strings with 23148 characters,
+and the built_in function-call counts, 34689 in all, are:
+= -- 2365
+> -- 915
 < -- 3
-+ -- 427
++ -- 428
 - -- 210
-* -- 2316
-:= -- 3909
-add.period$ -- 479
-call.type$ -- 89
+* -- 2317
+:= -- 3916
+add.period$ -- 480
+call.type$ -- 90
 change.case$ -- 88
 chr.to.int$ -- 0
-cite$ -- 101
-duplicate$ -- 3705
-empty$ -- 3608
+cite$ -- 102
+duplicate$ -- 3724
+empty$ -- 3635
 format.name$ -- 277
-if$ -- 7470
+if$ -- 7507
 int.to.chr$ -- 0
-int.to.str$ -- 89
-missing$ -- 885
-newline$ -- 593
+int.to.str$ -- 90
+missing$ -- 888
+newline$ -- 596
 num.names$ -- 82
-pop$ -- 1443
+pop$ -- 1457
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 0
-skip$ -- 751
+skip$ -- 765
 stack$ -- 0
 substring$ -- 1061
-swap$ -- 2172
+swap$ -- 2178
 text.length$ -- 3
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 0
 warning$ -- 12
 while$ -- 162
-width$ -- 91
-write$ -- 1240
+width$ -- 92
+write$ -- 1245
 (There was 1 error message)

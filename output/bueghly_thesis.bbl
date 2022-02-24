@@ -575,6 +575,9 @@ R.~D. Ball, V.~Bertone, F.~Cerutti, L.~Del~Debbio, S.~Forte, \emph{et~al.}
 \bibitem{L1_prefire}
 {\url{https://twiki.cern.ch/twiki/bin/viewauth/CMS/L1PrefiringWeightRecipe}}.
 
+\bibitem{EGM:PhotonID}
+{\url{https://twiki.cern.ch/twiki/bin/view/CMS/MultivariatePhotonIdentificationRun2}}.
+
 \bibitem{CB-Oreglia}
 M.~J. Oreglia.
 \newblock \enquote{A study of the reactions $\psi^\prime \to \gamma \gamma
