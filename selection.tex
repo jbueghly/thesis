@@ -97,17 +97,37 @@ Fig. \ref{fig:photon_mva_correction}. Similar plots for individual shower shape 
 	\label{fig:photon_mva_correction}
 \end{figure}
 
-After deriving the corrected photon MVA discriminator, 90\% signal efficiency working point cuts for barrel and endcap photons 
-are determined for the \hzg analysis. The working points are defined based on real photons from SM $Z\gamma$ simulation, and correspond 
-to discriminator scores greater than -0.4 (-0.59) for barrel (endcap) photons. A comparison of these working points with the standard 
-EGamma POG 90\% efficiency working points, plotted on the receiver operator characteristic (ROC) curve for SM $Z\gamma$ and Z plus jets 
-simulation, is shown in Figure [FIG]. The efficiency of the photon identification is measured with $Z\rightarrow e^{+}e^{-}$ data
+Based on the corrected photon MVA ID, 90\% signal efficiency working point (WP) cuts for barrel and endcap photons 
+are determined for the \hzg{} analysis. The WPs are defined based on real photons from $\Z\gamma$ simulation, and correspond 
+to photon MVA ID scores greater than -0.4 (-0.59) for barrel (endcap) photons. A comparison of these WPs with the general CMS 90\% efficiency WPs, 
+plotted on the receiver operator characteristic (ROC) curve for $\PZ\gamma$ (signal) and $\PZ$+jets (background)
+simulation, is shown in Fig. \ref{fig:photon_mva_roc}. The efficiency of the photon MVA ID is measured with $\PZ\to\epem$ data
 using a tag and probe technique. The tag electron must pass the single electron trigger with \pt threshold 27 (32) GeV in 
-2016 (2017/2018), tight cut-based identification, have \pt $>$ 30 (35) GeV for 2016 (2017/2018), and have $|\eta| < 2.5$. The 
-probe electron must pass the photon MVA identification with shower shape corrections described above. The scale factors, measured and 
-applied in bins of \pt and supercluster $\eta$, are shown in Figure [FIG]. The efficiencies and scale factors for the conversion-safe 
-electron veto are measured by the EGamma POG using $Z\mu^{+}\mu^{-}$ events with an FSR photon and applied in the \hzg analysis. 
-The scale factors are cataloged in Table [TAB]. 
+2016 (2017 and 2018), pass a tight cut-based identification, have \pt $>$ 30 (35) GeV for 2016 (2017 and 2018), and have $|\eta| < 2.5$. The 
+probe electron must pass the corrected photon MVA ID. The corresponding SFs, measured and 
+applied in bins of \pt and supercluster $\eta$, are shown in Fig. \ref{fig:photon_id_sf}. The efficiencies and SFs for the conversion-safe 
+electron veto are measured by CMS using $\PZ\to\mpmm$ events with an FSR photon and are applied in the \hzg{} analysis. 
+These SFs are cataloged in Table \ref{tab:eveto_sf}. 
+
+\begin{figure}[tb]
+	\begin{center}
+		\includegraphics[width=0.75\textwidth]{fig/selection/photon_ID_ROC.png}
+	\end{center}
+	\caption{ROC}
+	\label{fig:photon_mva_roc}
+\end{figure}
+
+\begin{figure}[tb]
+	\begin{center}
+		\includegraphics[width=0.7\textwidth]{fig/SFs/2016_ID_pho_2D.pdf}
+		\includegraphics[width=0.7\textwidth]{fig/SFs/2017_ID_pho_2D.pdf}
+		\includegraphics[width=0.7\textwidth]{fig/SFs/2018_ID_pho_2D.pdf}
+	\end{center}
+	\caption{Photon MVA ID efficiency SFs.}
+	\label{fig:photon_id_sf}
+\end{figure}
+
+\clearpage
 
 \section{Electron Selection}
 Electrons are identified using a boosted decision tree multivariate (MVA) discriminator trained on Drell-Yan plus jets simulation 
@@ -116,7 +136,7 @@ used in the training include \pt, supercluster $\eta$, shower shape variables, r
 pixel hit variables, and isolation variables [REF]. These features are sensitive to bremsstrahlung along the electron trajectory, 
 momentum-energy matching between electron trajectory and ECAL cluster, shower shape, and electrons from photon conversions.
 Since isolation features are included in the training of the discriminator, there is no need for separate isolation cuts. 
-Electrons pass the identification requirement of the \hzg analysis if their discriminator score is higher than a loose working point 
+Electrons pass the identification requirement of the \hzg analysis if their discriminator score is higher than a loose WP
 value, corresponding to 98\% signal efficiency. In addition to the MVA cut, electrons must have $|d_{xy}| < 0.5$ cm and $|d_{z}| < 1$ cm
 with respect to the primary vertex. Electrons with \pt $\leq$ 7 GeV are rejected. 
 
