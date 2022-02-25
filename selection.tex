@@ -99,7 +99,10 @@ Fig. \ref{fig:photon_mva_correction}. Similar plots for individual shower shape 
 
 Based on the corrected photon MVA ID, 90\% signal efficiency working point (WP) cuts for barrel and endcap photons 
 are determined for the \hzg{} analysis. The WPs are defined based on real photons from $\Z\gamma$ simulation, and correspond 
-to photon MVA ID scores greater than -0.4 (-0.59) for barrel (endcap) photons. A comparison of these WPs with the general CMS 90\% efficiency WPs, 
+to photon MVA ID scores greater than -0.4 (-0.59) for barrel (endcap) photons. 
+These relatively loose cuts are chosen because the photon MVA ID is later used as an input to a BDT for categorization, as described in 
+the next chapter.
+A comparison of these WPs with the general CMS 90\% efficiency WPs, 
 plotted on the receiver operator characteristic (ROC) curve for $\PZ\gamma$ (signal) and $\PZ$+jets (background)
 simulation, is shown in Fig. \ref{fig:photon_mva_roc}. The efficiency of the photon MVA ID is measured with $\PZ\to\epem$ data
 using a tag and probe technique. The tag electron must pass the single electron trigger with \pt threshold 27 (32) GeV in 
@@ -113,9 +116,24 @@ These SFs are cataloged in Table \ref{tab:eveto_sf}.
 	\begin{center}
 		\includegraphics[width=0.75\textwidth]{fig/selection/photon_ID_ROC.png}
 	\end{center}
-	\caption{ROC}
+	\caption{ROC curves for the corrected photon MVA ID in the barrel (red) and endcaps (blue). Here, signal refers to real photons from the $\PZ\PGg$ simulation and background refers to jets misreconstructed as photons from the $\PZ$+jets simulation. Also shown are the cuts used for the \hzg{} analysis WP and for the standard CMS 90\% WP.}
 	\label{fig:photon_mva_roc}
 \end{figure}
+
+\begin{table}[tb]
+	\centering   
+\caption{Photon conversion-safe electron veto SFs.}
+	\begin{tabular}{|c|cccccc|}
+
+	\hline
+	&\multicolumn{3}{c}{barrel} &\multicolumn{3}{c|}{endcap}\\
+&0--30\GeV &30--60\GeV&60--200\GeV&0--30\GeV &30--60\GeV&60--200\GeV\\\hline
+2016&\multicolumn{3}{c}{0.9938}&\multicolumn{3}{c|}{0.9875}\\
+2017&\multicolumn{3}{c}{0.967}&\multicolumn{3}{c|}{0.915}\\
+2018&0.987613&0.98895& 1.00006&0.95461&0.962451&0.99791\\\hline
+	\end{tabular}
+\label{tab:eveto_sf}
+\end{table}
 
 \begin{figure}[tb]
 	\begin{center}
@@ -126,6 +144,7 @@ These SFs are cataloged in Table \ref{tab:eveto_sf}.
 	\caption{Photon MVA ID efficiency SFs.}
 	\label{fig:photon_id_sf}
 \end{figure}
+
 
 \clearpage
 
