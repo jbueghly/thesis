@@ -178,34 +178,41 @@ impact parameter cuts described above. Identification efficiencies and SFs are m
 \clearpage
 
 \section{Muon Selection}
-A loose cut-based muon identification is used in the analysis. This identification was originally developed by the \hzz 
-analysis [REF] and is well-suited for \hzg due to the similarity of the multiple, potentially soft, muons in the final state. 
-All muons are first required to pass a set of common cuts, followed by a separate set of cuts for high \pt (greater than 200 GeV) 
-and low \pt muons. All muons must satisfy \pt $>$ 5 GeV, $|\eta| < 2.4$, $|d_{xy}| < 0.5$ cm, and $|d_{z}| < 1$ cm, where $d_{xy}$ and 
-$d_{z}$ are impact parameters defined with respect to the primary vertex of the interaction using the best muon track. 
-Additionally, the three dimensional impact parameter (analogously defined) must have a magnitude less than four times its uncertainty.
-Muons must either be reconstructed as global muons or tracker muons. Muons with standalone tracks (tracks only in the muon system) are
-rejected. Muons must pass a particle flow-based isolation requirement, where the relative particle flow isolation 
-within a $\Delta R = 0.3$ cone is defined as 
-\begin{equation}
-\label{eqn:pfiso}
-	\mathcal{I} \equiv \Big( \sum p_{T}^\text{charged} + \max\big[ 0, \sum p_{T}^\text{neutral} +\sum p_{T}^{\gamma} - p_{T}^\mathrm{PU}(\ell) \big] \Big) / p_{T}^{\ell}.
-\end{equation}
-Muons must satisfy $\mathcal{I} < 0.35$. 
-
-For muons with \pt $<$ 200 GeV, muons satisfying the common requirements and identified by the particle flow identification
-algorithm are selected. For muons with \pt $>$ 200 GeV, muons are selected if they pass the particle flow identification or if they pass
-a set of high-$p_{T}$ requirements. These requirements are the following: the muon must be matched to segments in at least two muon 
-stations; satisfy $\frac{p_{T}}{\sigma_{p_{T}}} < 0.3$, $|d_{xy}| < 0.2$ cm, $|d_{z}| < 0.5$ cm, have at least one pixel hit, and have 
+A loose cut-based muon identification is used in this analysis. This ID was originally developed for the CMS $\PH\to\PZ\PZ^*\to4\ell$ analysis of the 2016 data set~\cite{bib:htozz2016} and is well-suited for \hzg{} due to the similar kinematics of the multiple muons in the final state. 
+All muons are first required to pass a set of common ID cuts, followed by a separate set of cuts for high ($>200\GeV$)
+and low \pt muons. All muons are required to satisfy $|\eta| < 2.4$, $|d_{xy}| < 0.5$ \cm, and $|d_{z}| < 1$ \cm, where
+the impact parameters are defined with respect to the PV using the best fit muon track. 
+Additionally, the three-dimensional impact parameter with respect to the PV must have a magnitude less than four times its uncertainty.
+Muons are required to either be reconstructed as global muons or tracker muons. Those with standalone tracks only in the muon system are
+rejected. 
+Low \pt muons satisfying the common requirements of the PF ID algorithm are selected. 
+High \pt muons are selected if they pass the PF ID or if they pass
+the following high \pt requirements: the muon is matched to segments in at least two muon 
+stations; satisfies $\frac{p_{T}}{\sigma_{p_{T}}} < 0.3$, $|d_{xy}| < 0.2$ cm, $|d_{z}| < 0.5$ cm; has at least one pixel hit; and has
 tracker hits in at least six tracker layers.
 
-In 2016, data-taking was affected by a problem in which the level one trigger sent only one candidate per 60$^{\circ}$ sector instead 
-of up to three [REF?]. As a result, when two muons in the same endcap had a low $\Delta \phi$ separation, only one would fire the 
+A relative PF isolation requirement is imposed, defined by the variable
+\begin{equation}
+\label{eqn:pfiso}
+	\mathcal{I}^{\mu} \equiv \Big[ \sum \pt^\text{charged} +
+                                 \max\big( 0, \sum \pt^\text{neutral}
+                                 +
+                                  \sum \pt^{\Pgg}
+                                 - \pt^{\mu\mathrm{,PU}} \big) \Big]
+                                 / \pt^{\mu}.
+\end{equation}
+The quantity $\sum \pt^\text{charged}$ is the scalar sum of the \pt
+of charged hadrons originating from the PV,
+and $\sum \pt^\text{neutral}$ and $\sum \pt^{\Pgg}$ are the scalar sums of the \pt of neutral hadrons and photons, respectively. 
+The sums are over all PF candidates within a cone of radius $\DR = 0.3$ around the photon or lepton direction at the PV. 
+Muons are required to satisfy $\mathcal{I}^{\mu} < 0.35$. 
+The ID and isolation efficiencies and SFs with uncertainties were measured and provided by the CMS $\PH\to\PZ\PZ^*\to4\ell$ analysis working group.
+
+In 2016, data-taking was affected by a problem in which the L1 trigger sent only one candidate per 60$^{\circ}$ sector instead 
+of up to three~\cite{twiki:l1emtf}. As a result, when two muons in the same endcap had a low $\Delta \phi$ separation, only one would fire the 
 trigger. To account for this, 2016 data events containing identified muons with $\Delta \phi < 70^{\circ}$ in the same endcap region 
 are rejected. 
 
-Identification efficiencies and scale factors corresponding to the muon identification above are measured and provided by the 
-\hzz analysis working group, and are shown in Figure [FIG].  
 
 \section{Jet Selection}
 Jets are selected in order to categorize events coming from potential VBF Higgs production, but no jet multiplicity requirement is present 

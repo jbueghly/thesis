@@ -589,6 +589,9 @@ S.~Chatrchyan \emph{et~al.}
 \bibitem{EGM:ElectronID}
 {\url{https://twiki.cern.ch/twiki/bin/view/CMS/MultivariateElectronIdentificationRun2}}.
 
+\bibitem{twiki:l1emtf}
+{\url{https://twiki.cern.ch/twiki/bin/viewauth/CMS/EndcapHighPtMuonEfficiencyProblem}}.
+
 \bibitem{CB-Oreglia}
 M.~J. Oreglia.
 \newblock \enquote{A study of the reactions $\psi^\prime \to \gamma \gamma
