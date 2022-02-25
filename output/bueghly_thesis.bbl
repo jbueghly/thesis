@@ -575,8 +575,19 @@ R.~D. Ball, V.~Bertone, F.~Cerutti, L.~Del~Debbio, S.~Forte, \emph{et~al.}
 \bibitem{L1_prefire}
 {\url{https://twiki.cern.ch/twiki/bin/viewauth/CMS/L1PrefiringWeightRecipe}}.
 
+\bibitem{cite:tagandprobe}
+S.~Chatrchyan \emph{et~al.}
+\newblock \enquote{Measurement of the inclusive $\textrm{W}$ and $\textrm{Z}$
+  production cross sections in pp collisions at $\sqrt{s}=7$ {TeV}.}
+\newblock \emph{JHEP}  (2011) \textbf{10}:132.
+\newblock \doi{10.1007/JHEP10(2011)132}.
+\newblock \eprint{1107.4789}.
+
 \bibitem{EGM:PhotonID}
 {\url{https://twiki.cern.ch/twiki/bin/view/CMS/MultivariatePhotonIdentificationRun2}}.
+
+\bibitem{EGM:ElectronID}
+{\url{https://twiki.cern.ch/twiki/bin/view/CMS/MultivariateElectronIdentificationRun2}}.
 
 \bibitem{CB-Oreglia}
 M.~J. Oreglia.

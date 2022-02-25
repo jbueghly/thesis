@@ -141,10 +141,10 @@ between data and simulation is good over the full $\pt$ spectrum.
 
 \section{Pileup Reweighting}\label{sec:pileup}
 In order to correctly model the pileup distribution in data, a pileup reweighting procedure must be applied to the simulation.
-Although the Deterministic Annealing primary vertex reconstruction \cite{detanneal} has been shown to
+Although the Deterministic Annealing primary vertex (PV) reconstruction \cite{detanneal} has been shown to
 be efficient and well-behaved up to the observed levels of pileup, the final distribution
-for the number of reconstructed primary vertices is still sensitive to differences between data and 
-simulation in the primary vertex reconstruction and underlying event.
+for the number of reconstructed PVs is still sensitive to differences between data and 
+simulation in the PV reconstruction and underlying event.
 Additionally, the offline event selection criteria and trigger can potentially impact the distribution for the number of
 reconstructed vertices. 
 To handle this, the pileup distribution for data is first derived by using the per-bunch-crossing, per-luminosity-section instantaneous luminosity, 
@@ -152,7 +152,7 @@ together with the total pp inelastic cross section. The total pp inelastic cross
 section is taken to be 66 mb, 72.4 mb, and 80 mb for 2016, 2017, and 2018 respectively.
 This yields an expected pileup distribution, correctly weighted over the entire data-taking period. The simulation is then reweighted to 
 match this expected pileup distribution. 
-Figure \ref{fig:puwei} shows the number of primary vertices after pileup reweighting for each data-taking year. The uncertainties associated with pileup reweighting are 
+Figure \ref{fig:puwei} shows the number of PV after pileup reweighting for each data-taking year. The uncertainties associated with pileup reweighting are 
 accounted for in the analysis and are discussed further in Chapter \ref{sec:uncertainties}.
 \begin{figure}[tb]
   \begin{center}

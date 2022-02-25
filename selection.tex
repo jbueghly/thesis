@@ -3,7 +3,7 @@ This chapter outlines the basic \hzg{} physics object and event selection before
 Along the way, we will also point out the most relevant corrections applied, including trigger scale factors (SFs), physics object energy and momentum corrections, and identification and isolation SFs.
 
 \section{Primary Vertex}
-Events are required to have at least one good primary vertex (PV)
+Events are required to have at least one good PV
 with a reconstructed longitudinal position within 24\cm of the
 geometric center of the detector and a transverse position within
 2\cm of the nominal beam collision point. 
@@ -21,7 +21,7 @@ The dielectron trigger requires a leading (subleading) electron with
 $\pt > 23\,(12)\GeV$, while the dimuon trigger requires a muon with $\pt > 17\,(8)\GeV$. Events passing both the double muon and double electron triggers are classified as $\mpmm\gamma$ events.
 
 The triggers are applied to both data and simulation. Trigger efficiencies and SFs are measured using the 
-simulation samples corresponding to each data-taking year. These measurements use a tag and probe method. 
+simulation samples corresponding to each data-taking year. These measurements use a tag and probe~\cite{cite:tagandprobe} method. 
 This method takes advantage of the high purity of $\PZ\to\lplm$ events near the $\PZ$ boson mass peak. 
 One lepton functions as the tag, and satisfies a set of tight trigger, identification, isolation, and \pt requirements. 
 The second lepton, the probe, must pass a looser selection and is used to measure the efficiency in question. 
@@ -149,22 +149,33 @@ These SFs are cataloged in Table \ref{tab:eveto_sf}.
 \clearpage
 
 \section{Electron Selection}
-Electrons are identified using a boosted decision tree multivariate (MVA) discriminator trained on Drell-Yan plus jets simulation 
+Electrons are identified using a BDT discriminant (electron MVA ID) trained on Drell--Yan plus jets simulation, 
 with prompt electrons matched to generator-level objects as signal and unmatched and non-prompt electrons as background. The features 
-used in the training include \pt, supercluster $\eta$, shower shape variables, ratio of hadronic to electromagnetic energy, track and 
-pixel hit variables, and isolation variables [REF]. These features are sensitive to bremsstrahlung along the electron trajectory, 
-momentum-energy matching between electron trajectory and ECAL cluster, shower shape, and electrons from photon conversions.
-Since isolation features are included in the training of the discriminator, there is no need for separate isolation cuts. 
-Electrons pass the identification requirement of the \hzg analysis if their discriminator score is higher than a loose WP
-value, corresponding to 98\% signal efficiency. In addition to the MVA cut, electrons must have $|d_{xy}| < 0.5$ cm and $|d_{z}| < 1$ cm
-with respect to the primary vertex. Electrons with \pt $\leq$ 7 GeV are rejected. 
+used in the BDT training include \pt, supercluster $\eta$, shower shape variables, ratio of hadronic to electromagnetic energy, track and 
+pixel hit variables, and isolation variables~\cite{EGM:ElectronID}. 
+Since isolation features are included in the training of the photon MVA ID, there is no need for a separate isolation requirement. 
+For the \hzg{} analysis, an electron is selected if its photon MVA ID score is higher than a loose WP
+value, corresponding to 98\% signal efficiency. In addition to the photon MVA ID cut, electrons must satisfy the impact parameter requirements $|d_{xy}| < 0.5$ cm and $|d_{z}| < 1$ cm
+with respect to the PV. 
 
-Electron identification efficiencies and scale factors are measured using a tag and probe method on dielectron events near the 
-Z boson peak. These electrons must pass the single electron trigger with a \pt threshold of 27 (32) GeV for 2016 (2017/2018) data. 
-The dielectron mass must be between 60 and 120 GeV. The tag electron must pass a tight cut-based electron identification and have 
-\pt $>$ 30 (35) GeV for 2016 (2017) and $|\eta|$ < 2.5. The probe electron must pass the loose MVA identification cut and associated 
-impact parameter and \pt cuts described above. Identification efficiencies and scale factors are measured and applied in bins of 
-\pt and supercluster $\eta$. The scale factors for each data-taking year are shown in Figures [FIGS]. 
+Electron MVA ID efficiencies and SFs are measured using a tag and probe method on dielectron events near the 
+$\PZ$ boson mass peak. The electrons used by this procedure are required to pass the single electron trigger with a \pt threshold of 27 (32) GeV for 2016 (2017 and 2018) data. 
+The dielectron mass must be in the range 60--120\GeV. The tag electron must pass a tight cut-based electron ID and have 
+$\pt>30\,(35)\GeV$ for 2016 (2017 and 2018) and $|\eta|<2.5$. The probe electron is required to pass the loose electron MVA ID cut and the
+impact parameter cuts described above. Identification efficiencies and SFs are measured and applied in bins of 
+\pt and supercluster $\eta$. The SFs for each data-taking year are shown in Fig. \ref{fig:electron_id_sf}.
+
+\begin{figure}[tb]
+	\begin{center}
+		\includegraphics[width=0.6\textwidth]{fig/SFs/2016_ID_ele_2D.pdf}
+		\includegraphics[width=0.6\textwidth]{fig/SFs/2017_ID_ele_2D.pdf}
+		\includegraphics[width=0.6\textwidth]{fig/SFs/2018_ID_ele_2D.pdf}
+	\end{center}
+	\caption{Left: Electron MVA ID efficiency SFs for 2016 (upper), 2017 (middle), and 2018 (lower). Right: The corresponding uncertainties for the SFs.}
+	\label{fig:electron_id_sf}
+\end{figure}
+
+\clearpage
 
 \section{Muon Selection}
 A loose cut-based muon identification is used in the analysis. This identification was originally developed by the \hzz 

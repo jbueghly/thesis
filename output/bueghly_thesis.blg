@@ -15,6 +15,7 @@ A level-1 auxiliary file: statistics.aux
 A level-1 auxiliary file: results.aux
 A level-1 auxiliary file: conclusion.aux
 The style file: thesis_bibstyle.bst
+A level-1 auxiliary file: appendix_shower_shape.aux
 A level-1 auxiliary file: appendix_resonant_fits.aux
 Database file #1: refs.bib
 I was expecting a `,' or a `}'---line 1187 of file refs.bib
@@ -32,6 +33,8 @@ Warning--entry type for "detector_image" isn't style-file defined
 --line 1375 of file refs.bib
 Warning--entry type for "EGM:PhotonID" isn't style-file defined
 --line 1428 of file refs.bib
+Warning--entry type for "EGM:ElectronID" isn't style-file defined
+--line 1432 of file refs.bib
 Warning--empty journal in LHC-YR4
 Warning--empty author in Benedikt:2004wm
 Warning--empty journal in Benedikt:2004wm
@@ -44,45 +47,45 @@ Warning--empty author in LUM-18-002
 Warning--missing institution in LUM-18-002
 Warning--empty author in AGOSTINELLI2003250
 Warning--missing institution in cite:l3
-You've used 90 entries,
+You've used 92 entries,
             2559 wiz_defined-function locations,
-            1219 strings with 23148 characters,
-and the built_in function-call counts, 34689 in all, are:
-= -- 2365
-> -- 915
+            1228 strings with 23462 characters,
+and the built_in function-call counts, 35225 in all, are:
+= -- 2398
+> -- 925
 < -- 3
-+ -- 428
-- -- 210
-* -- 2317
-:= -- 3916
-add.period$ -- 480
-call.type$ -- 90
-change.case$ -- 88
++ -- 433
+- -- 212
+* -- 2344
+:= -- 3968
+add.period$ -- 487
+call.type$ -- 92
+change.case$ -- 89
 chr.to.int$ -- 0
-cite$ -- 102
-duplicate$ -- 3724
-empty$ -- 3635
-format.name$ -- 277
-if$ -- 7507
+cite$ -- 104
+duplicate$ -- 3786
+empty$ -- 3703
+format.name$ -- 280
+if$ -- 7628
 int.to.chr$ -- 0
-int.to.str$ -- 90
-missing$ -- 888
-newline$ -- 596
-num.names$ -- 82
-pop$ -- 1457
+int.to.str$ -- 92
+missing$ -- 901
+newline$ -- 606
+num.names$ -- 83
+pop$ -- 1486
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 0
-skip$ -- 765
+skip$ -- 787
 stack$ -- 0
-substring$ -- 1061
-swap$ -- 2178
+substring$ -- 1070
+swap$ -- 2209
 text.length$ -- 3
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 0
 warning$ -- 12
-while$ -- 162
-width$ -- 92
-write$ -- 1245
+while$ -- 164
+width$ -- 94
+write$ -- 1265
 (There was 1 error message)
