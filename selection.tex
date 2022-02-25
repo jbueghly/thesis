@@ -215,16 +215,16 @@ are rejected.
 
 
 \section{Jet Selection}
-Jets are selected in order to categorize events coming from potential VBF Higgs production, but no jet multiplicity requirement is present 
-for the \hzg selection. In fact, the majority of simulation and data events selected in the analysis have no jets. However, identifying 
+Jets are selected in order to categorize events coming from potential VBF Higgs production, but there is no jet muliplicity requirement 
+for the \hzg{} event selection. In fact, the majority of simulation and data events selected in the analysis have no jets. However, identifying 
 and selecting jets to categorize VBF events can still significantly improve the sensitivity of the search. Jets are required to pass 
-a loose cut-based identification in 2016 and a tight cut-based identification in 2017 and 2018. These sets of identification cuts are
-determined and provided by the JetMET POG. Additionally, jets must satisfy \pt $>$ 30 GeV, $|\eta| < 4.7$, and $\Delta R > 0.4$ with 
-respect to each lepton and the photon selected in the analysis. An issue with noise in the ECAL endcap in 2017 caused an artificial 
-increase in jet multiplicity in data within a specific kinematic phase space [REF]. To mitigate this, jets are rejected if they have 
-raw \pt $<$ 50 GeV and $2.65 < |\eta| < 3.139$. This cut reduces the efficiency to reconstruct dijet pairs by 12\% in the specified 
-region. To tag VBF events, we are interested in dijet pairs. To this end, if there are more than two jets satisfying the above criteria, 
-only the two jets with highest \pt are selected. 
+a loose cut-based identification in 2016 and a tight cut-based identification in 2017 and 2018. 
+Additionally, jets must satisfy $\pt>30\GeV$, $|\eta| < 4.7$, and $\Delta R > 0.4$ with 
+respect to each lepton and the photon selected in the analysis. An issue with noise in the ECAL endcaps in 2017~\cite{eenoise} caused an artificial 
+increase in jet multiplicity in data within a specific kinematic phase space. To mitigate this, jets are rejected if they have 
+uncorrected \pt $<$ 50 GeV and $2.65 < |\eta| < 3.139$. This cut reduces the efficiency to reconstruct dijet pairs by 12\% in the specified 
+region. To tag VBF events, we are interested in dijet pairs. If there are more than two jets satisfying the above criteria, 
+only the two highest \pt jets are selected. No SFs are needed for these jet selection requirements as they do not impact the event selection.
 
 \section{Object Corrections}
 Several standard corrections are applied to the physics objects selected in the analysis. Rochester muon momentum scale and resolution 

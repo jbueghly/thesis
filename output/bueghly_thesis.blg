@@ -37,6 +37,8 @@ Warning--entry type for "EGM:ElectronID" isn't style-file defined
 --line 1432 of file refs.bib
 Warning--entry type for "twiki:l1emtf" isn't style-file defined
 --line 1436 of file refs.bib
+Warning--entry type for "eenoise" isn't style-file defined
+--line 1440 of file refs.bib
 Warning--empty journal in LHC-YR4
 Warning--empty author in Benedikt:2004wm
 Warning--empty journal in Benedikt:2004wm
@@ -49,45 +51,45 @@ Warning--empty author in LUM-18-002
 Warning--missing institution in LUM-18-002
 Warning--empty author in AGOSTINELLI2003250
 Warning--missing institution in cite:l3
-You've used 93 entries,
+You've used 94 entries,
             2559 wiz_defined-function locations,
-            1230 strings with 23560 characters,
-and the built_in function-call counts, 35374 in all, are:
-= -- 2404
-> -- 926
+            1232 strings with 23674 characters,
+and the built_in function-call counts, 35523 in all, are:
+= -- 2410
+> -- 927
 < -- 3
-+ -- 434
++ -- 435
 - -- 212
-* -- 2345
-:= -- 3975
-add.period$ -- 488
-call.type$ -- 93
+* -- 2346
+:= -- 3982
+add.period$ -- 489
+call.type$ -- 94
 change.case$ -- 89
 chr.to.int$ -- 0
-cite$ -- 105
-duplicate$ -- 3805
-empty$ -- 3730
+cite$ -- 106
+duplicate$ -- 3824
+empty$ -- 3757
 format.name$ -- 280
-if$ -- 7665
+if$ -- 7702
 int.to.chr$ -- 0
-int.to.str$ -- 93
-missing$ -- 904
-newline$ -- 609
+int.to.str$ -- 94
+missing$ -- 907
+newline$ -- 612
 num.names$ -- 83
-pop$ -- 1500
+pop$ -- 1514
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 0
-skip$ -- 801
+skip$ -- 815
 stack$ -- 0
 substring$ -- 1070
-swap$ -- 2215
+swap$ -- 2221
 text.length$ -- 3
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 0
 warning$ -- 12
 while$ -- 164
-width$ -- 95
-write$ -- 1270
+width$ -- 96
+write$ -- 1275
 (There was 1 error message)
