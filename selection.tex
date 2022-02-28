@@ -227,23 +227,40 @@ region. To tag VBF events, we are interested in dijet pairs. If there are more t
 only the two highest \pt jets are selected. No SFs are needed for these jet selection requirements as they do not impact the event selection.
 
 \section{Object Corrections}
-Several standard corrections are applied to the physics objects selected in the analysis. Rochester muon momentum scale and resolution 
-corrections are applied to both data and simulation [REF]. Energy and momentum scale and resolution corrections for electrons 
-and photons are provided by the EGamma POG and applied in the analysis. Jet momentum scale and resolution correctors are provided by 
-the JetMET POG and applied in the analysis. 
+Several corrections are applied to the physics objects selected in the analysis. Rochester muon momentum scale and resolution 
+corrections~\cite{muonRoc} are applied to both data and simulation. This greatly improves the calibration of the dimuon mass near the $\PZ$ boson peak, as shown in Fig. \ref{fig:rochester}. 
+Energy scale and resolution corrections for electrons, photons, and jets are also applied in the analysis. The procedures for these corrections and the corresponding SFs for simulation 
+are provided by CMS.
 
-An additional muon momentum correction is obtained using an FSR photon recovery procedure, and is based on the procedure used by the \hzz 
-analysis [REF]. FSR photons are not considered during the standard CMS muon reconstruction. As the \pt of FSR photons from radiating 
-muons is generally very low, particle flow photons are considered, in contrast with the fully reconstructed photons used in the main 
-analysis selection. A particle flow photon must pass a set of cuts in order to be identified as an FSR photon associated with one of the 
-muons selected by the analysis. The photon must have \pt $>$ 2 GeV, $|\eta|<2.4$, and relative particle flow isolation less than 1.8. 
-It must also satisfy $\Delta R(\gamma, \mu)/p_{T,\gamma}^{2} < 0.012$ and $\Delta R(\gamma, \mu) < 0.4$. If multiple particle flow 
-photons pass these requirements, the photon with the smallest $\Delta R(\gamma, \mu)/p_{T,\gamma}^{2} < 0.012$ is chosen. 
-Then, the four momentum of the FSR photon is added back to the four momentum of the muon, and the muon kinematics reevaluated. 
+\begin{figure}[tb]
+	\begin{center}
+		\includegraphics[width=0.45\textwidth]{fig/selection/roccor_before.png}
+		\includegraphics[width=0.45\textwidth]{fig/selection/roccor_after.png}
+	\end{center}
+	\caption[Dimuon invariant mass around the $\PZ$ boson peak in 2018 data before (left) and after (right) the muon Rochester momentum corrections are applied.]
+	{Dimuon invariant mass around the $\PZ$ boson peak in 2018 data before (left) and after (right) the muon Rochester momentum corrections are applied~\cite{muonRoc}.}
+	\label{fig:rochester}
+\end{figure}
+
+An FSR recovery procedure is performed for the selected muons, 
+following a similar approach to that used in Ref.~\cite{bib:htozz2016}. An FSR photon is 
+identified and associated to its radiating muon based on the following criteria. The 
+photon must satisfy $\pt>2$\GeV, $\lvert{\eta}\rvert < 2.4$, $\DR(\gamma,\mu)/p_{\mathrm{T}\gamma}^{2} < 0.012 \GeV^{-2}$, $\DR(\gamma,\mu) < 0.4$, and relative PF isolation smaller than 1.8, where the pileup contribution is excluded from the isolation calculation. If 
+multiple FSR photons are associated to one muon, the photon with the smallest 
+value of $\DR(\gamma,\mu)/p_{\mathrm{T}\gamma}^{2}$ is selected. 
 In simulation, we find that the selected FSR photon matches the generator level FSR photon with 93\% efficiency. 
-Figure [FIG] shows the dilepton and three body 
+Figure \ref{fig:fsr_recovery} shows the dilepton and $\lplm\PGg$
 invariant mass among FSR photon-containing signal events with and without applying the FSR recovery correction.
-The procedure yields a 1\% improvement on the three body mass resolution in the muon channel.
+The FSR recovery procedure improves the $m_{\lplm\gamma}$ resolution by 1\% in the muon channel.
+
+\begin{figure}[tb]
+	\begin{center}
+		\includegraphics[width=0.45\textwidth]{fig/selection/mll.pdf}
+		\includegraphics[width=0.45\textwidth]{fig/selection/Hmass.pdf}
+	\end{center}
+	\caption{Dilepton invariant mass (left) and $\lplm\gamma$ invariant mass (right) with (blue) and without (red) FSR photon recovery for simulated $\PH\to\PZ\gamma\to\mpmm\gamma$ events containing at least one FSR photon.}
+	\label{fig:fsr_recovery}
+\end{figure}
 
 \section{Event Selection}
 Events are required to have at least one good primary vertex
