@@ -263,27 +263,21 @@ The FSR recovery procedure improves the $m_{\lplm\gamma}$ resolution by 1\% in t
 \end{figure}
 
 \section{Event Selection}
-Events are required to have at least one good primary vertex
-with a reconstructed longitudinal position within 24\,{cm} of the
-geometric center of the detector and a transverse position within
-2\,{cm} of the nominal beam collision point. The vertex with the largest value of summed physics-object
-$p_{T}^2$ is taken to be the primary interaction vertex. The physics objects used in this calculation are derived from 
-information obtained from the charged-particle tracking detectors only. These objects include jets reconstructed by 
-clustering charged particle tracks; the associated missing transverse momentum, defined as the negative vector sum of the \pt of 
-those jets.
+Events are required to contain a photon and at least two same-flavor, oppositely charged leptons ($\ell = \Pe$ or $\mu$) with $m_{\lplm}>50$\GeV.  
+The dilepton mass requirement, although relatively loose, is sufficient to suppress backgrounds that do not contain $\PZ$ boson decays while retaining high signal efficiency. The particles used to reconstruct the $\PZ\gamma$ candidate system are required to have $\pt > 25\,(15)$\GeV for the leading (subleading) electron, $\pt > 20\,(10)$\GeV for the leading (subleading) muon, and $\pt > 15$\GeV for the photon. 
+The photon must also satisfy $0 < |\eta| < 1.4442$ or $1.566 < |\eta| < 2.5$. 
+This avoids the calorimeter transition region, in which photon reconstruction is more difficult. 
+In events with multiple dilepton pairs, the pair with 
+mass closest to the nominal $\PZ$ boson mass~\cite{PhysRevD.98.030001} is selected. Additional electrons (muons) with \pt greater than 7 (5)\GeV are also used for categorization, as described in the next chapter. 
 
-Events with two same-flavor opposite sign leptons (e or $\mu$) and a photon are selected. The leading muon (electron) is required to have 
-\pt greater than 25 (20) GeV, and the trailing lepton must have \pt greater than 15 (10) GeV. Electrons (muons) must have $|\eta|$ 
-less than 2.5 (2.4). The photon must have \pt greater than 15 GeV and must satisfy $0 < |\eta| < 1.4442$ or $1.566 < |\eta| < 2.5$. 
-This avoids the calorimeter transition region, in which photon reconstruction is more difficult. The invariant mass of the dilepton 
-system is required to be greater than 50 GeV. In events with multiple dilepton pairs, the pair with mass closest to the nominal 
-Z boson mass [REF] is selected. 
-
-Events are required to have a photon satisfying $p_{T}^{\gamma}/m_{\ell\ell\gamma} > 0.14$, which suppresses the Z plus jets 
-background without significantly reducing signal efficiency and without significantly shaping the three body mass spectrum.
-Each lepton must have $\Delta R > 0.4$ with respect to the photon. To reject events with final-state radiation from 
-Drell-Yan processes, we require $m_{\ell\ell\gamma} + m_{\ell\ell} > 185$ GeV. Finally, the three body mass is required to 
-satisfy $105 < m_{\ell\ell\gamma} < 170$ GeV. 
+The invariant mass of the $\lplm\gamma$ system is required to be in the range $105 < m_{\lplm\gamma} < 170$\GeV, which provides a broad range around the Higgs boson mass in which to perform the fit.
+%  to be consistent with the Higgs boson mass.
+Events are required to have a photon satisfying $\pt^\gamma / m_{\lplm\gamma} > 0.14$,
+which suppresses the $\PZ$+jets background 
+without significantly reducing signal efficiency, with minimal bias in the
+$m_{\lplm\gamma}$ spectrum. Each lepton is required to have $\DR>0.4$
+with respect to the photon to reject events with FSR. To further reject FSR from $\PZ\gamma$
+processes, we require $m_{\lplm\gamma} + m_{\lplm} > 185\GeV$. 
 
 \section{Kinematic Fit}
 A kinematic fit technique is used to improve the dilepton mass resolution. This constrains the dilepton mass based on the true 
