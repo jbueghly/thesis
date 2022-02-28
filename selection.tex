@@ -280,56 +280,55 @@ with respect to the photon to reject events with FSR. To further reject FSR from
 processes, we require $m_{\lplm\gamma} + m_{\lplm} > 185\GeV$. 
 
 \section{Kinematic Fit}
-A kinematic fit technique is used to improve the dilepton mass resolution. This constrains the dilepton mass based on the true 
-Z boson lineshape while accounting for the known detector resolution. The position information of the leptons has a negligible impact
-on the fit, so only the lepton transverse momenta and dilepton mass are included in the fit. The procedure is based on previous
-studies by the \hzz analysis [REF]. We do not carry out an analogous kinematic fit for the $m_{\ell\ell\gamma}$ invariant 
-mass in order to avoid any potential bias due to reshaping the mass distribution. The kinematic fit is a maximum likelihood fit 
-defined by the likelihood function below: 
+A kinematic fit procedure is used to improve the dilepton mass and $m_{\lplm\gamma}$ resolutions, 
+following a similar 
+approach to that used in Ref.~\cite{bib:htozz2016}. A maximum likelihood fit is performed, taking into account 
+the true $\PZ$ boson line shape, obtained from \hzg{} simulation, the \pt of each lepton, 
+and the \pt resolution of each lepton. The outputs of this fit are the corrected \pt values for each 
+lepton. The likelihood function for the fit is given by
 
 \begin{equation}
-\begin{aligned}
-\mathcal{L}({P_{T}}^{1},{P_{T}}^{2}|{P_{T}}^{reco1},{\sigma_{P_{T}}}^1,{P_{T}}^{reco2},{\sigma_{P_{T}}}^2) \\
-=Gauss({P_{T}}^{reco1}|{P_{T}}^{1},{\sigma_{P_{T}}}^1)\cdot Gauss({P_{T}}^{reco2}|{P_{T}}^{2},{\sigma_{P_{T}}}^2)\cdot\mathcal{L}(m_{12}|m_{Z})
-\end{aligned}
+	\mathcal{L}(\ptone,\pttwo|\ptoner,\sigma_{\ptone},\pttwor,\sigma_{\pttwo}) = \mathcal{N}(\ptoner|\ptone,\sigma_{\ptone})\cdot\mathcal{N}(\pttwor|\pttwo,\sigma_{\pttwo})\cdot\mathcal{L}(m_{12}|m_{\PZ}),
 \end{equation}
+where $\mathcal{N}$ represents the normal distribution, \ptoner and \pttwor are the reconstructed transverse momenta of the two leptons, 
+$\sigma_{\ptone}$ and $\sigma_{\pttwo}$ are the per-lepton transverse momentum resolutions, 
+$\ptone$ and $\pttwo$ are the corrected \pt values, $m_{12}$ is the invariant mass 
+calculated from $\ptone$ and $\pttwo$, and $\mathcal{L}(m_{12}|m_{\PZ})$ is the likelihood given the true Z mass lineshape. 
+The corrected \pt values are used to recalculate the dilepton mass and $m_{\lplm\gamma}$. 
+Figure \ref{fig:kinfit} shows the dilepton mass distributions before and after the kinematic fit.
+The improvement in $m_{\lplm\gamma}$ resolution varies with data-taking year and is between 
+20--27\% in the electron channel and 10--12\% in the muon channel. The effect of the 
+kinematic fit is larger for the electron channel because of the poorer momentum resolution for electrons compared to muons. 
 
-Here, $p_{T}^{reco1}$ and $p_{T}^{reco2}$ are the reconstructed transverse momenta of the two leptons, 
-$\sigma_{p_{T}}^{1}$ and $\sigma_{p_{T}}^{2}$ are the per-lepton transverse momentum resolutions, 
-$p_{T}^{1}$ and $p_{T}^{2}$ are the parameters to optimize, and $m_{12}$ is the invariant mass 
-calculated from $p_{T}^{1}$ and $p_{T}^{2}$. $\mathcal{L}(m_{12}|m_{Z})$ is the likelihood given the true Z mass lineshape. 
-The outputs of the fit are $p_{T}^{1}$ and $p_{T}^{2}$.
-Their uncertainties are saved and used to calculate a per-event uncertainty for the mass measurement.
-To optimize this procedure, we determine the true generator level Z lineshape from a gluon-gluon fusion \hzg sample.
-Generator level Z lineshapes for the dielectron and dimuon final states are fit with 
-a single-sided Crystal Ball function plus three gaussian functions.
-For each event, the likelihood is maximized and the \pt information of the refit leptons is updated. 
-Then, the dilepton mass and three body mass are recalculated based on the refit leptons.
-The mass distributions for before and after the kinematic fit are shown in Figure [FIG]. The level of improvement in the 
-dilepton mass resolution, 
-as measured by $\sigma_{eff}$, is shown in in Table \ref{tab:sig_eff_refit}.
-
-\begin{table}[h]
-    \begin{center}
-    \caption{
-        Percent improvement in dilepton and three-body mass resolution (measured by $\sigma_{eff}$) 
-        after the kinematic fit.
-      }
-        \begin{tabular}{|c|cc|cc|}
-      \hline
-               & \multicolumn{2}{c|}{\textbf{electron channel}}   & \multicolumn{2}{c|}{\textbf{muon channel}}               \\
-	  \hline
-		&$m_{ee}$&$m_{ee\gamma}$&$m_{\mu\mu}$&$m_{\mu\mu\gamma}$\\\hline
-            \textbf{2016} & 20\% & 20\%& 17\% &12\%\\ 
-      \hline
-            \textbf{2017} & 28\% & 27\%& 21\% &11\%\\ 
-      \hline 
-            \textbf{2018} & 24\% & 24\%& 20\% &10\% \\ 
-      \hline 
-    \end{tabular}
-    \label{tab:sig_eff_refit}
-    \end{center}
-\end{table}
-
-We also perform a closure test on the background as shown in Figure [FIG]. The dilepton mass should be constrained,
-while the three body mass should not be distorted by the kinematic constraint. Indeed, this is what is observed.
+\begin{figure}[tb]
+	\begin{center}
+		\includegraphics[width=0.45\textwidth]{fig/selection/kinfit_data_el.png}
+		\includegraphics[width=0.45\textwidth]{fig/selection/kinfit_data_mu.png}
+	\end{center}
+	\caption{Dilepton invariant mass in 2016 data before and after the kinematic fit for the electron (left) and muon (right) channels.}
+	\label{fig:kinfit}
+\end{figure}
+%\begin{table}[h]
+%    \begin{center}
+%    \caption{
+%        Percent improvement in dilepton and three-body mass resolution (measured by $\sigma_{eff}$) 
+%        after the kinematic fit.
+%      }
+%        \begin{tabular}{|c|cc|cc|}
+%      \hline
+%               & \multicolumn{2}{c|}{\textbf{electron channel}}   & \multicolumn{2}{c|}{\textbf{muon channel}}               \\
+%	  \hline
+%		&$m_{ee}$&$m_{ee\gamma}$&$m_{\mu\mu}$&$m_{\mu\mu\gamma}$\\\hline
+%            \textbf{2016} & 20\% & 20\%& 17\% &12\%\\ 
+%      \hline
+%            \textbf{2017} & 28\% & 27\%& 21\% &11\%\\ 
+%      \hline 
+%            \textbf{2018} & 24\% & 24\%& 20\% &10\% \\ 
+%      \hline 
+%    \end{tabular}
+%    \label{tab:sig_eff_refit}
+%    \end{center}
+%\end{table}
+%
+%We also perform a closure test on the background as shown in Figure [FIG]. The dilepton mass should be constrained,
+%while the three body mass should not be distorted by the kinematic constraint. Indeed, this is what is observed.
