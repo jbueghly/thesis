@@ -310,3 +310,39 @@ kinematic fit is larger for the electron channel because of the poorer momentum 
 \end{figure}
 
 \section{Yields and Kinematic Distributions}
+Table \ref{tab:basic_yields} shows the number of expected \hzg{} signal events and the number of data events selected by the analysis, before any event categorization is done. The signal acceptance times efficiency ranges from 12--17\% depending on the year and final state. Also shown are the event yields normalized by luminosity. We note that these are fairly consistent from year to year. The minor increase in selected data per unit luminosity from 2016 to 2018 is explained by increased pileup due to higher instantaneous luminosity.
+
+\begin{table}[tb]
+	\footnotesize
+	\centering   
+\caption{Expected signal and data yields corresponding to each year of data-taking in the electron and muon channels.}
+	\begin{tabular}{|c|cccc|cccc|cccc|}\hline
+		& 2016 & & & & 2017 & & & & 2018 & & & \\
+		& Signal & & Data & & Signal & & Data & & Signal & & Data & \\ 
+		& $\Pe$ & $\mu$ & $\Pe$ & $\mu$ & $\Pe$ & $\mu$ & $\Pe$ & $\mu$ & $\Pe$ & $\mu$ & $\Pe$ & $\mu$ \\\hline
+		Total Events & 200.2 & & 475M & 278M & 239.1 & & 266M & 210M & 384.4 & & 1320M & 300M \\
+		HLT 	     & 59.5 & 68.0 & 51.5M & 96.8M & 67.2 & 77.5 & 57.0M & 92.8M & 91.5 & 110 & 67.6M & 100M \\ 
+		Selected Events & 29.2 & 33.5 & 54.4k & 67.4k & 31.4 & 39.3 & 65.7k & 83.1k & 48.6 & 57.6 & 95.6k & 117.6k \\ 
+		Selected Events/\fbinv & 0.80 & 0.93 & 1.50k & 1.86k & 0.76 & 0.95 & 1.58k & 2.00k & 0.81 & 0.96 & 1.60k & 1.97k \\\hline
+	\end{tabular}
+	\label{tab:basic_yields}
+\end{table}
+
+Distributions of several basic kinematic quantities after selection are shown in Fig. \ref{fig:basic_kinematics}. While the background for this analysis is estimated from data, it is still worth checking the agreement between data and background simulation for these quantities. We see that the level of agreement is good in all cases. 
+
+
+\begin{figure}[tb]
+	\begin{center}
+		\includegraphics[width=0.32\textwidth]{fig/selection/kinematics/sc_all_kin_phoPt_valid_ptwei_cat0.pdf}
+		\includegraphics[width=0.32\textwidth]{fig/selection/kinematics/sc_all_kin_lepPt1_valid_ptwei_cat0.pdf}
+		\includegraphics[width=0.32\textwidth]{fig/selection/kinematics/sc_all_kin_lepPt2_valid_ptwei_cat0.pdf}\\
+		\includegraphics[width=0.32\textwidth]{fig/selection/kinematics/sc_all_kin_phoeta_valid_ptwei_cat0.pdf}
+		\includegraphics[width=0.32\textwidth]{fig/selection/kinematics/sc_all_kin_lepeta1_valid_ptwei_cat0.pdf}
+		\includegraphics[width=0.32\textwidth]{fig/selection/kinematics/sc_all_kin_lepeta1_valid_ptwei_cat0.pdf}\\
+		\includegraphics[width=0.32\textwidth]{fig/selection/kinematics/sc_all_kin_mll_valid_ptwei_cat0.pdf}
+		\includegraphics[width=0.32\textwidth]{fig/selection/kinematics/sc_all_kin_mllgmllgpt_valid_ptwei_cat0.pdf}
+		\includegraphics[width=0.32\textwidth]{fig/selection/kinematics/all_kin_REFITmllg_valid_ptwei_cat0.pdf}
+		\end{center}
+	\caption{Basic kinematic distributions after event selection. The top (middle) row shows the \pt ($\eta$) of the photon (left), leading lepton (middle), and trailing lepton (right). From left to right, the bottom row shows the dilepton mass, $\pt/m$ of the $\lplm\gamma$ system, and corrected $m_{\lplm\gamma}$ after the kinematic fit is performed.}
+	\label{fig:basic_kinematics}
+\end{figure}
