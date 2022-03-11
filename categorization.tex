@@ -1,21 +1,23 @@
 \chapter{Event Categorization}\label{sec:categorization}
-The sensitivity of the \hzg search can be significantly improved by leveraging the differences between signal events
-arising from different Higgs boson production modes with different final state topologies and kinematics. 
-This is achieved by defining mutually exclusive categories targeting these different types of signal events. In previously 
-published CMS searches for \hzg [REFS], cut-based approaches were used to define the categories. Broadly, the presence of at least 
-one additional lepton was used to tag VH and ttH production, a dijet system was used to tag VBF production, a boosted jet was 
-used to tag gluon-gluon fusion events recoiling off of a jet, and properties of the photon were used to divide the remaining 
-events into kinematically distinct untagged categories. The specific definitions of the categories used in the 2016 search 
-at 13 TeV are shown in Figure [FIG]. 
+The sensitivity of the \hzg{} search can be significantly improved by leveraging the differences between signal events
+arising from different Higgs boson production mechanisms. In general, these production mechanisms have different final state topologies and kinematics. 
+Mutually exclusive categories are defined in order to take advantage of this. 
+In previously published CMS searches for \hzg{}, cut-based approaches were used to define the categories. However, in the present analysis, 
+the categorization strategy has been updated and improved using machine learning methods. The remainder of this chapter describes the categorization 
+strategy in detail and summarizes the final categories used in the full Run 2 \hzg{} analysis.
 
-The categorization of the present search is inspired by the previous CMS searches, but is significantly more sophisticated and 
-better optimized than those searches. The lepton tag category remains, as do the concepts of dijet and untagged categories. 
-However, the dijet and untagged categories are determined via the training of two BDTs, with category 
-boundaries optimized using the resulting BDT scores. Moreover, the boosted category is studied and found to yield no 
-improvement over the categories determined by the BDTs, so the boosted category is dropped in the present analysis. We proceed with 
-a description of the BDT procedures for the untagged and dijet cases. Then, with our BDTs in hand, we describe the procedure 
-for defining an optimal set of categories to be used in the analysis. We show that this categorization procedure is more 
-optimal than what has been done in past CMS searches. 
+The signal candidates from the $\mathrm{V}\PH$ and $\ttbar\PH$ production mechanisms are targeted using a lepton-tagged category, 
+in which at least one electron or muon is present beyond those used to reconstruct the 
+$\PZ\gamma$ system.
+The signal candidates from the VBF production mechanism are targeted by identifying events that have an additional dijet system. 
+A BDT classifier (referred to as the VBF BDT) uses the properties of this dijet system to divide such events 
+into a set of dijet categories. The VBF BDT discriminant value, transformed such that the VBF signal distribution is uniform,
+is denoted by $\DVBF$.
+The signal candidates from the $\Pg\Pg\PH$ production mechanism are targeted with events that do not fall within the 
+lepton-tagged or dijet categories. A BDT classifier (referred to as the kinematic BDT), trained on a set
+of kinematic variables, is used to further discriminate between signal and background events,
+defining a set of untagged categories. The kinematic BDT discriminant value, transformed such that the total signal 
+distribution is uniform, is denoted by $\Dkin$. 
 
 \section{Kinematic Boosted Decision Tree}
 The kinematic BDT is used to separate \hzg signal events from background events. Its primary purpose is to define the 
