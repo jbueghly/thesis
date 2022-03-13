@@ -20,15 +20,35 @@ defining a set of untagged categories. The kinematic BDT discriminant value, tra
 distribution is uniform, is denoted by $\Dkin$. 
 
 \section{Kinematic Boosted Decision Tree}
-The kinematic BDT is used to separate \hzg signal events from background events. Its primary purpose is to define the 
-untagged categories, which are distinguished primarily by kinematics and the quality of the final state photon. Its secondary 
-use is as an input to the dijet BDT (described below) in order to increase signal to background discrimination in the 
-dijet BDT training. The kinematic BDT is trained on \hzg signal events from all Higgs production modes and background events from 
-SM $Z\gamma$, Z plus jets, and $t\bar{t}$. The training is restricted to use half of the simulated events, with the other half 
-reserved for category optimization and signal modeling. All training events are required to pass the basic object and 
-event selection described in Chapter 6. Events from 2016, 2017, and 2018 simulation samples in both the muon and electron channels 
-are combined for the training. These samples are weighted by their respective cross sections and weighted by the luminosity of
-each year. 
+The kinematic BDT is used to distinguish \hzg{} signal events from background events based on the kinematics of the leptons and photon in the $\PZ\gamma$ candidate system, as well as on the measured properties of these physics objects.
+It is trained using simulated \hzg{} signal events from all Higgs boson production modes described in Chapter \ref{sec:data} and background events from $\PZ\gamma$, $\PZ$+jets, $\ttbar$, and VBS $\PZ\gamma$. The training is restricted to use half of the simulated events, with the other half 
+reserved for subsequent category optimization and signal $m_{\lplm\gamma}$ shape modeling. All training events are required to pass the object and 
+event selection criteria described in Chapter 6. Events from 2016, 2017, and 2018 simulation samples in both the muon and electron channels 
+are combined for training, weighted by their respective cross sections and by the recorded integrated luminosity of each data-taking year.
+
+\subsection{Feature Selection}
+The choice of training variables (features) for the kinematic BDT is guided by existing theoretical physics knowledge, categorization strategies in the prior \hzg{} analyses, and empirical methods. From a theoretical perspective, the decay angles between the final state particles are known to provide 
+some discriminating power between signal and background. These angular features, described in Refs. \cite{HZg_angle1,HZg_angle2}, include $\cos\Theta$, $\cos\theta$, and $\phi$, where $\Theta$ is the production angle of the $\PZ$ boson in the Higgs boson center-of-mass frame, and $\theta$ and $\phi$ are the polar and azimuthal decay angles of the leptons in the $\PZ$ boson center-of-mass frame, respectively. Figure \ref{fig:kinangles} shows how these angles are defined, and Fig. \ref{fig:kin_GEN_angles} shows the theoretical and reconstructed distributions of these quantities. Based on the theoretical distributions, these angular features are expected to offer good discriminating power between signal and background. However, it must be noted that the discriminating power is reduced for the final reconstructed quantities, since these angles are highly correlated with other analysis selection requirements, such as the mass cuts. 
+
+\begin{figure}[tb]
+	\begin{center}
+		\includegraphics[width=0.3\textwidth]{fig/MVA/HZg_angle2.png}
+		\includegraphics[width=0.3\textwidth]{fig/MVA/HZg_angle1.png}
+	\end{center}
+	\caption{Definitions of theoretical angles used for kinematic BDT training. The left diagram is in the Higgs boson center-of-mass frame, and the right diagram is in the $\PZ$ boson center-of-mass frame.}
+	\label{fig:kinangles}
+\end{figure}
+
+\begin{figure}[tb]
+	\begin{center}
+		\includegraphics[width=0.9\textwidth]{fig/MVA/Zg_theorist.png}
+		\includegraphics[width=0.3\textwidth]{fig/MVA/cosTheta_reco.png}
+		\includegraphics[width=0.3\textwidth]{fig/MVA/phi_reco.png}
+		\includegraphics[width=0.3\textwidth]{fig/MVA/costheta_reco.png}
+	\end{center}
+	\caption[Top: Expected theoretical shapees for the angular features used for kinematic BDT training. Bottom: Reconstructed shapes for these quantities after the \hzg{} selection requirements have been applied. Please note that the red and blue color conventions are reversed for the top and bottom plots.]
+	{Top: Expected theoretical shapes~\cite{HZg_angle1} for the angular features used for kinematic BDT training. Bottom: Reconstructed shapes for these quantities after the \hzg{} selection requirements have been applied. Please note that the red and blue color conventions are reversed for the top and bottom plots.} \label{fig:kin_GEN_angles}
+\end{figure}
 
 The following features are used in the training of the kinematic BDT: photon MVA score, photon energy resolution, $\eta$ of each 
 lepton and the photon, smallest and largest of the two $\Delta R$ values of the photon with respect to each lepton, $p_{T}/m$ for the 
