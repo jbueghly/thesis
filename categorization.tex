@@ -26,7 +26,7 @@ reserved for subsequent category optimization and signal $m_{\lplm\gamma}$ shape
 event selection criteria described in Chapter 6. Events from 2016, 2017, and 2018 simulation samples in both the muon and electron channels 
 are combined for training, weighted by their respective cross sections and by the recorded integrated luminosity of each data-taking year.
 
-\subsection{Feature Selection}
+\subsection{Training Features}
 The choice of training variables (features) for the kinematic BDT is guided by existing theoretical physics knowledge, categorization strategies in the prior \hzg{} analyses, and empirical methods. From a theoretical perspective, the decay angles between the final state particles are known to provide 
 some discriminating power between signal and background. These angular features, described in Refs. \cite{HZg_angle1,HZg_angle2}, include $\cos\Theta$, $\cos\theta$, and $\phi$, where $\Theta$ is the production angle of the $\PZ$ boson in the Higgs boson center-of-mass frame, and $\theta$ and $\phi$ are the polar and azimuthal decay angles of the leptons in the $\PZ$ boson center-of-mass frame, respectively. Figure \ref{fig:kinangles} shows how these angles are defined, and Fig. \ref{fig:kin_GEN_angles} shows the theoretical and reconstructed distributions of these quantities. Based on the theoretical distributions, these angular features are expected to offer good discriminating power between signal and background. However, it must be noted that the discriminating power is reduced for the final reconstructed quantities, since these angles are highly correlated with other analysis selection requirements, such as the mass cuts. 
 
@@ -49,6 +49,23 @@ some discriminating power between signal and background. These angular features,
 	\caption[Top: Expected theoretical shapees for the angular features used for kinematic BDT training. Bottom: Reconstructed shapes for these quantities after the \hzg{} selection requirements have been applied. Please note that the red and blue color conventions are reversed for the top and bottom plots.]
 	{Top: Expected theoretical shapes~\cite{HZg_angle1} for the angular features used for kinematic BDT training. Bottom: Reconstructed shapes for these quantities after the \hzg{} selection requirements have been applied. Please note that the red and blue color conventions are reversed for the top and bottom plots.} \label{fig:kin_GEN_angles}
 \end{figure}
+
+Several fundamental kinematic quantities of the final state particles are also used as training features. These include the pseudorapidity of each lepton, the $\Delta R$ between each lepton and the photon, and the $\pt/m$ of the $\lplm\gamma$ system. We note that the \pt values of each final state particle were also considered for training, but were found to have a negligible impact on discrimination power. This is likely because they are highly correlated with these other fundamental kinematic quantities, and thus, do not introduce much additional information to the BDT model. A comparison between signal and background shapes for these kinematic features is shown in Fig. \ref{fig:kin_training_shapes}.
+
+\begin{figure}[tb]
+	\begin{center}
+		\includegraphics[width=0.3\textwidth]{fig/MVA/lepeta1_reco.png}
+		\includegraphics[width=0.3\textwidth]{fig/MVA/lepeta2_reco.png}
+		\includegraphics[width=0.3\textwidth]{fig/MVA/phoeta_reco.png}
+		\includegraphics[width=0.3\textwidth]{fig/MVA/mindr_reco.png}
+		\includegraphics[width=0.3\textwidth]{fig/MVA/maxdr_reco.png}
+		\includegraphics[width=0.3\textwidth]{fig/MVA/pt_over_m_reco.png}
+	\end{center}
+	\caption{Comparison of reconstructed signal and background shapes for several kinematic variables used for kinematic BDT training.}
+	\label{fig:kin_training_shapes}
+\end{figure}
+
+
 
 The following features are used in the training of the kinematic BDT: photon MVA score, photon energy resolution, $\eta$ of each 
 lepton and the photon, smallest and largest of the two $\Delta R$ values of the photon with respect to each lepton, $p_{T}/m$ for the 
