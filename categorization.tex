@@ -61,29 +61,22 @@ Several fundamental kinematic quantities of the final state particles are also u
 		\includegraphics[width=0.3\textwidth]{fig/MVA/maxdr_reco.png}
 		\includegraphics[width=0.3\textwidth]{fig/MVA/pt_over_m_reco.png}
 	\end{center}
-	\caption{Comparison of reconstructed signal and background shapes for several kinematic variables used for kinematic BDT training.}
+	\caption{Comparison of reconstructed signal and background shapes for several kinematic variables used for kinematic BDT training. The blue histograms represent the signal, while the red histograms represent the background.}
 	\label{fig:kin_training_shapes}
 \end{figure}
 
+Finally, training features related to the quality of the final state photon are used. These include the corrected photon MVA ID score and the photon energy resolution. There are several motivations for these features. First, they are important for distinguishing \hzg{} signal events from the large $\PZ$+jets background, where a jet is misreconstructed as a photon. Second, they are inspired by the previous CMS \hzg{} searches, which used photon pseudorapidity and $R_{9}$ for categorization. In our current analysis, the photon $R_{9}$ was also considered as a training feature. However, it did not contribute any meaningful additional discriminating power. This is likely because the $R_9$ is already part of the corrected photon MVA ID. Figure \ref{fig:kin_pho_features} shows the comparison between signal and background shapes for these features after the full set of \hzg{} selection requirements has been applied. Both features offer strong discrimination power, particularly the corrected photon MVA ID score. However, we note that this is partially by construction, since a very loose photon MVA ID cut was applied in order to preserve maximal information for the kinematic BDT training.
 
+\begin{figure}[tb]
+	\begin{center}
+		\includegraphics[width=0.45\textwidth]{fig/MVA/phomva_reco.png}
+		\includegraphics[width=0.45\textwidth]{fig/MVA/phores_reco.png}
+	\end{center}
+	\caption{Comparison of reconstructed signal and background shapes for the photon quality features used for kinematic BDT training. The blue histograms represent the signal, while the red histograms represent the background.}
+	\label{fig:kin_pho_features}
+\end{figure}
 
-The following features are used in the training of the kinematic BDT: photon MVA score, photon energy resolution, $\eta$ of each 
-lepton and the photon, smallest and largest of the two $\Delta R$ values of the photon with respect to each lepton, $p_{T}/m$ for the 
-three body system, and three theoretically motivated decay angles. The angular quantities are defined in Figure [FIG] and their 
-theoretical, generator-level, and reconstructed distributions are shown in Figure [FIG]. The signal and background distributions
-used in the training for all kinematic BDT features are shown in Figure [FIG]. Table [TAB] ranks the kinematic BDT 
-training features in order of importance for the final discriminator. We observe that the most discriminating feature is the photon 
-MVA identification score which mainly serves distinguish real photons from misreconstructed jets. A comparison of the BDT 
-distributions in the training and test samples allows us to check for any possible overtraining of the model. This is shown in 
-Figure [FIG], where no significant overtraining is observed. 
-
-The output of the kinematic 
-BDT in data and simulation is shown in Figure [FIG]. We observe good agreement between data and simulation. For additional 
-validation of the method, two control regions are defined. A background-enriched control region is defined by 
-$m_{\ell\ell} + m_{\ell\ell\gamma} < 185$ GeV or $p_{T}^{\gamma} < 15/110$, and an irreducible background-enriched (SM $Z\gamma$) 
-control region is defince by $m_{\ell\ell} + m_{\ell\ell\gamma} < 185$ GeV and $80 < m_{\ell\ell} < 100$ GeV. The data and simulation
-distributions for the kinematic BDT for these control regions are shown in Figures [FIGS]. Again, we observe good agreement 
-between data and simulation.
+\subsection{Feature Modeling}
 
 \section{Vector Boson Fusion Boosted Decision Tree}
 The dijet BDT is used to discriminate signal from VBF Higgs production from other dijet signal and background events. The training
