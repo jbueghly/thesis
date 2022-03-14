@@ -137,16 +137,16 @@ effectively replaces the need for a boosted Higgs category, as was used in the C
 \end{table}
 
 \section{Vector Boson Fusion Boosted Decision Tree}
-The dijet BDT is used to discriminate signal from VBF Higgs production from other dijet signal and background events. The training
-and evaluation of the dijet BDT is only carried out on events which have two jets selected according to the requirements in 
-section [SEC]. The training is performed using VBF \hzg events as signal and gluon-gluon fusion \hzg, SM $Z\gamma$, Z plus jets, and 
-$t\bar{t}$ events as background. VH and ttH \hzg events are neglected, as their contribution is negligibly small. Only about 65\% 
-of the signal jets correspond to the true VBF jets in which we are interested. Because of this, we perform an additional matching 
-procedure for these jets. In order for an event to be used in the training, both reconstructed jets must be matched 
-to generator-level partons, which must also be matched to the generator-level \pt values of the true VBF partons. As with the 
+The VBF BDT is used to discriminate signal events arising via the VBF Higgs production mechanism from other sources of signal and background events. 
+The training and evaluation of the VBF BDT is carried out on events that have two jets selected according to the requirements in 
+Chapter \ref{sec:selection}. Signal events for training are taken from the simulated VBF \hzg{} samples, while ggH \hzg{}, $\PZ\gamma$, $\PZ$+jets, and 
+$\ttbar$ events are considered background. Due to their very small contribution, $\mathrm{V}\PH$ and $\ttbar\PH$ \hzg{} events are neglected. Only about 65\% 
+of the selected jets from the VBF signal correspond to the true VBF jets in which we are interested. Because of this, we perform an additional matching 
+procedure for these jets. In order for a VBF signal event to be used in the training, both reconstructed jets must be matched 
+to generator-level partons, which must, in turn, be matched to the generator-level \pt values of the true VBF partons. As for the 
 kinematic BDT, only half of the simulated events are used for the training procedure, with the remainder used for category optimization
-and signal modeling. Again, events from all data-taking years in both the muon and electron channels are combined for the training. 
-The samples are weightd by their respective cross sections and weighted by the luminosity of each year. 
+and signal modeling. Events from all three data-taking years in both the muon and electron channels are combined for training, weighted by the respective cross sections 
+and by the recorded integrated luminosity of each data-taking year.
 
 The input features to the dijet BDT training include 
 $\Delta\eta$(j, j), $\Delta\phi$(j, j), $\Delta\phi$($Z\gamma$, jj),  
