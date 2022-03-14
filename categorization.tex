@@ -69,14 +69,72 @@ Finally, training features related to the quality of the final state photon are 
 
 \begin{figure}[tb]
 	\begin{center}
-		\includegraphics[width=0.45\textwidth]{fig/MVA/phomva_reco.png}
-		\includegraphics[width=0.45\textwidth]{fig/MVA/phores_reco.png}
+		\includegraphics[width=0.35\textwidth]{fig/MVA/phomva_reco.png}
+		\includegraphics[width=0.35\textwidth]{fig/MVA/phores_reco.png}
 	\end{center}
 	\caption{Comparison of reconstructed signal and background shapes for the photon quality features used for kinematic BDT training. The blue histograms represent the signal, while the red histograms represent the background.}
 	\label{fig:kin_pho_features}
 \end{figure}
 
-\subsection{Feature Modeling}
+Since the kinematic BDT training is carried out using simulated events, it is necessary to check that the simulation accurately models the training feature distributions in data. 
+A comparison of data to simulation, combining all years of data-taking in both the electron and muon channels, is shown in Fig. \ref{fig:kin_vars1}. We observe good agreement between
+data and simulation for all kinematic BDT training features. 
+
+\begin{figure}[tb]
+	\begin{center}
+		\includegraphics[width=0.32\textwidth]{fig/MVA/sc_all_kin_dRlg1_valid_ptwei_cat0.pdf}
+		\includegraphics[width=0.32\textwidth]{fig/MVA/sc_all_kin_dRlg2_valid_ptwei_cat0.pdf}
+		\includegraphics[width=0.32\textwidth]{fig/MVA/sc_all_kin_mllgmllgpt_valid_ptwei_cat0.pdf}\\
+		\includegraphics[width=0.32\textwidth]{fig/MVA/sc_all_kin_phores_valid_ptwei_cat0.pdf}
+		\includegraphics[width=0.32\textwidth]{fig/MVA/sc_all_kin_phomva_valid_ptwei_EB_cat0.pdf}
+		\includegraphics[width=0.32\textwidth]{fig/MVA/sc_all_kin_phomva_valid_ptwei_EE_cat0.pdf}\\
+		\includegraphics[width=0.32\textwidth]{fig/MVA/sc_all_kin_coscaptheta_valid_ptwei_cat0.pdf}
+		\includegraphics[width=0.32\textwidth]{fig/MVA/sc_all_kin_costheta_valid_ptwei_cat0.pdf}
+		\includegraphics[width=0.32\textwidth]{fig/MVA/sc_all_kin_phi_valid_ptwei_cat0.pdf}\\
+		\includegraphics[width=0.32\textwidth]{fig/MVA/sc_all_kin_phoeta_valid_ptwei_cat0.pdf}
+		\includegraphics[width=0.32\textwidth]{fig/MVA/sc_all_kin_lepeta1_valid_ptwei_cat0.pdf}
+		\includegraphics[width=0.32\textwidth]{fig/MVA/sc_all_kin_lepeta1_valid_ptwei_cat0.pdf}\\
+		\end{center}
+	\caption{Comparison of data and simulation for the kinematic BDT training features. The plotted distributions include data and simulated samples from the combination of the three 
+	data-taking years in both the electron and muon channels.}
+	\label{fig:kin_vars1}
+\end{figure}
+
+\subsection{Training Results}
+The output kinematic BDT shapes for signal and background are shown in Fig. \ref{fig:kin_overtrain}. No overtraining is observed, 
+as evidenced by the similarity between training and test distributions. The importance of each training feature for the discrimination power of
+the final kinematic BDT discriminant is given in Table \ref{tab:kin_importance}. We see that the corrected photon MVA score is the most discriminating 
+feature, since it distinguishes real photons from misreconstructed jets. The variable $\pt^{\lplm\gamma}/m_{\lplm\gamma}$ also contributes good discimination power, and 
+effectively replaces the need for a boosted Higgs category, as was used in the CMS 2016 search. 
+
+\begin{figure}[tb]
+	\begin{center}
+		\includegraphics[width=0.65\textwidth]{fig/MVA/kin_overtrain_BDT.pdf}
+	\end{center}
+	\caption{Shapes of the kinematic BDT distributions for signal and background for both training and test sets. No BDT overtraining is observed.}\label{fig:kin_overtrain}
+\end{figure}
+
+\begin{table}[tb]
+	\centering
+	\begin{tabular}{|c|c c|}
+		\hline
+		Rank &               Variable                & Variable Importance (\%) \\ \hline
+		1   & 		corrected photon MVA score 				& 12.8     \\
+		2   &        	min($\Delta R(\ell,\gamma)$) 				& 12.0      \\
+		3   &       	$\pt^{\lplm\gamma}/m_{\lplm\gamma}$ 	 	& 10.2 	  \\
+		4   &         	$\cos{\Theta}$	 					& 10.0		 \\
+		5   &      	$\frac{\sigma_{\gamma}}{E_\gamma}$     			& 9.1		 \\
+		6   &         	$\cos{\theta}$ 						& 8.2      \\
+		7   &           max($\Delta R(\ell,\gamma))$ 	              		& 8.1	\\
+		8   &  	   	$\eta_{\ell 2}$      					& 8.1      \\
+		9   &       	$\eta_{\ell 1}$        					& 7.9 \\
+		10  &       	$\eta_\gamma$ 				 		& 7.2      \\
+		11  &           $\phi$                    				& 6.2  \\\hline
+
+	\end{tabular}
+ \caption{Importance of the kinematic BDT training features.}
+\label{tab:kin_importance}
+\end{table}
 
 \section{Vector Boson Fusion Boosted Decision Tree}
 The dijet BDT is used to discriminate signal from VBF Higgs production from other dijet signal and background events. The training
