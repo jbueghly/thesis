@@ -53,45 +53,45 @@ Warning--empty author in LUM-18-002
 Warning--missing institution in LUM-18-002
 Warning--empty author in AGOSTINELLI2003250
 Warning--missing institution in cite:l3
-You've used 97 entries,
+You've used 98 entries,
             2559 wiz_defined-function locations,
-            1249 strings with 24157 characters,
-and the built_in function-call counts, 36583 in all, are:
-= -- 2477
-> -- 962
+            1258 strings with 24374 characters,
+and the built_in function-call counts, 37005 in all, are:
+= -- 2506
+> -- 975
 < -- 3
-+ -- 452
-- -- 220
-* -- 2412
-:= -- 4092
-add.period$ -- 502
-call.type$ -- 97
-change.case$ -- 91
++ -- 458
+- -- 223
+* -- 2442
+:= -- 4140
+add.period$ -- 508
+call.type$ -- 98
+change.case$ -- 92
 chr.to.int$ -- 0
-cite$ -- 109
-duplicate$ -- 3935
-empty$ -- 3871
-format.name$ -- 290
-if$ -- 7935
+cite$ -- 110
+duplicate$ -- 3979
+empty$ -- 3913
+format.name$ -- 294
+if$ -- 8026
 int.to.chr$ -- 0
-int.to.str$ -- 97
-missing$ -- 934
-newline$ -- 629
-num.names$ -- 85
-pop$ -- 1568
+int.to.str$ -- 98
+missing$ -- 945
+newline$ -- 636
+num.names$ -- 86
+pop$ -- 1586
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 0
-skip$ -- 847
+skip$ -- 855
 stack$ -- 0
-substring$ -- 1097
-swap$ -- 2285
+substring$ -- 1109
+swap$ -- 2312
 text.length$ -- 3
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 0
 warning$ -- 12
-while$ -- 168
-width$ -- 99
-write$ -- 1310
+while$ -- 170
+width$ -- 100
+write$ -- 1325
 (There was 1 error message)

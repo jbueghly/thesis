@@ -143,23 +143,87 @@ Chapter \ref{sec:selection}. Signal events for training are taken from the simul
 $\ttbar$ events are considered background. Due to their very small contribution, $\mathrm{V}\PH$ and $\ttbar\PH$ \hzg{} events are neglected. Only about 65\% 
 of the selected jets from the VBF signal correspond to the true VBF jets in which we are interested. Because of this, we perform an additional matching 
 procedure for these jets. In order for a VBF signal event to be used in the training, both reconstructed jets must be matched 
-to generator-level partons, which must, in turn, be matched to the generator-level \pt values of the true VBF partons. As for the 
-kinematic BDT, only half of the simulated events are used for the training procedure, with the remainder used for category optimization
-and signal modeling. Events from all three data-taking years in both the muon and electron channels are combined for training, weighted by the respective cross sections 
+to generator-level partons, which must, in turn, be matched to the generator-level \pt values of the true VBF partons. 
+Only half of the simulated events are used for the training procedure, with the remainder used for category optimization
+and signal $m_{\lplm\gamma}$ shape modeling. Events from all three data-taking years in both the muon and electron channels are combined for training, weighted by the respective cross sections 
 and by the recorded integrated luminosity of each data-taking year.
 
-The input features to the dijet BDT training include 
-$\Delta\eta$(j, j), $\Delta\phi$(j, j), $\Delta\phi$($Z\gamma$, jj),  
-$\Delta R(j,\gamma)$, ${p_{T}}^{j1,2}$,
-$p_{T}^{t}$ (defined as $\frac{2|p_{Tx}^{Z}p_{Ty}^{\gamma}-p_{Ty}^{Z}p_{Tx}^{\gamma}|}{p_{T}^{H}}$),
-system \pt balance (defined as 
-$|\frac{\sum_{Z,\gamma,j_{1},j_{2}}{\vec{p}_{transverse}}^{i}}{\sum_{Z,\gamma,j_{1},j_{2}}p_{T}}|$),
-photon Zeppenfeld variable (defined as $|\eta_{\gamma}-\frac{\eta_{j1}+\eta_{j2}}{2}|$), and
-kinematic MVA score. The angular quantities provide discrimination between VBF and non-VBF events,
-while the kinematic MVA score and $p_{T}^{t}$ provide discrimination between signal and 
-background events. The $p_{T}^{t}$ [REF] is the component of the transverse momentum of the Z$\gamma$ system that
-is perpendicular to the difference of the 3-momenta of the Z boson and the photon candidate. 
+\subsection{Training Features}
+The training features used for the VBF BDT include quantities that distinguish events with the VBF topology from other types of events, as well as quantities that 
+distinguish signal from background based on kinematics. Since the categorization strategy treats dijet jets separately from other types of events, including these 
+kinematic variables is not redundant with the kinematic BDT described above. The two variables used for kinematic separation of signal and background for the VBF BDT are 
+the kinematic BDT score and the variable $p_{\mathrm{T}}^{t}$, defined in Chapter \ref{sec:analysis_overview}. Because the kinematics of the two leptons and photon are 
+similar for VBF signal events and other signal production mechanisms, the previously trained kinematic BDT is expected to yield good discrimation power between VBF signal and backgrounds. 
+By introducing the variable $p_{\mathrm{T}}^{t}$, we add another feature sensitive to boost of the Higgs boson. This takes advantage of the recoil of the Higgs boson against the jets, and along 
+with the $\pt$/m in the kinematic BDT, replaces the need for a boosted category. Signal and background shapes for the kinematic BDT score and $p_{\mathrm{T}}^{t}$ are shown in Fig. 
+\ref{fig:kin_bdt_ptt}, where background refers to the full training background, including ggH \hzg{} events.
 
+\begin{figure}[tb]
+	\begin{center}
+		\includegraphics[width=0.35\textwidth]{fig/MVA/kin_bdt_vbf_training.png}
+		\includegraphics[width=0.35\textwidth]{fig/MVA/ptt_vbf_training.png}
+	\end{center}
+	\caption{Comparison of signal and background shapes for the kinematic features used for VBF BDT training. The blue histograms represent the VBF signal, while the red histograms represent the training background, including ggH \hzg{} events.}
+	\label{fig:kin_bdt_ptt}
+\end{figure}
+
+We also include training features that aim to distinguish VBF events from non-VBF events, using information about the jets. These include 
+  (i) the difference in 
+  pseudorapidity between the two jets;
+  (ii)  the difference in azimuthal angle
+  between the  two jets; 
+   (iii) the
+  photon Zeppenfeld variable~\cite{Rainwater:1996ud} ($\eta_{\gamma} -
+  (\eta_{\mathrm{j_1}}+\eta_{\mathrm{j_2}})/2$), where 
+  $\eta_{\gamma} ,\eta_{\mathrm{j1}}$ and $\eta_\mathrm{{j2}}$ are the pseudorapidities of the
+  photon, leading jet, and subleading jet, respectively; 
+	(iv) the ratio between the $\pt$ of the $\PZ\gamma{\mathrm{j_1}}{\mathrm{j_2}}$ system and the corresponding scalar sum of momenta 
+		($\abs{\sum_{Z\gamma\mathrm{j_1}\mathrm{j_2}}{\vec{p}_{\mathrm{T}}}} / \sum_{Z\gamma\mathrm{j_1}\mathrm{j_2}}p_\mathrm{T}$);
+   (v) the difference in azimuthal angle
+  between the dijet system and the $\PZ\gamma$ system;
+  (vi) the $\pt$ of each jet; and (vii) the $\DR$ separation between each jet and the photon. Other training features were also 
+  tried, including the individual pseudorapidities of the jets and the Zeppenfeld variable for the $\PZ\gamma$ system. However, 
+  these features were not included, as they offered negligible improvement for the final trained model. Signal and background 
+  shape comparisons for the above variables are shown in Fig. \ref{fig:vbf_bdt_features}.
+
+\begin{figure}[tb]
+	\begin{center}
+		\includegraphics[width=0.3\textwidth]{fig/MVA/deta_jj_vbf.png}
+		\includegraphics[width=0.3\textwidth]{fig/MVA/dphi_jj_vbf.png}
+		\includegraphics[width=0.3\textwidth]{fig/MVA/dphi_zgjj_vbf.png}
+		\includegraphics[width=0.3\textwidth]{fig/MVA/dr_gj_vbf.png}
+		\includegraphics[width=0.3\textwidth]{fig/MVA/zepp_vbf.png}
+		\includegraphics[width=0.3\textwidth]{fig/MVA/ptbal_vbf.png}
+		\includegraphics[width=0.3\textwidth]{fig/MVA/ptj1_vbf.png}
+		\includegraphics[width=0.3\textwidth]{fig/MVA/ptj2_vbf.png}
+	\end{center}
+	\caption{Comparison of signal and background shapes for several variables used for VBF BDT training. The blue histograms represent the VBF signal, while the red histograms represent the training background, including ggH \hzg{} events.}
+	\label{fig:vbf_bdt_features}
+\end{figure}
+
+Since the VBF BDT training is carried out using simulated events, it is necessary to check that the simulation accurately models the training feature distributions in data. 
+A comparison of data to simulation, combining all years of data-taking in both the electron and muon channels, is shown in Fig. \ref{fig:VBF_valid}. We observe good agreement between
+data and simulation for all kinematic BDT training features. 
+
+\begin{figure}[tb]
+	\begin{center}
+		\includegraphics[width=0.3\textwidth]{fig/MVA/sc_all_VBF_PTt_valid_ptwei_cat0.pdf}
+		\includegraphics[width=0.3\textwidth]{fig/MVA/sc_all_VBF_kinMVA_valid_ptwei_VBF_cat0.pdf}
+		\includegraphics[width=0.3\textwidth]{fig/MVA/sc_all_VBF_dEtajj_valid_ptwei_VBF_cat0.pdf}
+		\includegraphics[width=0.3\textwidth]{fig/MVA/sc_all_VBF_dPhijj_valid_ptwei_VBF_cat0.pdf}
+		\includegraphics[width=0.3\textwidth]{fig/MVA/sc_all_VBF_dPhiZgjj_valid_ptwei_VBF_cat0.pdf}
+		\includegraphics[width=0.3\textwidth]{fig/MVA/sc_all_VBF_dR_phojet_valid_ptwei_cat0.pdf}
+		\includegraphics[width=0.3\textwidth]{fig/MVA/sc_all_VBF_Zeppen_pho_valid_ptwei_VBF_cat0.pdf}
+		\includegraphics[width=0.3\textwidth]{fig/MVA/sc_all_VBF_sysbal_valid_ptwei_VBF_cat0.pdf}\\ 
+		\includegraphics[width=0.3\textwidth]{fig/MVA/sc_all_VBF_VBFPt1_valid_ptwei_VBF_cat0.pdf}
+		\includegraphics[width=0.3\textwidth]{fig/MVA/sc_all_VBF_VBFPt2_valid_ptwei_VBF_cat0.pdf}
+		\end{center}
+	\caption{Comparison of data and simulation for the VBF BDT training features. The plotted distributions include data and simulated samples from the combination of the three 
+	data-taking years in both the electron and muon channels.}
+	\label{fig:VBF_valid}
+\end{figure}
+
+\subsection{Training Results}
 
 \section{Categorization Procedure}
 
