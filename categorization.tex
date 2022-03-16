@@ -116,20 +116,20 @@ effectively replaces the need for a boosted Higgs category, as was used in the C
 
 \begin{table}[tb]
 	\centering
-	\begin{tabular}{|c|c c|}
+	\begin{tabular}{|c c|}
 		\hline
-		Rank &               Variable                & Variable Importance (\%) \\ \hline
-		1   & 		corrected photon MVA score 				& 12.8     \\
-		2   &        	min($\Delta R(\ell,\gamma)$) 				& 12.0      \\
-		3   &       	$\pt^{\lplm\gamma}/m_{\lplm\gamma}$ 	 	& 10.2 	  \\
-		4   &         	$\cos{\Theta}$	 					& 10.0		 \\
-		5   &      	$\frac{\sigma_{\gamma}}{E_\gamma}$     			& 9.1		 \\
-		6   &         	$\cos{\theta}$ 						& 8.2      \\
-		7   &           max($\Delta R(\ell,\gamma))$ 	              		& 8.1	\\
-		8   &  	   	$\eta_{\ell 2}$      					& 8.1      \\
-		9   &       	$\eta_{\ell 1}$        					& 7.9 \\
-		10  &       	$\eta_\gamma$ 				 		& 7.2      \\
-		11  &           $\phi$                    				& 6.2  \\\hline
+		               Variable                & Variable Importance (\%) \\ \hline
+				corrected photon MVA score 				& 12.8     \\
+		       	min($\Delta R(\ell,\gamma)$) 				& 12.0      \\
+		      	$\pt^{\lplm\gamma}/m_{\lplm\gamma}$ 	 	& 10.2 	  \\
+		        	$\cos{\Theta}$	 					& 10.0		 \\
+		     	$\frac{\sigma_{\gamma}}{E_\gamma}$     			& 9.1		 \\
+		        	$\cos{\theta}$ 						& 8.2      \\
+		          max($\Delta R(\ell,\gamma))$ 	              		& 8.1	\\
+		 	   	$\eta_{\ell 2}$      					& 8.1      \\
+		      	$\eta_{\ell 1}$        					& 7.9 \\
+		      	$\eta_\gamma$ 				 		& 7.2      \\
+		          $\phi$                    				& 6.2  \\\hline
 
 	\end{tabular}
  \caption{Importance of the kinematic BDT training features.}
@@ -203,7 +203,7 @@ We also include training features that aim to distinguish VBF events from non-VB
 
 Since the VBF BDT training is carried out using simulated events, it is necessary to check that the simulation accurately models the training feature distributions in data. 
 A comparison of data to simulation, combining all years of data-taking in both the electron and muon channels, is shown in Fig. \ref{fig:VBF_valid}. We observe good agreement between
-data and simulation for all kinematic BDT training features. 
+data and simulation for all VBF BDT training features. 
 
 \begin{figure}[tb]
 	\begin{center}
@@ -224,6 +224,38 @@ data and simulation for all kinematic BDT training features.
 \end{figure}
 
 \subsection{Training Results}
+The output VBF BDT shapes for signal and background are shown in Fig. \ref{fig:vbf_overtrain}. No overtraining is observed, 
+as evidenced by the similarity between training and test distributions. The importance of each training feature for the discrimination power of
+the final VBF BDT discriminant is given in Table \ref{tab:vbf_importance}. We see that the most important feature is the $\Delta \eta$ between the jets, followed 
+by the kinematic BDT score and quantities relating the dijet system to the $\PZ\gamma$ system.
+
+\begin{figure}[tb]
+	\begin{center}
+		\includegraphics[width=0.65\textwidth]{fig/MVA/overtrain_BDT_VBF_WP90.pdf}
+	\end{center}
+	\caption{Shapes of the VBF BDT distributions for signal and background for both training and test sets. No BDT overtraining is observed.}\label{fig:vbf_overtrain}
+	\label{fig:vbf_overtrain}
+\end{figure}
+
+\begin{table}[tb]
+	\centering
+	\begin{tabular}{|cc|}
+		\hline
+		      Variable       						& Variable Importance (\%) \\ \hline
+		$|\Delta\eta(j_1, j_2)|$ 									& 15.9   \\
+		   kinematic BDT score  						 			 	& 12.3 \\
+		   $|\Delta\phi(\PZ\gamma, j_1j_2)|$  								& 11.7 \\
+		 $|\sum_{\PZ\gamma j_1 j_2}\vec{\pt}/\sum_{\PZ\gamma j_1 j_2}\pt|$     	& 11.4 \\
+		 $p_T^t$  		   							& 10.7  \\
+		$|\Delta\phi(j_1, j_2)|$ 									& 10.4 \\
+		       $|\eta_\gamma-\frac{\eta_{j1}+\eta_{j2}}{2}|$   					& 8.6 \\
+		       $\pt^{j2}$  									& 7.8 \\
+		      $\pt^{j1}$  									& 6.2 \\
+		     $\Delta R(\gamma,j)$    								& 5.0 \\ \hline
+	\end{tabular}
+	\caption{Importance of the VBF BDT training features.} 
+\label{tab:vbf_importance}
+\end{table}
 
 \section{Categorization Procedure}
 
