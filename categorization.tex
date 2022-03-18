@@ -262,84 +262,78 @@ by the kinematic BDT score and quantities relating the dijet system to the $\PZ\
 The procedure used for event categorization is described below. 
 
 \begin{enumerate}
-  \item Events with at least one additional electron or muon with $\pt>7$ ($5$)\GeV are assigned to 
+  \item Events with at least one additional electron (muon) with $\pt>7$ (5)\GeV are assigned to 
 	  the lepton-tagged category.
   \item Events not assigned to the lepton-tagged category, but which contain two jets satisfying the 
-	  selection requirements described in Section \ref{sec:selection}, are classified 
-	  as dijet events, indicative of possible VBF production. If multiple dijet pairs exist within an event, the two jets with highest 
-	  $\pt$ are considered. The subdivision of dijet events into a set of three dijet categories 
-	  is described later in this section.
-	  The VBF BDT classifier is trained to separate VBF signal events from $\Pg\Pg\PH$+jets and background events. 
-  The distribution of $\mathcal{D}_{\mathrm{VBF}}$ is shown in Fig.~\ref{fig:BDT} (left) for both simulated event samples and data. 
+	  selection requirements described in Chapter \ref{sec:selection}, are classified 
+	  as dijet events, indicative of possible VBF production. 
+	  The subdivision of dijet events into a set of three dijet categories using the VBF BDT is described below.
   \item Events not assigned to the lepton-tagged or dijet categories are classified as untagged events.
-	The subdivision of untagged events into a set of four untagged categories is described 
-	later in this section.
-  The kinematic BDT classifier is trained to distinguish signal events from background events based on the kinematics of the leptons and photon in the $\PZ\gamma$ candidate system, as well as on the measured properties of these physics objects.
-  The distribution of $\mathcal{D}_{\mathrm{kin}}$ is shown in Fig.~\ref{fig:BDT} (right) for both simulated samples and data. 
+	The subdivision of untagged events into a set of four untagged categories using the kinematic BDT is described below.
 \end{enumerate}
 
 \begin{figure}[tbp!]
 \centering
-\includegraphics[width=0.47\textwidth]{fig/bdt/Figure_002-a.pdf}
-\includegraphics[width=0.47\textwidth]{fig/bdt/Figure_002-b.pdf}
- \caption{The $\mathcal{D}_{\mathrm{VBF}}$ (left) and $\mathcal{D}_{\mathrm{kin}}$ (right) distributions for signal, simulated background, and data. 
-	  The $\mathcal{D}_{\mathrm{VBF}}$ distribution includes
-	  only dijet-tagged events, and the $\mathcal{D}_{\mathrm{kin}}$ distribution includes only untagged events. The sum of contributions from all signal production mechanisms is shown by the blue line, while the contribution from only the VBF mechanism is shown by the red line. The uncertainty band incorporates all statistical and systematic uncertainties in the expected background. The dashed lines indicate the boundaries for the dijet and untagged categories. The gray shaded region in the $\mathcal{D}_{\mathrm{kin}}$ distribution is excluded from the analysis.\label{fig:BDT}}
+\includegraphics[width=0.47\textwidth]{fig/cat/Figure_002-a.pdf}
+\includegraphics[width=0.47\textwidth]{fig/cat/Figure_002-b.pdf}
+ \caption{The $\DVBF$ (left) and $\Dkin$ (right) distributions for signal, simulated background, and data. 
+	  The $\DVBF$ distribution includes
+	  only dijet-tagged events, and the $\Dkin$ distribution includes only untagged events. The sum of contributions from all signal production mechanisms is shown by the blue line, while the contribution from only the VBF mechanism is shown by the red line. The uncertainty band incorporates all statistical and systematic uncertainties in the expected background. The dashed lines indicate the boundaries for the dijet and untagged categories. The gray shaded region in the $\Dkin$ distribution is excluded from the analysis.\label{fig:BDT}}
 \end{figure}
 
-The subdivision of dijet and untagged events into categories is based on the VBF BDT and kinematic BDT discriminants.
-Category boundaries are defined as mutually exclusive regions of $\mathcal{D}_{\mathrm{VBF}}$ and $\mathcal{D}_{\mathrm{kin}}$. 
-The locations of the boundaries defining the categories are optimized by iterating over all possible combinations of boundaries using $\sum_{i}^{n} {S_i}^2/B_i$
+Distributions of the transformed VBF BDT score ($\DVBF$) and transformed kinematic BDT score ($\Dkin$) are shown in Fig. \ref{fig:BDT}.
+The subdivision of dijet and untagged events into categories is based on these distributions.
+Category boundaries are defined as mutually exclusive regions of $\DVBF$ and $\Dkin$. 
+The locations of the boundaries defining the categories are optimized by iterating over all possible combinations of boundaries using $\sum_{i=1}^{n} {S_i}^2/B_i$
 as a figure-of-merit. The variables $S_i$ and $B_i$
 represent the number of expected signal and background events in the ${i}^{th}$  
 category, and $n$ is the total number of categories. 
 We consider categories with boundaries corresponding to signal efficiencies  
-between $0$--$100$\% in $10$\% increments.
-The optimization procedure results in three dijet categories for the VBF BDT and four untagged categories for the kinematic BDT.
-The lowest $\mathcal{D}_{\mathrm{kin}}$ boundary corresponds to the $10$\% point in integrated signal efficiency, 
-and events below the $10$\% point are excluded from the analysis to preserve the stability of the background model.
+between 0 and 100\% in 10\% increments.
+This optimization procedure results in three dijet categories and four untagged categories.
+The lowest $\Dkin$ boundary corresponds to the 10\% point in integrated signal efficiency, 
+and events below the 10\% point are excluded from the analysis to preserve the stability of the background model.
 
 The full categorization and optimization procedure results in the following eight mutually exclusive categories: 
 one lepton-tagged category, three dijet categories, and four untagged categories. 
 The category definitions are summarized in Table~\ref{tab:category}.
 \begin{table}[!tb]
     \centering   
-    \caption{Summary of the category definitions. The lepton-tagged category requires at least one additional electron or muon. Dijet categories are defined by regions of $\mathcal{D}_{\mathrm{VBF}}$ 
-	  and untagged categories are defined by regions of $\mathcal{D}_{\mathrm{kin}}$.}
-  \label{tab:category}
+    \caption{Summary of the category definitions. The lepton-tagged category requires at least one additional electron or muon. Dijet categories are defined by regions of $\DVBF$ 
+	  and untagged categories are defined by regions of $\Dkin$.}
   \begin{tabular}{c@{\hskip 0.3in}ccc@{\hskip 0.3in}cccc}
     \hline
                  Lepton   & Dijet 1 & Dijet 2 & Dijet 3& Untagged 1 & Untagged 2 & Untagged 3 & Untagged 4 \\\hline
-		  \multirow{2}{*}{$\geq$ 1 $\Pe,\mu$} &\multicolumn{3}{c}{$\mathcal{D}_{\mathrm{VBF}}$ selection}&\multicolumn{4}{c}{$\mathcal{D}_{\mathrm{kin}}$ selection}\\
+		  \multirow{2}{*}{$\geq$ 1 $\Pe,\mu$} &\multicolumn{3}{c}{$\DVBF$ selection}&\multicolumn{4}{c}{$\Dkin$ selection}\\
         &0.5--1.0&0.3--0.5&0.0--0.3&0.9--1.0&0.8--0.9&0.4--0.8&0.1--0.4\\
         \hline
   \end{tabular}
+  \label{tab:category}
 \end{table}
 
-Table~\ref{tab:yield} lists the event categories used in the analysis, along with the expected event yields for an $m_\PH=\mH\GeV$  signal arising from 
-$\Pg\Pg\PH$, VBF, $\mathrm{V}\PH$, and $\ttbar\PH$ production, as well as a 6\% resonant background contribution from FSR from $\PH\rightarrow\Pgmp\Pgmm$. The expected event yield from $\PH\to\tau^+\tau^-$ is estimated to be below the 1\% level relative to the $\PH\to\PZ\gamma$ yield and is neglected.
+Table~\ref{tab:yield} lists the event categories used in the analysis, along with the expected event yields for an $m_{\PH}=\mH\GeV$ signal arising from 
+$\Pg\Pg\PH$, VBF, $\mathrm{V}\PH$, and $\ttbar\PH$ production, as well as the resonant background contribution from FSR from $\PH\to\Pgmp\Pgmm$, which is 3--8\% of the \hzg{} yield, depending on the category. Event yields from other Higgs backgrounds such as $\PH\to\tau^+\tau^-$ and $\PH\to\gamma\gamma$ are estimated to be below the 1\% level relative to the \hzg{} yield and are neglected.
 The dominant contribution to the signal yield is generally from $\Pg\Pg\PH$ production, except in the lepton-tagged category, in which $\mathrm{V}\PH$ and $\ttbar\PH$ events dominate, and in the dijet 1 category, in which VBF events dominate.
 The categorization procedure increases the sensitivity of the analysis by 24\% with respect to an inclusive event selection.  
-The product of signal acceptance and efficiency for $\Pp\Pp\to\PH\to \PZ\gamma\to\ell^+\ell^-\gamma$ for $m_{\PH} =\mH\GeV$ is $23$ ($29$)\% in the electron (muon) channel.    
 
-  \begin{table}[tb!]
-    \centering   
-	  \scriptsize
-    \caption{Yields and approximate significance ($S/\sqrt{B}$) for each category, where $S$ and $B$ are the expected number of signal and background events in the narrowest $m_{\ell^+\ell^-\gamma}$ interval containing 95\% of the expected signal distribution.
-    Also shown is the $m_{\ell^{+}\ell^{-}\gamma}$ resolution, computed using the narrowest interval containing 68\% of the expected signal distribution. 
+  \begin{table}[tb]
+    \centering   	
+	  \tiny
+    \caption{Yields and approximate significance ($S/\sqrt{B}$) for each category, where $S$ and $B$ are the expected number of signal and background events in the narrowest $m_{\lplm\gamma}$ interval containing 95\% of the expected signal distribution.
+    Also shown is the $m_{\lplm\gamma}$ resolution, computed using the narrowest interval containing 68\% of the expected signal distribution. 
 	   }
   \begin{tabular}{c@{\hskip 0.3in}ccccccccc}
     \LumiT\fbinv   & Lepton   &  & Dijet 1 & Dijet 2 & Dijet 3& Untagged 1 & Untagged 2 & Untagged 3 & Untagged 4\\\hline
   \tabincell{c}{\textbf{SM signal}\\\textbf{yield}}    &&        &           &           &           &        &        &        &       \\
-  $\Pg\Pg\PH$             & 0.51   & \tabincell{c}{$\Pe^+\Pe^-$\\$\mu^+\mu^-$} & \tabincell{c}{1.10\\1.41}& \tabincell{c}{1.62\\2.05}& \tabincell{c}{9.44\\12.1}&\tabincell{c}{6.89\\8.52}& \tabincell{c}{7.35\\9.17}& \tabincell{c}{29.8\\38.0}&\tabincell{c}{22.5\\29.0}\\
+  $\Pg\Pg\PH$             & 0.51   & \tabincell{c}{$\epem$\\$\mpmm$} & \tabincell{c}{1.10\\1.41}& \tabincell{c}{1.62\\2.05}& \tabincell{c}{9.44\\12.1}&\tabincell{c}{6.89\\8.52}& \tabincell{c}{7.35\\9.17}& \tabincell{c}{29.8\\38.0}&\tabincell{c}{22.5\\29.0}\\
   &        &           & &           &           &        &        &        &       \\
-  VBF             & 0.09   & \tabincell{c}{$\Pe^+\Pe^-$\\$\mu^+\mu^-$}& \tabincell{c}{1.94\\2.40}& \tabincell{c}{0.76\\0.97}&  \tabincell{c}{1.13\\1.43}& \tabincell{c}{0.71\\0.89}& \tabincell{c}{0.35\\0.43}& \tabincell{c}{0.92\\1.18}& \tabincell{c}{0.51\\0.65}\\
+  VBF             & 0.09   & \tabincell{c}{$\epem$\\$\mpmm$}& \tabincell{c}{1.94\\2.40}& \tabincell{c}{0.76\\0.97}&  \tabincell{c}{1.13\\1.43}& \tabincell{c}{0.71\\0.89}& \tabincell{c}{0.35\\0.43}& \tabincell{c}{0.92\\1.18}& \tabincell{c}{0.51\\0.65}\\
   &        &           & &           &           &        &        &        &       \\
-  $\mathrm{V}\PH+\ttbar\PH$& 1.84  & \tabincell{c}{$\Pe^+\Pe^-$\\$\mu^+\mu^-$} & \tabincell{c}{0.04\\0.05}& \tabincell{c}{0.13\\0.16}& \tabincell{c}{1.89\\2.36}& \tabincell{c}{0.31\\0.39}& \tabincell{c}{0.17\\0.21}& \tabincell{c}{0.45\\0.57}& \tabincell{c}{0.27\\0.33}\\\hline
+  $\mathrm{V}\PH+\ttbar\PH$& 1.84  & \tabincell{c}{$\epem$\\$\mpmm$} & \tabincell{c}{0.04\\0.05}& \tabincell{c}{0.13\\0.16}& \tabincell{c}{1.89\\2.36}& \tabincell{c}{0.31\\0.39}& \tabincell{c}{0.17\\0.21}& \tabincell{c}{0.45\\0.57}& \tabincell{c}{0.27\\0.33}\\\hline
   \tabincell{c}{\textbf{SM resonant} \\\textbf{background}}&&&&&&&&&\\
-  $\PH\rightarrow\mu^+\mu^-$     & 0.14& $\mu^+\mu^-$&0.27 & 0.27 & 0.43& 0.62& 0.49 & 2.02& 1.78\\\hline
+  $\PH\to\mpmm$     & 0.14& $\mpmm$&0.27 & 0.27 & 0.43& 0.62& 0.49 & 2.02& 1.78\\\hline
  
-  \tabincell{c}{\textbf{Mass} \\\textbf{resolution}\\(GeV)} & 2.12& \tabincell{c}{$\Pe^+\Pe^-$\\$\mu^+\mu^-$}& \tabincell{c}{1.91\\1.52}& \tabincell{c}{2.06\\1.61}& \tabincell{c}{2.15\\1.72}& \tabincell{c}{1.80\\1.37}& \tabincell{c}{1.97\\1.42}& \tabincell{c}{2.12\\1.62}& \tabincell{c}{2.33\\1.83}\\
+  \tabincell{c}{\textbf{Mass} \\\textbf{resolution}\\(\GeVns)} & 2.12& \tabincell{c}{$\epem$\\$\mpmm$}& \tabincell{c}{1.91\\1.52}& \tabincell{c}{2.06\\1.61}& \tabincell{c}{2.15\\1.72}& \tabincell{c}{1.80\\1.37}& \tabincell{c}{1.97\\1.42}& \tabincell{c}{2.12\\1.62}& \tabincell{c}{2.33\\1.83}\\
   \hline
   
   \textbf{Data yield}            & 1485   && 168    & 589    & 11596& 1485      & 1541      & 2559      & 17608   \\\hline
@@ -349,46 +343,3 @@ The product of signal acceptance and efficiency for $\Pp\Pp\to\PH\to \PZ\gamma\t
   \end{tabular}
   \label{tab:yield}
   \end{table}
-
-\section{Dropping of Boosted Category}
-
-In the previous 2016 analysis, a boosted Higgs category was used. This category is defined by a simple cut on the \pt of the
-$\ell\ell\PGg$ system.
-However, for the current MVA-based analysis, the Higgs kinematics 
-are already included in the BDT training. In this case, it stands to reason that the boosted category may no longer be useful for 
-improving the analysis senstivity. We therefore test the possibility of constructing a boosted category before constructing the 
-untagged categories to see whether the combined significance is increased or decreased.
-The left plot of Figure \ref{fig:llgpt} shows the \pt spectrum of the $\ell\ell\PGg$ system for various signal MC samples. 
-We see that the \pt spectrum for the gluon-gluon fusion process is similar to the main backgrounds, 
-while the other signal processes are more boosted. 
-The right plot shows the upper limit on $\sigma/\sigma_{SM}$ as a function of a \pt cut on the $\ell\ell\PGg$ system,
-where the background estimation is taken from data. 
-The upper limit for the boosted category (shown in blue) worsens as the \pt cut increases. This is expected since we lose 
-a substantial amount of gluon-gluon fusion signal. However, the combined limit of the untagged categories improves.
-The overall combined limit (shown in black) is rather flat as a function of the \pt of the $\ell\ell\PGg$ system. 
-For the overall combined limit, we observe fluctuations beyond a \pt cut of 60 \GeV, so we choose 60 \GeV as the cut defining
-a potential boosted category. Comparing the combined significance of the boosted category plus untagged categories to the 
-untagged categories alone, we see that the combined significance is substantially higher for the untagged categories alone. An explanation for this behavior is as follows.
-In the current analysis flow, dijet events are selected before boosted events. 
-We loosen the dijet selection requirements, which causes the boosted events to migrate to the 
-dijet categories and reduces the significance of boosted category.
-Therefore, we choose not to use a boosted category in this version of the analysis. 
- \begin{figure}[htbp]
- 	\begin{center}
- 		\includegraphics[width=0.4\textwidth]{fig/boosted/hptllg_inc_e.pdf}
- 		\includegraphics[width=0.4\textwidth]{fig/boosted/plot_opt_boostedcat.pdf}
-
- 	\end{center}
- 	\caption{Left: $\ell\ell\PGg$ \pt for different signal MC processes. Right: optimization of the boosted category by scanning the expected limit as function of $\ell\ell\PGg$ \pt.}
- 	\label{fig:llgpt}
- \end{figure}
- \begin{figure}[htbp]
-	\begin{center}
-		\includegraphics[width=0.4\textwidth]{fig/boosted/mllgpt_VBFuntag.pdf}
-		\includegraphics[width=0.4\textwidth]{fig/boosted/mllg_VBFuntag.pdf}
-		
-	\end{center}
-	\caption{Left: $\ell\ell\PGg$ \pt for untagged events and dijet events. Right: The $m_{\ell\ell\PGg}$ spectrum of untagged events and dijet events.}
-	\label{fig:dijetboost}
-\end{figure}
-
