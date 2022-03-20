@@ -72,113 +72,22 @@ procedure used for the signal fits described above. As for the signal, the analy
 in Appendix \ref{sec:appendix_hmumu}. 
 
 \section{Nonresonant Background Modeling}
-The background model in each category is obtained from the data using the discrete profiling method~\cite{Dauncey:2014xga}.
+The nonresonant background model in each category is obtained from the data using the discrete profiling method~\cite{Dauncey:2014xga}.
 This technique accounts for the systematic uncertainty associated with choosing an analytic functional form to fit the background.
 The background function is chosen from a set of candidate functions via a discrete nuisance parameter in the fit.
 These functions are derived from the data in each category, with muon and electron events from all data-taking years combined.
-The $m_{\ell^+\ell^-\gamma}$ spectrum consists of a turn-on peak around 110--115\GeV and a falling spectrum in the high-mass tail, where the turn-on peak is driven by the photon $\pt$ selection.
-These features are modeled by the convolution of a Gaussian function with a step function multiplied by one of several falling spectrum functions.
+The $m_{\ell^+\ell^-\gamma}$ spectrum consists of a turn-on peak around 110--115\GeV and a monotonically falling spectrum in the high-mass tail, where the turn-on peak is driven by the photon $\pt$ selection.
+These features are modeled by the convolution of a Gaussian function, which is used to describe the lower-mass (turn-on) portion of the spectrum, with a step function that is multiplied by one of several functions, which are used to describe the higher-mass (tail) portion of the spectrum.
 The complete function has the general form:
 \begin{equation}
-    \mathcal{F}(m_{\ell^+\ell^-\gamma}; \mu_{\mathrm{G}}, \sigma_{\mathrm{G}}, s, \vec{\alpha}) = \int_{105}^{170}\mathcal{N}(m_{\ell^+\ell^-\gamma}-t;\mu_{\mathrm{G}},\sigma_{\mathrm{G}})\Theta(t; s)f(t; \vec{\alpha})dt,
+    \mathcal{F}(m_{\lplm\gamma}; \mu_{\mathrm{G}}, \sigma_{\mathrm{G}}, s, \vec{\alpha}) = \int_{m_\textrm{min}}^{m_\textrm{max}}\mathcal{N}(m_{\lplm\gamma}-t;\mu_{\mathrm{G}},\sigma_{\mathrm{G}})\Theta(t; s)f(t; \vec{\alpha})dt,
 \end{equation}
-where $t$ is the integration variable for the convolution, $\mathcal{N}(m_{\ell^+\ell^-\gamma}-t;\mu_{\mathrm{G}},\sigma_{\mathrm{G}})$ is the Gaussian function with mean $\mu_{\mathrm{G}}$ and standard deviation $\sigma_{\mathrm{G}}$, $\Theta(t; s)$ is the Heaviside step function with step location $s$, and $f(t; \vec{\alpha})$ is the falling spectrum function with shape parameters $\vec{\alpha}$.
-The falling spectrum function families considered include exponential functions, power law functions, Laurent series, and Bernstein polynomials.
-Functions from each family are selected based on a chi-squared goodness-of-fit criterion ($\text{\textit{p}-value} > 0.01$) as well as an $\mathcal{F}$-test~\cite{Fisher:1922saa}, which determines the highest order function to be used.
-A penalty term is added to the final likelihood to take into account the number of parameters in each function, ensuring that higher-order functions will not be preferred a priori.
-The set of profiled background functions in each category is checked to ensure that any bias introduced into the fit results is small and that the associated CL intervals have the appropriate frequentist coverage. For each function, pseudo-data sets are generated under a fixed signal strength hypothesis. A signal-plus-background fit is performed on each pseudo-data set, with the choice of background function profiled, and the distribution of best fit signal strengths is used to assess the bias and frequentist coverage.
-
-The best fit value of the signal strength, $\hat{\mu}$, is determined by maximizing the likelihood, accounting for all nuisance parameters.
-The uncertainty in $\hat{\mu}$ and the observed significance are derived from the profile likelihood test statistic~\cite{cite:l3},
-\begin{equation}
-	q(\mu) = -2\mathrm{ln}\Bigg(\frac{\mathcal{L}(\mu, \hat{\vec{\theta_{\mu}}})}{\mathcal{L}(\hat{\mu},\hat{\vec{\theta}})}\Bigg),
-\end{equation}
-where $\vec{\theta}$ is the set of nuisance parameters, $\hat{\mu}$ and $\hat{\vec{\theta}}$ are unconditional best fit values, and $\hat{\vec{\theta_{\mu}}}$ is the set of conditional best fit values of the nuisance parameters for a given value of $\mu$.
-An upper limit on $\mu$ is determined using the profile likelihood statistic with the \CLs criterion.
-The asymptotic approximation for the sampling distribution of $q(\mu)$ is assumed in the derivation of these results~\cite{cite:l1,cite:l2,cite:l3,Cowan:2010js}.
-The expected significance under the SM hypothesis and the expected upper limits under the background-only hypothesis are also reported.
-These are obtained by fitting to the corresponding Asimov data sets~\cite{Cowan:2010js}.
-
-In addition, a combined maximum likelihood fit with the CMS measurement~\cite{CMS:2021kom} of $\PH\to\PGg\PGg$ using the same data sample is performed to determine the ratio $\mathcal{B}(\PH\to\PZ\gamma)/\mathcal{B}(\PH\to\gamma\gamma)$.
-The $\PH\to\PGg\PGg$ analysis obtained a signal strength for $\sigma(\Pp\Pp\to\PH)\mathcal{B}(\PH\to\PGg\PGg)$ of $1.12\pm0.09$.
-In this combined fit, the branching fraction $\mathcal{B}(\PH\to\gamma\gamma)$ is an additional free parameter.
-The uncertainty in the measured ratio of the two branching fractions is dominated by the statistical uncertainties in the branching fractions.
-Common sources of theoretical and experimental uncertainty in the two measurements, described in the next section, are treated as correlated in the fit.
-The combination is performed at $m_\PH = \mH$\GeV, and the discrete profiling method is used for the background modeling in both cases.
-
-
-\section{Resonant Background Modeling}
-
-The process $\PH\to\Pgmp\Pgmm$, where at least one muon radiates an FSR photon, is expected to contribute at the 6\% level relative to the $\PH\to\PZ\PGg$ signal yield. Because of this, 
-we treat it as a resonant background. To model the $\PH\to\Pgmp\Pgmm$ shape, we perform fits to the $m_{\ell^+\ell^-\gamma}$ distributions in simulated event samples, following the same 
-procedure used for the signal fits described above. As for the signal, the analytic model is taken to be the sum of Crystal Ball and Gaussian functions. The resulting fits are shown 
-in Figs. [REF]. 
-
-
-\begin{figure}
-	\begin{center}
-		\includegraphics[width=0.40\textwidth]{fig/hmumu/2016/bkgfit_mu_ggF_1_125.png}
-		\includegraphics[width=0.40\textwidth]{fig/hmumu/2016/bkgfit_mu_ggF_2_125.png}\\
-		\includegraphics[width=0.40\textwidth]{fig/hmumu/2016/bkgfit_mu_ggF_3_125.png}
-		\includegraphics[width=0.40\textwidth]{fig/hmumu/2016/bkgfit_mu_ggF_4_125.png}\\
-		\includegraphics[width=0.40\textwidth]{fig/hmumu/2016/bkgfit_mu_VBF_501_125.png}
-		\includegraphics[width=0.40\textwidth]{fig/hmumu/2016/bkgfit_mu_VBF_502_125.png}\\
-		\includegraphics[width=0.40\textwidth]{fig/hmumu/2016/bkgfit_mu_ggF_503_125.png}
-		\caption{Fits to simulated $m_{\mu^+\mu^-\gamma}$ resonant background distributions from $\PH\to\Pgmp\Pgmm$ for
-			 $m_\PH=125\GeV$ for the 2016 data-taking period.
-			 The blue line shows the total fit function, the green line shows the Crystal Ball function component, and the red line shows the Gaussian function component.
-			 The top four plots correspond to the untagged categories, and the bottom three plots correspond to the dijet categories.}
-		\label{fig:mubkgfit}
-	\end{center}
-\end{figure}
-
-\begin{figure}
-	\begin{center}
-		\includegraphics[width=0.40\textwidth]{fig/hmumu/2016/bkgfit_ele_mu_ZH_6789_125.png}
-		\includegraphics[width=0.40\textwidth]{fig/hmumu/2016/bkgfit_ele_mu_WH_6789_125.png}
-		\caption{Fits to simulated $m_{\ell^+\ell^-\gamma}$ resonant background distributions from $\PH\to\Pgmp\Pgmm$ in the electron and muon channels combined in the lepton-tagged category for
-            		 $m_\PH=125\GeV$ for the 2016 data-taking period.
-        		 The left plot shows the fit to simulated ZH production events, and the right plot shows the fit to simulated WH production events. 
-			 The blue line shows the total fit function, the green line shows the Crystal Ball function component, and the red line shows the Gaussian function component.}
-		\label{fig:elemubkgfit}
-	\end{center}
-\end{figure}
-
-\section{Nonresonant Background Modeling}
-As in previous versions of the analysis, we use a parametric fit to the $m_{\ell^+\ell^-\gamma}$ spectrum in data to estimate the background. 
-The background model in each category is obtained from the data using the discrete profiling method~\cite{Dauncey:2014xga}.
-This technique accounts for the systematic uncertainty associated with choosing an analytic functional form to fit the background.
-The background function is chosen from a set of candidate functions via a discrete nuisance parameter in the fit. 
-These functions are derived from the data in each category, with muon and electron events from all data-taking years combined.
-The discrete profiling method is described in further detail later in this section. 
-
-In Run 1 \cite{CMS-PAS-HIG-13-006}, the background fitting started from 100\GeV. 
-At the lower end of this fit range, below about 115 \GeV, there is a notable turn-on in the mass distribution that arises due to the 
-presence of the on-shell Z boson. As such, the Run 1 analysis used PDFs composed of a Gaussian turn-on component convoluted 
-with a falling spectrum component. In the first Run 2 analysis using only the 2016 data, this procedure was significantly changed.
-The lower bound of the fit range was updated to 115 \GeV in order to avoid the turn-on. This meant that the functional forms used
-to model the background could be simplified, as they no longer required the turn-on component. Now, in the full Run 2 analysis with 
-2016, 2017, and 2018 data, we have returned to the Run 1 approach of fitting the turn-on. The reason for this is that the turn-on can have an impact on 
-the mass distribution, even above 115 \GeV. As a consequence, avoiding the turn-on component of the fit leads to some mismodeling in the 
-low mass region. Moreover, this mismodeling can be enough in some cases to lead to significant bias in the signal strength measurement. 
-The solution has been to set the lower bound at 105 \GeV such that the turn-on is roughly Gaussian and can be modeled and fit properly.
-
-\subsection{General Form of PDFs}
-The $m_{\ell^+\ell^-\gamma}$ spectrum consists of a turn-on peak around 110--115\GeV and a falling spectrum in the high-mass tail, where the turn-on peak is driven by the photon $\pt$ selection. 
-These features are modeled by the convolution of a Gaussian function with a step function multiplied by one of several falling spectrum functions.
-The complete function has the general form:
-% To model the background distribution, we consider functions with the following general form:
-\begin{equation}
-    \mathcal{F}(m_{\ell^+\ell^-\gamma}; \mu_{\mathrm{G}}, \sigma_{\mathrm{G}}, s, \vec{\alpha}) = \int_{105}^{170}\mathcal{N}(m_{\ell^+\ell^-\gamma}-t;\mu_{\mathrm{G}},\sigma_{\mathrm{G}})\Theta(t; s)f(t; \vec{\alpha})dt,
-\end{equation}
-where $t$ is the integration variable for the convolution, $\mathcal{N}(m_{\ell^+\ell^-\gamma}-t;\mu_{\mathrm{G}},\sigma_{\mathrm{G}})$ is the Gaussian function with mean $\mu_{\mathrm{G}}$ and standard deviation $\sigma_{\mathrm{G}}$, $\Theta(t; s)$ is the Heaviside step function with step location $s$, and $f(t; \vec{\alpha})$ is the falling spectrum function with shape parameters $\vec{\alpha}$.
-The total number of parameters in the fit is equal to three plus the number of parameters 
-in the falling spectrum component.
+where $t$ is the integration variable for the convolution, $m_\textrm{min}=105\GeV$ and $m_\textrm{max}=170\GeV$ are the limits of integration, $\mathcal{N}(m_{\ell^+\ell^-\gamma}-t;\mu_{\mathrm{G}},\sigma_{\mathrm{G}})$ is the Gaussian function with mean $\mu_{\mathrm{G}}$ and standard deviation $\sigma_{\mathrm{G}}$, $\Theta(t; s)$ is the Heaviside step function with step location $s$, and $f(t; \vec{\alpha})$ is the falling spectrum function with shape parameters $\vec{\alpha}$.
 
 \subsection{Falling Spectrum Component Families}
-The choice of falling spectrum component to model the background in a given category is not a priori known. For this reason, we consider several 
-families of PDFs for the falling spectrum. The families tested include Bernstein polynomials, exponential series, power law series, and 
-Laurent series. These families are described in more detail as follows:
+The choice of falling spectrum component to model the background in a given category is not a priori known. For this reason, we consider several function families for the falling spectrum. 
+The families considered include exponential functions, power law functions, Laurent series, and Bernstein polynomials.
+These families are described in more detail below.
 
 \begin{itemize}
 	\item exponential series of order N:
@@ -196,15 +105,6 @@ Laurent series. These families are described in more detail as follows:
 	with $2N$ free parameters: $p_i < 0$ and $f_i$.
 	The lowest order considered has $N=1$, i.e. one term.
 	
-	\item Bernstein polynomial of order N:
-    \begin{equation}
-        \mathrm{Bern_{N}}(m_{\ell\ell\gamma}) = \sum\limits_{i=0}^{N}f_{i}b_{i,N}(m_{\ell\ell\gamma})
-    \end{equation}
-    \begin{equation}
-        \mathrm{b_{i,N}}(m_{\ell\ell\gamma}) = \binom{N}{i}m_{\ell\ell\gamma}^{i}(1 - m_{\ell\ell\gamma}^{N-i})
-    \end{equation}
-    with $N$ free parameters $f_{i}$. The lowest order considered has $N=1$.
-
 	\item Laurent series with 2, 3, 4, 5, or 6 terms, where N + 1 equals the number of free parameters:
 	\begin{equation}
         \mathrm{Lau_{1}}(m_{\ell\ell\gamma}) = f_2m_{\ell\ell\gamma}^{-4}+f_3m_{\ell\ell\gamma}^{-5}
@@ -221,6 +121,15 @@ Laurent series. These families are described in more detail as follows:
 	\begin{equation}
         \mathrm{Lau_{5}}(m_{\ell\ell\gamma}) = f_1m_{\ell\ell\gamma}^{-2}+f_2m_{\ell\ell\gamma}^{-3}+f_3m_{\ell\ell\gamma}^{-4}+f_4m_{\ell\ell\gamma}^{-5}+f_5m_{\ell\ell\gamma}^{-6}+f_6m_{\ell\ell\gamma}^{-7}
 	\end{equation}
+	
+	\item Bernstein polynomial of order N:
+    \begin{equation}
+        \mathrm{Bern_{N}}(m_{\ell\ell\gamma}) = \sum\limits_{i=0}^{N}f_{i}b_{i,N}(m_{\ell\ell\gamma})
+    \end{equation}
+    \begin{equation}
+        \mathrm{b_{i,N}}(m_{\ell\ell\gamma}) = \binom{N}{i}m_{\ell\ell\gamma}^{i}(1 - m_{\ell\ell\gamma}^{N-i})
+    \end{equation}
+    with $N$ free parameters $f_{i}$. The lowest order considered has $N=1$.
 \end{itemize}
 
 \subsection{Discrete Profiling Method}\label{sec:envelope}
@@ -534,3 +443,24 @@ truth family shows a large bias when fit with a different family. Given the smal
 function, and the fact that the behavior is somewhat expected for lower order fits within the Bernstein family, we expect 
 the overall impact on the analysis to be negligible. Therefore, the untagged 3 envelope is also deemed fine for the analysis. 
 
+Functions from each family are selected based on a chi-squared goodness-of-fit criterion ($\text{\textit{p}-value} > 0.01$) as well as an $\mathcal{F}$-test~\cite{Fisher:1922saa}, which determines the highest order function to be used.
+A penalty term is added to the final likelihood to take into account the number of parameters in each function, ensuring that higher-order functions will not be preferred a priori.
+The set of profiled background functions in each category is checked to ensure that any bias introduced into the fit results is small and that the associated CL intervals have the appropriate frequentist coverage. For each function, pseudo-data sets are generated under a fixed signal strength hypothesis. A signal-plus-background fit is performed on each pseudo-data set, with the choice of background function profiled, and the distribution of best fit signal strengths is used to assess the bias and frequentist coverage.
+
+The best fit value of the signal strength, $\hat{\mu}$, is determined by maximizing the likelihood, accounting for all nuisance parameters.
+The uncertainty in $\hat{\mu}$ and the observed significance are derived from the profile likelihood test statistic~\cite{cite:l3},
+\begin{equation}
+	q(\mu) = -2\mathrm{ln}\Bigg(\frac{\mathcal{L}(\mu, \hat{\vec{\theta_{\mu}}})}{\mathcal{L}(\hat{\mu},\hat{\vec{\theta}})}\Bigg),
+\end{equation}
+where $\vec{\theta}$ is the set of nuisance parameters, $\hat{\mu}$ and $\hat{\vec{\theta}}$ are unconditional best fit values, and $\hat{\vec{\theta_{\mu}}}$ is the set of conditional best fit values of the nuisance parameters for a given value of $\mu$.
+An upper limit on $\mu$ is determined using the profile likelihood statistic with the \CLs criterion.
+The asymptotic approximation for the sampling distribution of $q(\mu)$ is assumed in the derivation of these results~\cite{cite:l1,cite:l2,cite:l3,Cowan:2010js}.
+The expected significance under the SM hypothesis and the expected upper limits under the background-only hypothesis are also reported.
+These are obtained by fitting to the corresponding Asimov data sets~\cite{Cowan:2010js}.
+
+In addition, a combined maximum likelihood fit with the CMS measurement~\cite{CMS:2021kom} of $\PH\to\PGg\PGg$ using the same data sample is performed to determine the ratio $\mathcal{B}(\PH\to\PZ\gamma)/\mathcal{B}(\PH\to\gamma\gamma)$.
+The $\PH\to\PGg\PGg$ analysis obtained a signal strength for $\sigma(\Pp\Pp\to\PH)\mathcal{B}(\PH\to\PGg\PGg)$ of $1.12\pm0.09$.
+In this combined fit, the branching fraction $\mathcal{B}(\PH\to\gamma\gamma)$ is an additional free parameter.
+The uncertainty in the measured ratio of the two branching fractions is dominated by the statistical uncertainties in the branching fractions.
+Common sources of theoretical and experimental uncertainty in the two measurements, described in the next section, are treated as correlated in the fit.
+The combination is performed at $m_\PH = \mH$\GeV, and the discrete profiling method is used for the background modeling in both cases.
