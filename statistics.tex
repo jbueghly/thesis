@@ -133,26 +133,23 @@ These families are described in more detail below.
 \end{itemize}
 
 \subsection{Discrete Profiling Method}\label{sec:envelope}
-In each category, there is ambiguity about which PDF to choose to model the background. 
-In previous versions of this analysis, a detailed bias study 
-was performed for each falling spectrum component family, and the family with the least bias was chosen. However, 
-no uncertainty was assigned due to the choice of background PDF. In principle, the 
-choice of PDF is a source of systematic uncertainty in the measurement. 
-Therefore, the discrete profiling method was since developed as a way to assess this uncertainty in a formal way. 
-In this method, the choice of PDF for the background fit is included as a 
+In each category, there is ambiguity about which function to choose to model the background. 
+In principle, the choice of function is a source of systematic uncertainty in the measurement. 
+The discrete profiling method was developed as a way to assess this uncertainty in a formal way. 
+In this method, the choice of function for the background fit is included as a 
 discrete nuisance parameter in the full likelihood function. All reasonable families of 
-functions should be considered, and additionally, it is found that certain orders within 
-the same family should be considered. The set of functions profiled in a given category is referred to as an \textit{envelope}.
+functions should be considered, and a range of orders should be considered within each family. 
+The set of functions profiled in a given category is referred to as an \textit{envelope}.
 The exact composition of the envelope in each category
-is based on a set of selection requirements that account for goodness of fit, an F-test procedure, 
-and an assessment of bias. The details of this selection will be described in the following section.
+is based on a set of selection requirements that account for goodness of fit, an $\mathcal{F}$-test~\cite{Fisher:1922saa} procedure that determines the highest order function to be included, 
+and an assessment of bias and frequentist coverage. The details of this selection will be described later in this chapter.
 When fitting the background, all functions in the envelope are tried, with a penalty term added to the likelihood 
-to account for the number of free parameters in the fit. When a measurement is made of 
-a parameter of interest, for example the signal strength, the PDF with the smallest negative log likelihood, 
-profiled as a function of the parameter of interest, is used. The profiling allows the best fit function to change for 
+to account for the number of free parameters in the fit and ensure that higher-order functions are not preferred a priori. When a measurement is made of 
+a parameter of interest, such as the signal strength, the function with the smallest negative log likelihood, 
+profiled as a function of the parameter of interest, is used. This profiling allows the best fit function to change for 
 different values of the parameter of interest, so we can say that we carry out the fit with the full envelope of functions.  
 The envelope yields a profile likelihood curve that is broader than the profile likelihood curve obtained from any individual function. 
-This increase in breadth reflects the uncertainty associated with the choice of background PDF. 
+This increase in breadth reflects the uncertainty associated with the choice of background function. 
 
 \subsection{Envelope Selection}\label{sec:envelope_selection}
 Individual functions are added to the envelope in a given category based on a series of selection requirements. In general, 
@@ -163,28 +160,28 @@ the quality of the fit good enough for the envelope. Any function failing this r
 be considered a reasonable description of the data. 
 
 The second consideration is the result of an F-test. The F-test is a way to compare functions within a specific family of 
-falling spectrum component PDFs. It compares the fit of a lower order function in the family to that of a higher order function. 
+falling spectrum component functions. It compares the fit of a lower order function in the family to that of a higher order function. 
 While it is expected that the higher order function will always provide a better fit, the question is whether the higher order 
 fit is better in a statistically significant way. If it is not significantly better, there is a motivation to stick to the lower
 order function and exclude the higher order function from the envelope. The details of the F-test procedure are as follows. 
-First, the lowest order PDF in a given family is fit to the data in a given
-category. Then, the next highest order PDF is fit to the same data. The difference between twice 
+First, the lowest order function in a given family is fit to the data in a given
+category. Then, the next highest order function is fit to the same data. The difference between twice 
 the negative log likelihood between the two fits, $2\Delta NLL_{N+1} = 2(NLL_{N}-NLL_{N+1})$, 
-can be used to determine whether the data are better supported by the higher order PDF. 
-More precisely, $2\Delta NLL_{N+1}$ is distributed as a $\chi^{2}$ PDF with $M$ degrees of 
+can be used to determine whether the data are better supported by the higher order function. 
+More precisely, $2\Delta NLL_{N+1}$ is distributed as a $\chi^{2}$ function with $M$ degrees of 
 freedom, where $M$ is the difference in the number of free parameters between the order $N+1$ 
-PDF and the order $N$ PDF. For example, in the case of the first two orders of 
+function and the order $N$ function. For example, in the case of the first two orders of 
 the exponential family, $M = 4-2 = 2$, and for the Bernstein polynomial family, $M=3-2=1$. 
 After carrying out the fits and computing the negative log likelihoods, a p-value is then 
 calculated as 
 \begin{equation}
 \mathrm{p} = P(2\Delta NLL > 2\Delta NLL_{N+1} | \chi^{2}(M)).
 \end{equation}
-If the p-value is less than 0.05, we state that the higher order PDF is supported by the 
-data, and the procedure is repeated for the next highest order PDF. Alternatively, if the 
-p-value is greater than 0.05, the higher order PDF is assumed to be too flexible given 
-the data, and the F-test ends, having found the highest order PDF supported by the data.
-This procedure is done to find the highest-order PDF supported by the data for each PDF 
+If the p-value is less than 0.05, we state that the higher order function is supported by the 
+data, and the procedure is repeated for the next highest order function. Alternatively, if the 
+p-value is greater than 0.05, the higher order function is assumed to be too flexible given 
+the data, and the F-test ends, having found the highest order function supported by the data.
+This procedure is done to find the highest-order function supported by the data for each function 
 family. In this analysis, we consider fits up to order 5 for each falling spectrum family.
 In each family, we identify the highest order function with an F-test probability below 0.05 and include it in the envelope. 
 We then also include all lower order functions within the family that pass the chi-squared goodness of fit criterion.
@@ -192,7 +189,7 @@ We then also include all lower order functions within the family that pass the c
 The final consideration in selecting functions for the envelope is bias and coverage. After constructing an initial envelope in a given 
 category based on the chi-squared and F-test results, an envelope bias study is performed. The full details of the envelope 
 bias studies for each category can be reviewed in Section \ref{sec:envelope_bias_studies}. In a nutshell, toys are generated from 
-each PDF contained in the envelope, and these toys are subsequently fit with the full envelope. The collection of toy fits
+each function contained in the envelope, and these toys are subsequently fit with the full envelope. The collection of toy fits
 allows us to compute the bias and coverage of the signal strength. Should the bias and coverage be at an acceptable level, the 
 envelope can be used in the analysis. However, in the presence of large bias or low coverage, we can consider modifying the 
 composition of the envelope in order to reduce the bias. In practice, this is often achievable by adding higher order functions that 
@@ -241,14 +238,14 @@ it is clear that modeling the turn-on properly yields a better fit around 115 Ge
 \end{figure}
 
 \subsection{Envelope Bias Studies}\label{sec:envelope_bias_studies}
-Upon the selection of an initial envelope of PDFs to model the background in a 
+Upon the selection of an initial envelope of functions to model the background in a 
 given category of the analysis, a bias study is performed for that category. 
 The principal goal of the bias study is to measure the bias and coverage of the 
 full model, the envelope of functions, for different choices of the true 
-underlying PDF. Of course, we do not know the true underlying PDF a priori, so 
+underlying function. Of course, we do not know the true underlying function a priori, so 
 we rely on the chi-squared and F-test probabilities used to construct the 
 envelope to identify likely truth functions. In practice, this means that each 
-individual PDF in the envelope is considered separately as a possible truth function
+individual function in the envelope is considered separately as a possible truth function
 in our bias studies. There are several possible outcomes of the bias studies in each 
 category. One outcome is that the bias is minimal and the coverage good for all 
 truth functions. In this case, we accept the composition of the envelope as good 
@@ -260,12 +257,12 @@ retry the bias study using the extended envelope.
 
 A more precise description of the bias study procedure follows. First, we generate 
 a set of 1,000 toy datasets for a given truth function. The parameters of the truth 
-function are fixed by fitting the data. Then, this PDF is used to generate the toys, 
+function are fixed by fitting the data. Then, this function is used to generate the toys, 
 with the same level of statistical uncertainty as the data
 and assuming a true signal strength of zero (background only). Next, each toy is fit using 
 the full envelope, where the index of the best fit function is profiled with the 
 signal strength. In general, this means that different toys may be fit by different 
-constituent PDFs within the envelope, and these PDFs may be different from the generating PDF. 
+constituent functions within the envelope, and these functions may be different from the generating function. 
 For each toy fit, we obtain a best fit signal strength $\hat{r}$ and a 68\% confidence interval
 ($\hat{r}_{down}$, $\hat{r}_{up}$). We define the pull for each toy as 
 $pull = (\hat{r}-r_{true})/\sigma_{\hat{r}}$. In the background only case, $r_{true} = 0$. 
@@ -289,11 +286,6 @@ certain truth functions. Therefore, the envelope was extended to include higher 
 to order 5 for each of these categories. The bias tables for these categories reflect the results for the final 
 extended envelope. 
 
-%For each choice of truth function, it is also useful to keep track of the frequency at which each 
-%constituent PDF in the envelope is chosen by the fit. That is, what fraction of the toys is fit by
-%each function. This can aid in detecting potential issues and interpreting bias. The frequency 
-%heat maps in each category are shown in Figure \ref{fig:envelope_heatmaps_105_170}.
-
 \begin{table}
 	\caption{Bias and coverage results for each category.}
     \footnotesize
@@ -301,7 +293,7 @@ extended envelope.
     \begin{subtable}{\textwidth}
 	    \centering
     \begin{tabular}{|c|cccccccc|} \hline
-        \textbf{Generating PDF} & Exp1 & Pow1 & Lau1 & Lau2 & Lau3 & Lau4 & Bern2 & Bern3\\ \hline
+        \textbf{Generating Function} & Exp1 & Pow1 & Lau1 & Lau2 & Lau3 & Lau4 & Bern2 & Bern3\\ \hline
         \textbf{Bias} & \tabincell{c}{-0.03\\$\pm$0.03}& \tabincell{c}{0.02\\$\pm$0.04}& \tabincell{c}{0.02\\$\pm$0.04}& \tabincell{c}{0.06\\$\pm$0.04}& \tabincell{c}{0.04\\$\pm$0.04}& \tabincell{c}{-0.09\\$\pm$0.04} &\tabincell{c}{-0.07\\$\pm$0.03} &\tabincell{c}{0.00\\$\pm$0.04}\\ 
         \textbf{Coverage} & 0.68 & 0.66 & 0.71 & 0.68 & 0.71 & 0.68 & 0.65 & 0.70\\ \hline
     \end{tabular}
@@ -313,7 +305,7 @@ extended envelope.
         \footnotesize
         \centering
         \begin{tabular}{|c|ccccc|} \hline
-            \textbf{Generating PDF} &Exp1 &Pow1 &Lau3 &Bern2 &Bern3\\ \hline
+            \textbf{Generating Function} &Exp1 &Pow1 &Lau3 &Bern2 &Bern3\\ \hline
             \textbf{Bias} &\tabincell{c}{-0.10\\$\pm$0.04}&\tabincell{c}{-0.09\\$\pm$0.05} &\tabincell{c}{-0.27\\$\pm$0.04}& \tabincell{c}{-0.07\\$\pm$0.03} & \tabincell{c}{0.07\\$\pm$0.04}\\ 
             \textbf{Coverage} & 0.67 & 0.66 & 0.67 & 0.67 & 0.65\\ \hline
         \end{tabular}
@@ -325,7 +317,7 @@ extended envelope.
         \footnotesize
         \centering
         \begin{tabular}{|c|ccccc|} \hline
-            \textbf{Generating PDF} &Exp1 &Pow1 &Bern3&Bern4&Bern5\\ \hline
+            \textbf{Generating Function} &Exp1 &Pow1 &Bern3&Bern4&Bern5\\ \hline
             \textbf{Bias} &\tabincell{c}{-0.05\\$\pm$0.04}&\tabincell{c}{-0.11\\$\pm$0.03}&\tabincell{c}{0.03\\$\pm$0.04}&\tabincell{c}{-0.02\\$\pm$0.03}&\tabincell{c}{0.27\\$\pm$0.04}\\ 
             \textbf{Coverage} & 0.67&0.67 & 0.70 &0.67 & 0.66\\ \hline
         \end{tabular}
@@ -337,7 +329,7 @@ extended envelope.
         \footnotesize
         \centering
         \begin{tabular}{|c|cccc|} \hline
-            \textbf{Generating PDF} &Exp3 &Bern3 &Bern4 &Bern5\\ \hline
+            \textbf{Generating Function} &Exp3 &Bern3 &Bern4 &Bern5\\ \hline
             \textbf{Bias} &\tabincell{c}{-0.08\\$\pm$0.03} &\tabincell{c}{0.07\\$\pm$0.03} &\tabincell{c}{0.16\\$\pm$0.03} &\tabincell{c}{0.10\\$\pm$0.03}\\ 
             \textbf{Coverage} & 0.68 & 0.67 & 0.67 & 0.68\\ \hline
         \end{tabular}
@@ -349,7 +341,7 @@ extended envelope.
     \footnotesize
     \centering
     \begin{tabular}{|c|ccccccc|} \hline
-        \textbf{Generating PDF} &Exp1 &Pow1 &Lau1 &Lau2 &Lau3 &Lau4 &Bern2\\ \hline
+        \textbf{Generating Function} &Exp1 &Pow1 &Lau1 &Lau2 &Lau3 &Lau4 &Bern2\\ \hline
         \textbf{Bias} &\tabincell{c}{0.03\\$\pm$0.03} &\tabincell{c}{0.09\\$\pm$0.03} &\tabincell{c}{-0.02\\$\pm$0.04}&\tabincell{c}{-0.06\\$\pm$0.04} &\tabincell{c}{-0.02\\$\pm$0.03} &\tabincell{c}{0.02\\$\pm$0.03} &\tabincell{c}{-0.04\\$\pm$0.03}\\ 
         \textbf{Coverage} & 0.64 & 0.66 & 0.66 & 0.68 & 0.67 & 0.68 & 0.66\\ \hline
     \end{tabular}
@@ -361,7 +353,7 @@ extended envelope.
     \footnotesize
     \centering
     \begin{tabular}{|c|cccccccccc|} \hline
-        \textbf{Generating PDF} &Exp1 &Pow1 &Pow3 &Lau2 &Lau3& Lau4&Bern2 &Bern3 &Bern4 & Bern5\\ \hline
+        \textbf{Generating Function} &Exp1 &Pow1 &Pow3 &Lau2 &Lau3& Lau4&Bern2 &Bern3 &Bern4 & Bern5\\ \hline
         \textbf{Bias} & \tabincell{c}{-0.12\\$\pm$0.04} &\tabincell{c}{ -0.29\\$\pm$0.04} & \tabincell{c}{-0.14\\$\pm$0.04} & \tabincell{c}{-0.22\\$\pm$0.04} & \tabincell{c}{-0.16\\$\pm$0.04} & \tabincell{c}{-0.18\\$\pm$0.04} &\tabincell{c}{-0.06\\$\pm$0.04} &\tabincell{c}{-0.05\\$\pm$0.03} & \tabincell{c}{0.05\\$\pm$0.03} & \tabincell{c}{-0.13\\$\pm$0.03}\\ 
         \textbf{Coverage} & 0.67 & 0.65 & 0.68 & 0.66 & 0.66 & 0.67 & 0.68 & 0.64 & 0.67 & 0.65\\ \hline
     \end{tabular}
@@ -375,7 +367,7 @@ extended envelope.
     \footnotesize
     \centering
     \begin{tabular}{|c|cccccccccc|} \hline
-        \textbf{Generating PDF} &Exp1 &Pow1 & Pow3 &Lau2 &Lau3 & Lau4 & Bern2 &Bern3 &Bern4 &Bern5\\ \hline
+        \textbf{Generating Function} &Exp1 &Pow1 & Pow3 &Lau2 &Lau3 & Lau4 & Bern2 &Bern3 &Bern4 &Bern5\\ \hline
         \textbf{Bias} & \tabincell{c}{-0.12\\$\pm$0.03} & \tabincell{c}{-0.29\\$\pm$0.04} & \tabincell{c}{-0.14\\$\pm$0.04} &\tabincell{c}{-0.22\\$\pm$0.04} &\tabincell{c}{-0.16\\$\pm$0.03}&\tabincell{c}{-0.18\\$\pm$0.03} & \tabincell{c}{-0.06\\$\pm$0.03} & \tabincell{c}{-0.03\\$\pm$0.05} & \tabincell{c}{0.05\\$\pm$0.03} & \tabincell{c}{-0.13\\$\pm$0.03}\\ 
         \textbf{Coverage} & 0.67 & 0.65 & 0.68 & 0.67 & 0.66 & 0.67 & 0.68 & 0.64 & 0.67 & 0.65\\ \hline
     \end{tabular}
@@ -389,7 +381,7 @@ extended envelope.
     \footnotesize
     \centering
     \begin{tabular}{|c|ccccc|} \hline
-        \textbf{Generating PDF} &Exp1 &Pow1 &Lau1 &Lau2 &Bern2\\ \hline
+        \textbf{Generating Function} &Exp1 &Pow1 &Lau1 &Lau2 &Bern2\\ \hline
         \textbf{Bias} &  \tabincell{c}{-0.04\\$\pm$0.03} &  \tabincell{c}{0.05\\$\pm$0.03} &  \tabincell{c}{0.27\\$\pm$0.04} &  \tabincell{c}{0.03\\$\pm$0.03} & \tabincell{c}{-0.03\\$\pm$0.03}\\ 
         \textbf{Coverage} & 0.71 & 0.69 & 0.66 & 0.70 & 0.70\\ \hline
     \end{tabular}
