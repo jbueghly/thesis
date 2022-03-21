@@ -84,6 +84,30 @@ The complete function has the general form:
 \end{equation}
 where $t$ is the integration variable for the convolution, $m_\textrm{min}=105\GeV$ and $m_\textrm{max}=170\GeV$ are the limits of integration, $\mathcal{N}(m_{\ell^+\ell^-\gamma}-t;\mu_{\mathrm{G}},\sigma_{\mathrm{G}})$ is the Gaussian function with mean $\mu_{\mathrm{G}}$ and standard deviation $\sigma_{\mathrm{G}}$, $\Theta(t; s)$ is the Heaviside step function with step location $s$, and $f(t; \vec{\alpha})$ is the falling spectrum function with shape parameters $\vec{\alpha}$.
 
+Since the background modeling strategy has been changed several times throughout the history of the CMS \hzg{} searches, 
+it is worthwhile to understand the motivation for the current approach. Previously, in the 2016 analysis,
+the background was modeled for the $m_{\lplm\gamma}$ range of 115--170\GeV.
+The choice to extend the mass range down to 105\GeV was made in order to improve 
+the model in the low mass region near the turn-on peak and avoid potential bias.
+Figure \ref{fig:compare_turnon_fits} shows a comparison of fits in each category with and without modeling the turn-on. From the plots, 
+it is clear that modeling the turn-on properly yields a better fit around 115 GeV, the previous lower bound of the fit used in the 2016 search. 
+
+\begin{figure}
+	\begin{center}
+        \includegraphics[width=0.33\textwidth]{fig/turnon_comparison/over_cat1_prefit_new.pdf}
+        \includegraphics[width=0.33\textwidth]{fig/turnon_comparison/over_cat2_prefit_new.pdf}\\
+        \includegraphics[width=0.33\textwidth]{fig/turnon_comparison/plot_cat3_prefit_new.pdf}
+        \includegraphics[width=0.33\textwidth]{fig/turnon_comparison/plot_cat4_prefit_new.pdf}\\
+        \includegraphics[width=0.33\textwidth]{fig/turnon_comparison/over_cat501_prefit_new.pdf}
+        \includegraphics[width=0.33\textwidth]{fig/turnon_comparison/over_cat502_prefit_new.pdf}\\
+        \includegraphics[width=0.33\textwidth]{fig/turnon_comparison/plot_cat503_prefit_new.pdf}
+        \includegraphics[width=0.33\textwidth]{fig/turnon_comparison/over_plot6789_prefit_new.pdf}
+        \caption{Comparison of background fits with and without modeling the turn-on. 
+        The top four plots correspond to the untagged categories, and the bottom four plots correspond to the dijet categories and lepton-tagged category.}
+		\label{fig:compare_turnon_fits}
+	\end{center}
+\end{figure}
+
 \subsection{Falling Spectrum Component Families}
 The choice of falling spectrum component to model the background in a given category is not a priori known. For this reason, we consider several function families for the falling spectrum. 
 The families considered include exponential functions, power law functions, Laurent series, and Bernstein polynomials.
@@ -153,49 +177,74 @@ This increase in breadth reflects the uncertainty associated with the choice of 
 
 \subsection{Envelope Selection}\label{sec:envelope_selection}
 Individual functions are added to the envelope in a given category based on a series of selection requirements. In general, 
-the requirements are related to three main factors: goodness of fit, F-test, and bias. The simplest requirement is a basic 
-goodness of fit cut. For each function considered, the chi-squared per number of degrees of freedom is calculated. This is 
-then converted into a p-value, or chi-squared probability. If the chi-squared probability is greater than 0.01, we consider 
+the requirements are related to three main factors: goodness of fit, $\mathcal{F}$-test results, and bias results. 
+The simplest requirement is a basic goodness of fit cut. For each function considered, the chi-squared per number of degrees of freedom is calculated. This is 
+then converted into a \textit{p}-value, or chi-squared probability. If the chi-squared probability is greater than 0.01, we consider 
 the quality of the fit good enough for the envelope. Any function failing this requirement is thrown away, as it cannot
-be considered a reasonable description of the data. 
+be considered a reasonable description of the background in data. 
 
-The second consideration is the result of an F-test. The F-test is a way to compare functions within a specific family of 
-falling spectrum component functions. It compares the fit of a lower order function in the family to that of a higher order function. 
-While it is expected that the higher order function will always provide a better fit, the question is whether the higher order 
-fit is better in a statistically significant way. If it is not significantly better, there is a motivation to stick to the lower
-order function and exclude the higher order function from the envelope. The details of the F-test procedure are as follows. 
-First, the lowest order function in a given family is fit to the data in a given
-category. Then, the next highest order function is fit to the same data. The difference between twice 
+The second consideration is the result of an $\mathcal{F}$-test. The $\mathcal{F}$-test is a way to compare functions within a specific family of 
+falling spectrum component functions. It compares the fit of a lower-order function in the family to that of a higher-order function. 
+While it is expected that the higher-order function will always provide a better fit, the question is whether the higher-order 
+fit is better in a statistically significant way. If it is not significantly better, there is a motivation to stick to the lower-order function and exclude the higher-order function from the envelope. 
+The details of the $\mathcal{F}$-test procedure are as follows. 
+First, the lowest-order function in a given family is fit to the data in a given
+category. Then, the next-highest-order function is fit to the same data. The difference between twice 
 the negative log likelihood between the two fits, $2\Delta NLL_{N+1} = 2(NLL_{N}-NLL_{N+1})$, 
-can be used to determine whether the data are better supported by the higher order function. 
-More precisely, $2\Delta NLL_{N+1}$ is distributed as a $\chi^{2}$ function with $M$ degrees of 
+can be used to determine whether the data better support the higher-order function. 
+More specifically, $2\Delta NLL_{N+1}$ is distributed as a chi-squared function with $M$ degrees of 
 freedom, where $M$ is the difference in the number of free parameters between the order $N+1$ 
 function and the order $N$ function. For example, in the case of the first two orders of 
 the exponential family, $M = 4-2 = 2$, and for the Bernstein polynomial family, $M=3-2=1$. 
-After carrying out the fits and computing the negative log likelihoods, a p-value is then 
-calculated as 
+After carrying out the fits and computing the negative log likelihoods, a \textit{p}-value is then calculated as 
 \begin{equation}
 \mathrm{p} = P(2\Delta NLL > 2\Delta NLL_{N+1} | \chi^{2}(M)).
 \end{equation}
-If the p-value is less than 0.05, we state that the higher order function is supported by the 
-data, and the procedure is repeated for the next highest order function. Alternatively, if the 
-p-value is greater than 0.05, the higher order function is assumed to be too flexible given 
-the data, and the F-test ends, having found the highest order function supported by the data.
-This procedure is done to find the highest-order function supported by the data for each function 
-family. In this analysis, we consider fits up to order 5 for each falling spectrum family.
-In each family, we identify the highest order function with an F-test probability below 0.05 and include it in the envelope. 
-We then also include all lower order functions within the family that pass the chi-squared goodness of fit criterion.
+If this \textit{p}-value is less than 0.05, we state that the higher-order function is supported by the 
+data, and the procedure is repeated for the next-highest-order function. Alternatively, if the 
+\textit{p}-value is greater than 0.05, the higher-order function is assumed to be too flexible, 
+and the $\mathcal{F}$-test ends, having found the highest-order function supported by the data.
+In this analysis, we consider fits up to order 5 for each falling spectrum family.
+In each family, we use this procedure to identify the highest-order function to include in the envelope. 
+We then also include all lower-order functions within the family that pass the chi-squared goodness of fit criterion.
 
-The final consideration in selecting functions for the envelope is bias and coverage. After constructing an initial envelope in a given 
-category based on the chi-squared and F-test results, an envelope bias study is performed. The full details of the envelope 
-bias studies for each category can be reviewed in Section \ref{sec:envelope_bias_studies}. In a nutshell, toys are generated from 
-each function contained in the envelope, and these toys are subsequently fit with the full envelope. The collection of toy fits
-allows us to compute the bias and coverage of the signal strength. Should the bias and coverage be at an acceptable level, the 
-envelope can be used in the analysis. However, in the presence of large bias or low coverage, we can consider modifying the 
-composition of the envelope in order to reduce the bias. In practice, this is often achievable by adding higher order functions that 
-may have been excluded by the F-test, but nevertheless fit the data well. These more flexible functions are often able to reduce the 
-bias and improve the coverage of the envelope. This is considered category by category.
-The fits of the chosen envelope functions in each category are shown in Figure \ref{fig:bkgmodel_e}.
+The final factor in selecting functions for the envelope is an assessment of bias and frequentist coverage. 
+After constructing an initial envelope in a given 
+category based on the chi-squared and $\mathcal{F}$-test results, an envelope bias study is performed. 
+For this study, 1,000 pseudo-data sets are generated from each function contained in the envelope, which are subsequently fit with the full envelope, where 
+the discrete index of the background function is allowed to float. 
+In general, this means that different pseudo-data sets may be fit by different 
+constituent functions within the envelope, and these functions may be different from the generating function. 
+With the resulting collection of fits, we compute the bias and frequentist coverage of the signal strength $\mu$. 
+For each fit, we obtain a best fit signal strength $\hat{\mu}$ and a 68\% confidence interval
+($\hat{\mu}_{\mathrm{down}}$, $\hat{\mu}_{\mathrm{up}}$). We define the pull for each toy as 
+$(\hat{\mu}-\mu_{\mathrm{true}})/\sigma_{\hat{\mu}}$. 
+The pull distribution is expected to be drawn from a unit Gaussian function. 
+We fit the pull distribution with a Gaussian, and the best fit mean 
+value is taken to be the bias. The coverage is defined as the frequency with which zero falls
+within the confidence interval ($\hat{\mu}_{\mathrm{down}}$, $\hat{\mu}_{\mathrm{up}}$). It is expected to be 
+near 68\%. If overcoverage is observed, this implies the uncertainty in the signal strength may 
+be overly conservative. Within a few percent of 68\%, this is acceptable. If undercoverage of 
+a significant amount is observed, this implies a problem with the model, and may mean that 
+the individual functions are biased or that the envelope should be made more flexible. 
+
+There are several possible outcomes of the bias studies in each 
+category. One outcome is that the bias is minimal and the coverage good for all 
+truth functions. In this case, we accept the composition of the envelope as good 
+for the analysis. Another possible outcome is that one or more truth functions is 
+associated with a large (significantly greater than 14\%) bias or low 
+(significantly less than 68\%) coverage. In this case, we can consider adding 
+more functions to the envelope to increase the flexibility of the model, and then 
+retry the bias study using the extended envelope. 
+
+The fits of the final chosen envelope functions in each category are shown in Figure \ref{fig:bkgmodel_e}.
+The corresponding bias and coverage results for the final envelope in each category 
+are shown in Tables \ref{tab:bias_cat1_m105-170} through \ref{tab:bias_cat6789_m105-170}. 
+In the categories untagged 3, untagged 4, and dijet 3, it was observed that the initial functions chosen 
+by the chi-squared and $\mathrm{F}$-test procedure showed large biases (greater than 20\%) and low coverages (less than 60\%) for 
+certain truth functions. Therefore, the envelope was extended to include higher order Bernstein functions up 
+to order 5 for each of these categories. The bias tables for these categories reflect the results for the final 
+extended envelope, including these added functions. 
 
 \begin{figure}
 	\begin{center}
@@ -207,84 +256,11 @@ The fits of the chosen envelope functions in each category are shown in Figure \
         \includegraphics[width=0.4\textwidth]{fig/envelope_plots/m105_170_cat502_turn_lau.pdf}\\
         \includegraphics[width=0.4\textwidth]{fig/envelope_plots/m105_170_cat503_turn_bern5.pdf}
         \includegraphics[width=0.4\textwidth]{fig/envelope_plots/m105_170_cat6789_turn_lau.pdf}
-		\caption{Background functions determined by the discrete profiling method.
+		\caption{Background functions selected for the envelope in each category.
         The top four plots correspond to the untagged categories, and the bottom four plots correspond to the dijet categories and lepton tag category.}
 		\label{fig:bkgmodel_e}
 	\end{center}
 \end{figure}
-
-\subsection{Comparison with Previous Approach}
-Previously, in the 2016 analysis and in earlier versions of the full Run 2 analysis, 
-the background was modeled on the three body mass range 115 to 170 GeV. After extending the 
-range down to 105 GeV and studying the fits in each category, it is worth checking how the new
-modeling compares to the old. One simple way to compare is by overlaying the fit plots using 
-the best fit function in each range. This is shown in Figure \ref{fig:compare_turnon_fits}. From the plots, 
-it is clear that modeling the turn-on properly yields a better fit around 115 GeV, the previous lower bound of the fit. 
-
-\begin{figure}
-	\begin{center}
-        \includegraphics[width=0.33\textwidth]{fig/turnon_comparison/over_cat1_prefit_new.pdf}
-        \includegraphics[width=0.33\textwidth]{fig/turnon_comparison/over_cat2_prefit_new.pdf}\\
-        \includegraphics[width=0.33\textwidth]{fig/turnon_comparison/plot_cat3_prefit_new.pdf}
-        \includegraphics[width=0.33\textwidth]{fig/turnon_comparison/plot_cat4_prefit_new.pdf}\\
-        \includegraphics[width=0.33\textwidth]{fig/turnon_comparison/over_cat501_prefit_new.pdf}
-        \includegraphics[width=0.33\textwidth]{fig/turnon_comparison/over_cat502_prefit_new.pdf}\\
-        \includegraphics[width=0.33\textwidth]{fig/turnon_comparison/plot_cat503_prefit_new.pdf}
-        \includegraphics[width=0.33\textwidth]{fig/turnon_comparison/over_plot6789_prefit_new.pdf}
-        \caption{Comparison of background fits with and without modeling the turn-on. 
-        The top four plots correspond to the untagged categories, and the bottom four plots correspond to the dijet categories and lepton tag category.}
-		\label{fig:compare_turnon_fits}
-	\end{center}
-\end{figure}
-
-\subsection{Envelope Bias Studies}\label{sec:envelope_bias_studies}
-Upon the selection of an initial envelope of functions to model the background in a 
-given category of the analysis, a bias study is performed for that category. 
-The principal goal of the bias study is to measure the bias and coverage of the 
-full model, the envelope of functions, for different choices of the true 
-underlying function. Of course, we do not know the true underlying function a priori, so 
-we rely on the chi-squared and F-test probabilities used to construct the 
-envelope to identify likely truth functions. In practice, this means that each 
-individual function in the envelope is considered separately as a possible truth function
-in our bias studies. There are several possible outcomes of the bias studies in each 
-category. One outcome is that the bias is minimal and the coverage good for all 
-truth functions. In this case, we accept the composition of the envelope as good 
-for the analysis. Another possible outcome is that one or more truth functions is 
-associated with a large (significantly greater than 14\%) bias or low 
-(significantly less than 68\%) coverage. In this case, we can consider adding 
-more functions to the envelope to increase the flexibility of the model, and then 
-retry the bias study using the extended envelope. 
-
-A more precise description of the bias study procedure follows. First, we generate 
-a set of 1,000 toy datasets for a given truth function. The parameters of the truth 
-function are fixed by fitting the data. Then, this function is used to generate the toys, 
-with the same level of statistical uncertainty as the data
-and assuming a true signal strength of zero (background only). Next, each toy is fit using 
-the full envelope, where the index of the best fit function is profiled with the 
-signal strength. In general, this means that different toys may be fit by different 
-constituent functions within the envelope, and these functions may be different from the generating function. 
-For each toy fit, we obtain a best fit signal strength $\hat{r}$ and a 68\% confidence interval
-($\hat{r}_{down}$, $\hat{r}_{up}$). We define the pull for each toy as 
-$pull = (\hat{r}-r_{true})/\sigma_{\hat{r}}$. In the background only case, $r_{true} = 0$. 
-The uncertainty in the denominator accounts for
-the assymetric error bars coming from the confidence interval. The pull distribution is expected
-to be a unit Gaussian. We fit the pull distribution with a Gaussian, and the best fit mean 
-value is taken to be the bias. The coverage is defined as the frequency with which zero falls
-within the confidence interval ($\hat{r}_{down}$, $\hat{r}_{up}$). It is expected to be 
-near 68\%. If overcoverage is observed, this implies the uncertainty in the signal strength may 
-be overly conservative. Within a few percent of 68\%, this is acceptable. If undercoverage of 
-a significant amount is observed, this implies a problem with the model, and may mean that 
-the individual functions are biased or that the envelope should be made more flexible. 
-
-The bias and coverage results for the final envelope in each category 
-are shown in Tables \ref{tab:bias_cat1_m105-170} through \ref{tab:bias_cat6789_m105-170}. 
-Note that in all categories except untagged 3, untagged 4, and dijet 3, the envelope functions 
-are exactly those identified by the chi-squared and F-test probabilities previously described.
-However, in untagged 3, untagged 4, and dijet 3, it was observed that the initial functions chosen 
-by the chi-squared and F-test procedure showed large biases (greater than 20\%) and low coverages (less than 60\%) for 
-certain truth functions. Therefore, the envelope was extended to include higher order Bernstein functions up 
-to order 5 for each of these categories. The bias tables for these categories reflect the results for the final 
-extended envelope. 
 
 \begin{table}
 	\caption{Bias and coverage results for each category.}
@@ -385,60 +361,12 @@ extended envelope.
         \textbf{Bias} &  \tabincell{c}{-0.04\\$\pm$0.03} &  \tabincell{c}{0.05\\$\pm$0.03} &  \tabincell{c}{0.27\\$\pm$0.04} &  \tabincell{c}{0.03\\$\pm$0.03} & \tabincell{c}{-0.03\\$\pm$0.03}\\ 
         \textbf{Coverage} & 0.71 & 0.69 & 0.66 & 0.70 & 0.70\\ \hline
     \end{tabular}
-    \caption{Lepton tag bias and coverage results from the final envelope bias study.}
+    \caption{Lepton-tagged bias and coverage results from the final envelope bias study.}
     \label{tab:bias_cat6789_m105-170}
 \end{subtable}
 \end{table}
 
-
-
-
-
-
-%\begin{figure}
-%	\begin{center}
-%        \includegraphics[width=0.35\textwidth]{fig/biasPlots/turnon_bias/turnonfit/fix_m105_170/heatmap_cat1.png}
-%        \includegraphics[width=0.35\textwidth]{fig/biasPlots/turnon_bias/turnonfit/fix_m105_170/heatmap_cat2.png}\\
-%        \includegraphics[width=0.35\textwidth]{fig/biasPlots/turnon_bias/turnonfit/fix_m105_170/heatmap_cat3.png}
-%        \includegraphics[width=0.35\textwidth]{fig/biasPlots/turnon_bias/turnonfit/fix_m105_170/heatmap_cat4.png}\\
-%        \includegraphics[width=0.35\textwidth]{fig/biasPlots/turnon_bias/turnonfit/fix_m105_170/heatmap_cat501.png}
-%        \includegraphics[width=0.35\textwidth]{fig/biasPlots/turnon_bias/turnonfit/fix_m105_170/heatmap_cat502.png}\\
-%        \includegraphics[width=0.35\textwidth]{fig/biasPlots/turnon_bias/turnonfit/fix_m105_170/heatmap_cat503.png}
-%        \includegraphics[width=0.35\textwidth]{fig/biasPlots/turnon_bias/turnonfit/fix_m105_170/heatmap_cat6789.png}\\
-%        \caption{Fit frequency heat maps for the functions chosen for the initial envelope.
-%        The top four plots correspond to the untagged categories, and the bottom four plots correspond to the dijet categories and lepton tag category.}
-%		\label{fig:envelope_heatmaps_105_170}
-%	\end{center}
-%\end{figure}
-
-\subsection{Interpretation of Bias Study Results}
-We now turn to the interpretation of the initial envelope bias studies. First, it can be seen that most 
-categories show no signs of significant bias or undercoverage for any potential truth functions. 
-Specifically, we see that the envelopes for categories untagged 1, untagged 4, and dijet 1
-can immediately be accepted as good for the analysis. In untagged 2, untagged 3, dijet 2, dijet 3, and the lepton 
-tag category, specific truth functions deserve a bit more scrutiny. 
-
-In the untagged 2, dijet 2, dijet 3, and lepton tag categories, we observe slightly larger bias for the Laurent polynomial truth functions. 
-From the heat map of the chosen functions, we can see the toys generated with Laurent functions are most often fit with 
-Bernstein polynomials. Additionally, the Laurent functions give lower probabilities than the other functions in the envelope. 
-This means that the Laurent family is irrevelant in the final background model. 
-Given this consideration, along with the fairly good coverage for these 
-Laurent functions, we expect the impact of these biases on the analysis to be negligible. A similar line of logic also applies to the 
-case of the power law 1 truth function in categories dijet 2 and dijet 3. Again, we expect the impact of these biases to be negligible.
-
-In untagged 3, we observe a small, but somewhat significant bias of 27\% for the truth function with falling spectrum
-component Bernstein 5. In this case, we see that the coverage of 66\% is still quite good, only slightly below 68\%. 
-Looking at the fit frequency heat map for this category, we see that this bias arises when the fit function is a 
-lower order Bernstein polynomial. This type of behavior is expected. Generating with a higher order and fitting with a lower 
-order within the same function family will usually yield some level of bias. This is less of a concern than a case in which one 
-truth family shows a large bias when fit with a different family. Given the small size of the bias for a single truth 
-function, and the fact that the behavior is somewhat expected for lower order fits within the Bernstein family, we expect 
-the overall impact on the analysis to be negligible. Therefore, the untagged 3 envelope is also deemed fine for the analysis. 
-
-Functions from each family are selected based on a chi-squared goodness-of-fit criterion ($\text{\textit{p}-value} > 0.01$) as well as an $\mathcal{F}$-test~\cite{Fisher:1922saa}, which determines the highest order function to be used.
-A penalty term is added to the final likelihood to take into account the number of parameters in each function, ensuring that higher-order functions will not be preferred a priori.
-The set of profiled background functions in each category is checked to ensure that any bias introduced into the fit results is small and that the associated CL intervals have the appropriate frequentist coverage. For each function, pseudo-data sets are generated under a fixed signal strength hypothesis. A signal-plus-background fit is performed on each pseudo-data set, with the choice of background function profiled, and the distribution of best fit signal strengths is used to assess the bias and frequentist coverage.
-
+\section{Obtaining Results}
 The best fit value of the signal strength, $\hat{\mu}$, is determined by maximizing the likelihood, accounting for all nuisance parameters.
 The uncertainty in $\hat{\mu}$ and the observed significance are derived from the profile likelihood test statistic~\cite{cite:l3},
 \begin{equation}
@@ -446,7 +374,7 @@ The uncertainty in $\hat{\mu}$ and the observed significance are derived from th
 \end{equation}
 where $\vec{\theta}$ is the set of nuisance parameters, $\hat{\mu}$ and $\hat{\vec{\theta}}$ are unconditional best fit values, and $\hat{\vec{\theta_{\mu}}}$ is the set of conditional best fit values of the nuisance parameters for a given value of $\mu$.
 An upper limit on $\mu$ is determined using the profile likelihood statistic with the \CLs criterion.
-The asymptotic approximation for the sampling distribution of $q(\mu)$ is assumed in the derivation of these results~\cite{cite:l1,cite:l2,cite:l3,Cowan:2010js}.
+The asymptotic approximation for the sampling distribution of $q(\mu)$ is assumed in the derivation of these results~\cite{cite:l3,cite:l1,cite:l2,Cowan:2010js}.
 The expected significance under the SM hypothesis and the expected upper limits under the background-only hypothesis are also reported.
 These are obtained by fitting to the corresponding Asimov data sets~\cite{Cowan:2010js}.
 
