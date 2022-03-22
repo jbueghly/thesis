@@ -73,13 +73,13 @@ and 2018 are shown in Fig. \ref{fig:mu_trig_SF}. On average, the double muon tri
 \end{figure}
 
 \section{Photon Selection}
-Photons are identified using a BDT discriminant (photon MVA ID) trained on $\PGg$+jets simulation in order to distinguish real photons from jets misreconstructed as photons. 
+Photons are identified using a BDT discriminant (photon MVA ID) trained on $\gamma$+jets simulation in order to distinguish real photons from jets misreconstructed as photons. 
 The features used for the BDT training include supercluster kinematics, isolation variables, and shower shape variables~\cite{EGM:PhotonID}. 
 To reject electrons faking photons, a conversion-safe electron veto is also applied. In order to improve agreement between simulation and data for the photon MVA ID, shower 
-shape corrections are taken from the CMS $\PH\to\PGg\PGg$ analysis of the same data set~\cite{CMS:2021kom} and applied to simulated events. 
-The photon MVA ID is then reevaluated after these corrections. We correct the following features: $R_{9}^{5x5}$, defined as the ratio of energy in
-the 5x5 array of ECAL crystals to the supercluster energy; $S_{4}$, defined as the ratio of the maximum energy 2x2 array to the energy of 
-the 5x5 array; the energy weighted shower widths $\sigma_{\eta}$ and $\sigma_{\phi}$; the energy weighted widths by crystal index 
+shape corrections are taken from the CMS \hgg{} analysis of the same data set~\cite{CMS:2021kom} and applied to simulated events. 
+The photon MVA ID is then reevaluated after these corrections. We correct the following features: $R_{9}^{5\times 5}$, defined as the ratio of energy in
+the 5$\times$5 array of ECAL crystals to the supercluster energy; $S_{4}$, defined as the ratio of the maximum energy 2$\times$2 array to the energy of 
+the 5$\times$5 array; the energy weighted shower widths $\sigma_{\eta}$ and $\sigma_{\phi}$; the energy weighted widths by crystal index 
 $\sigma_{i\eta i\eta}$ and $\sigma_{i\eta i\phi}$; photon isolation, charged isolation with respect to the primary vertex, 
 and charged isolation with respect to the worst vertex choice. The validity of the shower shape corrections is checked using tag 
 and probe procedures for $\PZ\to\epem$ events where the probe electron mimics a photon and $\PZ\to\mpmm$
@@ -116,7 +116,7 @@ These SFs are cataloged in Table \ref{tab:eveto_sf}.
 	\begin{center}
 		\includegraphics[width=0.75\textwidth]{fig/selection/photon_ID_ROC.png}
 	\end{center}
-	\caption{ROC curves for the corrected photon MVA ID in the barrel (red) and endcaps (blue). Here, signal refers to real photons from the $\PZ\PGg$ simulation and background refers to jets misreconstructed as photons from the $\PZ$+jets simulation. Also shown are the cuts used for the \hzg{} analysis WP and for the standard CMS 90\% WP.}
+	\caption{ROC curves for the corrected photon MVA ID in the barrel (red) and endcaps (blue). Here, signal refers to real photons from the $\PZ\gamma$ simulation and background refers to jets misreconstructed as photons from the $\PZ$+jets simulation. Also shown are the cuts used for the \hzg{} analysis WP and for the standard CMS 90\% WP.}
 	\label{fig:photon_mva_roc}
 \end{figure}
 
@@ -153,8 +153,8 @@ Electrons are identified using a BDT discriminant (electron MVA ID) trained on D
 with prompt electrons matched to generator-level objects as signal and unmatched and non-prompt electrons as background. The features 
 used in the BDT training include \pt, supercluster $\eta$, shower shape variables, ratio of hadronic to electromagnetic energy, track and 
 pixel hit variables, and isolation variables~\cite{EGM:ElectronID}. 
-Since isolation features are included in the training of the photon MVA ID, there is no need for a separate isolation requirement. 
-For the \hzg{} analysis, an electron is selected if its photon MVA ID score is higher than a loose WP
+Since isolation features are included in the training of the electron MVA ID, there is no need for a separate isolation requirement. 
+For the \hzg{} analysis, an electron is selected if its electron MVA ID score is higher than a loose WP
 value, corresponding to 98\% signal efficiency. In addition to the photon MVA ID cut, electrons must satisfy the impact parameter requirements $|d_{xy}| < 0.5$ cm and $|d_{z}| < 1$ cm
 with respect to the PV. 
 
@@ -203,7 +203,7 @@ A relative PF isolation requirement is imposed, defined by the variable
 \end{equation}
 The quantity $\sum \pt^\text{charged}$ is the scalar sum of the \pt
 of charged hadrons originating from the PV,
-and $\sum \pt^\text{neutral}$ and $\sum \pt^{\Pgg}$ are the scalar sums of the \pt of neutral hadrons and photons, respectively. 
+and $\sum \pt^\text{neutral}$ and $\sum \pt^{\gamma}$ are the scalar sums of the \pt of neutral hadrons and photons, respectively. 
 The sums are over all PF candidates within a cone of radius $\DR = 0.3$ around the photon or lepton direction at the PV. 
 Muons are required to satisfy $\mathcal{I}^{\mu} < 0.35$. 
 The ID and isolation efficiencies and SFs with uncertainties were measured and provided by the CMS $\PH\to\PZ\PZ^*\to4\ell$ analysis working group.
@@ -249,16 +249,16 @@ photon must satisfy $\pt>2$\GeV, $\lvert{\eta}\rvert < 2.4$, $\DR(\gamma,\mu)/p_
 multiple FSR photons are associated to one muon, the photon with the smallest 
 value of $\DR(\gamma,\mu)/p_{\mathrm{T}\gamma}^{2}$ is selected. 
 In simulation, we find that the selected FSR photon matches the generator level FSR photon with 93\% efficiency. 
-Figure \ref{fig:fsr_recovery} shows the dilepton and $\lplm\PGg$
+Figure \ref{fig:fsr_recovery} shows the dilepton and $\lplm\gamma$
 invariant mass among FSR photon-containing signal events with and without applying the FSR recovery correction.
-The FSR recovery procedure improves the $m_{\lplm\gamma}$ resolution by 1\% in the muon channel.
+The FSR recovery procedure improves the $m_{\lplm\gamma}$ resolution by about 1\% in the muon channel.
 
 \begin{figure}[tb]
 	\begin{center}
 		\includegraphics[width=0.45\textwidth]{fig/selection/mll.pdf}
 		\includegraphics[width=0.45\textwidth]{fig/selection/Hmass.pdf}
 	\end{center}
-	\caption{Dilepton invariant mass (left) and $\lplm\gamma$ invariant mass (right) with (blue) and without (red) FSR photon recovery for simulated $\PH\to\PZ\gamma\to\mpmm\gamma$ events containing at least one FSR photon.}
+	\caption{Dilepton invariant mass (left) and $\lplm\gamma$ invariant mass (right) with (blue) and without (red) FSR photon recovery for the subset of simulated $\PH\to\PZ\gamma\to\mpmm\gamma$ events containing at least one FSR photon.}
 	\label{fig:fsr_recovery}
 \end{figure}
 
@@ -270,8 +270,7 @@ This avoids the calorimeter transition region, in which photon reconstruction is
 In events with multiple dilepton pairs, the pair with 
 mass closest to the nominal $\PZ$ boson mass~\cite{PhysRevD.98.030001} is selected. Additional electrons (muons) with \pt greater than 7 (5)\GeV are also used for categorization, as described in the next chapter. 
 
-The invariant mass of the $\lplm\gamma$ system is required to be in the range $105 < m_{\lplm\gamma} < 170$\GeV, which provides a broad range around the Higgs boson mass in which to perform the fit.
-%  to be consistent with the Higgs boson mass.
+The $\lplm\gamma$ system is required to satisfy $105 < m_{\lplm\gamma} < 170$\GeV, which provides a broad range around the Higgs boson mass in which to perform the fit.
 Events are required to have a photon satisfying $\pt^\gamma / m_{\lplm\gamma} > 0.14$,
 which suppresses the $\PZ$+jets background 
 without significantly reducing signal efficiency, with minimal bias in the
