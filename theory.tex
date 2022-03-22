@@ -34,10 +34,10 @@ Quarks are fermions that carry both fractional electric charge and color charge,
 Leptons are fermions that carry integer electric charge and participate in the electroweak interaction.
 In contrast to fermions, bosons have integer spin. The vector gauge bosons function as mediators of the fundamental forces of nature. 
 The gluons mediate the strong force, the photon the electromagnetic force, and the W and Z bosons the weak force. 
-Finally, the electrically neutral, scalar Higgs boson emerges due to electroweak symmetry breaking, described later in this section. The interaction of the Higgs 
+Finally, the electrically neutral, scalar Higgs boson emerges due to electroweak symmetry breaking, described later in this chapter. The interaction of the Higgs 
 with the other particles in the SM is responsible for particle masses. 
 In the context of this thesis, which is a search for \hzg{}, the most relevant elementary particles are the Higgs boson, Z boson, leptons, and photon. 
-Therefore, the remainder of this section will describe electroweak theory and the Higgs mechanism in more detail. Other aspects of the SM, such as quantum chromodynamics, 
+Therefore, the remainder of this chapter will describe electroweak theory and the Higgs mechanism in more detail. Other aspects of the SM, such as quantum chromodynamics, 
 are of importance in collider physics, but of less relevance for this specific search. Such topics are omitted in order to narrow the scope of the discussion.
 
 \section{Electroweak Theory}
@@ -50,9 +50,9 @@ SM Lagrangian can be written as
 	& D_{\mu,L} = \partial_{\mu} + \frac{ig}{2}\tau\cdot A_{\mu} + \frac{ig'}{2}B_{\mu}Y \label{eqn:DL}\\
 	& D_{\mu,R} = \partial_{\mu} + \frac{ig'}{2}B_{\mu}Y. \label{eqn:DR}
 \end{align}
-In the above equations, $A_{\mu\nu}^a$ represents an SU(2)$_L$ triplet of gauge fields and $B_{\mu\nu}$ represents a U(1) gauge field. The third and fourth terms in equation \ref{eqn:LEWK} 
+In the above equations, $A_{\mu\nu}^a$ represents an SU(2)$_{\mathrm{L}}$ triplet of gauge fields and $B_{\mu\nu}$ represents a U(1) gauge field. The third and fourth terms in equation \ref{eqn:LEWK} 
 describe the interactions of these gauge fields with the fermions, both quarks and leptons. Note that the interaction depends on the chirality of the fermions, where the left-handed 
-fermions are denoted as $L$ and the right-handed as $R$. The right-handed fermions interact only with the U(1) field, while the left-handed fermions interact with the U(1) and SU(2)$_L$ fields. 
+fermions are denoted as $L$ and the right-handed as $R$. The right-handed fermions interact only with the U(1) field, while the left-handed fermions interact with the U(1) and SU(2)$_{\mathrm{L}}$ fields. 
 This is encoded by the derivative operators $D_{\mu,L}$ and $D_{\mu,R}$ defined in equations \ref{eqn:DL} and \ref{eqn:DR} in terms of the fields, Pauli matrices ($\tau$), hypercharge operator Y, and the couplings $g$ and $g'$. 
 
 \section{Spontaneous Symmetry Breaking (Higgs Mechanism)}
@@ -60,14 +60,14 @@ One important property of the electroweak Lagrangian in equation \ref{eqn:LEWK} 
 However, the direct observation of charged and neutral 
 current interactions \cite{HASERT1973121,HASERT1973138} at CERN in 1973 implied that the W and Z boson must have relatively large masses in the range of 50--100\GeV. Indeed, the massive W and Z bosons were later discovered and measured \cite{UA1:1983crd,UA2:1983tsx} at the CERN Super Proton Synchroton in 1983. 
 A solution to this shortcoming of the electroweak theory came in the form of the Higgs mechanism \cite{Englert:1964et,Higgs:1964ia,Higgs:1964pj},
-which spontaneously breaks the SU(2)xU(1) gauge symmetry. One consequence of this is the addition of a real 
+which spontaneously breaks the SU(2)$_{\mathrm{L}}$$\times$U(1) gauge symmetry. One consequence of this is the addition of a real 
 Higgs field accompanied by a massive Higgs boson. The W and Z boson masses arise naturally due to the electroweak symmetry breaking, 
 while fermion masses are explained via additional Yukawa couplings to the Higgs boson. 
 The discovery of the Higgs boson and subsequent measurements of its properties have provided experimental verification that the Higgs mechanism 
-is a central piece of the Standard Model. 
+is a central piece of the SM. 
 
-To understand how the Higgs mechanism works, consider the introduction of a complex scalar field $\sf \Phi$, which 
-transforms as a doublet under SU(2)$_L$.
+To understand how the Higgs mechanism works, consider the introduction of a complex scalar field $\Phi$, which 
+transforms as a doublet under SU(2)$_{\mathrm{L}}$.
 \begin{equation}
     \label{eqn:higgsField}
     \Phi = 
@@ -78,7 +78,7 @@ transforms as a doublet under SU(2)$_L$.
 \end{equation}
 Its contribution to the Lagrangian is given by:
 \begin{equation}
-    \mathcal{L_{H}} = (D^{\mu}_L\Phi)^{\dagger}(D_{\mu,L}\Phi) - V(\Phi)
+    \mathcal{L_{H}} = (D^{\mu}_L\Phi)^{\dagger}(D_{\mu,L}\Phi) - V(\Phi),
     \label{LHiggs}
 \end{equation}
 where the Higgs potential takes the form
@@ -94,13 +94,13 @@ minimizing the potential:
 \begin{align*}
     \frac{\partial}{\partial(\Phi^{\dagger}\Phi)}V(\Phi) &= 0 \\
     \mu^{2} + 2\lambda\Big(|\Phi^{\dagger}\Phi|\Big) &= 0 \\
-    \mu^{2} + 2\lambda\Big[(\phi^{+})^{2} + (\phi^{0})^{2}\Big] &= 0 \numberthis
+    \mu^{2} + 2\lambda\Big[(\phi^{+})^{2} + (\phi^{0})^{2}\Big] &= 0. \numberthis
     \label{VHiggsMinimization}
 \end{align*}
 This can be minimized in many ways depending on individual values of $\phi^{+}$ and $\phi^{0}$ in the vacuum. By convention,
-and without loss of generality, we choose the case in which $\phi^{+} = 0$. In this case we obtain the equation
+and without loss of generality, we choose the case in which $\phi^{+} = 0$. In this case, we obtain the equation
 \begin{equation}
-    \phi^{0} = \sqrt{\frac{-\mu^{2}}{2\lambda}} = \frac{1}{\sqrt{2}}v
+    \phi^{0} = \sqrt{\frac{-\mu^{2}}{2\lambda}} = \frac{1}{\sqrt{2}}v,
 \end{equation}
 where we have defined $v \equiv \sqrt{-\mu^{2}/\lambda}$.
 
@@ -121,21 +121,21 @@ where we have defined $v \equiv \sqrt{-\mu^{2}/\lambda}$.
 The existence of the Higgs VEV has profound implications. To see this, it is helpful to reparameterize the scalar doublet field
 $\Phi$ as follows:
 \begin{equation}
-    \Phi = \frac{1}{\sqrt{2}}e^{i\frac{\tau^{a}}{2}\theta_{a}(x)}
+    \Phi = \frac{1}{\sqrt{2}}e^{i\frac{\tau^{a}}{2}\theta_{a}(x)}.
     \begin{bmatrix}
         0 \\
         v + h(x)
-    \end{bmatrix}
+    \end{bmatrix}.
     \label{reparamHiggsField}
 \end{equation}
-As $\Phi$ is invariant under local SU(2)$_L$ gauge transformations, the prefactor may be rotated away. This is equivalent to setting 
+As $\Phi$ is invariant under local SU(2)$_{\mathrm{L}}$ gauge transformations, the prefactor may be rotated away. This is equivalent to setting 
 $\theta(x) = 0$ in equation \ref{reparamHiggsField}. This choice of gauge is known as the unitary gauge, and leads to 
 \begin{equation}
     \Phi = \frac{1}{\sqrt{2}}
     \begin{bmatrix}
         0 \\
         v + h(x)
-    \end{bmatrix}
+    \end{bmatrix}.
     \label{HiggsFieldUnitaryGauge}
 \end{equation}
 Given the above form of $\Phi$, we can now evaluate the Higgs Lagrangian (equation \ref{LHiggs}), starting with the kinetic term
@@ -174,7 +174,7 @@ Then the kinetic term of the Higgs Lagrangian can be recast as
     (D^{\mu}_L\Phi)^{\dagger}(D_{\mu,L}\Phi) &= \frac{1}{2}\partial_{\mu}h(x)\partial^{\mu}h(x) \\ 
     &+ \frac{1}{2}m_{Z}^{2}Z_{\mu}Z^{\mu} + m_{W}^{2}W_{\mu}^{+}W^{-\mu} \\
     &+ \frac{v}{4}(g^{2} + g'^{2})Z_{\mu}Z^{\mu}h + \frac{1}{8}(g^{2} + g'^{2})Z_{\mu}Z^{\mu}h^{2} \\
-    &+ \frac{v}{4}g^{2}W_{\mu}^{+}W^{-\mu}h + \frac{1}{8}g^{2}W_{\mu}^{+}W^{-\mu}h^{2} \label{kinHiggsMasses}\numberthis
+    &+ \frac{v}{4}g^{2}W_{\mu}^{+}W^{-\mu}h + \frac{1}{8}g^{2}W_{\mu}^{+}W^{-\mu}h^{2}. \label{kinHiggsMasses}\numberthis
 \end{align*}
 Equation \ref{kinHiggsMasses} provides a great deal of information on the physical ramifications of the Higgs mechanism.
 The first term is the kinetic term of the physical Higgs boson field. The second and third terms are the mass terms of the Z and W 
@@ -196,11 +196,7 @@ form of Yukawa couplings:
     + Y_{ij}^{e}\bar{L}^{i}_{L}\Phi e_{R}^{j} + h.c.,
     \label{LYukawa}
 \end{equation}
-where $\tilde{\Phi} \equiv i\tau_{2}\Phi^{*}$, and $u$, $d$, and $e$ represent up-type quarks, down-type quarks, and leptons, respectively. The constants $Y_{ij}^a$ denote the Yukawa couplings in each case, $Q^i$ is the set of SU(2) quark doublets, and $L^i$ is the set of SU(2) lepton doublets.
-\begin{equation}
-    \tilde{\Phi} \equiv i\tau_{2}\Phi^{*}
-    \label{PhiDual}
-\end{equation}
+where $\tilde{\Phi} \equiv i\tau_{2}\Phi^{*}$, and $u$, $d$, and $e$ represent up-type quarks, down-type quarks, and leptons, respectively. The constants $Y_{ij}^a$ denote the Yukawa couplings in each case, $Q^i$ is the set of SU(2)$_{\mathrm{L}}$ quark doublets, and $L^i$ is the set of SU(2)$_{\mathrm{L}}$ lepton doublets.
 Plugging in the unitary gauge parameterization of equation \ref{HiggsFieldUnitaryGauge}, this evaluates to 
 \begin{align}
     \mathcal{L}_{Yukawa} = \frac{Y_{ij}^{d}}{\sqrt{2}}\bar{d}_{L}^{i}(v + h)d_{R}^{j} 
@@ -211,11 +207,11 @@ It is worth looking closely at the terms in equation \ref{expandedLYuk}. For a g
 is a fermion mass term. The second term in the parentheses gives the coupling of the fermion to the Higgs boson. With this in mind, 
 we observe that the fermion mass is given in terms of the couplings and the Higgs vev by 
 \begin{equation}
-    m_{f} = \frac{y_{f}v}{\sqrt{2}}
+    m_{f} = \frac{y_{f}v}{\sqrt{2}},
     \label{fermionMass}
 \end{equation}
 where $y_{f}$ is the relevant value taken from the Yukawa coupling matrix. In addition, we see that the strength of the fermion coupling
-to the Higgs boson is given by $\frac{m_{f}}{v}$. Thus, fermions couple to the Higgs boson with strength directly proportional 
+to the Higgs boson is given by $\frac{m_{f}}{v}$. Thus, fermions couple to the Higgs boson with strengths directly proportional 
 to their masses. This result has important consequences in the context of collider experiments, as it regulates the rates of
 Higgs production and decay related to each fermion-Higgs interaction. 
 
@@ -248,7 +244,7 @@ Higgs production and decay related to each fermion-Higgs interaction.
 
 At a hadron collider like the LHC, the Higgs boson can be produced via several different mechanisms, with each mechanism occuring at a certain rate. The dominant production 
 mechanism is gluon-gluon fusion (ggH), followed by vector boson fusion (VBF) production, which is about an order of magnitude rarer. Less common production mechanisms, but 
-still relevant for a search at the LHC, are the associated production mechanisms WH, ZH, and $\ttbar\PH$). The cross sections for each Higgs production mechanism as a function of 
+still relevant for a search at the LHC, are the associated production mechanisms WH, ZH, and $\ttbar\PH$. The cross sections for each Higgs production mechanism as a function of 
 center of mass energy are shown in Fig. \ref{fig:higgs_prod}.
 
 \begin{figure}[tb]
@@ -283,7 +279,7 @@ The branching fraction of \hzg{} is suppressed relative to several other product
 One of the goals of the LHC is to search for BSM physics. While the decay \hzg{} is predicted in the SM, searching for it and measuring its branching fraction can indirectly probe potential 
 new physics phenomena. A few unique features of \hzg{} make it well-suited as a BSM probe. First, the decay is loop-induced, which means that the introduction of new particles will contribute 
 to the loop, interfering and altering the final branching fraction. Secondly, the decay \hgg{} is a very similar loop-induced process. This means any new particle content entering into the \hzg{} loop will also enter into the \hgg{} loop. However, in the case of \hzg{}, the
-Z boson couples to loop particles according to the SU(2)xU(1) quantum number rather than just the electric charge, as is the case for \hgg{}. 
+Z boson couples to loop particles according to the SU(2)$_{\mathrm{L}}$xU(1) quantum number rather than just the electric charge, as is the case for \hgg{}. 
 It follows that potential BSM physics scenarios can shift the 
 branching fractions of \hzg{} and \hgg{} by differing amounts, making the ratio $\mathcal{B}(\PH\rightarrow\PZ\gamma)/\mathcal{B}(\PH\rightarrow\gamma\gamma)$ a sensitive observable. In the SM, 
 $\mathcal{B}(\PH\rightarrow\PZ\gamma)/\mathcal{B}(\PH\rightarrow\gamma\gamma) = 0.69 \pm 0.04$. A measurement of a significant deviation from this value would be an indicator of possible BSM physics.
@@ -291,7 +287,7 @@ Below, we describe a few examples of BSM scenarios that can affect this ratio.
 
 One way to consider BSM effects in the context of \hzg{} is to introduce new particles, like a W' boson, charged scalar, or a pair of charged leptons. 
 This is the approach taken by Carena, Low, and Wagner~\cite{Zg_theory_decaywidth}. The W' possibility is motivated by the fact that the W boson loop is the dominant 
-contribution in the SM. The W' can be defined by an SU(2) triplet and characterized by mass and Higgs coupling parameters. Figure \ref{fig:rzg_bsm} (left) shows contours of constant branching fraction 
+contribution in the SM. The W' can be defined by an SU(2)$_{\mathrm{L}}$ triplet and characterized by mass and Higgs coupling parameters. Figure \ref{fig:rzg_bsm} (left) shows contours of constant branching fraction 
 enhancement in the \hzg{} and \hgg{} decay channels in the mass-coupling plane for the W' model. 
 Depending on the parameter values, the level of enhancement can be up to double the SM value, and it differs 
 significantly in the two channels. Similarly, we can imagine a new charged scalar or a pair of new charged leptons. The branching fraction enhancement contour plots in Fig. \ref{fig:rzg_bsm} show that for similar regions in the mass-coupling plane, \hzg{} can be enhanced, while \hgg{} is simultaneously diminished. 
@@ -336,7 +332,7 @@ In the SM, the value of $\lambda$ in equation \ref{expandedVHiggs} is the same f
 different than the value in the SM. This would enter into amplitudes for two-loop processes, such as those shown in Fig. \ref{fig:two-loop_diagrams}. In turn, this would
 modify the \hzg{} branching fraction relative to the SM prediction. An advantage of this approach is that it does not depend on the specifics of the BSM model giving rise to the 
 anomalous trilinear Higgs self-coupling, so it can serve as a more general probe for new physics. Degrassi and Vitti show that \hzg{} is among the most sensitive Higgs decay modes to an 
-anomalous trilinear Higgs self-coupling, more sensitive than \hgg{} and only slightly less sensitive than $\PH\rightarrow\PZ\PZ^*$. 
+anomalous trilinear Higgs self-coupling, more sensitive than \hgg{} and only slightly less sensitive than $\PH\rightarrow\PZ\PZ$. 
 
 \begin{figure}[tb]
 	\begin{center}
