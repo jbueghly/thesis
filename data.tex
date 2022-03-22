@@ -43,13 +43,13 @@ The dominant backgrounds, $\PZ/\gamma^{*}(\rightarrow \ell^+\ell^-)$+$\gamma$ an
 are generated at NLO using the \MGvATNLO v2.6.0 (v2.6.1) 
 generator~\cite{Alwall:2014hca} for 2016 (2017 and 2018) samples. 
  Events arising from $\ttbar$ production~\cite{Frixione:2007nw} are a relatively minor background and are generated at NLO with \POWHEG v2.0~\cite{cite:powheg1,cite:powheg2}.
- The background from vector boson scattering (VBS) production of $\PZ/\gamma^{*}$+$\gamma$ pairs, with the $\PZ$ boson decaying to a pair of leptons, is simulated at leading order using the \MGvATNLO generator. The decay $\PH\to\mu^+\mu^-$ is considered as a resonant background and is generated for the $\Pg\Pg\PH$, VBF,  $\mathrm{V}\PH$, and $\ttbar\PH$ production mechanisms. The $\Pg\Pg\PH$ production cross section is
+ The background from vector boson scattering (VBS) production of $\PZ/\gamma^{*}$+$\gamma$ pairs, with the $\PZ$ boson decaying to a pair of leptons, is simulated at leading order using the \MGvATNLO generator. The decay $\PH\to\mpmm$ is considered as a resonant background and is generated for the $\Pg\Pg\PH$, VBF,  $\mathrm{V}\PH$, and $\ttbar\PH$ production mechanisms. The $\Pg\Pg\PH$ production cross section is
 computed at next-to-next-to-NLO precision in QCD and at NLO in electroweak (EWK)
 theory~\cite{Anastasiou:2016cez}. 
 The cross sections for Higgs boson production in the VBF~\cite{PhysRevLett.115.082002} and VH~\cite{BREIN2004149} mechanisms are calculated at next-to-NLO in QCD, including NLO EWK corrections, while the $\ttbar\PH$ cross section is computed at NLO in QCD and EWK theory~\cite{PhysRevD.68.034022}. 
 
 A full list of simulated physics processes used in the analysis is provided in Table \ref{tab:sim_samples}, along with cross section and branching fraction information. 
-For the \hzg{} and $\PH\to\mu^+\mu^-$ samples, the SM Higgs boson production cross sections and branching fractions
+For the \hzg{} and $\PH\to\mpmm$ samples, the SM Higgs boson production cross sections and branching fractions
 recommended by the LHC Higgs Working
 Group~\cite{LHC-YR4} are used for each mass point.
 The values for the Higgs boson processes listed in Table \ref{tab:sim_samples} correspond to $m_{\PH}=125\GeV$.
@@ -104,10 +104,10 @@ The events with prompt, final state photons are tagged using generator-level tru
 
 \section{Photon Internal Conversion}
 \label{sec:gconversion}
-The PYTHIA 8 showering algorithm automatically 
-includes a component in which $\PH\to\PGg\PGg$ photons are 
-internally converted via the process $\PH\to\PGg\PGg*\to \mathrm{f\bar{f}}\PGg\PGg$, with $\mathrm{f\bar{f}}$ mostly $\epem$. 
-This also affects the $\PH\to \PZ\PGg$ signal and $\PZ\PGg$ background samples. 
+The \PYTHIA 8 showering algorithm automatically 
+includes a component in which photons from \hgg{} are
+internally converted via the process $\PH\to\gamma\gamma^*\to \mathrm{f\bar{f}}\gamma\gamma$, with $\mathrm{f\bar{f}}$ mostly $\epem$. 
+This also affects the \hzg{} signal and $\PZ\gamma$ background samples. 
 Since the normalization of these samples does not include the internal conversion component, the cross section must be adjusted accordingly.
 To determine the amount by which the cross section is adjusted, we measure the internal conversion
 rate in simulation. 
