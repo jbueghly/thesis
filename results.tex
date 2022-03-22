@@ -83,72 +83,24 @@ The black solid line shows $\mu=1$, and the red dashed line shows the best fit v
 
 \section{Ratio Measurement}
 The ratio $\mathcal{B}(H\rightarrow\PZ\gamma)/\mathcal{B}(H\rightarrow\gamma\gamma)$ is theoretically interesting, as it is 
-potentially sensitive to beyond BSM physics, such as supersymmetry and extended Higgs 
-sectors~\cite{Djouadi:1996yq,Zg_theory_extension,Zg_theory_decaywidth}.
-BSM effects from models such as these typically shift the $H\rightarrow\PZ\gamma$ and $\PH\to\PGg\PGg$ branching fractions 
-by different amounts, making the ratio the most sensitive observable. 
-By combining the $H\rightarrow\PZ\gamma$ analysis with the existing CMS $\PH\to\PGg\PGg$ analysis, described in Ref.~\cite{CMS:2021kom}, 
-we can obtain a measurement of this ratio and compare it to the SM prediction of $0.69 \pm 0.04$. An experimental advantage 
-of this measurement is the cancellation of common theoretical uncertainties related to Higgs boson production and common experimental 
-uncertainty sources like the L1 prefiring issue.
+potentially sensitive to BSM physics, as described in Chapter \ref{sec:intro}.
+By combining the \hzg{} analysis with the existing CMS $\PH\to\gamma\gamma$ analysis of the same data set~\cite{CMS:2021kom}, 
+we can obtain a measurement of this ratio and compare it to the SM prediction of $0.69 \pm 0.04$. 
 
-The ratio measurement is obtained via a combined fit of the two analyses with two parameters of interest: the $\PH\to\PGg\PGg$ signal 
-strength with respect to the SM expectation ($\mu_{\gamma\gamma}$) and the ratio of the signal strengths for the two channels
-($\mu_{Z\gamma} / \mu_{\gamma\gamma}$). After obtaining the best fit values for these parameters of interest, 
-the ratio of signal strengths can be scaled to obtain the ratio of branching fractions. Common systematic uncertainties in the two 
-analyses are correlated in the combined fit, and are listed in Table \ref{tab:corr_unc}. The combination is performed at 
-a Higgs boson mass of 125.38 GeV, and discrete profiling of the background models is enabled for both analyses. 
-
-The profile likelihood scans for the parameters of interest are shown in Figure \ref{fig:scan_br}. The best fit values of the 
+The profile likelihood scans for the parameters of interest in the ratio fit are shown in Figure \ref{fig:scan_br}. The best fit values of the 
 parameters of interest are $\mu_{\gamma\gamma} = 1.121^{+0.095}_{-0.090}$ and 
 $\mu_{Z\gamma}/\mu_{\gamma\gamma} = 2.225^{+0.926}_{-0.825}$. 
-The value of $\mu_{\gamma\gamma}$ agrees well with the standalone $\PH\to\PGg\PGg$ fit. 
+The value of $\mu_{\gamma\gamma}$ agrees well with the standalone $\PH\to\gamma\gamma$ fit. 
 Multiplying through, the value of $\mu_{Z\gamma}$ is 2.49, which 
-agrees well with the result of the standalone $H\rightarrow\PZ\gamma$ fit.
-The measured value of $\mathcal{B}(\PH\to\PZ\gamma)/\mathcal{B}(\PH\to\gamma\gamma)$ from the combined fit with the $\PH\to\PGg\PGg$
-analysis is \brRatio. This measurement is consistent with the SM prediction for the ratio at the \brRatioCompat\, standard deviation level. 
-The nuisance parameter impacts on the signal strength ratio are shown in Figure \ref{fig:ratio_impacts}.
-
-\begin{table}
-   \centering   
-   % \resizebox{\textwidth}{15mm}{
-      
-\begin{tabular}{cc}
-   Source &\\\hline
-   Theoretical uncertainties&\\\\
-   Scale uncertainties  &  QCD scale ZH\\
-                        &  QCD scale WH\\
-                        &  QCD scale ggH\\
-                        &  QCD scale qqH\\
-                        &  QCD scale ttH\\
-   PDF uncertainties    &  pdf\_Higgs\_ggH\\
-                        &  pdf\_Higgs\_VH\\
-                        &  pdf\_Higgs\_qqH\\
-                        &  pdf\_Higgs\_ttH\\\hline
-   Systematic uncertainties&\\\\
-   Luminosity  &lumi\_13TeV\_Uncorrelated\_2016,2017,2018\\
-                            &lumi\_13TeV\_Beam\_Current\_Calibration\\
-                            &lumi\_13TeV\_Beam\_Beam\_Deflection\\
-                            &lumi\_13TeV\_Dynamic\_Beta\\
-                            &lumi\_13TeV\_Ghosts\_And\_Satellite\\
-                            &lumi\_13TeV\_Length\_Scale\\
-                            &lumi\_13TeV\_X\_Y\_Factorization\\
-   Parton showering        &PartonShower\_norm\\
-   Underlying events        &UnderlyingEvent\_norm\\
-   L1-prefire           &2016,2017 L1 prefire uncertainty\\
-                        
-
-\end{tabular}
-% }
-\caption{Correlated uncertainties between $\PH\to\cPZ\gamma$ and $\PH\to\gamma\gamma$ for the $\mathcal{B}(\PH\to\cPZ\gamma)/\mathcal{B}(\PH\to\gamma\gamma)$ measurement.}
-\label{tab:corr_unc}
-\end{table}
+agrees well with the result of the standalone \hzg{} fit.
+The measured value of $\mathcal{B}(\PH\to\PZ\gamma)/\mathcal{B}(\PH\to\gamma\gamma)$ is \brRatio. 
+This measurement is consistent with the SM prediction for the ratio at the \brRatioCompat\, standard deviation level. 
 
 \begin{figure}
    \begin{center}
    \includegraphics[width=0.45\textwidth]{fig/results/ratio/scan_mu_BR_gamgam.pdf}
    \includegraphics[width=0.45\textwidth]{fig/results/ratio/scan_mu_BR_Zgam_r_BR_gamgam.pdf}\\
-   \caption{Profile likelihood scans of $\mu_{\gamma\gamma}$ and $\mu_{\PZ\gamma}/\mu_{\gamma\gamma}$ with fixed $m_H=125.38\GeV$.}
+   \caption{Profile likelihood scans of $\mu_{\gamma\gamma}$ and $\mu_{\PZ\gamma}/\mu_{\gamma\gamma}$ for $m_H=125.38\GeV$.}
    \label{fig:scan_br}
    \end{center}    
 \end{figure}
