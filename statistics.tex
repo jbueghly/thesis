@@ -66,8 +66,8 @@ Figure \ref{fig:elesigfit} (\ref{fig:musigfit}) shows the signal fits for the $m
 \end{figure}
 
 \section{Resonant Background Modeling}
-The process $\PH\to\Pgmp\Pgmm$, where at least one muon radiates an FSR photon, is expected to contribute at the 6\% level relative to the $\PH\to\PZ\PGg$ signal yield. Because of this, 
-we treat it as a resonant background. To model the $\PH\to\Pgmp\Pgmm$ shape, we perform fits to the $m_{\ell^+\ell^-\gamma}$ distributions in simulated event samples, following the same 
+The process $\PH\to\mpmm$, where at least one muon radiates an FSR photon, is expected to contribute at the 6\% level relative to the \hzg{} signal yield. Because of this, 
+we treat it as a resonant background. To model the $\PH\to\mpmm$ shape, we perform fits to the $m_{\lplm\gamma}$ distributions in simulated event samples, following the same 
 procedure used for the signal fits described above. As for the signal, the analytic model is taken to be the sum of Crystal Ball and Gaussian functions. The resulting fits are shown 
 in Appendix \ref{sec:appendix_hmumu}. 
 
@@ -116,7 +116,7 @@ These families are described in more detail below.
 \begin{itemize}
 	\item exponential series of order N:
 	\begin{equation}
-        \mathrm{Exp_{N}}(m_{\ell\ell\gamma}) = \sum\limits_{i=1}^{N}f_ie^{p_i\, m_{\ell\ell\gamma}}
+        \mathrm{Exp_{N}}(m_{\lplm\gamma}) = \sum\limits_{i=1}^{N}f_ie^{p_i\, m_{\lplm\gamma}}
 	\end{equation}
 	with $2N$ free parameters: $p_i < 0$ and $f_i$.
 	The lowest order considered has $N=1$, i.e. one term.
@@ -124,34 +124,34 @@ These families are described in more detail below.
 
 	\item power law series of order N:
 	\begin{equation}
-        \mathrm{Pow_{N}}(m_{\ell\ell\gamma}) = \sum\limits_{i=1}^{N}f_im_{\ell\ell\gamma}^{p_i}
+        \mathrm{Pow_{N}}(m_{\lplm\gamma}) = \sum\limits_{i=1}^{N}f_im_{\lplm\gamma}^{p_i}
 	\end{equation}
 	with $2N$ free parameters: $p_i < 0$ and $f_i$.
 	The lowest order considered has $N=1$, i.e. one term.
 	
 	\item Laurent series with 2, 3, 4, 5, or 6 terms, where N + 1 equals the number of free parameters:
 	\begin{equation}
-        \mathrm{Lau_{1}}(m_{\ell\ell\gamma}) = f_2m_{\ell\ell\gamma}^{-4}+f_3m_{\ell\ell\gamma}^{-5}
+        \mathrm{Lau_{1}}(m_{\lplm\gamma}) = f_2m_{\lplm\gamma}^{-4}+f_3m_{\lplm\gamma}^{-5}
 	\end{equation}
 	\begin{equation}
-        \mathrm{Lau_{2}}(m_{\ell\ell\gamma}) = f_1m_{\ell\ell\gamma}^{-3}+f_2m_{\ell\ell\gamma}^{-4}+f_3m_{\ell\ell\gamma}^{-5}
+        \mathrm{Lau_{2}}(m_{\lplm\gamma}) = f_1m_{\lplm\gamma}^{-3}+f_2m_{\lplm\gamma}^{-4}+f_3m_{\lplm\gamma}^{-5}
 	\end{equation}
 	\begin{equation}
-        \mathrm{Lau_{3}}(m_{\ell\ell\gamma}) = f_1m_{\ell\ell\gamma}^{-3}+f_2m_{\ell\ell\gamma}^{-4}+f_3m_{\ell\ell\gamma}^{-5}+f_4m_{\ell\ell\gamma}^{-6}
+        \mathrm{Lau_{3}}(m_{\lplm\gamma}) = f_1m_{\lplm\gamma}^{-3}+f_2m_{\lplm\gamma}^{-4}+f_3m_{\lplm\gamma}^{-5}+f_4m_{\lplm\gamma}^{-6}
 	\end{equation}
 	\begin{equation}
-        \mathrm{Lau_{4}}(m_{\ell\ell\gamma}) = f_1m_{\ell\ell\gamma}^{-2}+f_2m_{\ell\ell\gamma}^{-3}+f_3m_{\ell\ell\gamma}^{-4}+f_4m_{\ell\ell\gamma}^{-5}+f_5m_{\ell\ell\gamma}^{-6}
+        \mathrm{Lau_{4}}(m_{\lplm\gamma}) = f_1m_{\lplm\gamma}^{-2}+f_2m_{\lplm\gamma}^{-3}+f_3m_{\lplm\gamma}^{-4}+f_4m_{\lplm\gamma}^{-5}+f_5m_{\lplm\gamma}^{-6}
 	\end{equation}
 	\begin{equation}
-        \mathrm{Lau_{5}}(m_{\ell\ell\gamma}) = f_1m_{\ell\ell\gamma}^{-2}+f_2m_{\ell\ell\gamma}^{-3}+f_3m_{\ell\ell\gamma}^{-4}+f_4m_{\ell\ell\gamma}^{-5}+f_5m_{\ell\ell\gamma}^{-6}+f_6m_{\ell\ell\gamma}^{-7}
+        \mathrm{Lau_{5}}(m_{\lplm\gamma}) = f_1m_{\lplm\gamma}^{-2}+f_2m_{\lplm\gamma}^{-3}+f_3m_{\lplm\gamma}^{-4}+f_4m_{\lplm\gamma}^{-5}+f_5m_{\lplm\gamma}^{-6}+f_6m_{\lplm\gamma}^{-7}
 	\end{equation}
 	
 	\item Bernstein polynomial of order N:
     \begin{equation}
-        \mathrm{Bern_{N}}(m_{\ell\ell\gamma}) = \sum\limits_{i=0}^{N}f_{i}b_{i,N}(m_{\ell\ell\gamma})
+        \mathrm{Bern_{N}}(m_{\lplm\gamma}) = \sum\limits_{i=0}^{N}f_{i}b_{i,N}(m_{\lplm\gamma})
     \end{equation}
     \begin{equation}
-        \mathrm{b_{i,N}}(m_{\ell\ell\gamma}) = \binom{N}{i}m_{\ell\ell\gamma}^{i}(1 - m_{\ell\ell\gamma}^{N-i})
+        \mathrm{b_{i,N}}(m_{\lplm\gamma}) = \binom{N}{i}m_{\lplm\gamma}^{i}(1 - m_{\lplm\gamma}^{N-i})
     \end{equation}
     with $N$ free parameters $f_{i}$. The lowest order considered has $N=1$.
 \end{itemize}
@@ -165,7 +165,7 @@ discrete nuisance parameter in the full likelihood function. All reasonable fami
 functions should be considered, and a range of orders should be considered within each family. 
 The set of functions profiled in a given category is referred to as an \textit{envelope}.
 The exact composition of the envelope in each category
-is based on a set of selection requirements that account for goodness of fit, an $\mathcal{F}$-test~\cite{Fisher:1922saa} procedure that determines the highest order function to be included, 
+is based on a set of selection requirements that account for goodness of fit, an $\mathcal{F}$-test~\cite{Fisher:1922saa} procedure that determines the highest-order function to be included, 
 and an assessment of bias and frequentist coverage. The details of this selection will be described later in this chapter.
 When fitting the background, all functions in the envelope are tried, with a penalty term added to the likelihood 
 to account for the number of free parameters in the fit and ensure that higher-order functions are not preferred a priori. When a measurement is made of 
@@ -190,7 +190,7 @@ fit is better in a statistically significant way. If it is not significantly bet
 The details of the $\mathcal{F}$-test procedure are as follows. 
 First, the lowest-order function in a given family is fit to the data in a given
 category. Then, the next-highest-order function is fit to the same data. The difference between twice 
-the negative log likelihood between the two fits, $2\Delta NLL_{N+1} = 2(NLL_{N}-NLL_{N+1})$, 
+the negative log likelihood, $2\Delta NLL_{N+1} = 2(NLL_{N}-NLL_{N+1})$, of the two fits
 can be used to determine whether the data better support the higher-order function. 
 More specifically, $2\Delta NLL_{N+1}$ is distributed as a chi-squared function with $M$ degrees of 
 freedom, where $M$ is the difference in the number of free parameters between the order $N+1$ 
@@ -217,7 +217,7 @@ In general, this means that different pseudo-data sets may be fit by different
 constituent functions within the envelope, and these functions may be different from the generating function. 
 With the resulting collection of fits, we compute the bias and frequentist coverage of the signal strength $\mu$. 
 For each fit, we obtain a best fit signal strength $\hat{\mu}$ and a 68\% confidence interval
-($\hat{\mu}_{\mathrm{down}}$, $\hat{\mu}_{\mathrm{up}}$). We define the pull for each toy as 
+($\hat{\mu}_{\mathrm{down}}$, $\hat{\mu}_{\mathrm{up}}$). We define the pull for each pseudo-data set as 
 $(\hat{\mu}-\mu_{\mathrm{true}})/\sigma_{\hat{\mu}}$. 
 The pull distribution is expected to be drawn from a unit Gaussian function. 
 We fit the pull distribution with a Gaussian, and the best fit mean 
@@ -242,7 +242,7 @@ The corresponding bias and coverage results for the final envelope in each categ
 are shown in Tables \ref{tab:bias_cat1_m105-170} through \ref{tab:bias_cat6789_m105-170}. 
 In the categories untagged 3, untagged 4, and dijet 3, it was observed that the initial functions chosen 
 by the chi-squared and $\mathrm{F}$-test procedure showed large biases (greater than 20\%) and low coverages (less than 60\%) for 
-certain truth functions. Therefore, the envelope was extended to include higher order Bernstein functions up 
+certain truth functions. Therefore, the envelope was extended to include higher-order Bernstein polynomials up 
 to order 5 for each of these categories. The bias tables for these categories reflect the results for the final 
 extended envelope, including these added functions. 
 
@@ -378,8 +378,8 @@ The asymptotic approximation for the sampling distribution of $q(\mu)$ is assume
 The expected significance under the SM hypothesis and the expected upper limits under the background-only hypothesis are also reported.
 These are obtained by fitting to the corresponding Asimov data sets~\cite{Cowan:2010js}.
 
-In addition, a combined maximum likelihood fit with the CMS measurement~\cite{CMS:2021kom} of $\PH\to\PGg\PGg$ using the same data sample is performed to determine the ratio $\mathcal{B}(\PH\to\PZ\gamma)/\mathcal{B}(\PH\to\gamma\gamma)$.
-The $\PH\to\PGg\PGg$ analysis obtained a signal strength for $\sigma(\Pp\Pp\to\PH)\mathcal{B}(\PH\to\PGg\PGg)$ of $1.12\pm0.09$.
+In addition, a combined maximum likelihood fit with the CMS measurement~\cite{CMS:2021kom} of \hgg{} using the same data sample is performed to measure the value of the ratio $\mathcal{B}(\PH\to\PZ\gamma)/\mathcal{B}(\PH\to\gamma\gamma)$.
+The \hgg{} analysis obtained a measurement of the signal strength for $\sigma(\Pp\Pp\to\PH)\mathcal{B}(\PH\to\gamma\gamma)$ of $1.12\pm0.09$.
 In this combined fit, the branching fraction $\mathcal{B}(\PH\to\gamma\gamma)$ is an additional free parameter.
 The uncertainty in the measured ratio of the two branching fractions is dominated by the statistical uncertainties in the branching fractions.
 Common sources of theoretical and experimental uncertainty in the two measurements, described in the next section, are treated as correlated in the fit.
