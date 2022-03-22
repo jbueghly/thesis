@@ -73,7 +73,7 @@ The crystal length corresponds to 25.8 (24.7) radiation lengths in the EB (EE). 
 electrons and photons, encounter the ECAL and interact with the crystal material, electromagnetic showers are induced. 
 Light is emitted by the ECAL crystals proportional to the energy of constituent particles in the shower, allowing 
 for reconstruction of the shower energy. An array of fast and radiation-tolerant photodetectors detects the emitted light, and this information is saved off detector. 
-For this purpose, the EB uses avalanche photodiodes, while the EE uses vacuum phototriodes. As shown in Fig. \ref{fig:cms_ecal_response}, the ECAL has maintained good performance with minimal degradation throughout the duration of Run 1 and Run 2 of the LHC.
+As shown in Fig. \ref{fig:cms_ecal_response}, the ECAL has maintained good performance with minimal degradation throughout the duration of Run 1 and Run 2 of the LHC.
 
 \begin{figure}[tb]
   \centering
@@ -99,7 +99,7 @@ materials within the solenoid, such as the calorimeters. Most other types of par
 resistive plate chambers (RPCs). The DTs cover the barrel region ($|\eta| < 1.2$) and are arranged in four stations, each with 60--70 drift chambers containing a gas mixture of 85\% Ar and 15\% CO$_2$.
 The CSCs are multiwire proportional chambers composed of anode wire planes interleaved with cathode panels. Muons passing through the CSCs ionize a gas mixture of 40\% Ar, 50\% CO$_2$, and 10\% CF$_4$, 
 and the electrons flow to the anodes, yielding a detectable avalanche of charge. Covering the region $|\eta| < 2.1$, the RPCs are composed of oppositely charged parallel plates enclosing a gas mixture 
-of primarily $\mathrm{C}_2\mathrm{H}_2\mathrm{F}_4$. One advantage of the RPCs is their good time resolution, which is less than the LHC bunch spacing time of 25ns. This makes them useful for fast muon triggering that matches
+of primarily $\mathrm{C}_2\mathrm{H}_2\mathrm{F}_4$. One advantage of the RPCs is their good time resolution, which is less than the LHC bunch spacing time of 25 ns. This makes them useful for fast muon triggering that matches
 muon tracks to the relevant bunch crossing. Figure \ref{fig:muon_system} shows a cross-sectional view of the CMS detector highlighting the muon system components. 
 
 \begin{figure}[tb]
@@ -111,7 +111,7 @@ muon tracks to the relevant bunch crossing. Figure \ref{fig:muon_system} shows a
 \end{figure}
 
 \section{Trigger System}
-At the LHC, the proton beam crossing interval is 25 ns, which corresponds to a pp collision rate of 40 MHz. Recording the full set of detector information for each collision is unfeasible, as there is far too much data to save to disk. As a result, the CMS experiment employs a two-tiered trigger system, designed to preserve information of physics interest while reducing the 
+At the LHC, the proton beam crossing interval is 25 ns, which corresponds to a pp collision rate of 40 MHz. Recording the full set of detector information for each collision is unfeasible, as there is far too much data to save to disk. Because of this, the CMS experiment employs a two-tiered trigger system, designed to preserve information of physics interest while reducing the 
 stored event rate to a more manageable 100 Hz. The first level of the trigger (L1) is a hardware trigger, which reduces the event rate from 40 MHz to about 100 kHz. The second layer is the 
 high level trigger (HLT), a processor farm using software optimized for fast processing. 
 
@@ -168,7 +168,7 @@ Muon reconstruction utilizes information from the muon detectors and the tracker
 Subsequently, these standalone muon tracks are combined with tracker information via two algorithms. So-called ``tracker muons" are reconstructed using an ``inside-out" algorithm, which starts from 
 tracker tracks and matches them to DT or CSC segments. So-called ``global muons" are reconstructed with an ``outside-in" approach, which starts from standalone muon tracks and matches them 
 to tracker tracks using a Kalman filter technique. If both algorithms reconstruct a muon sharing the same tracker track, the two outputs are merged into a single muon candidate.
-In general, the tracker muon algorithm is more efficient in the region of low muon \pt, while the global algorithm is more efficient at high \pt. 
+In general, the tracker muon algorithm is more efficient for low muon \pt, while the global algorithm is more efficient for high \pt. 
 
 The momentum of muons is obtained from the corresponding track momentum. Matching muons to tracks measured in the silicon tracker results in a \pt resolution, for muons with \pt up to $100$\GeV, of $1$\% in the barrel and $3$\% in the endcaps. The \pt resolution in the barrel is better than $7$\% for muons with \pt up to $1$\TeV~\cite{CMS:2018rym}. As shown in Fig. \ref{fig:muon_resolution}, this corresponds to a dimuon mass resolution in $\PZ\to\mpmm$ events of roughly 1--2\GeV, depending on the pseudorapidity of the muons~\cite{MUON:DP2019}. 
 
