@@ -4,7 +4,7 @@ arising from different Higgs boson production mechanisms. In general, these prod
 Mutually exclusive categories are defined in order to take advantage of this. 
 In previously published CMS searches for \hzg{}, cut-based approaches were used to define the categories. However, in the present analysis, 
 the categorization strategy has been updated and improved using machine learning methods. The remainder of this chapter describes the categorization 
-strategy in detail and summarizes the final categories used in the full Run 2 \hzg{} analysis.
+strategy in detail and summarizes the final categories used in the CMS full Run 2 \hzg{} analysis.
 
 The signal candidates from the $\mathrm{V}\PH$ and $\ttbar\PH$ production mechanisms are targeted using a lepton-tagged category, 
 in which at least one electron or muon is present beyond those used to reconstruct the 
@@ -144,18 +144,18 @@ $\ttbar$ events are considered background. Due to their very small contribution,
 of the selected jets from the VBF signal correspond to the true VBF jets in which we are interested. Because of this, we perform an additional matching 
 procedure for these jets. In order for a VBF signal event to be used in the training, both reconstructed jets must be matched 
 to generator-level partons, which must, in turn, be matched to the generator-level \pt values of the true VBF partons. 
-Only half of the simulated events are used for the training procedure, with the remainder used for category optimization
+Only half of the simulated events satisfying this requirement are used for the training procedure, with the remainder used for category optimization
 and signal $m_{\lplm\gamma}$ shape modeling. Events from all three data-taking years in both the muon and electron channels are combined for training, weighted by the respective cross sections 
 and by the recorded integrated luminosity of each data-taking year.
 
 \subsection{Training Features}
 The training features used for the VBF BDT include quantities that distinguish events with the VBF topology from other types of events, as well as quantities that 
-distinguish signal from background based on kinematics. Since the categorization strategy treats dijet jets separately from other types of events, including these 
+distinguish signal from background based on kinematics. Since the categorization strategy treats dijet events separately from other types of events, including these 
 kinematic variables is not redundant with the kinematic BDT described above. The two variables used for kinematic separation of signal and background for the VBF BDT are 
 the kinematic BDT score and the variable $p_{\mathrm{T}}^{t}$, defined in Chapter \ref{sec:analysis_overview}. Because the kinematics of the two leptons and photon are 
 similar for VBF signal events and other signal production mechanisms, the previously trained kinematic BDT is expected to yield good discrimation power between VBF signal and backgrounds. 
 By introducing the variable $p_{\mathrm{T}}^{t}$, we add another feature sensitive to boost of the Higgs boson. This takes advantage of the recoil of the Higgs boson against the jets, and along 
-with the $\pt$/m in the kinematic BDT, replaces the need for a boosted category. Signal and background shapes for the kinematic BDT score and $p_{\mathrm{T}}^{t}$ are shown in Fig. 
+with the variable $\pt^{\lplm\gamma}/m_{\lplm\gamma}$ in the kinematic BDT, replaces the need for a boosted category. Signal and background shapes for the kinematic BDT score and $p_{\mathrm{T}}^{t}$ are shown in Fig. 
 \ref{fig:kin_bdt_ptt}, where background refers to the full training background, including ggH \hzg{} events.
 
 \begin{figure}[tb]
@@ -312,7 +312,7 @@ The category definitions are summarized in Table~\ref{tab:category}.
 \end{table}
 
 Table~\ref{tab:yield} lists the event categories used in the analysis, along with the expected event yields for an $m_{\PH}=\mH\GeV$ signal arising from 
-$\Pg\Pg\PH$, VBF, $\mathrm{V}\PH$, and $\ttbar\PH$ production, as well as the resonant background contribution from FSR from $\PH\to\Pgmp\Pgmm$, which is 3--8\% of the \hzg{} yield, depending on the category. Event yields from other Higgs backgrounds such as $\PH\to\tau^+\tau^-$ and $\PH\to\gamma\gamma$ are estimated to be below the 1\% level relative to the \hzg{} yield and are neglected.
+$\Pg\Pg\PH$, VBF, $\mathrm{V}\PH$, and $\ttbar\PH$ production, as well as the resonant background contribution from FSR from $\PH\to\mpmm$, which is 3--8\% of the \hzg{} yield, depending on the category. Event yields from other Higgs backgrounds such as $\PH\to\tau^+\tau^-$ and $\PH\to\gamma\gamma$ are estimated to be below the 1\% level relative to the \hzg{} yield and are neglected.
 The dominant contribution to the signal yield is generally from $\Pg\Pg\PH$ production, except in the lepton-tagged category, in which $\mathrm{V}\PH$ and $\ttbar\PH$ events dominate, and in the dijet 1 category, in which VBF events dominate.
 The categorization procedure increases the sensitivity of the analysis by 24\% with respect to an inclusive event selection.  
 
