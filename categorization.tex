@@ -21,14 +21,14 @@ distribution is uniform, is denoted by $\Dkin$.
 
 \section{Kinematic Boosted Decision Tree}
 The kinematic BDT is used to distinguish \hzg{} signal events from background events based on the kinematics of the leptons and photon in the $\PZ\gamma$ candidate system, as well as on the measured properties of these physics objects.
-It is trained using simulated \hzg{} signal events from all Higgs boson production modes described in Chapter \ref{sec:data} and background events from $\PZ\gamma$, $\PZ$+jets, $\ttbar$, and VBS $\PZ\gamma$. The training is restricted to use half of the simulated events, with the other half 
+It is trained using simulated \hzg{} signal events from all Higgs boson production modes described in Chapter~\ref{sec:data} and background events from $\PZ\gamma$, $\PZ$+jets, $\ttbar$, and VBS $\PZ\gamma$. The training is restricted to use half of the simulated events, with the other half 
 reserved for subsequent category optimization and signal $m_{\lplm\gamma}$ shape modeling. All training events are required to pass the object and 
 event selection criteria described in Chapter 6. Events from 2016, 2017, and 2018 simulation samples in both the muon and electron channels 
 are combined for training, weighted by their respective cross sections and by the recorded integrated luminosity of each data-taking year.
 
 \subsection{Training Features}
 The choice of training variables (features) for the kinematic BDT is guided by existing theoretical physics knowledge, categorization strategies in the prior \hzg{} analyses, and empirical methods. From a theoretical perspective, the decay angles between the final state particles are known to provide 
-some discriminating power between signal and background. These angular features, described in Refs. \cite{HZg_angle1,HZg_angle2}, include $\cos\Theta$, $\cos\theta$, and $\phi$, where $\Theta$ is the production angle of the $\PZ$ boson in the Higgs boson center-of-mass frame, and $\theta$ and $\phi$ are the polar and azimuthal decay angles of the leptons in the $\PZ$ boson center-of-mass frame, respectively. Figure \ref{fig:kinangles} shows how these angles are defined, and Fig. \ref{fig:kin_GEN_angles} shows the theoretical and reconstructed distributions of these quantities. Based on the theoretical distributions, these angular features are expected to offer good discriminating power between signal and background. However, it must be noted that the discriminating power is reduced for the final reconstructed quantities, since these angles are highly correlated with other analysis selection requirements, such as the mass cuts. 
+some discriminating power between signal and background. These angular features, described in Refs.~\cite{HZg_angle1,HZg_angle2}, include $\cos\Theta$, $\cos\theta$, and $\phi$, where $\Theta$ is the production angle of the $\PZ$ boson relative to the incoming parton in the Higgs boson center-of-mass frame, and $\theta$ and $\phi$ are the polar and azimuthal decay angles of the leptons in the $\PZ$ boson center-of-mass frame, respectively. Figure~\ref{fig:kinangles} shows how these angles are defined, and Fig.~\ref{fig:kin_GEN_angles} shows the theoretical and reconstructed distributions of these quantities. Based on the theoretical distributions, these angular features are expected to offer good discriminating power between signal and background. However, it must be noted that the discriminating power is reduced for the final reconstructed quantities, since these angles are highly correlated with other analysis selection requirements, such as the mass cuts. 
 
 \begin{figure}[tb]
 	\begin{center}
@@ -50,7 +50,7 @@ some discriminating power between signal and background. These angular features,
 	{Top: Expected theoretical shapes~\cite{HZg_angle1} for the angular features used for kinematic BDT training. Bottom: Reconstructed shapes for these quantities after the \hzg{} selection requirements have been applied. Please note that the red and blue color conventions are reversed for the top and bottom plots.} \label{fig:kin_GEN_angles}
 \end{figure}
 
-Several fundamental kinematic quantities of the final state particles are also used as training features. These include the pseudorapidity of each lepton, the $\Delta R$ between each lepton and the photon, and the $\pt/m$ of the $\lplm\gamma$ system. We note that the \pt values of each final state particle were also considered for training, but were found to have a negligible impact on discrimination power. This is likely because they are highly correlated with these other fundamental kinematic quantities, and thus, do not introduce much additional information to the BDT model. A comparison between signal and background shapes for these kinematic features is shown in Fig. \ref{fig:kin_training_shapes}.
+Several fundamental kinematic quantities of the final state particles are also used as training features. These include the pseudorapidity of each lepton, the $\Delta R$ between each lepton and the photon, and the $\pt/m$ of the $\lplm\gamma$ system. We note that the \pt values of each final state particle were also considered for training, but were found to have a negligible impact on discrimination power. This is likely because they are highly correlated with these other fundamental kinematic quantities, and thus, do not introduce much additional information to the BDT model. A comparison between signal and background shapes for these kinematic features is shown in Fig.~\ref{fig:kin_training_shapes}.
 
 \begin{figure}[tb]
 	\begin{center}
@@ -65,7 +65,7 @@ Several fundamental kinematic quantities of the final state particles are also u
 	\label{fig:kin_training_shapes}
 \end{figure}
 
-Finally, training features related to the quality of the final state photon are used. These include the corrected photon MVA ID score and the photon energy resolution. There are several motivations for these features. First, they are important for distinguishing \hzg{} signal events from the large $\PZ$+jets background, where a jet is misreconstructed as a photon. Second, they are inspired by the previous CMS \hzg{} searches, which used photon pseudorapidity and $R_{9}$ for categorization. In our current analysis, the photon $R_{9}$ was also considered as a training feature. However, it did not contribute any meaningful additional discriminating power. This is likely because the $R_9$ is already part of the corrected photon MVA ID. Figure \ref{fig:kin_pho_features} shows the comparison between signal and background shapes for these features after the full set of \hzg{} selection requirements has been applied. Both features offer strong discrimination power, particularly the corrected photon MVA ID score. However, we note that this is partially by construction, since a very loose photon MVA ID cut was applied in order to preserve maximal information for the kinematic BDT training.
+Finally, training features related to the quality of the final state photon are used. These include the corrected photon MVA ID score and the photon energy resolution. There are several motivations for these features. First, they are important for distinguishing \hzg{} signal events from the large $\PZ$+jets background, where a jet is misreconstructed as a photon. Second, they are inspired by the previous CMS \hzg{} searches, which used photon pseudorapidity and $R_{9}$ for categorization. In our current analysis, the photon $R_{9}$ was also considered as a training feature. However, it did not contribute any meaningful additional discriminating power. This is likely because the $R_9$ is already part of the corrected photon MVA ID. Figure~\ref{fig:kin_pho_features} shows the comparison between signal and background shapes for these features after the full set of \hzg{} selection requirements has been applied. Both features offer strong discrimination power, particularly the corrected photon MVA ID score. However, we note that this is partially by construction, since a very loose photon MVA ID cut was applied in order to preserve maximal information for the kinematic BDT training.
 
 \begin{figure}[tb]
 	\begin{center}
@@ -77,7 +77,7 @@ Finally, training features related to the quality of the final state photon are 
 \end{figure}
 
 Since the kinematic BDT training is carried out using simulated events, it is necessary to check that the simulation accurately models the training feature distributions in data. 
-A comparison of data to simulation, combining all years of data-taking in both the electron and muon channels, is shown in Fig. \ref{fig:kin_vars1}. We observe good agreement between
+A comparison of data to simulation, combining all years of data-taking in both the electron and muon channels, is shown in Fig.~\ref{fig:kin_vars1}. We observe good agreement between
 data and simulation for all kinematic BDT training features. 
 
 \begin{figure}[tb]
@@ -101,9 +101,9 @@ data and simulation for all kinematic BDT training features.
 \end{figure}
 
 \subsection{Training Results}
-The output kinematic BDT shapes for signal and background are shown in Fig. \ref{fig:kin_overtrain}. No overtraining is observed, 
+The output kinematic BDT shapes for signal and background are shown in Fig.~\ref{fig:kin_overtrain}. No overtraining is observed, 
 as evidenced by the similarity between training and test distributions. The importance of each training feature for the discrimination power of
-the final kinematic BDT discriminant is given in Table \ref{tab:kin_importance}. We see that the corrected photon MVA score is the most discriminating 
+the final kinematic BDT discriminant is given in Table~\ref{tab:kin_importance}. We see that the corrected photon MVA score is the most discriminating 
 feature, since it distinguishes real photons from misreconstructed jets. The variable $\pt^{\lplm\gamma}/m_{\lplm\gamma}$ also contributes good discimination power, and 
 effectively replaces the need for a boosted Higgs category, as was used in the CMS 2016 search. 
 
@@ -139,7 +139,7 @@ effectively replaces the need for a boosted Higgs category, as was used in the C
 \section{Vector Boson Fusion Boosted Decision Tree}
 The VBF BDT is used to discriminate signal events arising via the VBF Higgs production mechanism from other sources of signal and background events. 
 The training and evaluation of the VBF BDT is carried out on events that have two jets selected according to the requirements in 
-Chapter \ref{sec:selection}. Signal events for training are taken from the simulated VBF \hzg{} samples, while ggH \hzg{}, $\PZ\gamma$, $\PZ$+jets, and 
+Chapter~\ref{sec:selection}. Signal events for training are taken from the simulated VBF \hzg{} samples, while ggH \hzg{}, $\PZ\gamma$, $\PZ$+jets, and 
 $\ttbar$ events are considered background. Due to their very small contribution, $\mathrm{V}\PH$ and $\ttbar\PH$ \hzg{} events are neglected. Only about 65\% 
 of the selected jets from the VBF signal correspond to the true VBF jets in which we are interested. Because of this, we perform an additional matching 
 procedure for these jets. In order for a VBF signal event to be used in the training, both reconstructed jets must be matched 
@@ -152,11 +152,10 @@ and by the recorded integrated luminosity of each data-taking year.
 The training features used for the VBF BDT include quantities that distinguish events with the VBF topology from other types of events, as well as quantities that 
 distinguish signal from background based on kinematics. Since the categorization strategy treats dijet events separately from other types of events, including these 
 kinematic variables is not redundant with the kinematic BDT described above. The two variables used for kinematic separation of signal and background for the VBF BDT are 
-the kinematic BDT score and the variable $p_{\mathrm{T}}^{t}$, defined in Chapter \ref{sec:analysis_overview}. Because the kinematics of the two leptons and photon are 
+the kinematic BDT score and the variable $p_{\mathrm{T}}^{t}$, defined in Chapter~\ref{sec:analysis_overview}. Because the kinematics of the two leptons and photon are 
 similar for VBF signal events and other signal production mechanisms, the previously trained kinematic BDT is expected to yield good discrimation power between VBF signal and backgrounds. 
 By introducing the variable $p_{\mathrm{T}}^{t}$, we add another feature sensitive to boost of the Higgs boson. This takes advantage of the recoil of the Higgs boson against the jets, and along 
-with the variable $\pt^{\lplm\gamma}/m_{\lplm\gamma}$ in the kinematic BDT, replaces the need for a boosted category. Signal and background shapes for the kinematic BDT score and $p_{\mathrm{T}}^{t}$ are shown in Fig. 
-\ref{fig:kin_bdt_ptt}, where background refers to the full training background, including ggH \hzg{} events.
+with the variable $\pt^{\lplm\gamma}/m_{\lplm\gamma}$ in the kinematic BDT, replaces the need for a boosted category. Signal and background shapes for the kinematic BDT score and $p_{\mathrm{T}}^{t}$ are shown in Fig.~\ref{fig:kin_bdt_ptt}, where background refers to the full training background, including ggH \hzg{} events.
 
 \begin{figure}[tb]
 	\begin{center}
@@ -184,7 +183,7 @@ We also include training features that aim to distinguish VBF events from non-VB
   (vi) the $\pt$ of each jet; and (vii) the $\DR$ separation between each jet and the photon. Other training features were also 
   tried, including the individual pseudorapidities of the jets and the Zeppenfeld variable for the $\PZ\gamma$ system. However, 
   these features were not included, as they offered negligible improvement for the final trained model. Signal and background 
-  shape comparisons for the above variables are shown in Fig. \ref{fig:vbf_bdt_features}.
+  shape comparisons for the above variables are shown in Fig.~\ref{fig:vbf_bdt_features}.
 
 \begin{figure}[tb]
 	\begin{center}
@@ -202,7 +201,7 @@ We also include training features that aim to distinguish VBF events from non-VB
 \end{figure}
 
 Since the VBF BDT training is carried out using simulated events, it is necessary to check that the simulation accurately models the training feature distributions in data. 
-A comparison of data to simulation, combining all years of data-taking in both the electron and muon channels, is shown in Fig. \ref{fig:VBF_valid}. We observe good agreement between
+A comparison of data to simulation, combining all years of data-taking in both the electron and muon channels, is shown in Fig.~\ref{fig:VBF_valid}. We observe good agreement between
 data and simulation for all VBF BDT training features. 
 
 \begin{figure}[tb]
@@ -224,9 +223,9 @@ data and simulation for all VBF BDT training features.
 \end{figure}
 
 \subsection{Training Results}
-The output VBF BDT shapes for signal and background are shown in Fig. \ref{fig:vbf_overtrain}. No overtraining is observed, 
+The output VBF BDT shapes for signal and background are shown in Fig.~\ref{fig:vbf_overtrain}. No overtraining is observed, 
 as evidenced by the similarity between training and test distributions. The importance of each training feature for the discrimination power of
-the final VBF BDT discriminant is given in Table \ref{tab:vbf_importance}. We see that the most important feature is the $\Delta \eta$ between the jets, followed 
+the final VBF BDT discriminant is given in Table~\ref{tab:vbf_importance}. We see that the most important feature is the $\Delta \eta$ between the jets, followed 
 by the kinematic BDT score and quantities relating the dijet system to the $\PZ\gamma$ system.
 
 \begin{figure}[tb]
@@ -265,7 +264,7 @@ The procedure used for event categorization is described below.
   \item Events with at least one additional electron (muon) with $\pt>7$ (5)\GeV are assigned to 
 	  the lepton-tagged category.
   \item Events not assigned to the lepton-tagged category, but which contain two jets satisfying the 
-	  selection requirements described in Chapter \ref{sec:selection}, are classified 
+	  selection requirements described in Chapter~\ref{sec:selection}, are classified 
 	  as dijet events, indicative of possible VBF production. 
 	  The subdivision of dijet events into a set of three dijet categories using the VBF BDT is described below.
   \item Events not assigned to the lepton-tagged or dijet categories are classified as untagged events.
@@ -281,7 +280,7 @@ The procedure used for event categorization is described below.
 	  only dijet-tagged events, and the $\Dkin$ distribution includes only untagged events. The sum of contributions from all signal production mechanisms is shown by the blue line, while the contribution from only the VBF mechanism is shown by the red line. The uncertainty band incorporates all statistical and systematic uncertainties in the expected background. The dashed lines indicate the boundaries for the dijet and untagged categories. The gray shaded region in the $\Dkin$ distribution is excluded from the analysis.\label{fig:BDT}}
 \end{figure}
 
-Distributions of the transformed VBF BDT score ($\DVBF$) and transformed kinematic BDT score ($\Dkin$) are shown in Fig. \ref{fig:BDT}.
+Distributions of the transformed VBF BDT score ($\DVBF$) and transformed kinematic BDT score ($\Dkin$) are shown in Fig.~\ref{fig:BDT}.
 The subdivision of dijet and untagged events into categories is based on these distributions.
 Category boundaries are defined as mutually exclusive regions of $\DVBF$ and $\Dkin$. 
 The locations of the boundaries defining the categories are optimized by iterating over all possible combinations of boundaries using $\sum_{i=1}^{n} {S_i}^2/B_i$

@@ -4,7 +4,7 @@ The data sample used for the CMS Run 2 \hzg{} search corresponds to a total inte
 To be considered in the analysis, events must satisfy the HLT requirements for at least one of the dielectron or dimuon triggers.
 The dielectron trigger requires a leading (subleading) electron with
 $\pt > 23\,(12)\GeV$, while the dimuon trigger requires a leading (subleading) muon with $\pt > 17\,(8)\GeV$.
-The corresponding CMS data streams are listed in Table \ref{tab:data_samples}. All data samples use the CMS MINIAOD data format.
+The corresponding CMS data streams are listed in Table~\ref{tab:data_samples}. All data samples use the CMS MINIAOD data format.
 To ensure data quality, luminosity masks are applied based on recommendations from the Physics Performance and Dataset group.
 
 \begin{table}[tb]
@@ -48,15 +48,15 @@ computed at next-to-next-to-NLO precision in QCD and at NLO in electroweak (EWK)
 theory~\cite{Anastasiou:2016cez}. 
 The cross sections for Higgs boson production in the VBF~\cite{PhysRevLett.115.082002} and VH~\cite{BREIN2004149} mechanisms are calculated at next-to-NLO in QCD, including NLO EWK corrections, while the $\ttbar\PH$ cross section is computed at NLO in QCD and EWK theory~\cite{PhysRevD.68.034022}. 
 
-A full list of simulated physics processes used in the analysis is provided in Table \ref{tab:sim_samples}, along with cross section and branching fraction information. 
+A full list of simulated physics processes used in the analysis is provided in Table~\ref{tab:sim_samples}, along with cross section and branching fraction information. 
 For the \hzg{} and $\PH\to\mpmm$ samples, the SM Higgs boson production cross sections and branching fractions
 recommended by the LHC Higgs Working
 Group~\cite{LHC-YR4} are used for each mass point.
-The values for the Higgs boson processes listed in Table \ref{tab:sim_samples} correspond to $m_{\PH}=125\GeV$.
+The values for the Higgs boson processes listed in Table~\ref{tab:sim_samples} correspond to $m_{\PH}=125\GeV$.
 
 \begin{table}[tb]
 	\begin{center}
-		\caption{Simulated event samples used in the analysis. For Higgs samples, the listed cross sections and branching fractions correspond to the values for $m_{\PH}=125\GeV$.}
+		\caption{Simulated event samples used in the analysis. For Higgs samples, the listed cross sections and branching fractions correspond to the values for $m_{\PH}=125\GeV$. In this table, $\ell$ denotes $\Pe$, $\mu$, or $\tau$.}
 		\begin{tabular}{|l|c|c|}
 			\hline
 			\textbf{process} & \textbf{cross section (pb)} & \textbf{branching fraction}\\\hline 
@@ -109,23 +109,23 @@ includes a component in which photons from \hgg{} are
 internally converted via the process $\PH\to\gamma\gamma^*\to \mathrm{f\bar{f}}\gamma\gamma$, with $\mathrm{f\bar{f}}$ mostly $\epem$. 
 This also affects the \hzg{} signal and $\PZ\gamma$ background samples. 
 Since the normalization of these samples does not include the internal conversion component, the cross section must be adjusted accordingly.
-To determine the amount by which the cross section is adjusted, we measure the internal conversion
+To determine the amount by which the cross section is adjusted, we calculate the internal conversion
 rate in simulation. 
 We define a ratio where the numerator is the number of events with hard process final state photons
 and the denominator is total number of events in the simulation. Subtracting this ratio from unity gives the internal conversion rate.
 The hard process final state photon flagging is done using generator-level truth information.
 In our analysis, the internal conversion rate is about 3.1\% (2016) and 3.0\% (2017 and 2018).  
-We, therefore, divide the affected sample cross sections by 0.969 (0.97) for 2016 (2017 and 2018).
+We, consequently, divide the affected sample cross sections by 0.969 (0.97) for 2016 (2017 and 2018).
 
 \section{Transverse Momentum Reweighting}\label{sec:Zpt}
 The underlying event tuning was updated from CUETP8M1 (2016) to CP5 (2017--2018). Unfortunately, 
 it was discovered that this update caused significant mismodeling of the $\lplm\gamma$ \pt spectrum in the 
-$\PZ\gamma$ and $\PZ$+jets background samples in 2017 and 2018. Figure \ref{fig:pt_reweight} (left) shows the clear difference between 
+$\PZ\gamma$ and $\PZ$+jets background samples in 2017 and 2018. Figure~\ref{fig:pt_reweight} (left) shows the clear difference between 
 simulated $\pt^{\lplm\gamma}$ in 2016 and 2017--2018. As will be described later in this thesis, 
 the variable $\pt^{\lplm\gamma}/m_{\lplm\gamma}$ has good discriminating power between signal and background and is a useful feature for MVA training.
 Therefore, it is important to correct this discrepancy. To do this, a simple reweighting of the distribution is performed using two 
 sideband regions in $m_{\lplm\gamma}$. The sidebands are defined as 115--120 and 130--135\GeV. The resulting weights are then applied to 
-the $\PZ\gamma$ and $\PZ$+jets simulated events in 2017 and 2018. Figure \ref{fig:pt_reweight} (right) shows the final distribution of 
+the $\PZ\gamma$ and $\PZ$+jets simulated events in 2017 and 2018. Figure~\ref{fig:pt_reweight} (right) shows the final distribution of 
 $\pt^{\lplm\gamma}/m_{\lplm\gamma}$ for all data-taking years combined after the $\pt^{\lplm\gamma}$ reweighting is applied. The overall agreement 
 between data and simulation is good over the full $\pt$ spectrum.
 
@@ -141,7 +141,7 @@ between data and simulation is good over the full $\pt$ spectrum.
 
 \section{Pileup Reweighting}\label{sec:pileup}
 In order to correctly model the pileup distribution in data, a pileup reweighting procedure must be applied to the simulation.
-Although the Deterministic Annealing primary vertex (PV) reconstruction \cite{detanneal} has been shown to
+Although the Deterministic Annealing primary vertex (PV) reconstruction~\cite{detanneal} has been shown to
 be efficient and well-behaved up to the observed levels of pileup, the final distribution
 for the number of reconstructed PVs is still sensitive to differences between data and 
 simulation in the PV reconstruction and underlying event.
@@ -152,8 +152,8 @@ together with the total pp inelastic cross section. The total pp inelastic cross
 section is taken to be 66 mb, 72.4 mb, and 80 mb for 2016, 2017, and 2018 respectively.
 This yields an expected pileup distribution, correctly weighted over the entire data-taking period. The simulation is then reweighted to 
 match this expected pileup distribution. 
-Figure \ref{fig:puwei} shows the number of PV after pileup reweighting for each data-taking year. The uncertainties associated with pileup reweighting are 
-accounted for in the analysis and are discussed further in Chapter \ref{sec:uncertainties}.
+Figure~\ref{fig:puwei} shows the number of PV after pileup reweighting for each data-taking year. The uncertainties associated with pileup reweighting are 
+accounted for in the analysis and are discussed further in Chapter~\ref{sec:uncertainties}.
 \begin{figure}[tb]
   \begin{center}
      \includegraphics[width=0.3\textwidth]{fig/pileup/ele_kin_nVtx_valid_Legacy16_HLT.pdf}
@@ -174,10 +174,10 @@ $2<|\eta|<3$. This effect is not described in simulation.
 To handle this, a weight is applied to each simulated event based on the probability of an event not to prefire and self-veto. 
 The prefiring probability is determined by measuring the timing distributions of physics objects in the subset of data events for which prefiring 
 is impossible due to the lack of a L1 trigger accept in the previous bunch crossing. The measurement is parameterized in 
-$\eta$ and \pt. The final event weight applied to the simulation is the product of the non-prefiring probability of all objects, as shown in equation \ref{eqn:prefire}.
+$\eta$ and \pt. The final event weight applied to the simulation is the product of the non-prefiring probability of all objects, as shown in equation~\ref{eqn:prefire}.
 \begin{equation}
 	\omega = 1 - \mathrm{P(Prefiring)} = \prod_{i=\mathrm{photons,\,jets,\,muons}}(1-\epsilon_i^{\mathrm{pref}}(\eta,\pt^{\mathrm{EM,\,\mu}}))
 	\label{eqn:prefire}
 \end{equation}
 The impact of the L1 prefiring for electrons (muons) is a 1.4 (0.8)\% loss in signal yield for 2016 and 2.4 (1.1)\% loss in signal yield for 2017.
-The uncertainties associated with the L1 prefiring reweighting are accounted for in the analysis and are discussed further in Chapter \ref{sec:uncertainties}.
+The uncertainties associated with the L1 prefiring reweighting are accounted for in the analysis and are discussed further in Chapter~\ref{sec:uncertainties}.
